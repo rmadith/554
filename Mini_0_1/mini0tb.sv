@@ -17,15 +17,33 @@ mini_01 iDUT(
 
 
 initial begin
-clk = 0;
-KEY = '1;
-SW =  '0;
-@(posedge clk);
-KEY [0] = 0;
-@(negedge clk);
-KEY [0] = 1;
-SW = 10'b1010101010; 
-repeat (100) @(posedge clk);
+  clk = 0;
+  KEY = '1;
+  SW =  '0;
+  @(posedge clk);
+  KEY [0] = 0;  // Reset
+  @(negedge clk);
+  KEY [0] = 1;
+  SW = 10'b0100000010; 
+
+  fork
+	begin: test1
+	  repeat(500) @(posedge clk);
+	  $display("Test 1 Failed");
+	end
+	begin
+	   @(posedge iDUT.we)
+	   repeat (10) @(posedge clk);
+	   if(SW === LEDR) begin
+		$display("Test 1 Passed");
+		disable test1;
+	   end
+	end
+   join
+
+
+	
+
 $stop;
 end
 
@@ -33,4 +51,3 @@ end
 always
 #5 clk = ~clk;
 endmodule
-
