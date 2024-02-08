@@ -3,7 +3,8 @@ module MiniLabO_tb();
 
 logic clk;
 logic [3:0] KEY;
-logic [9:0] SW, LEDR;
+logic [9:0] SW, LEDR, test_rand;
+
 
 
 mini_01 iDUT(
@@ -26,6 +27,7 @@ initial begin
   KEY [0] = 1;
   SW = 10'b0100000010; 
 
+  // Classical Test
   fork
 	begin: test1
 	  repeat(500) @(posedge clk);
@@ -42,9 +44,20 @@ initial begin
    join
 
 
-	
+  // Randomized test
+  repeat(10000) begin
+	test_rand = $urandom();
+	SW = test_rand;
+	repeat(100) @(posedge clk);
+	if(LEDR !== SW) begin
+		$display("Test Failed");
+		$display("\t LEDR = %d, KEY = %d",LEDR, SW);
+		$stop();
+	end
+  end
 
-$stop;
+$display("All tests passed");
+$stop();
 end
 
 

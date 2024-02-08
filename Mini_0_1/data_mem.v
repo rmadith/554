@@ -16,14 +16,14 @@ output reg [15:0] rd_data;	//output of data memory
 reg [15:0]data_mem[0:8191];
 
 ///////////////////////////////////////////////
-// Model read, data is latched on clock low //
+// Model read, data is negedge  clock  //
 /////////////////////////////////////////////
 always @(negedge clk)
   if (re && ~we)
     rd_data <= data_mem[addr[12:0]];
 	
 ////////////////////////////////////////////////
-// Model write, data is written on clock low //
+// Model write, data is written on negedge clk //
 //////////////////////////////////////////////
 always @(negedge clk)
   if (we && ~re)

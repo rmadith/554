@@ -51,6 +51,9 @@ always @(negedge clk)
     mem1[dst_addr] <= dst;
 
 
+
+// Register Bypass Added edge case to make R0 return 0
+
 assign p0 =  (p0_addr == 4'h0) ? 16'h0 : (((we === 1'b1) && (dst_addr === p0_addr)) ? dst: temp_p0);
 
 assign p1 =  (p1_addr == 4'h0) ? 16'h0 : (((we === 1'b1) && (dst_addr === p1_addr)) ? dst: temp_p1);
@@ -63,4 +66,3 @@ assign p1 =  (p1_addr == 4'h0) ? 16'h0 : (((we === 1'b1) && (dst_addr === p1_add
 	
 endmodule
   
-

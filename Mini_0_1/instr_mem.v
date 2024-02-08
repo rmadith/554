@@ -9,7 +9,7 @@ output reg [15:0] instr;	//output of insturction memory
 reg [15:0]instr_mem[0:16535];
 
 /////////////////////////////////////
-// Memory is latched on clock low //
+// Memory is floped on negedge clock  //
 ///////////////////////////////////
 always @(negedge clk)
    if(rd_en)
