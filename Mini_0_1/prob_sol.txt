@@ -1,4 +1,6 @@
-Problems:
+// Vishnu and Muthu
+Report: 
+When loading our processor, they were numerous latches, and we fixed them by adding a negedge clk wherever it was necessary.
 
 Registers were not initialized to zero. Hence the values were incorrect because the don't cares propagated. To fix this we created an additional edge case test for R0
 in the Register bypass statement.
@@ -6,3 +8,8 @@ in the Register bypass statement.
 When reading the Switch, initially we were reading at every posedge clk, which didn't properly store in memory because the memory file operated at negedge clk. Solution was to 
 read the switch at negedge clk. 
 
+We also made a blunder of assigning a signal to an output port of data memory module. Because of this the data wasn't propogating through the processor.
+
+In the instruction memory, when reading the hex file through readmemh, we have the absolute path of the file, which gave us a weird binary error problem. Instead we write the file namme itself, and it worked. 
+
+When compiling in quartus, there were no memory blocks defined. This was because we didn't assign the  write signal to the data memory module. 
