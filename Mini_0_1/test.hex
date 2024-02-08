@@ -1,0 +1,5 @@
+@0000 B300	// llb R3, 0x00
+@0001 A3C0	// lhb R3, 0xC0
+@0002 8730	// lw R7,R3,0
+@0003 9731	// sw R7,R3,1
+@0004 CFFD	// b uncond,loop

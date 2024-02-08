@@ -1,0 +1,8 @@
+Problems:
+
+Registers were not initialized to zero. Hence the values were incorrect because the don't cares propagated. To fix this we created an additional edge case test for R0
+in the Register bypass statement.
+
+When reading the Switch, initially we were reading at every posedge clk, which didn't properly store in memory because the memory file operated at negedge clk. Solution was to 
+read the switch at negedge clk. 
+
