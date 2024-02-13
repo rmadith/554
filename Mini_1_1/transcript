@@ -1,0 +1,35 @@
+# Compile of RemoteComm.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# Compile of spart.sv was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of UART.sv failed with 2 errors.
+# Compile of UART.sv failed with 2 errors.
+# Compile of UART.sv failed with 1 errors.
+# Compile of UART.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv failed with 1 errors.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# Compile of spart.sv was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of UART.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# Compile of spart.sv was successful.
+# 6 compiles, 0 failed with no errors.
