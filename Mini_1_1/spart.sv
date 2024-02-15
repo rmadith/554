@@ -30,18 +30,35 @@ module spart(
     input RX				// UART RX line
     );
 
+logic add_tx,remove_rx;
+logic rx_rdy; 
+logic tx_q_empty;
+logic rx_q_full;
+logic tx_done;
 
-logic [12:0] DB
+logic [12:0] DB;
+logic [7:0] rx_data, tx_data;
+
+logic [7:0] inter_databus;
+
+circular_queue iTxQueue(.clk(clk),.rst_n(rst_n),.data_in(databus),.add(add_tx),.remove(tx_done),.data_out(tx_data),.q_full(tx_q_full),.q_empty(tx_q_empty));
+circular_queue iRxQueue(.clk(clk),.rst_n(rst_n),.data_in(rx_data),.add(rx_rdy),.remove(remove_rx),.data_out(databus),.q_full(rx_q_full),.q_empty(rx_q_empty));
+
+UART iUART(.clk(clk),.rst_n(rst_n),.RX(RX),.TX(TX),.rx_rdy(rx_rdy),.clr_rx_rdy(),.rx_data(rx_data),.trmt(!tx_q_empty),.tx_data(tx_data),.tx_done(tx_done), .baud(DB));
 
 always_comb
     case(ioaddr)
-	00: 
-	01: databus = {tx_queue, rx_queue};
-	10: if(iorw_n) databus = DB[7:0];
-	    else DB[7:0] = databus;
+	00: if(iorw_n) remove_rx = 1;
+	    else add_tx = 1;
+	01: inter_databus = {tx_queue, rx_queue};
+	10: if(iorw_n) inter_databus = DB[7:0];
+	    else DB[7:0] = inter_databus;
 	11: if(iorw_n) databus = DB[12:8];
 	    else DB[12:8] = databus;
 	default: databus = 8'bzzzzzzz;
+     endcase
+
+
 	
 				   
 endmodule

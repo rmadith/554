@@ -26,6 +26,13 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	RemoteComm
 
+} {} {}} I:/win/554_git/Mini_1_1/circular_queue.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/circular_queue.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module circular_queue
+
+Top level modules:
+	circular_queue
+
 } {} {}} I:/win/554_git/Mini_1_1/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/UART_rx.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module UART_rx

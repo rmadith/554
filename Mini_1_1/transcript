@@ -33,3 +33,11 @@
 # Compile of UART_wrapper.sv was successful.
 # Compile of spart.sv was successful.
 # 6 compiles, 0 failed with no errors.
+# Compile of circular_queue.sv failed with 2 errors.
+# Compile of circular_queue.sv failed with 2 errors.
+# Compile of circular_queue.sv failed with 2 errors.
+# Compile of circular_queue.sv failed with 2 errors.
+# Compile of circular_queue.sv failed with 2 errors.
+# Compile of circular_queue.sv failed with 3 errors.
+# Compile of circular_queue.sv failed with 1 errors.
+# Compile of circular_queue.sv was successful.
