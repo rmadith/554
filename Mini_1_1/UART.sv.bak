@@ -1,4 +1,4 @@
-module UART(clk,rst_n,RX,TX,rx_rdy,clr_rx_rdy,rx_data,trmt,tx_data,tx_done);
+module UART(clk,rst_n,RX,TX,rx_rdy,clr_rx_rdy,rx_data,trmt,tx_data,tx_done, baud);
 
 input clk,rst_n;		// clock and active low reset
 input RX,trmt;		// strt_tx tells TX section to transmit tx_data
@@ -8,7 +8,7 @@ output TX,rx_rdy,tx_done;	// rx_rdy asserted when byte received,
 							// tx_done asserted when tranmission complete
 output [7:0] rx_data;		// byte received
 
-parameter baud = 13'h01b2;
+input baud;
 
 //////////////////////////////
 // Instantiate Transmitter //

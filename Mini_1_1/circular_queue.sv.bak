@@ -9,17 +9,18 @@ module circular_queue(clk,rst_n,data_in,add,remove,data_out,q_full,q_empty);
     parameter Q_SIZE = 8;
 
     reg [7:0] queue [Q_SIZE - 1 : 0];
-    reg [3:0] produce_count,consume_count;    
-    
-    always_ff @(posedge clk,negedge rst_n) begin 
+    reg [3:0] produce_count,consume_count;
+
+    always_ff @(posedge clk,negedge rst_n) begin
         if (!rst_n) begin
             produce_count <= 0;
             consume_count <= 0;
         end
-        else if(add) begin 
-            if(!q_full)
+        else if(add) begin
+            if(!q_full) begin 
                 queue[produce_count[2:0]] <= data_in;
                 produce_count <= produce_count + 1;
+	    end
         end
         else if (remove) begin
             if(!q_empty)
@@ -35,4 +36,3 @@ module circular_queue(clk,rst_n,data_in,add,remove,data_out,q_full,q_empty);
 
 
 endmodule
-

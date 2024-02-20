@@ -1,4 +1,3 @@
-`timescale 1ns/1ps
 module UART_rx(clk, rst_n, RX, clr_rdy, rx_data, rdy, baud);
 
 // declaring input/output signals
@@ -6,7 +5,7 @@ input clk, rst_n, RX, clr_rdy;
 output reg rdy;
 output [7:0]rx_data;
 
-input baud;
+input [12:0] baud;
 
 logic start, shift, set_rdy, receiving, enable;
 reg double_flop1, double_flop2, edge_detect;

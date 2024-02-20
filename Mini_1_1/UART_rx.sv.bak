@@ -1,5 +1,4 @@
-`timescale 1ns/1ps
-module UART_rx(clk, rst_n, RX, clr_rdy, rx_data, rdy);
+module UART_rx(clk, rst_n, RX, clr_rdy, rx_data, rdy, baud);
 
 // declaring input/output signals
 input clk, rst_n, RX, clr_rdy;

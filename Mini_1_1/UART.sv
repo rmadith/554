@@ -8,7 +8,7 @@ output TX,rx_rdy,tx_done;	// rx_rdy asserted when byte received,
 							// tx_done asserted when tranmission complete
 output [7:0] rx_data;		// byte received
 
-input baud;
+input [12:0] baud;
 
 //////////////////////////////
 // Instantiate Transmitter //

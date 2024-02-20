@@ -1,43 +1,477 @@
-# Compile of RemoteComm.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of UART_rx.sv was successful.
-# Compile of UART_tx.sv was successful.
-# Compile of UART_wrapper.sv was successful.
-# 5 compiles, 0 failed with no errors.
-# Compile of UART_rx.sv was successful.
-# Compile of UART_tx.sv was successful.
-# Compile of RemoteComm.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of UART_rx.sv was successful.
-# Compile of UART_tx.sv was successful.
-# Compile of UART_wrapper.sv was successful.
-# Compile of spart.sv was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of UART.sv failed with 2 errors.
-# Compile of UART.sv failed with 2 errors.
-# Compile of UART.sv failed with 1 errors.
-# Compile of UART.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of RemoteComm.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of UART_rx.sv failed with 1 errors.
-# Compile of UART_tx.sv was successful.
-# Compile of UART_wrapper.sv was successful.
-# Compile of spart.sv was successful.
-# 6 compiles, 1 failed with 1 error.
-# Compile of UART.sv was successful.
-# Compile of RemoteComm.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of UART_rx.sv was successful.
-# Compile of UART_tx.sv was successful.
-# Compile of UART_wrapper.sv was successful.
-# Compile of spart.sv was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of circular_queue.sv failed with 2 errors.
-# Compile of circular_queue.sv failed with 2 errors.
-# Compile of circular_queue.sv failed with 2 errors.
-# Compile of circular_queue.sv failed with 2 errors.
-# Compile of circular_queue.sv failed with 2 errors.
-# Compile of circular_queue.sv failed with 3 errors.
-# Compile of circular_queue.sv failed with 1 errors.
 # Compile of circular_queue.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of spart.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of RemoteComm.sv was successful with warnings.
+# Compile of RemoteComm.sv was successful.
+# Compile of spart.sv was successful.
+# Compile of spart.sv was successful.
+# Compile of spart.sv was successful.
+# Compile of spart_tb.sv failed with 5 errors.
+# 2 compiles, 1 failed with 5 errors.
+# Compile of spart_tb.sv failed with 3 errors.
+# Compile of spart_tb.sv failed with 3 errors.
+# Compile of spart_tb.sv was successful.
+vsim work.spart_tb -voptargs=+acc
+# vsim work.spart_tb -voptargs="+acc" 
+# Start time: 13:50:59 on Feb 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(15): (vopt-8885) Illegal inout port connection for 'databus' (8th connection) to reg type. 
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 13:51:04 on Feb 20,2024, Elapsed time: 0:00:05
+# Errors: 1, Warnings: 13
+# Compile of spart_tb.sv was successful.
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 13:53:54 on Feb 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(15): (vopt-8885) Illegal inout port connection for 'databus' (8th connection) to reg type. 
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 13:53:57 on Feb 20,2024, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 2
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 13:54:39 on Feb 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(15): (vopt-8885) Illegal inout port connection for 'databus' (8th connection) to reg type. 
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 13:54:43 on Feb 20,2024, Elapsed time: 0:00:04
+# Errors: 1, Warnings: 2
+# Compile of spart_tb.sv was successful.
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 13:55:20 on Feb 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(16): (vopt-8885) Illegal inout port connection for 'databus' (8th connection) to reg type. 
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 13:55:24 on Feb 20,2024, Elapsed time: 0:00:04
+# Errors: 1, Warnings: 2
+# Compile of spart_tb.sv was successful.
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 13:55:40 on Feb 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2685) [TFMPC] - Too few port connections for 'iTxQueue'.  Expected 10, found 9.
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2718) [TFMPC] - Missing connection for port 'containing'.
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2685) [TFMPC] - Too few port connections for 'iRxQueue'.  Expected 10, found 9.
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2718) [TFMPC] - Missing connection for port 'remaining'.
+# ** Warning: I:/win/554_git/Mini_1_1/RemoteComm.sv(33): (vopt-2685) [TFMPC] - Too few port connections for 'iUART'.  Expected 11, found 10.
+# ** Warning: I:/win/554_git/Mini_1_1/RemoteComm.sv(33): (vopt-2718) [TFMPC] - Missing connection for port 'baud'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=6.
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'spart_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/comms File: I:/win/554_git/Mini_1_1/RemoteComm.sv
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+# Error loading design
+# End time: 13:55:44 on Feb 20,2024, Elapsed time: 0:00:04
+# Errors: 1, Warnings: 8
+# Compile of RemoteComm.sv was successful.
+# Load canceled
+# Compile of UART_rx.sv was successful.
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 13:56:28 on Feb 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Mini_1_1/RemoteComm.sv(32): (vopt-2685) [TFMPC] - Too few port connections for 'iUART'.  Expected 11, found 10.
+# ** Warning: I:/win/554_git/Mini_1_1/RemoteComm.sv(32): (vopt-2718) [TFMPC] - Missing connection for port 'baud'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'spart_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/comms/iUART/iTX File: I:/win/554_git/Mini_1_1/UART_tx.sv
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+# Error loading design
+# End time: 13:56:33 on Feb 20,2024, Elapsed time: 0:00:05
+# Errors: 1, Warnings: 5
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 13:56:51 on Feb 20,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'spart_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/comms/iUART/iTX File: I:/win/554_git/Mini_1_1/UART_tx.sv
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+# Error loading design
+# End time: 13:56:55 on Feb 20,2024, Elapsed time: 0:00:04
+# Errors: 1, Warnings: 1
+# Compile of UART_tx.sv was successful.
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 13:57:13 on Feb 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (13) for port 'baud'. The port definition is at: I:/win/554_git/Mini_1_1/UART.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT/iUART File: I:/win/554_git/Mini_1_1/spart.sv Line: 50
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 80
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 78
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 76
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 75
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 68
+# Error loading design
+# End time: 13:57:19 on Feb 20,2024, Elapsed time: 0:00:06
+# Errors: 5, Warnings: 3
+# Compile of UART.sv was successful.
+# Compile of spart.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# Optimization canceled
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 13:59:44 on Feb 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2685) [TFMPC] - Too few port connections for 'iTxQueue'.  Expected 10, found 9.
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2718) [TFMPC] - Missing connection for port 'containing'.
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2685) [TFMPC] - Too few port connections for 'iRxQueue'.  Expected 10, found 9.
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2718) [TFMPC] - Missing connection for port 'remaining'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (13) for port 'baud'. The port definition is at: I:/win/554_git/Mini_1_1/UART_tx.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/comms/iUART/iTX File: I:/win/554_git/Mini_1_1/UART.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (13) for port 'baud'. The port definition is at: I:/win/554_git/Mini_1_1/UART_rx.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/comms/iUART/iRX File: I:/win/554_git/Mini_1_1/UART.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (13) for port 'baud'. The port definition is at: I:/win/554_git/Mini_1_1/UART_tx.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT/iUART/iTX File: I:/win/554_git/Mini_1_1/UART.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (13) for port 'baud'. The port definition is at: I:/win/554_git/Mini_1_1/UART_rx.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT/iUART/iRX File: I:/win/554_git/Mini_1_1/UART.sv Line: 23
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 78
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 76
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 75
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 68
+# Error loading design
+# End time: 13:59:49 on Feb 20,2024, Elapsed time: 0:00:05
+# Errors: 4, Warnings: 10
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of spart.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 14:00:59 on Feb 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2685) [TFMPC] - Too few port connections for 'iTxQueue'.  Expected 10, found 9.
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2718) [TFMPC] - Missing connection for port 'containing'.
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2685) [TFMPC] - Too few port connections for 'iRxQueue'.  Expected 10, found 9.
+# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2718) [TFMPC] - Missing connection for port 'remaining'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 78
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 76
+# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
+#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 75
+# Error loading design
+# End time: 14:01:04 on Feb 20,2024, Elapsed time: 0:00:05
+# Errors: 3, Warnings: 6
+# Compile of spart.sv was successful.
+# Compile of spart.sv was successful.
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 14:05:02 on Feb 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(56)
+#    Time: 45 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 56
+add wave -position insertpoint sim:/spart_tb/iDUT/*
+view -new wave
+# .main_pane.wave1.interior.cs.body.pw.wf
+add wave -position insertpoint sim:/spart_tb/comms/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(56)
+#    Time: 45 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 56
+add wave -position insertpoint sim:/spart_tb/comms/*
+view -new wave
+# .main_pane.wave1.interior.cs.body.pw.wf
+add wave -position insertpoint sim:/spart_tb/iDUT/*
+# Compile of RemoteComm.sv was successful.
+# Compile of spart_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(18): (vopt-2912) Port 'baud' not found in module 'spart' (11th connection).
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 14:05:02 on Feb 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(18): (vopt-2912) Port 'baud' not found in module 'spart' (11th connection).
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
+# Error loading design
+# End time: 14:09:49 on Feb 20,2024, Elapsed time: 0:04:47
+# Errors: 2, Warnings: 1
+# Compile of spart_tb.sv was successful.
+vsim -voptargs=+acc work.spart_tb
+# vsim -voptargs="+acc" work.spart_tb 
+# Start time: 14:10:02 on Feb 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(58)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 58
+view -new wave
+# .main_pane.wave2.interior.cs.body.pw.wf
+add wave -position insertpoint sim:/spart_tb/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(58)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 58
+# Compile of spart_tb.sv was successful.
+# Compile of spart.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+run -all
+# Lower bits are set but is not correctly returned by databus
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(73)
+#    Time: 75 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 73
+# Causality operation skipped due to absence of debug database file
+# Compile of spart.sv failed with 1 errors.
+# Compile of spart.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+restart
+# Compile of spart.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+run
+# Lower bits are set but is not correctly returned by databus
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(73)
+#    Time: 75 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 73
+# Compile of spart.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+# Compile of spart.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+# Compile of spart.sv was successful.
+# Compile of spart_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+# Compile of spart.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
