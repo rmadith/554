@@ -127,30 +127,36 @@ initial begin
     @(posedge clk) send_cmd = 1;
     @(posedge clk) send_cmd = 0;
     @(posedge cmd_sent);
+    //@(posedge iDUT.rx_rdy);
 
+    @(posedge clk);
     ioaddr = 2'b00;
     iocs_n = 0;
     iorw_n = 1;
 
     @(posedge clk);
-    if(databus == 8'hB5) begin
+    if(inter_databus == 8'hB5) begin
 	$display("Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right");
     end else begin
 	$display("Transmission from remote comm failed");
 	$stop();
     end
 
-
+    iocs_n = 1;
 
     count = 0;
     repeat(20) begin
-	if(!tx_q_full) begin
+        iocs_n = 0;
+        iorw_n = 0;
+        //$display("Hello");
+	if(!iDUT.rx_q_full) begin
 	    cmd = $random();
 	    @(posedge clk) send_cmd = 1;
 	    @(posedge clk) send_cmd = 0;
 	    @(posedge cmd_sent);
-            count++;
+            count = count + 1;
 	end
+        iocs_n = 1;
     end
 
 
@@ -163,9 +169,18 @@ initial begin
     end
 
 
+    count = 0;
+    repeat (20) begin
+	iocs_n = 1;
 
 
 
+
+
+
+
+    $display("All test passed");
+    $stop();
 	    
 
 end

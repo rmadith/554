@@ -5,7 +5,7 @@ input clk, rst_n, RX, clr_rdy;
 output reg rdy;
 output [7:0]rx_data;
 
-input baud;
+input [12:0] baud;
 
 logic start, shift, set_rdy, receiving, enable;
 reg double_flop1, double_flop2, edge_detect;
@@ -44,9 +44,9 @@ end
 // Baud Counter
 always_ff@(posedge clk) begin
   if (!rst_n)
-    baud_cnt <= 'h1b2;	
+    baud_cnt <= baud;	
   if(start|shift)
-    baud_cnt <= (start) ? 'h1b2 : baud;
+    baud_cnt <= (start) ? baud[12:1] : baud;
   else if(receiving)
     baud_cnt <= baud_cnt - 1;
 end

@@ -34,7 +34,7 @@ UART iUART(.clk(clk), .rst_n(rst_n), .RX(RX), .TX(TX), .tx_data(tx_data), .trmt(
 
 //  <<< Your implementation here >>>
 
-assign tx_data = low_byte;
+assign tx_data = cmd;
 
 // Low byte FF
 always_ff @(posedge clk) begin
@@ -56,6 +56,8 @@ always @(posedge clk, negedge rst_n) begin
 	cmd_sent <= 1'b0;
     else if(set_cmd_snt) 
 	cmd_sent <= 1'b1;
+    else
+	cmd_sent <= 1'b0;
 end
 
 // State machine flop

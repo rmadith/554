@@ -44,9 +44,9 @@ end
 // Baud Counter
 always_ff@(posedge clk) begin
   if (!rst_n)
-    baud_cnt <= 'h1b2;	
+    baud_cnt <= baud;	
   if(start|shift)
-    baud_cnt <= (start) ? 'h1b2 : baud;
+    baud_cnt <= (start) ? baud[12:1] : baud;
   else if(receiving)
     baud_cnt <= baud_cnt - 1;
 end
@@ -69,6 +69,8 @@ always_ff@(posedge clk, negedge rst_n)begin
     rdy <= 1'b0;
   else if(set_rdy)
     rdy <= 1'b1;
+  else 
+    rdy <= 1'b0;
 end
 
 // state reset flip flop
