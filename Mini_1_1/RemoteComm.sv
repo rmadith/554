@@ -34,7 +34,7 @@ UART iUART(.clk(clk), .rst_n(rst_n), .RX(RX), .TX(TX), .tx_data(tx_data), .trmt(
 
 //  <<< Your implementation here >>>
 
-assign tx_data = low_byte;
+assign tx_data = cmd;
 
 // Low byte FF
 always_ff @(posedge clk) begin

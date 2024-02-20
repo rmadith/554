@@ -475,3 +475,317 @@ run -all
 # ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
 #    Time: 55 ns  Iteration: 1  Instance: /spart_tb
 # Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+# Compile of spart.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+# Compile of spart_tb.sv was successful.
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(94)
+#    Time: 105 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 94
+run -all
+# Status Registers didn't return right values
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(108)
+#    Time: 115 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 108
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Status Registers didn't return right values
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(106)
+#    Time: 115 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 106
+run -all
+# Compile of spart_tb.sv was successful.
+run -all
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Status Registers didn't return right values
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(110)
+#    Time: 125 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 110
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Status Registers didn't return right values
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(108)
+#    Time: 115 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 108
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Transmission from remote comm failed
+# Test 1: Failed. Count is not equal to 8
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(159)
+#    Time: 116485 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 159
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Transmission from remote comm failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(138)
+#    Time: 5675 ns  Iteration: 2  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 138
+add wave -position end  sim:/spart_tb/comms/baud
+restart
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Transmission from remote comm failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(138)
+#    Time: 43675 ns  Iteration: 2  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 138
+add wave -position insertpoint sim:/spart_tb/iDUT/iUART/*
+view -new wave
+# .main_pane.wave3.interior.cs.body.pw.wf
+add wave -position insertpoint sim:/spart_tb/iDUT/iUART/*
+view -new wave
+# .main_pane.wave4.interior.cs.body.pw.wf
+add wave -position insertpoint sim:/spart_tb/comms/iUART/*
+add wave -position insertpoint sim:/spart_tb/comms/iUART/iTX/*
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Transmission from remote comm failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(138)
+#    Time: 43675 ns  Iteration: 2  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 138
+# Compile of RemoteComm.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Transmission from remote comm failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(138)
+#    Time: 43675 ns  Iteration: 2  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 138
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Transmission from remote comm failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(140)
+#    Time: 43685 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 140
+add wave -position insertpoint sim:/spart_tb/iDUT/iRxQueue/*
+add wave -position insertpoint sim:/spart_tb/iDUT/iTxQueue/*
+add wave -position insertpoint sim:/spart_tb/iDUT/iRxQueue/*
+add wave -position insertpoint sim:/spart_tb/iDUT/iUART/*

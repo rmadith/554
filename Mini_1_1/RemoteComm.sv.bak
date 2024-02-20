@@ -1,10 +1,10 @@
-module RemoteComm(clk, rst_n, RX, TX, cmd, send_cmd, cmd_sent, resp_rdy, resp);
+module RemoteComm(clk, rst_n, RX, TX, cmd, send_cmd, cmd_sent, resp_rdy, resp, baud);
 
 input clk, rst_n;		// clock and active low reset
 input RX;				// serial data input
 input send_cmd;			// indicates to tranmit 24-bit command (cmd)
 input [7:0] cmd;		// 16-bit command
-
+input [12:0] baud;
 output TX;				// serial data output
 output reg cmd_sent;		// indicates transmission of command complete
 output resp_rdy;		// indicates 8-bit response has been received
@@ -30,7 +30,7 @@ state_t state, nxt_state;
 // Instantiate basic 8-bit UART transceiver //
 /////////////////////////////////////////////
 UART iUART(.clk(clk), .rst_n(rst_n), .RX(RX), .TX(TX), .tx_data(tx_data), .trmt(trmt),
-           .tx_done(tx_done), .rx_data(resp), .rx_rdy(resp_rdy), .clr_rx_rdy(resp_rdy));
+           .tx_done(tx_done), .rx_data(resp), .rx_rdy(resp_rdy), .clr_rx_rdy(resp_rdy) ,.baud(baud));
 
 //  <<< Your implementation here >>>
 

@@ -70,16 +70,16 @@ always_comb begin
     inter_DB_1 = 0; 
 
     case(inter_ioaddr)
-        00: begin if(iorw_n) begin 
+        2'b00: begin if(iorw_n) begin 
 		remove_rx = 1;
 		inter_databus = rx_bus;
 	    end
             else add_tx = 1;
 	    end
-        10: begin if(iorw_n) inter_databus = DB[7:0];
+        2'b10: begin if(iorw_n) inter_databus = DB[7:0];
             else if(!iorw_n) inter_DB_1 = databus;
 	    end
-        11 : begin if(iorw_n) inter_databus = DB[12:8];
+        2'b11: begin if(iorw_n) inter_databus = DB[12:8];
             else inter_DB_2 = databus[4:0];
 	    end
         default: inter_databus = {tx_queue, rx_queue};

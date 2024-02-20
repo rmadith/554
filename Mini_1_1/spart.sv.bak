@@ -76,13 +76,13 @@ always_comb begin
 	    end
             else add_tx = 1;
 	    end
-        01: inter_databus = {tx_queue, rx_queue};
         10: begin if(iorw_n) inter_databus = DB[7:0];
             else if(!iorw_n) inter_DB_1 = databus;
 	    end
         11: begin if(iorw_n) inter_databus = DB[12:8];
             else inter_DB_2 = databus[4:0];
 	    end
+        default: inter_databus = {tx_queue, rx_queue};
      endcase
 end
 
