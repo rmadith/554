@@ -1407,3 +1407,82 @@ run -all
 # All mini tests work! SPART by itself should not have issues. Hopefully (!?)
 # Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
 # Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sent and populated TX queue
+# All test passed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(201)
+#    Time: 392235 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 201
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Transmission from remote comm failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(142)
+#    Time: 43685 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 142
+# Compile of spart_tb.sv failed with 1 errors.
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file I:/win/554_git/Mini_1_1/work/@_opt/_deps (0:0 1:1 186 0 4623 1708469930 0x53:0x1)
+# ** Warning: (vsim-56) Problem with optimized design dependency file "I:/win/554_git/Mini_1_1/work/@_opt/_deps" - file open failed.
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Failed. Count is not equal to 8
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(185)
+#    Time: 392225 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 185

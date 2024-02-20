@@ -116,7 +116,7 @@ initial begin
     
 
 
-    // Official Test 1: Should test filling the TX queue to full
+    // Official Test 1: Should test RX queue to near full
 
     // Reseting to start official tests
     @(negedge clk) rst_n = 0;
@@ -146,8 +146,8 @@ initial begin
 
     count = 0;
     repeat(20) begin
-        iocs_n = 0;
-        iorw_n = 0;
+        //iocs_n = 0;
+        //iorw_n = 0;
         //$display("Hello");
 	if(!iDUT.rx_q_full) begin
 	    cmd = $random();
@@ -156,6 +156,7 @@ initial begin
 	    @(posedge cmd_sent);
             count = count + 1;
 	end
+        //iocs_n = 1;
     end
 
 
@@ -167,7 +168,26 @@ initial begin
 	$stop();
     end
 
+    // Official Test 2: Should test filling the TX queue to full
+    count = 0;
+    repeat (20) begin
+	iocs_n = 1;
+	iorw_n = 0
+        @(posedge clk) databus = $random();
+	if(!tx_q_full) count = count + 1;
+    end
 
+
+    if(count == 8) begin
+	$display("Test 2: Sucess! TX Queue populated");
+    end else begin
+	$display("Test 2: Failed. Count is not equal to 8");
+	$stop();
+    end
+
+
+
+    $display("All test passed");
     $stop();
 	    
 
