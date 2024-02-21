@@ -1,0 +1,29 @@
+module MiniLabO_tb();
+
+
+logic clk;
+logic [3:0] KEY;
+logic [9:0] LEDR, test_rand;
+
+
+
+
+MiniLab1 iDUT(.clk(clk),.KEY(KEY),.LEDR(),.GPIO());
+
+
+initial begin
+  clk = 0;
+  KEY = '1;
+  @(posedge clk);
+  KEY [0] = 0;  // Reset
+  @(negedge clk);
+  KEY [0] = 1;
+
+  repeat (100000) @(posedge clk);
+$stop();
+end
+
+
+always
+#5 clk = ~clk;
+endmodule

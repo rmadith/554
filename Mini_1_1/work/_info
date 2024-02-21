@@ -51,6 +51,9 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -80,33 +83,294 @@ R4
 R5
 n@_opt1
 R6
+R1
+T_opt2
+!s110 1708474815
+VQ2LGJTV;hIT[PD^KfM5`62
+04 11 4 work MiniLabO_tb fast 0
+=1-6c2b59d179dc-65d541be-1f4-1e14
+!s124 OEM10U19 
+R4
+R5
+n@_opt2
+R6
+valu
+Z7 !s110 1708474462
+!i10b 1
+!s100 Qa:FE8TO6XQ^8@;Y`]NaL2
+Il>UzAG:>b^S[l2U5dUeP23
+Z8 dI:/win/554_git/Mini_1_1
+Z9 w1707428831
+8I:/win/554_git/Mini_1_1/alu.v
+FI:/win/554_git/Mini_1_1/alu.v
+Z10 Fcommon_params.inc
+!i122 170
+L0 1 143
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z13 !s108 1708474461.000000
+!s107 common_params.inc|I:/win/554_git/Mini_1_1/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/alu.v|
+!i113 0
+Z14 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vbr_bool
+Z15 !s110 1708474461
+!i10b 1
+!s100 E26GMAO3hRS^Pm`2Z_NLV0
+IVBhT8CYm]oV7B7mSHg[YJ3
+R8
+R9
+8I:/win/554_git/Mini_1_1/br_bool.v
+FI:/win/554_git/Mini_1_1/br_bool.v
+!i122 168
+L0 1 64
+R11
+R12
+r1
+!s85 0
+31
+Z16 !s108 1708474460.000000
+!s107 I:/win/554_git/Mini_1_1/br_bool.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/br_bool.v|
+!i113 0
+R14
+R5
 vcircular_queue
-Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1708455374
+Z17 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z18 !s110 1708474459
 !i10b 1
 !s100 Gak84K>:eVBn?XkKYFCzc2
 IXSPG0m_mhaT@BSUJkN@g53
 S1
-Z8 dI:/win/554_git/Mini_1_1
+R8
 w1708455371
 8I:/win/554_git/Mini_1_1/circular_queue.sv
 FI:/win/554_git/Mini_1_1/circular_queue.sv
-!i122 28
+!i122 165
 L0 1 41
-Z9 VDg1SIo80bB@j0V0VzS_@n1
-Z10 OL;L;2021.2;73
+R11
+R12
 r1
 !s85 0
 31
-!s108 1708455374.000000
+!s108 1708474459.000000
 !s107 I:/win/554_git/Mini_1_1/circular_queue.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Mini_1_1/circular_queue.sv|
 !i113 0
-Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z19 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vcpu
+!s110 1708474460
+!i10b 1
+!s100 ?Z0;[UL:W9Ak>j>z<Dn1e1
+Iz;iQcQV_8MWlTAZ4:HT<l1
+R8
+R9
+8I:/win/554_git/Mini_1_1/cpu.v
+FI:/win/554_git/Mini_1_1/cpu.v
+!i122 167
+L0 1 113
+R11
+R12
+r1
+!s85 0
+31
+R16
+!s107 I:/win/554_git/Mini_1_1/cpu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/cpu.v|
+!i113 0
+R14
+R5
+vcpu_tb
+R15
+!i10b 1
+!s100 6`0mR8X`;XN3iJiE?57>a3
+Im5hk13`z3oR7T?FC25BXo1
+R8
+R9
+8I:/win/554_git/Mini_1_1/cpu_tb.v
+FI:/win/554_git/Mini_1_1/cpu_tb.v
+!i122 169
+L0 1 19
+R11
+R12
+r1
+!s85 0
+31
+R13
+!s107 I:/win/554_git/Mini_1_1/cpu_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/cpu_tb.v|
+!i113 0
+R14
+R5
+vDM
+R7
+!i10b 1
+!s100 UKWHH<3QmD`BR<Phik3zo3
+IM7b=PNfj_=Ii3CzOGYLaO3
+R8
+w1707432983
+8I:/win/554_git/Mini_1_1/data_mem.v
+FI:/win/554_git/Mini_1_1/data_mem.v
+!i122 171
+L0 1 32
+R11
+R12
+r1
+!s85 0
+31
+Z20 !s108 1708474462.000000
+!s107 I:/win/554_git/Mini_1_1/data_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/data_mem.v|
+!i113 0
+R14
+R5
+n@d@m
+vdst_mux
+!s110 1708474463
+!i10b 1
+!s100 :kE892UGSV5FgKWfaDcb?2
+I=dODh[cES^nWO1==0`0`40
+R8
+R9
+8I:/win/554_git/Mini_1_1/dst_mux.v
+FI:/win/554_git/Mini_1_1/dst_mux.v
+!i122 174
+Z21 L0 1 22
+R11
+R12
+r1
+!s85 0
+31
+Z22 !s108 1708474463.000000
+!s107 I:/win/554_git/Mini_1_1/dst_mux.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/dst_mux.v|
+!i113 0
+R14
+R5
+vid
+!s110 1708474736
+!i10b 1
+!s100 nk[7R]UDOJ`z=[VOXS>o@0
+IgVW?^OAdn?ELKA;fJJEYz0
+R8
+w1708474729
+8I:/win/554_git/Mini_1_1/id.v
+FI:/win/554_git/Mini_1_1/id.v
+R10
+!i122 183
+L0 1 368
+R11
+R12
+r1
+!s85 0
+31
+!s108 1708474735.000000
+!s107 common_params.inc|I:/win/554_git/Mini_1_1/id.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/id.v|
+!i113 0
+R14
+R5
+vIM
+R7
+!i10b 1
+!s100 gUd0j94gPO9hgK2JN_;Z^1
+Ibbo857Ph`PaA:_E9[M^2m1
+R8
+w1707432999
+8I:/win/554_git/Mini_1_1/instr_mem.v
+FI:/win/554_git/Mini_1_1/instr_mem.v
+!i122 172
+R21
+R11
+R12
+r1
+!s85 0
+31
+R20
+!s107 I:/win/554_git/Mini_1_1/instr_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/instr_mem.v|
+!i113 0
+R14
+R5
+n@i@m
+vMiniLab1
+Z23 !s110 1708474465
+!i10b 1
+!s100 j31:ffLMJA@MOKBiED`=:2
+I0dmO:jL;VglbJb4chlVaQ1
+R8
+w1708473464
+8I:/win/554_git/Mini_1_1/MiniLab1.v
+FI:/win/554_git/Mini_1_1/MiniLab1.v
+!i122 177
+L0 6 50
+R11
+R12
+r1
+!s85 0
+31
+Z24 !s108 1708474465.000000
+!s107 I:/win/554_git/Mini_1_1/MiniLab1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/MiniLab1.v|
+!i113 0
+R14
+R5
+n@mini@lab1
+vMiniLabO_tb
+R17
+!s110 1708474802
+!i10b 1
+!s100 E9:8>jA4=^hnm;3W_DjQk3
+I^GkNh4PNDI0ba4GRASO]53
+S1
+R8
+w1708474798
+8I:/win/554_git/Mini_1_1/mini0tb.sv
+FI:/win/554_git/Mini_1_1/mini0tb.sv
+!i122 184
+L0 1 29
+R11
+R12
+r1
+!s85 0
+31
+!s108 1708474801.000000
+!s107 I:/win/554_git/Mini_1_1/mini0tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Mini_1_1/mini0tb.sv|
+!i113 0
+R19
+R5
+n@mini@lab@o_tb
+vpc
+R23
+!i10b 1
+!s100 PE1Pom<0:Zl97>AaRaWK81
+IB71PzzKk7<JV?B>iMY:Nb1
+R8
+R9
+8I:/win/554_git/Mini_1_1/prgm_cntr.v
+FI:/win/554_git/Mini_1_1/prgm_cntr.v
+!i122 178
+L0 1 60
+R11
+R12
+r1
+!s85 0
+31
+R24
+!s107 I:/win/554_git/Mini_1_1/prgm_cntr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/prgm_cntr.v|
+!i113 0
+R14
 R5
 vRemoteComm
-R7
-!s110 1708467779
+R17
+Z25 !s110 1708474443
 !i10b 1
 !s100 l9CBRZ2;78HLYiRclLZg32
 I7g0NMoRo:0Hc]kV;@iJ`I1
@@ -115,23 +379,69 @@ R8
 w1708467734
 8I:/win/554_git/Mini_1_1/RemoteComm.sv
 FI:/win/554_git/Mini_1_1/RemoteComm.sv
-!i122 93
+!i122 158
 L0 1 101
-R9
-R10
+R11
+R12
 r1
 !s85 0
 31
-!s108 1708467778.000000
+!s108 1708474442.000000
 !s107 I:/win/554_git/Mini_1_1/RemoteComm.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Mini_1_1/RemoteComm.sv|
 !i113 0
-R11
+R19
 R5
 n@remote@comm
+vreset_synch
+R17
+!s110 1708474643
+!i10b 1
+!s100 n@m[9<dLH0b=7DcKH`KS52
+I[E0PDVY?j^b8g5:OWKn2e1
+S1
+R8
+R9
+8I:/win/554_git/Mini_1_1/reset_synch.sv
+FI:/win/554_git/Mini_1_1/reset_synch.sv
+!i122 180
+L0 1 17
+R11
+R12
+r1
+!s85 0
+31
+!s108 1708474642.000000
+!s107 I:/win/554_git/Mini_1_1/reset_synch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Mini_1_1/reset_synch.sv|
+!i113 0
+R19
+R5
+vrf
+Z26 !s110 1708474464
+!i10b 1
+!s100 [`c4cIEQDIIAiM@9g0YE`2
+IXWJR_>73O2E4zm=l^_N<c0
+R8
+w1707432958
+8I:/win/554_git/Mini_1_1/rf.v
+FI:/win/554_git/Mini_1_1/rf.v
+!i122 176
+L0 1 67
+R11
+R12
+r1
+!s85 0
+31
+!s108 1708474464.000000
+!s107 I:/win/554_git/Mini_1_1/rf.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/rf.v|
+!i113 0
+R14
+R5
 vspart
-R7
-!s110 1708461870
+R17
+!s110 1708474455
 !i10b 1
 !s100 ]ZNM_D3kgM`dzk>9z0::G0
 INPFFSEa8^^n:0ZkI2^h>42
@@ -140,22 +450,22 @@ R8
 w1708461860
 8I:/win/554_git/Mini_1_1/spart.sv
 FI:/win/554_git/Mini_1_1/spart.sv
-!i122 64
+!i122 163
 L0 20 71
-R9
-R10
+R11
+R12
 r1
 !s85 0
 31
-!s108 1708461870.000000
+!s108 1708474455.000000
 !s107 I:/win/554_git/Mini_1_1/spart.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Mini_1_1/spart.sv|
 !i113 0
-R11
+R19
 R5
 vspart_tb
-R7
-!s110 1708470554
+R17
+R18
 !i10b 1
 !s100 fnYfI2_c:o_j01j2zG=Nc3
 I5KNKVLTOePoOT;ie<0?CU1
@@ -164,22 +474,45 @@ R8
 w1708470552
 8I:/win/554_git/Mini_1_1/spart_tb.sv
 FI:/win/554_git/Mini_1_1/spart_tb.sv
-!i122 104
+!i122 164
 L0 1 199
-R9
-R10
+R11
+R12
 r1
 !s85 0
 31
-!s108 1708470553.000000
+!s108 1708474458.000000
 !s107 I:/win/554_git/Mini_1_1/spart_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Mini_1_1/spart_tb.sv|
 !i113 0
+R19
+R5
+vsrc_mux
+R26
+!i10b 1
+!s100 YfY5>1NKa[kU71O7UUT>21
+ITEHdYWoN[_mnBcd3=S:0Y2
+R8
+R9
+8I:/win/554_git/Mini_1_1/src_mux.v
+FI:/win/554_git/Mini_1_1/src_mux.v
+R10
+!i122 175
+L0 1 120
 R11
+R12
+r1
+!s85 0
+31
+R22
+!s107 common_params.inc|I:/win/554_git/Mini_1_1/src_mux.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Mini_1_1/src_mux.v|
+!i113 0
+R14
 R5
 vUART
-R7
-!s110 1708459172
+R17
+R25
 !i10b 1
 !s100 XORQ1nIF_:gHEh7hH2aVc3
 IfNj1aQ@]0L3Kac9XzQh>I3
@@ -188,23 +521,23 @@ R8
 w1708459096
 8I:/win/554_git/Mini_1_1/UART.sv
 FI:/win/554_git/Mini_1_1/UART.sv
-!i122 44
+!i122 159
 L0 1 26
-R9
-R10
+R11
+R12
 r1
 !s85 0
 31
-!s108 1708459171.000000
+Z27 !s108 1708474443.000000
 !s107 I:/win/554_git/Mini_1_1/UART.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Mini_1_1/UART.sv|
 !i113 0
-R11
+R19
 R5
 n@u@a@r@t
 vUART_rx
-R7
-!s110 1708468730
+R17
+Z28 !s110 1708474444
 !i10b 1
 !s100 `lPTd1QAb>;IY_mcVAE[I2
 IP:AhG6Z7>iS;_WA>lDRdo0
@@ -213,23 +546,23 @@ R8
 w1708467776
 8I:/win/554_git/Mini_1_1/UART_rx.sv
 FI:/win/554_git/Mini_1_1/UART_rx.sv
-!i122 98
+!i122 160
 L0 1 110
-R9
-R10
+R11
+R12
 r1
 !s85 0
 31
-!s108 1708468729.000000
+R27
 !s107 I:/win/554_git/Mini_1_1/UART_rx.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Mini_1_1/UART_rx.sv|
 !i113 0
-R11
+R19
 R5
 n@u@a@r@t_rx
 vUART_tx
-R7
-!s110 1708459249
+R17
+R28
 !i10b 1
 !s100 OeFSLfMK9lOH:aKaF>z2A3
 I3Ngcgjm<a]22b8nNaLn]73
@@ -238,23 +571,23 @@ R8
 w1708459207
 8I:/win/554_git/Mini_1_1/UART_tx.sv
 FI:/win/554_git/Mini_1_1/UART_tx.sv
-!i122 47
+!i122 161
 L0 1 117
-R9
-R10
+R11
+R12
 r1
 !s85 0
 31
-!s108 1708459249.000000
+!s108 1708474444.000000
 !s107 I:/win/554_git/Mini_1_1/UART_tx.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Mini_1_1/UART_tx.sv|
 !i113 0
-R11
+R19
 R5
 n@u@a@r@t_tx
 vUART_wrapper
-R7
-!s110 1707863480
+R17
+!s110 1708474446
 !i10b 1
 !s100 eSA>SBjXbLQSPO3gYKPnf2
 IFzj3I@Q1fl1NmgMYgZ?FQ3
@@ -263,17 +596,17 @@ R8
 w1702163064
 8I:/win/554_git/Mini_1_1/UART_wrapper.sv
 FI:/win/554_git/Mini_1_1/UART_wrapper.sv
-!i122 25
+!i122 162
 L0 1 81
-R9
-R10
+R11
+R12
 r1
 !s85 0
 31
-!s108 1707863479.000000
+!s108 1708474445.000000
 !s107 I:/win/554_git/Mini_1_1/UART_wrapper.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Mini_1_1/UART_wrapper.sv|
 !i113 0
-R11
+R19
 R5
 n@u@a@r@t_wrapper
