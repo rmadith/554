@@ -47,13 +47,6 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	MiniLab1
 
-} {} {}} I:/win/554_git/Mini_1_1/spart.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/spart.sv
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module spart
-
-Top level modules:
-	spart
-
 } {} {}} I:/win/554_git/Mini_1_1/id.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/id.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module id
@@ -75,13 +68,6 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	IM
 
-} {} {}} I:/win/554_git/Mini_1_1/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/UART_wrapper.sv
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module UART_wrapper
-
-Top level modules:
-	UART_wrapper
-
 } {} {}} I:/win/554_git/Mini_1_1/UART.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/UART.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module UART
@@ -89,12 +75,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	UART
 
-} {} {}} I:/win/554_git/Mini_1_1/data_mem.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/data_mem.v
+} {} {}} I:/win/554_git/Mini_1_1/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/UART_wrapper.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module DM
+-- Compiling module UART_wrapper
 
 Top level modules:
-	DM
+	UART_wrapper
 
 } {} {}} I:/win/554_git/Mini_1_1/rf.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/rf.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -103,6 +89,13 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	rf
 
+} {} {}} I:/win/554_git/Mini_1_1/data_mem.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/data_mem.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module DM
+
+Top level modules:
+	DM
+
 } {} {}} I:/win/554_git/Mini_1_1/src_mux.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/src_mux.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module src_mux
@@ -110,19 +103,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	src_mux
 
-} {} {}} I:/win/554_git/Mini_1_1/spart_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/spart_tb.sv
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module spart_tb
-
-Top level modules:
-	spart_tb
-
 } {} {}} I:/win/554_git/Mini_1_1/alu.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/alu.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module alu
 
 Top level modules:
 	alu
+
+} {} {}} I:/win/554_git/Mini_1_1/spart_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/spart_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module spart_tb
+
+Top level modules:
+	spart_tb
 
 } {} {}} I:/win/554_git/Mini_1_1/cpu_tb.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/cpu_tb.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -138,18 +131,18 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	br_bool
 
-} {} {}} I:/win/554_git/Mini_1_1/cpu.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/cpu.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module cpu
-
-Top level modules:
-	cpu
-
 } {} {}} I:/win/554_git/Mini_1_1/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/UART_rx.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module UART_rx
 
 Top level modules:
 	UART_rx
+
+} {} {}} I:/win/554_git/Mini_1_1/cpu.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/cpu.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module cpu
+
+Top level modules:
+	cpu
 
 } {} {}}

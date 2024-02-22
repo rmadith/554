@@ -16,6 +16,8 @@ RemoteComm comms(.clk(clk), .rst_n(KEY[0]), .RX(RX), .TX(TX), .cmd(cmd), .send_c
 
 initial begin
   clk = 0;
+  send_cmd = 0;
+  cmd = '0;
   KEY = '1;
   @(posedge clk);
   KEY [0] = 0;  // Reset

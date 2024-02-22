@@ -16,13 +16,22 @@ RemoteComm comms(.clk(clk), .rst_n(KEY[0]), .RX(RX), .TX(TX), .cmd(cmd), .send_c
 
 initial begin
   clk = 0;
+  send_cmd = 0;
+  cmd = '0;
   KEY = '1;
   @(posedge clk);
   KEY [0] = 0;  // Reset
   @(negedge clk);
   KEY [0] = 1;
 
-  repeat (10000) @(posedge clk);
+  repeat(18) @(posedge resp_rdy);
+
+  cmd = 8'hAC;
+  @(posedge clk) send_cmd = 1;
+  @(posedge clk) send_cmd = 0;
+
+
+  repeat (100000) @(posedge clk);
   $stop();
 end
 

@@ -67,7 +67,7 @@ always_comb begin
     inter_trmt = 0;
     inter_rm = 0;
     case(state)
-	IDLE: if(!tx_q_empty) begin
+	IDLE: if(!tx_q_empty) begin	// when the TX queue is not empty we start to transmit
 		inter_trmt = 1;
 		nxt_state = transmitting;
 	      end

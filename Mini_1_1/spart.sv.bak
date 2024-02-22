@@ -90,9 +90,9 @@ logic chng_sig1, chng_sig2;
 always @(posedge clk, negedge rst_n) 
      if(!rst_n)
 	DB = 'h1b2;
-     else if(chng_sig1)
-	DB[12:8] = databus[4:0];
      else if(chng_sig2)
+	DB[12:8] = databus[4:0];
+     else if(chng_sig1)
 	DB[7:0] = databus;
 
 
