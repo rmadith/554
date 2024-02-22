@@ -4,16 +4,16 @@ KEY[0] => KEY[0].IN1
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
-LEDR[0] <= <GND>
-LEDR[1] <= <GND>
-LEDR[2] <= <GND>
-LEDR[3] <= <GND>
-LEDR[4] <= <GND>
-LEDR[5] <= <GND>
-LEDR[6] <= <GND>
-LEDR[7] <= <GND>
-LEDR[8] <= <GND>
-LEDR[9] <= <GND>
+LEDR[0] << <GND>
+LEDR[1] << <GND>
+LEDR[2] << <GND>
+LEDR[3] << <GND>
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
 GPIO[0] <> <UNC>
 GPIO[1] <> <UNC>
 GPIO[2] <> <UNC>
@@ -67,32 +67,13 @@ iocs_n => inter_ioaddr[0].OE
 iocs_n => inter_ioaddr[1].OE
 iocs_n => databus.IN0
 iorw_n => databus.IN1
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_2.OUTPUTSELECT
-iorw_n => inter_DB_2.OUTPUTSELECT
-iorw_n => inter_DB_2.OUTPUTSELECT
-iorw_n => inter_DB_2.OUTPUTSELECT
-iorw_n => inter_DB_2.OUTPUTSELECT
 iorw_n => Mux8.IN1
 iorw_n => Mux8.IN2
 iorw_n => Mux8.IN3
 iorw_n => remove_rx.DATAB
 iorw_n => add_tx.DATAB
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
-iorw_n => inter_DB_1.OUTPUTSELECT
+iorw_n => chng_sig2.DATAB
+iorw_n => chng_sig1.DATAB
 tx_q_full <= circular_queue:iTxQueue.q_full
 rx_q_empty <= circular_queue:iRxQueue.q_empty
 ioaddr[0] => inter_ioaddr[0].DATAIN
@@ -340,6 +321,7 @@ clk => baud_cnt[8].CLK
 clk => baud_cnt[9].CLK
 clk => baud_cnt[10].CLK
 clk => baud_cnt[11].CLK
+clk => baud_cnt[12].CLK
 clk => bit_cnt[0].CLK
 clk => bit_cnt[1].CLK
 clk => bit_cnt[2].CLK
@@ -372,6 +354,7 @@ rst_n => baud_cnt[8].PRESET
 rst_n => baud_cnt[9].ACLR
 rst_n => baud_cnt[10].ACLR
 rst_n => baud_cnt[11].ACLR
+rst_n => baud_cnt[12].ACLR
 TX <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 trmt => tx_done.OUTPUTSELECT
 trmt => nxt_state.DATAB
@@ -397,7 +380,7 @@ baud[8] => baud_cnt.DATAB
 baud[9] => baud_cnt.DATAB
 baud[10] => baud_cnt.DATAB
 baud[11] => baud_cnt.DATAB
-baud[12] => ~NO_FANOUT~
+baud[12] => baud_cnt.DATAB
 
 
 |MiniLab1|spart:iSpart|UART:iUART|UART_rx:iRX
@@ -2134,9 +2117,6 @@ addr[11] => data_mem.RADDR11
 addr[12] => data_mem.waddr_a[12].DATAIN
 addr[12] => data_mem.WADDR12
 addr[12] => data_mem.RADDR12
-addr[13] => ~NO_FANOUT~
-addr[14] => ~NO_FANOUT~
-addr[15] => ~NO_FANOUT~
 re => always0.IN0
 re => always1.IN0
 we => always1.IN1

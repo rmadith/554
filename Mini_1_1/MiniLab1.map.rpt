@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiniLab1
-Tue Feb 20 17:58:05 2024
+Thu Feb 22 03:46:00 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -19,7 +19,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
  11. Inverted Register Statistics
  12. Registers Packed Into Inferred Megafunctions
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl_0|altsyncram_q9q1:auto_generated
+ 14. Source assignments for cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl_0|altsyncram_v2u1:auto_generated
  15. Source assignments for cpu:iCPU|rf:iRF|altsyncram:mem0_rtl_0|altsyncram_00q1:auto_generated
  16. Source assignments for cpu:iCPU|rf:iRF|altsyncram:mem1_rtl_0|altsyncram_00q1:auto_generated
  17. Source assignments for cpu:iCPU|IM:iIM|altsyncram:instr_mem_rtl_0|altsyncram_0fc1:auto_generated
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Feb 20 17:58:05 2024          ;
+; Analysis & Synthesis Status     ; Successful - Thu Feb 22 03:46:00 2024          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; MiniLab1                                       ;
 ; Top-level Entity Name           ; MiniLab1                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 433                                            ;
+; Total registers                 ; 435                                            ;
 ; Total pins                      ; 51                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 393,728                                        ;
@@ -216,6 +216,7 @@ https://fpgasoftware.intel.com/eula.
 ; cpu.v                            ; yes             ; User Verilog HDL File                                 ; I:/win/554_git/Mini_1_1/cpu.v                                                   ;         ;
 ; br_bool.v                        ; yes             ; User Verilog HDL File                                 ; I:/win/554_git/Mini_1_1/br_bool.v                                               ;         ;
 ; alu.v                            ; yes             ; User Verilog HDL File                                 ; I:/win/554_git/Mini_1_1/alu.v                                                   ;         ;
+; data_mem.hex                     ; yes             ; Auto-Found Hexadecimal (Intel-Format) File            ; I:/win/554_git/Mini_1_1/data_mem.hex                                            ;         ;
 ; test.hex                         ; yes             ; Auto-Found Hexadecimal (Intel-Format) File            ; I:/win/554_git/Mini_1_1/test.hex                                                ;         ;
 ; common_params.inc                ; yes             ; Auto-Found Unspecified File                           ; I:/win/554_git/Mini_1_1/common_params.inc                                       ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
@@ -227,7 +228,8 @@ https://fpgasoftware.intel.com/eula.
 ; altrom.inc                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_q9q1.tdf           ; yes             ; Auto-Generated Megafunction                           ; I:/win/554_git/Mini_1_1/db/altsyncram_q9q1.tdf                                  ;         ;
+; db/altsyncram_v2u1.tdf           ; yes             ; Auto-Generated Megafunction                           ; I:/win/554_git/Mini_1_1/db/altsyncram_v2u1.tdf                                  ;         ;
+; db/MiniLab1.ram0_DM_89a.hdl.mif  ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; I:/win/554_git/Mini_1_1/db/MiniLab1.ram0_DM_89a.hdl.mif                         ;         ;
 ; db/altsyncram_00q1.tdf           ; yes             ; Auto-Generated Megafunction                           ; I:/win/554_git/Mini_1_1/db/altsyncram_00q1.tdf                                  ;         ;
 ; db/altsyncram_0fc1.tdf           ; yes             ; Auto-Generated Megafunction                           ; I:/win/554_git/Mini_1_1/db/altsyncram_0fc1.tdf                                  ;         ;
 ; db/MiniLab1.ram0_IM_936.hdl.mif  ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; I:/win/554_git/Mini_1_1/db/MiniLab1.ram0_IM_936.hdl.mif                         ;         ;
@@ -241,16 +243,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 398       ;
+; Estimate of Logic utilization (ALMs needed) ; 401       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 566       ;
+; Combinational ALUT usage for logic          ; 553       ;
 ;     -- 7 input functions                    ; 36        ;
-;     -- 6 input functions                    ; 138       ;
-;     -- 5 input functions                    ; 159       ;
-;     -- 4 input functions                    ; 66        ;
-;     -- <=3 input functions                  ; 167       ;
+;     -- 6 input functions                    ; 157       ;
+;     -- 5 input functions                    ; 118       ;
+;     -- 4 input functions                    ; 56        ;
+;     -- <=3 input functions                  ; 186       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 433       ;
+; Dedicated logic registers                   ; 435       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 51        ;
 ; Total MLAB memory bits                      ; 0         ;
@@ -259,9 +261,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 513       ;
-; Total fan-out                               ; 5118      ;
-; Average fan-out                             ; 4.21      ;
+; Maximum fan-out                             ; 515       ;
+; Total fan-out                               ; 5062      ;
+; Average fan-out                             ; 4.20      ;
 +---------------------------------------------+-----------+
 
 
@@ -270,11 +272,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |MiniLab1                                    ; 566 (15)            ; 433 (0)                   ; 393728            ; 0          ; 51   ; 0            ; |MiniLab1                                                                                        ; MiniLab1        ; work         ;
-;    |cpu:iCPU|                                ; 337 (3)             ; 216 (0)                   ; 393728            ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU                                                                               ; cpu             ; work         ;
-;       |DM:iDM|                               ; 0 (0)               ; 0 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|DM:iDM                                                                        ; DM              ; work         ;
+; |MiniLab1                                    ; 553 (12)            ; 435 (0)                   ; 393728            ; 0          ; 51   ; 0            ; |MiniLab1                                                                                        ; MiniLab1        ; work         ;
+;    |cpu:iCPU|                                ; 339 (2)             ; 216 (0)                   ; 393728            ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU                                                                               ; cpu             ; work         ;
+;       |DM:iDM|                               ; 2 (2)               ; 0 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|DM:iDM                                                                        ; DM              ; work         ;
 ;          |altsyncram:data_mem_rtl_0|         ; 0 (0)               ; 0 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl_0                                              ; altsyncram      ; work         ;
-;             |altsyncram_q9q1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl_0|altsyncram_q9q1:auto_generated               ; altsyncram_q9q1 ; work         ;
+;             |altsyncram_v2u1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 131072            ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl_0|altsyncram_v2u1:auto_generated               ; altsyncram_v2u1 ; work         ;
 ;       |IM:iIM|                               ; 16 (0)              ; 1 (0)                     ; 262144            ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|IM:iIM                                                                        ; IM              ; work         ;
 ;          |altsyncram:instr_mem_rtl_0|        ; 16 (0)              ; 1 (0)                     ; 262144            ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|IM:iIM|altsyncram:instr_mem_rtl_0                                             ; altsyncram      ; work         ;
 ;             |altsyncram_0fc1:auto_generated| ; 16 (0)              ; 1 (1)                     ; 262144            ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|IM:iIM|altsyncram:instr_mem_rtl_0|altsyncram_0fc1:auto_generated              ; altsyncram_0fc1 ; work         ;
@@ -282,7 +284,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |alu:iALU|                             ; 160 (160)           ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|alu:iALU                                                                      ; alu             ; work         ;
 ;       |br_bool:iBRL|                         ; 9 (9)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|br_bool:iBRL                                                                  ; br_bool         ; work         ;
 ;       |dst_mux:iDSTMUX|                      ; 17 (17)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|dst_mux:iDSTMUX                                                               ; dst_mux         ; work         ;
-;       |id:iID|                               ; 43 (43)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|id:iID                                                                        ; id              ; work         ;
+;       |id:iID|                               ; 44 (44)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|id:iID                                                                        ; id              ; work         ;
 ;       |pc:iPC|                               ; 16 (16)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|pc:iPC                                                                        ; pc              ; work         ;
 ;       |rf:iRF|                               ; 6 (6)               ; 0 (0)                     ; 512               ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|rf:iRF                                                                        ; rf              ; work         ;
 ;          |altsyncram:mem0_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 256               ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|rf:iRF|altsyncram:mem0_rtl_0                                                  ; altsyncram      ; work         ;
@@ -291,12 +293,12 @@ https://fpgasoftware.intel.com/eula.
 ;             |altsyncram_00q1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 256               ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|rf:iRF|altsyncram:mem1_rtl_0|altsyncram_00q1:auto_generated                   ; altsyncram_00q1 ; work         ;
 ;       |src_mux:ISRCMUX|                      ; 67 (67)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX                                                               ; src_mux         ; work         ;
 ;    |reset_synch:rst|                         ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|reset_synch:rst                                                                        ; reset_synch     ; work         ;
-;    |spart:iSpart|                            ; 214 (32)            ; 215 (13)                  ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart                                                                           ; spart           ; work         ;
-;       |UART:iUART|                           ; 97 (0)              ; 58 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart|UART:iUART                                                                ; UART            ; work         ;
-;          |UART_rx:iRX|                       ; 53 (53)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart|UART:iUART|UART_rx:iRX                                                    ; UART_rx         ; work         ;
-;          |UART_tx:iTX|                       ; 44 (44)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart|UART:iUART|UART_tx:iTX                                                    ; UART_tx         ; work         ;
+;    |spart:iSpart|                            ; 202 (23)            ; 217 (14)                  ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart                                                                           ; spart           ; work         ;
+;       |UART:iUART|                           ; 93 (0)              ; 59 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart|UART:iUART                                                                ; UART            ; work         ;
+;          |UART_rx:iRX|                       ; 54 (54)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart|UART:iUART|UART_rx:iRX                                                    ; UART_rx         ; work         ;
+;          |UART_tx:iTX|                       ; 39 (39)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart|UART:iUART|UART_tx:iTX                                                    ; UART_tx         ; work         ;
 ;       |circular_queue:iRxQueue|              ; 43 (43)             ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart|circular_queue:iRxQueue                                                   ; circular_queue  ; work         ;
-;       |circular_queue:iTxQueue|              ; 42 (42)             ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart|circular_queue:iTxQueue                                                   ; circular_queue  ; work         ;
+;       |circular_queue:iTxQueue|              ; 43 (43)             ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniLab1|spart:iSpart|circular_queue:iTxQueue                                                   ; circular_queue  ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -306,7 +308,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+---------------------------------+
 ; Name                                                                                 ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                             ;
 +--------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+---------------------------------+
-; cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl_0|altsyncram_q9q1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 8192         ; 16           ; 8192         ; 16           ; 131072 ; None                            ;
+; cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl_0|altsyncram_v2u1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 8192         ; 16           ; 8192         ; 16           ; 131072 ; db/MiniLab1.ram0_DM_89a.hdl.mif ;
 ; cpu:iCPU|IM:iIM|altsyncram:instr_mem_rtl_0|altsyncram_0fc1:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 16536        ; 16           ; --           ; --           ; 264576 ; db/MiniLab1.ram0_IM_936.hdl.mif ;
 ; cpu:iCPU|rf:iRF|altsyncram:mem0_rtl_0|altsyncram_00q1:auto_generated|ALTSYNCRAM      ; AUTO ; Simple Dual Port ; 16           ; 16           ; 16           ; 16           ; 256    ; None                            ;
 ; cpu:iCPU|rf:iRF|altsyncram:mem1_rtl_0|altsyncram_00q1:auto_generated|ALTSYNCRAM      ; AUTO ; Simple Dual Port ; 16           ; 16           ; 16           ; 16           ; 256    ; None                            ;
@@ -328,12 +330,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 433   ;
+; Total registers                              ; 435   ;
 ; Number of registers using Synchronous Clear  ; 40    ;
-; Number of registers using Synchronous Load   ; 48    ;
-; Number of registers using Asynchronous Clear ; 105   ;
+; Number of registers using Synchronous Load   ; 56    ;
+; Number of registers using Asynchronous Clear ; 107   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 217   ;
+; Number of registers using Clock Enable       ; 225   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -358,8 +360,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spart:iSpart|DB[1]                               ; 4       ;
 ; spart:iSpart|UART:iUART|UART_tx:iTX|shift_reg[3] ; 1       ;
 ; spart:iSpart|UART:iUART|UART_tx:iTX|shift_reg[4] ; 1       ;
-; cpu:iCPU|id:iID|instr_IM_ID[13]                  ; 20      ;
-; cpu:iCPU|id:iID|instr_IM_ID[15]                  ; 21      ;
+; cpu:iCPU|id:iID|instr_IM_ID[15]                  ; 20      ;
+; cpu:iCPU|id:iID|instr_IM_ID[13]                  ; 19      ;
 ; cpu:iCPU|id:iID|instr_IM_ID[12]                  ; 24      ;
 ; spart:iSpart|UART:iUART|UART_tx:iTX|shift_reg[5] ; 1       ;
 ; spart:iSpart|UART:iUART|UART_tx:iTX|shift_reg[6] ; 1       ;
@@ -389,34 +391,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MiniLab1|spart:iSpart|UART:iUART|UART_tx:iTX|baud_cnt[9]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|p1_ID_EX[8]             ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|p0_ID_EX[13]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MiniLab1|spart:iSpart|UART:iUART|UART_tx:iTX|baud_cnt[2]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|p1_ID_EX[2]             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|p0_ID_EX[4]             ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MiniLab1|spart:iSpart|UART:iUART|UART_rx:iRX|bit_cnt[3]   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MiniLab1|spart:iSpart|UART:iUART|UART_tx:iTX|bit_cnt[0]   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MiniLab1|spart:iSpart|UART:iUART|UART_tx:iTX|bit_cnt[3]   ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MiniLab1|cpu:iCPU|dst_mux:iDSTMUX|rf_w_data_DM_WB[14]     ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MiniLab1|cpu:iCPU|dst_mux:iDSTMUX|rf_w_data_DM_WB[0]      ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |MiniLab1|spart:iSpart|UART:iUART|UART_rx:iRX|baud_cnt[3]  ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |MiniLab1|spart:iSpart|UART:iUART|UART_rx:iRX|baud_cnt[1]  ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |MiniLab1|spart:iSpart|UART:iUART|UART_tx:iTX|baud_cnt[1]  ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MiniLab1|spart:iSpart|UART:iUART|UART_tx:iTX|shift_reg[3] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MiniLab1|spart:iSpart|UART:iUART|UART_tx:iTX|shift_reg[4] ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|RF_p0[8]                ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|alu:iALU|shft_r2[6]                     ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|src0[4]                 ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MiniLab1|spart:iSpart|Mux1                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |MiniLab1|spart:iSpart|Mux4                                ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MiniLab1|spart:iSpart|inter_DB_1[5]                       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|src0[10]                ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; No         ; |MiniLab1|cpu:iCPU|id:iID|Selector0                        ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|src1[8]                 ;
-; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|alu:iALU|dst[10]                        ;
-; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|alu:iALU|dst[5]                         ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|alu:iALU|dst[3]                         ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|alu:iALU|dst[15]                        ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|alu:iALU|shft_r2[4]                     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|src0[8]                 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MiniLab1|spart:iSpart|Mux2                                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |MiniLab1|spart:iSpart|Mux7                                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|src0[9]                 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; No         ; |MiniLab1|cpu:iCPU|id:iID|Selector1                        ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|src_mux:ISRCMUX|src1[9]                 ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|alu:iALU|dst[9]                         ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|alu:iALU|dst[4]                         ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|alu:iALU|dst[0]                         ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |MiniLab1|cpu:iCPU|alu:iALU|dst[14]                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
-; Source assignments for cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl_0|altsyncram_q9q1:auto_generated ;
+; Source assignments for cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl_0|altsyncram_v2u1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------+
 ; Assignment                      ; Value              ; From ; To                                ;
 +---------------------------------+--------------------+------+-----------------------------------+
@@ -473,62 +474,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +--------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl_0 ;
-+------------------------------------+----------------------+--------------------------------+
-; Parameter Name                     ; Value                ; Type                           ;
-+------------------------------------+----------------------+--------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
-; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                        ;
-; WIDTH_A                            ; 16                   ; Untyped                        ;
-; WIDTHAD_A                          ; 13                   ; Untyped                        ;
-; NUMWORDS_A                         ; 8192                 ; Untyped                        ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                        ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
-; WIDTH_B                            ; 16                   ; Untyped                        ;
-; WIDTHAD_B                          ; 13                   ; Untyped                        ;
-; NUMWORDS_B                         ; 8192                 ; Untyped                        ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
-; RDCONTROL_REG_B                    ; CLOCK0               ; Untyped                        ;
-; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                        ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                        ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                        ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                        ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
-; BYTE_SIZE                          ; 8                    ; Untyped                        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
-; INIT_FILE                          ; UNUSED               ; Untyped                        ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
-; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                        ;
-; CBXI_PARAMETER                     ; altsyncram_q9q1      ; Untyped                        ;
-+------------------------------------+----------------------+--------------------------------+
++------------------------------------+---------------------------------+---------------------+
+; Parameter Name                     ; Value                           ; Type                ;
++------------------------------------+---------------------------------+---------------------+
+; BYTE_SIZE_BLOCK                    ; 8                               ; Untyped             ;
+; AUTO_CARRY_CHAINS                  ; ON                              ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                             ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                ; ON                              ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                             ; IGNORE_CASCADE      ;
+; WIDTH_BYTEENA                      ; 1                               ; Untyped             ;
+; OPERATION_MODE                     ; DUAL_PORT                       ; Untyped             ;
+; WIDTH_A                            ; 16                              ; Untyped             ;
+; WIDTHAD_A                          ; 13                              ; Untyped             ;
+; NUMWORDS_A                         ; 8192                            ; Untyped             ;
+; OUTDATA_REG_A                      ; UNREGISTERED                    ; Untyped             ;
+; ADDRESS_ACLR_A                     ; NONE                            ; Untyped             ;
+; OUTDATA_ACLR_A                     ; NONE                            ; Untyped             ;
+; WRCONTROL_ACLR_A                   ; NONE                            ; Untyped             ;
+; INDATA_ACLR_A                      ; NONE                            ; Untyped             ;
+; BYTEENA_ACLR_A                     ; NONE                            ; Untyped             ;
+; WIDTH_B                            ; 16                              ; Untyped             ;
+; WIDTHAD_B                          ; 13                              ; Untyped             ;
+; NUMWORDS_B                         ; 8192                            ; Untyped             ;
+; INDATA_REG_B                       ; CLOCK1                          ; Untyped             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                          ; Untyped             ;
+; RDCONTROL_REG_B                    ; CLOCK0                          ; Untyped             ;
+; ADDRESS_REG_B                      ; CLOCK0                          ; Untyped             ;
+; OUTDATA_REG_B                      ; UNREGISTERED                    ; Untyped             ;
+; BYTEENA_REG_B                      ; CLOCK1                          ; Untyped             ;
+; INDATA_ACLR_B                      ; NONE                            ; Untyped             ;
+; WRCONTROL_ACLR_B                   ; NONE                            ; Untyped             ;
+; ADDRESS_ACLR_B                     ; NONE                            ; Untyped             ;
+; OUTDATA_ACLR_B                     ; NONE                            ; Untyped             ;
+; RDCONTROL_ACLR_B                   ; NONE                            ; Untyped             ;
+; BYTEENA_ACLR_B                     ; NONE                            ; Untyped             ;
+; WIDTH_BYTEENA_A                    ; 1                               ; Untyped             ;
+; WIDTH_BYTEENA_B                    ; 1                               ; Untyped             ;
+; RAM_BLOCK_TYPE                     ; AUTO                            ; Untyped             ;
+; BYTE_SIZE                          ; 8                               ; Untyped             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                        ; Untyped             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ            ; Untyped             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ            ; Untyped             ;
+; INIT_FILE                          ; db/MiniLab1.ram0_DM_89a.hdl.mif ; Untyped             ;
+; INIT_FILE_LAYOUT                   ; PORT_A                          ; Untyped             ;
+; MAXIMUM_DEPTH                      ; 0                               ; Untyped             ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                          ; Untyped             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                          ; Untyped             ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                          ; Untyped             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                          ; Untyped             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                 ; Untyped             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                 ; Untyped             ;
+; ENABLE_ECC                         ; FALSE                           ; Untyped             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                           ; Untyped             ;
+; WIDTH_ECCSTATUS                    ; 3                               ; Untyped             ;
+; DEVICE_FAMILY                      ; Cyclone V                       ; Untyped             ;
+; CBXI_PARAMETER                     ; altsyncram_v2u1                 ; Untyped             ;
++------------------------------------+---------------------------------+---------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -777,14 +778,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:iCPU"                                                                                                                                       ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                        ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-; rdata ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "rdata[9..8]" will be connected to GND. ;
-; wdata ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "wdata[15..8]" have no fanouts                     ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cpu:iCPU"                                                                                                                         ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                    ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; rdata[9..8] ; Input  ; Info     ; Stuck at GND                                                                                                               ;
+; wdata       ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "wdata[15..8]" have no fanouts ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------+
@@ -830,28 +831,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 433                         ;
-;     CLR               ; 45                          ;
+; arriav_ff             ; 435                         ;
+;     CLR               ; 39                          ;
 ;     ENA               ; 157                         ;
 ;     ENA CLR           ; 44                          ;
-;     ENA CLR SLD       ; 16                          ;
+;     ENA CLR SLD       ; 24                          ;
 ;     SCLR              ; 8                           ;
 ;     SCLR SLD          ; 32                          ;
 ;     plain             ; 131                         ;
 ; arriav_io_obuf        ; 36                          ;
-; arriav_lcell_comb     ; 567                         ;
-;     arith             ; 41                          ;
-;         1 data inputs ; 41                          ;
+; arriav_lcell_comb     ; 554                         ;
+;     arith             ; 42                          ;
+;         1 data inputs ; 42                          ;
 ;     extend            ; 36                          ;
 ;         7 data inputs ; 36                          ;
-;     normal            ; 464                         ;
+;     normal            ; 450                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 30                          ;
-;         3 data inputs ; 68                          ;
-;         4 data inputs ; 66                          ;
-;         5 data inputs ; 159                         ;
-;         6 data inputs ; 138                         ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 80                          ;
+;         4 data inputs ; 56                          ;
+;         5 data inputs ; 118                         ;
+;         6 data inputs ; 157                         ;
 ;     shared            ; 26                          ;
 ;         0 data inputs ; 2                           ;
 ;         2 data inputs ; 8                           ;
@@ -860,7 +861,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 80                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.50                       ;
-; Average LUT depth     ; 5.06                        ;
+; Average LUT depth     ; 4.97                        ;
 +-----------------------+-----------------------------+
 
 
@@ -879,7 +880,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Feb 20 17:57:47 2024
+    Info: Processing started: Thu Feb 22 03:45:41 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniLab1 -c MiniLab1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -927,31 +928,31 @@ Info (12021): Found 1 design units, including 1 entities, in source file br_bool
     Info (12023): Found entity 1: br_bool File: I:/win/554_git/Mini_1_1/br_bool.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: alu File: I:/win/554_git/Mini_1_1/alu.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(35): created implicit net for "stall_IM_ID" File: I:/win/554_git/Mini_1_1/cpu.v Line: 35
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(36): created implicit net for "flow_change_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 36
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(46): created implicit net for "zr_EX_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 46
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(46): created implicit net for "br_instr_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 46
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(47): created implicit net for "jmp_imm_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 47
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(47): created implicit net for "jmp_reg_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 47
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(47): created implicit net for "jmp_imm_EX_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 47
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(47): created implicit net for "rf_re0" File: I:/win/554_git/Mini_1_1/cpu.v Line: 47
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(48): created implicit net for "rf_re1" File: I:/win/554_git/Mini_1_1/cpu.v Line: 48
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(48): created implicit net for "rf_we_DM_WB" File: I:/win/554_git/Mini_1_1/cpu.v Line: 48
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(50): created implicit net for "dm_re_EX_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 50
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(51): created implicit net for "dm_we_EX_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 51
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(51): created implicit net for "clk_z_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 51
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(51): created implicit net for "clk_nv_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 51
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(53): created implicit net for "stall_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 53
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(53): created implicit net for "stall_EX_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 53
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(53): created implicit net for "hlt_DM_WB" File: I:/win/554_git/Mini_1_1/cpu.v Line: 53
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(54): created implicit net for "byp0_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 54
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(54): created implicit net for "byp0_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 54
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(54): created implicit net for "byp1_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 54
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(54): created implicit net for "byp1_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 54
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(77): created implicit net for "ov" File: I:/win/554_git/Mini_1_1/cpu.v Line: 77
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(77): created implicit net for "zr" File: I:/win/554_git/Mini_1_1/cpu.v Line: 77
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(77): created implicit net for "neg" File: I:/win/554_git/Mini_1_1/cpu.v Line: 77
-Warning (10236): Verilog HDL Implicit Net warning at cpu.v(87): created implicit net for "dm_we" File: I:/win/554_git/Mini_1_1/cpu.v Line: 87
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(36): created implicit net for "stall_IM_ID" File: I:/win/554_git/Mini_1_1/cpu.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(37): created implicit net for "flow_change_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(47): created implicit net for "zr_EX_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(47): created implicit net for "br_instr_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(48): created implicit net for "jmp_imm_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(48): created implicit net for "jmp_reg_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(48): created implicit net for "jmp_imm_EX_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(48): created implicit net for "rf_re0" File: I:/win/554_git/Mini_1_1/cpu.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(49): created implicit net for "rf_re1" File: I:/win/554_git/Mini_1_1/cpu.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(49): created implicit net for "rf_we_DM_WB" File: I:/win/554_git/Mini_1_1/cpu.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(51): created implicit net for "dm_re_EX_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 51
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(52): created implicit net for "dm_we_EX_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(52): created implicit net for "clk_z_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(52): created implicit net for "clk_nv_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(54): created implicit net for "stall_ID_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 54
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(54): created implicit net for "stall_EX_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 54
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(54): created implicit net for "hlt_DM_WB" File: I:/win/554_git/Mini_1_1/cpu.v Line: 54
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(55): created implicit net for "byp0_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(55): created implicit net for "byp0_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(55): created implicit net for "byp1_EX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(55): created implicit net for "byp1_DM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(78): created implicit net for "ov" File: I:/win/554_git/Mini_1_1/cpu.v Line: 78
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(78): created implicit net for "zr" File: I:/win/554_git/Mini_1_1/cpu.v Line: 78
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(78): created implicit net for "neg" File: I:/win/554_git/Mini_1_1/cpu.v Line: 78
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(88): created implicit net for "dm_we" File: I:/win/554_git/Mini_1_1/cpu.v Line: 88
 Warning (10236): Verilog HDL Implicit Net warning at alu.v(50): created implicit net for "sat_neg" File: I:/win/554_git/Mini_1_1/alu.v Line: 50
 Warning (10236): Verilog HDL Implicit Net warning at alu.v(51): created implicit net for "sat_pos" File: I:/win/554_git/Mini_1_1/alu.v Line: 51
 Warning (10236): Verilog HDL Implicit Net warning at alu.v(69): created implicit net for "shft_in" File: I:/win/554_git/Mini_1_1/alu.v Line: 69
@@ -959,37 +960,39 @@ Info (12127): Elaborating entity "MiniLab1" for the top level hierarchy
 Warning (10034): Output port "LEDR" at MiniLab1.v(14) has no driver File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 14
 Info (12128): Elaborating entity "reset_synch" for hierarchy "reset_synch:rst" File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 29
 Info (12128): Elaborating entity "spart" for hierarchy "spart:iSpart" File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 31
-Info (12128): Elaborating entity "circular_queue" for hierarchy "spart:iSpart|circular_queue:iTxQueue" File: I:/win/554_git/Mini_1_1/spart.sv Line: 47
+Warning (10036): Verilog HDL or VHDL warning at spart.sv(40): object "inter_DB_1" assigned a value but never read File: I:/win/554_git/Mini_1_1/spart.sv Line: 40
+Warning (10036): Verilog HDL or VHDL warning at spart.sv(41): object "inter_DB_2" assigned a value but never read File: I:/win/554_git/Mini_1_1/spart.sv Line: 41
+Info (12128): Elaborating entity "circular_queue" for hierarchy "spart:iSpart|circular_queue:iTxQueue" File: I:/win/554_git/Mini_1_1/spart.sv Line: 52
 Warning (10230): Verilog HDL assignment warning at circular_queue.sv(23): truncated value with size 32 to match size of target (4) File: I:/win/554_git/Mini_1_1/circular_queue.sv Line: 23
 Warning (10230): Verilog HDL assignment warning at circular_queue.sv(28): truncated value with size 32 to match size of target (4) File: I:/win/554_git/Mini_1_1/circular_queue.sv Line: 28
 Warning (10230): Verilog HDL assignment warning at circular_queue.sv(36): truncated value with size 32 to match size of target (4) File: I:/win/554_git/Mini_1_1/circular_queue.sv Line: 36
-Info (12128): Elaborating entity "UART" for hierarchy "spart:iSpart|UART:iUART" File: I:/win/554_git/Mini_1_1/spart.sv Line: 50
+Info (12128): Elaborating entity "UART" for hierarchy "spart:iSpart|UART:iUART" File: I:/win/554_git/Mini_1_1/spart.sv Line: 55
 Info (12128): Elaborating entity "UART_tx" for hierarchy "spart:iSpart|UART:iUART|UART_tx:iTX" File: I:/win/554_git/Mini_1_1/UART.sv Line: 17
 Warning (10230): Verilog HDL assignment warning at UART_tx.sv(43): truncated value with size 32 to match size of target (4) File: I:/win/554_git/Mini_1_1/UART_tx.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at UART_tx.sv(52): truncated value with size 13 to match size of target (12) File: I:/win/554_git/Mini_1_1/UART_tx.sv Line: 52
-Warning (10230): Verilog HDL assignment warning at UART_tx.sv(54): truncated value with size 32 to match size of target (12) File: I:/win/554_git/Mini_1_1/UART_tx.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at UART_tx.sv(54): truncated value with size 32 to match size of target (13) File: I:/win/554_git/Mini_1_1/UART_tx.sv Line: 54
 Info (12128): Elaborating entity "UART_rx" for hierarchy "spart:iSpart|UART:iUART|UART_rx:iRX" File: I:/win/554_git/Mini_1_1/UART.sv Line: 24
 Warning (10230): Verilog HDL assignment warning at UART_rx.sv(41): truncated value with size 32 to match size of target (4) File: I:/win/554_git/Mini_1_1/UART_rx.sv Line: 41
 Warning (10230): Verilog HDL assignment warning at UART_rx.sv(51): truncated value with size 32 to match size of target (13) File: I:/win/554_git/Mini_1_1/UART_rx.sv Line: 51
 Info (12128): Elaborating entity "cpu" for hierarchy "cpu:iCPU" File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 33
-Info (12128): Elaborating entity "pc" for hierarchy "cpu:iCPU|pc:iPC" File: I:/win/554_git/Mini_1_1/cpu.v Line: 36
+Info (12128): Elaborating entity "pc" for hierarchy "cpu:iCPU|pc:iPC" File: I:/win/554_git/Mini_1_1/cpu.v Line: 37
 Warning (10230): Verilog HDL assignment warning at prgm_cntr.v(27): truncated value with size 32 to match size of target (16) File: I:/win/554_git/Mini_1_1/prgm_cntr.v Line: 27
-Info (12128): Elaborating entity "IM" for hierarchy "cpu:iCPU|IM:iIM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 41
-Warning (10850): Verilog HDL warning at instr_mem.v(19): number of words (18) in memory file does not match the number of elements in the address range [0:16535] File: I:/win/554_git/Mini_1_1/instr_mem.v Line: 19
+Info (12128): Elaborating entity "IM" for hierarchy "cpu:iCPU|IM:iIM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 42
+Warning (10850): Verilog HDL warning at instr_mem.v(19): number of words (71) in memory file does not match the number of elements in the address range [0:16535] File: I:/win/554_git/Mini_1_1/instr_mem.v Line: 19
 Warning (10030): Net "instr_mem.data_a" at instr_mem.v(9) has no driver or initial value, using a default initial value '0' File: I:/win/554_git/Mini_1_1/instr_mem.v Line: 9
 Warning (10030): Net "instr_mem.waddr_a" at instr_mem.v(9) has no driver or initial value, using a default initial value '0' File: I:/win/554_git/Mini_1_1/instr_mem.v Line: 9
 Warning (10030): Net "instr_mem.we_a" at instr_mem.v(9) has no driver or initial value, using a default initial value '0' File: I:/win/554_git/Mini_1_1/instr_mem.v Line: 9
-Info (12128): Elaborating entity "id" for hierarchy "cpu:iCPU|id:iID" File: I:/win/554_git/Mini_1_1/cpu.v Line: 55
-Info (12128): Elaborating entity "rf" for hierarchy "cpu:iCPU|rf:iRF" File: I:/win/554_git/Mini_1_1/cpu.v Line: 62
-Info (12128): Elaborating entity "src_mux" for hierarchy "cpu:iCPU|src_mux:ISRCMUX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 71
-Info (12128): Elaborating entity "alu" for hierarchy "cpu:iCPU|alu:iALU" File: I:/win/554_git/Mini_1_1/cpu.v Line: 77
+Info (12128): Elaborating entity "id" for hierarchy "cpu:iCPU|id:iID" File: I:/win/554_git/Mini_1_1/cpu.v Line: 56
+Info (12128): Elaborating entity "rf" for hierarchy "cpu:iCPU|rf:iRF" File: I:/win/554_git/Mini_1_1/cpu.v Line: 63
+Info (12128): Elaborating entity "src_mux" for hierarchy "cpu:iCPU|src_mux:ISRCMUX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 72
+Info (12128): Elaborating entity "alu" for hierarchy "cpu:iCPU|alu:iALU" File: I:/win/554_git/Mini_1_1/cpu.v Line: 78
 Warning (10230): Verilog HDL assignment warning at alu.v(42): truncated value with size 32 to match size of target (1) File: I:/win/554_git/Mini_1_1/alu.v Line: 42
 Warning (10230): Verilog HDL assignment warning at alu.v(50): truncated value with size 32 to match size of target (1) File: I:/win/554_git/Mini_1_1/alu.v Line: 50
 Warning (10230): Verilog HDL assignment warning at alu.v(51): truncated value with size 32 to match size of target (1) File: I:/win/554_git/Mini_1_1/alu.v Line: 51
 Warning (10230): Verilog HDL assignment warning at alu.v(69): truncated value with size 32 to match size of target (1) File: I:/win/554_git/Mini_1_1/alu.v Line: 69
-Info (12128): Elaborating entity "DM" for hierarchy "cpu:iCPU|DM:iDM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 96
-Info (12128): Elaborating entity "dst_mux" for hierarchy "cpu:iCPU|dst_mux:iDSTMUX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 103
-Info (12128): Elaborating entity "br_bool" for hierarchy "cpu:iCPU|br_bool:iBRL" File: I:/win/554_git/Mini_1_1/cpu.v Line: 111
+Info (12128): Elaborating entity "DM" for hierarchy "cpu:iCPU|DM:iDM" File: I:/win/554_git/Mini_1_1/cpu.v Line: 97
+Warning (10850): Verilog HDL warning at data_mem.v(33): number of words (22) in memory file does not match the number of elements in the address range [0:8191] File: I:/win/554_git/Mini_1_1/data_mem.v Line: 33
+Info (12128): Elaborating entity "dst_mux" for hierarchy "cpu:iCPU|dst_mux:iDSTMUX" File: I:/win/554_git/Mini_1_1/cpu.v Line: 104
+Info (12128): Elaborating entity "br_bool" for hierarchy "cpu:iCPU|br_bool:iBRL" File: I:/win/554_git/Mini_1_1/cpu.v Line: 112
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "spart:iSpart|circular_queue:iRxQueue|queue" is uninferred due to asynchronous read logic File: I:/win/554_git/Mini_1_1/circular_queue.sv Line: 12
     Info (276007): RAM logic "spart:iSpart|circular_queue:iTxQueue|queue" is uninferred due to asynchronous read logic File: I:/win/554_git/Mini_1_1/circular_queue.sv Line: 12
@@ -1009,6 +1012,7 @@ Info (19000): Inferred 4 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/MiniLab1.ram0_DM_89a.hdl.mif
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
         Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
     Info (276029): Inferred altsyncram megafunction from the following design logic: "cpu:iCPU|rf:iRF|mem0_rtl_0" 
@@ -1072,10 +1076,13 @@ Info (12133): Instantiated megafunction "cpu:iCPU|DM:iDM|altsyncram:data_mem_rtl
     Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/MiniLab1.ram0_DM_89a.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
     Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_q9q1.tdf
-    Info (12023): Found entity 1: altsyncram_q9q1 File: I:/win/554_git/Mini_1_1/db/altsyncram_q9q1.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_v2u1.tdf
+    Info (12023): Found entity 1: altsyncram_v2u1 File: I:/win/554_git/Mini_1_1/db/altsyncram_v2u1.tdf Line: 28
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "I:/win/554_git/Mini_1_1/db/MiniLab1.ram0_DM_89a.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "I:/win/554_git/Mini_1_1/db/MiniLab1.ram0_DM_89a.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12130): Elaborated megafunction instantiation "cpu:iCPU|rf:iRF|altsyncram:mem0_rtl_0"
 Info (12133): Instantiated megafunction "cpu:iCPU|rf:iRF|altsyncram:mem0_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1183,14 +1190,14 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "ioaddr[0]" to the node "spart:iSpart|inter_ioaddr[0]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 28
     Warning (13047): Converted the fan-out from the tri-state buffer "ioaddr[1]" to the node "spart:iSpart|inter_ioaddr[1]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 28
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[3]" to the node "spart:iSpart|inter_DB_2" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
-    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[0]" to the node "spart:iSpart|inter_DB_2" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
-    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[1]" to the node "spart:iSpart|inter_DB_2" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
-    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[4]" to the node "spart:iSpart|inter_DB_2" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
-    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[2]" to the node "spart:iSpart|inter_DB_2" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
-    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[7]" to the node "spart:iSpart|inter_DB_1[7]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
-    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[5]" to the node "spart:iSpart|inter_DB_1[5]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
-    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[6]" to the node "spart:iSpart|inter_DB_1[6]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
+    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[0]" to the node "spart:iSpart|DB[0]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
+    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[7]" to the node "cpu:iCPU|dst_mux:iDSTMUX|rf_w_data_DM_WB" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
+    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[5]" to the node "cpu:iCPU|dst_mux:iDSTMUX|rf_w_data_DM_WB" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
+    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[4]" to the node "spart:iSpart|DB[12]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
+    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[1]" to the node "spart:iSpart|DB[9]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
+    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[2]" to the node "spart:iSpart|DB[10]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
+    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[6]" to the node "spart:iSpart|DB[6]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
+    Warning (13047): Converted the fan-out from the tri-state buffer "inter_databus[3]" to the node "spart:iSpart|DB[11]" into an OR gate File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 26
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "GPIO[3]~synth" File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 18
 Warning (13024): Output pins are stuck at VCC or GND
@@ -1212,17 +1219,17 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 11
     Warning (15610): No output dependent on input pin "KEY[2]" File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 11
     Warning (15610): No output dependent on input pin "KEY[3]" File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 11
-Info (21057): Implemented 1007 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 989 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 10 output pins
     Info (21060): Implemented 36 bidirectional pins
-    Info (21061): Implemented 876 logic cells
+    Info (21061): Implemented 858 logic cells
     Info (21064): Implemented 80 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 141 warnings
-    Info: Peak virtual memory: 4885 megabytes
-    Info: Processing ended: Tue Feb 20 17:58:05 2024
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:12
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 145 warnings
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Thu Feb 22 03:46:00 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +------------------------------------------+

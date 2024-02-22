@@ -5,7 +5,8 @@ input [9:0] rdata;
 
 output we,re;
 
-output [15:0] wdata,addr;
+output [15:0] wdata;
+output [15:0] addr;
 
 
 
@@ -81,8 +82,8 @@ alu iALU(.clk(clk), .src0(src0), .src1(src1), .shamt(instr_ID_EX[3:0]), .func(al
 
 
 
-assign re = |dst_EX_DM[15:13] & dm_re_EX_DM;
-assign we = |dst_EX_DM[15:13] & dm_we_EX_DM;
+assign re = |dst_EX_DM[15:13] &dm_re_EX_DM;
+assign we = |dst_EX_DM[15:13] &dm_we_EX_DM;
 
 assign dm_we = ~|dst_EX_DM[15:13] & dm_we_EX_DM;
 
@@ -92,7 +93,7 @@ assign addr = dst_EX_DM;
 
 assign wdata = p0_EX_DM;
 
-DM iDM(.clk(clk),.addr(dst_EX_DM), .re(re), .we(dm_we), .wrt_data(p0_EX_DM),
+DM iDM(.clk(clk),.addr(dst_EX_DM[12:0]), .re(&dm_re_EX_DM), .we(dm_we), .wrt_data(p0_EX_DM),
        .rd_data(in_data));
 
 //////////////////////////

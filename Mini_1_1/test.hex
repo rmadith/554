@@ -1,18 +1,71 @@
-@0000 B304	// llb R3, 0x04
-@0001 A3C0	// lhb R3, 0xC0
-@0002 B71B	// llb R7, 0x1B
-@0003 A700	// lhb R7, 0x00
-@0004 9730	// sw R7, R3, 0
-@0005 B75B	// llb R7, 0x5B
-@0006 A700	// lhb R7, 0x00
-@0007 9730	// sw R7, R3, 0
-@0008 B732	// llb R7, 0x32
-@0009 A700	// lhb R7, 0x00
-@000a 9730	// sw R7, R3, 0
-@000b B74A	// llb R7, 0x4A
-@000c A700	// lhb R7, 0x00
-@000d 9730	// sw R7, R3, 0
-@000e B748	// llb R7, 0x48
-@000f A700	// lhb R7, 0x00
-@0010 9730	// sw R7, R3, 0
-@0011 CFFC	// b uncond,loop
+@0000 B104	// llb R1, 0x04
+@0001 A1C0	// lhb R1, 0xC0
+@0002 3220	// and R2, R2, R0
+@0003 B301	// llb R3, 0x01
+@0004 A300	// lhb R3, 0x00
+@0005 B4F0	// llb R4, 0xF0
+@0006 A400	// lhb R4, 0x00
+@0007 B50F	// llb R5, 0x0F
+@0008 A500	// lhb R5, 0x00
+@0009 B716	// llb R7, 0x16
+@000a A700	// lhb R7, 0x00
+@000b BE0D	// llb R14, 0x0D
+@000c AE00	// lhb R14, 0x00
+@000d BC1B	// llb R12, 0x1B
+@000e AC00	// lhb R12, 0x00
+@000f 9C10	// sw R12, R1, 0
+@0010 BC5B	// llb R12, 0x5B
+@0011 AC00	// lhb R12, 0x00
+@0012 9C10	// sw R12, R1, 0
+@0013 BC32	// llb R12, 0x32
+@0014 AC00	// lhb R12, 0x00
+@0015 9C10	// sw R12, R1, 0
+@0016 BC4A	// llb R12, 0x4A
+@0017 AC00	// lhb R12, 0x00
+@0018 9C10	// sw R12, R1, 0
+@0019 3220	// and R2, R2, R0
+@001a 3990	// and R9, R9, R0
+@001b 3660	// and R6, R6, R0
+@001c 3880	// and R8, R8, R0
+@001d 8611	// lw R6, R1, 1
+@001e 3664	// and R6, R6, R4
+@001f 6664	// srl R6, R6, 4
+@0020 C208	// b eq, startWait
+@0021 3000	// and R0, R0, R0
+@0022 8D20	// lw R13, R2, 0
+@0023 9D10	// sw R13, R1, 0
+@0024 0223	// add R2, R2, R3
+@0025 0920	// add R9, R2, R0
+@0026 2872	// sub R8, R7, R2
+@0027 C206	// b eq, inputPoll
+@0028 CFF4	// b uncond, start
+@0029 8611	// lw R6, R1, 1
+@002a 3664	// and R6, R6, R4
+@002b 6664	// srl R6, R6, 4
+@002c C1F0	// b neq, start
+@002d CFFB	// b uncond, startWait
+@002e 8611	// lw R6, R1, 1
+@002f 3665	// and R6, R6, R5
+@0030 C3FD	// b eq, inputPoll
+@0031 8810	// lw R8, R1, 0
+@0032 2A8E	// sub R10, R8, R14
+@0033 C203	// b eq, print
+@0034 9820	// sw R8, R2, 0
+@0035 0223	// add R2, R2, R3
+@0036 CFF7	// b uncond, inputPoll
+@0037 8611	// lw R6, R1, 1
+@0038 3664	// and R6, R6, R4
+@0039 6664	// srl R6, R6, 4
+@003a C206	// b eq, printWait
+@003b 8D90	// lw R13, R9, 0
+@003c 9D10	// sw R13, R1, 0
+@003d 2A92	// sub R10, R9, R2
+@003e C207	// b eq, done
+@003f 0993	// add R9, R9, R3
+@0040 CFF6	// b uncond, print
+@0041 8611	// lw R6, R1, 1
+@0042 3664	// and R6, R6, R4
+@0043 6664	// srl R6, R6, 4
+@0044 C1F2	// b neq, print
+@0045 CFFB	// b uncond, printWait
+@0046 CFBC	// b uncond, realStart

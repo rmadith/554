@@ -30,7 +30,7 @@ reset_synch rst(.RST_n(KEY[0]), .clk(clk), .rst_n(rst_n));
 
 spart iSpart(.clk(clk), .rst_n(rst_n), .iocs_n(iocs_n), .iorw_n(iorw_n), .tx_q_full(), .rx_q_empty(), .ioaddr(ioaddr), .databus(inter_databus), .TX(GPIO[3]), .RX(GPIO[5]));
 
-cpu iCPU(.clk(clk), .rst_n(rst_n), .rdata(inter_databus), .wdata(databus), .re(re), .we(we), .addr(addr));
+cpu iCPU(.clk(clk), .rst_n(rst_n), .rdata({{2{1'b0}}, inter_databus}), .wdata(databus), .re(re), .we(we), .addr(addr));
 
 //=======================================================
 //  Structural coding
@@ -42,14 +42,14 @@ cpu iCPU(.clk(clk), .rst_n(rst_n), .rdata(inter_databus), .wdata(databus), .re(r
 
 
 assign ioaddr = (addr == 16'hC004) ? 2'b00 :
-					 (addr == 16'hC005) ? 2'b01 : 
-					 (addr == 16'hC006) ? 2'b10 :
-					 (addr == 16'hC007) ? 2'b11 :
-					 2'bz;
+		(addr == 16'hC005) ? 2'b01 : 
+		(addr == 16'hC006) ? 2'b10 :
+		(addr == 16'hC007) ? 2'b11 :
+		2'bz;
 
-assign iocs_n = ~(re | we) && (addr == 16'hC004 || addr == 16'hC005 || addr == 16'hC006 || addr == 16'hC007);
-assign iorw_n = ~we; /// add trisstate : ToDO  
-assign inter_databus = we ? databus  : 8'bz;
+assign iocs_n = ~((re | we) && (addr == 16'hC004 || addr == 16'hC005 || addr == 16'hC006 || addr == 16'hC007));
+assign iorw_n = ~we;
+assign inter_databus = (we) ? databus  : 8'bz;
 
 
 endmodule
