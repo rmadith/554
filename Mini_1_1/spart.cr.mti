@@ -1,16 +1,16 @@
-I:/win/554_git/Mini_1_1/reset_synch.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/reset_synch.sv
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module reset_synch
-
-Top level modules:
-	reset_synch
-
-} {} {}} I:/win/554_git/Mini_1_1/UART_tx.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/UART_tx.sv
+I:/win/554_git/Mini_1_1/UART_tx.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/UART_tx.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module UART_tx
 
 Top level modules:
 	UART_tx
+
+} {} {}} I:/win/554_git/Mini_1_1/reset_synch.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/reset_synch.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module reset_synch
+
+Top level modules:
+	reset_synch
 
 } {} {}} I:/win/554_git/Mini_1_1/RemoteComm.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/RemoteComm.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -40,19 +40,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	circular_queue
 
-} {} {}} I:/win/554_git/Mini_1_1/id.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/id.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module id
-
-Top level modules:
-	id
-
 } {} {}} I:/win/554_git/Mini_1_1/spart.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/spart.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module spart
 
 Top level modules:
 	spart
+
+} {} {}} I:/win/554_git/Mini_1_1/id.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/id.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module id
+
+Top level modules:
+	id
 
 } {} {}} I:/win/554_git/Mini_1_1/MiniLab1.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/MiniLab1.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -116,13 +116,6 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 
 Top level modules:
 	alu
-
-} {} {}} I:/win/554_git/Mini_1_1/spart_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Mini_1_1/spart_tb.sv
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module spart_tb
-
-Top level modules:
-	spart_tb
 
 } {} {}} I:/win/554_git/Mini_1_1/cpu_tb.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Mini_1_1/cpu_tb.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021

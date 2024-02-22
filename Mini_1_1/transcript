@@ -1,131 +1,12 @@
-# Compile of circular_queue.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of spart.sv was successful.
-# Compile of RemoteComm.sv was successful.
-# Compile of RemoteComm.sv was successful with warnings.
-# Compile of RemoteComm.sv was successful.
-# Compile of spart.sv was successful.
-# Compile of spart.sv was successful.
-# Compile of spart.sv was successful.
-# Compile of spart_tb.sv failed with 5 errors.
-# 2 compiles, 1 failed with 5 errors.
-# Compile of spart_tb.sv failed with 3 errors.
-# Compile of spart_tb.sv failed with 3 errors.
 # Compile of spart_tb.sv was successful.
 vsim work.spart_tb -voptargs=+acc
 # vsim work.spart_tb -voptargs="+acc" 
-# Start time: 13:50:59 on Feb 20,2024
+# Start time: 21:59:13 on Feb 21,2024
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file I:/win/554_git/Mini_1_1/work/@_opt/_deps (0:0 1:1 186 0 4623 1708469930 0x53:0x1)
+# ** Warning: (vsim-56) Problem with optimized design dependency file "I:/win/554_git/Mini_1_1/work/@_opt/_deps" - file open failed.
+# No such file or directory. (errno = ENOENT)
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(15): (vopt-8885) Illegal inout port connection for 'databus' (8th connection) to reg type. 
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 13:51:04 on Feb 20,2024, Elapsed time: 0:00:05
-# Errors: 1, Warnings: 13
-# Compile of spart_tb.sv was successful.
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 13:53:54 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(15): (vopt-8885) Illegal inout port connection for 'databus' (8th connection) to reg type. 
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 13:53:57 on Feb 20,2024, Elapsed time: 0:00:03
-# Errors: 1, Warnings: 2
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 13:54:39 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(15): (vopt-8885) Illegal inout port connection for 'databus' (8th connection) to reg type. 
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 13:54:43 on Feb 20,2024, Elapsed time: 0:00:04
-# Errors: 1, Warnings: 2
-# Compile of spart_tb.sv was successful.
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 13:55:20 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(16): (vopt-8885) Illegal inout port connection for 'databus' (8th connection) to reg type. 
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 13:55:24 on Feb 20,2024, Elapsed time: 0:00:04
-# Errors: 1, Warnings: 2
-# Compile of spart_tb.sv was successful.
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 13:55:40 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2685) [TFMPC] - Too few port connections for 'iTxQueue'.  Expected 10, found 9.
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2718) [TFMPC] - Missing connection for port 'containing'.
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2685) [TFMPC] - Too few port connections for 'iRxQueue'.  Expected 10, found 9.
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2718) [TFMPC] - Missing connection for port 'remaining'.
-# ** Warning: I:/win/554_git/Mini_1_1/RemoteComm.sv(33): (vopt-2685) [TFMPC] - Too few port connections for 'iUART'.  Expected 11, found 10.
-# ** Warning: I:/win/554_git/Mini_1_1/RemoteComm.sv(33): (vopt-2718) [TFMPC] - Missing connection for port 'baud'.
 # ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=6.
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'spart_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/comms File: I:/win/554_git/Mini_1_1/RemoteComm.sv
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# Error loading design
-# End time: 13:55:44 on Feb 20,2024, Elapsed time: 0:00:04
-# Errors: 1, Warnings: 8
-# Compile of RemoteComm.sv was successful.
-# Load canceled
-# Compile of UART_rx.sv was successful.
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 13:56:28 on Feb 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: I:/win/554_git/Mini_1_1/RemoteComm.sv(32): (vopt-2685) [TFMPC] - Too few port connections for 'iUART'.  Expected 11, found 10.
-# ** Warning: I:/win/554_git/Mini_1_1/RemoteComm.sv(32): (vopt-2718) [TFMPC] - Missing connection for port 'baud'.
-# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'spart_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/comms/iUART/iTX File: I:/win/554_git/Mini_1_1/UART_tx.sv
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# Error loading design
-# End time: 13:56:33 on Feb 20,2024, Elapsed time: 0:00:05
-# Errors: 1, Warnings: 5
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 13:56:51 on Feb 20,2024
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'spart_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/comms/iUART/iTX File: I:/win/554_git/Mini_1_1/UART_tx.sv
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# Error loading design
-# End time: 13:56:55 on Feb 20,2024, Elapsed time: 0:00:04
-# Errors: 1, Warnings: 1
-# Compile of UART_tx.sv was successful.
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 13:57:13 on Feb 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.spart_tb(fast)
 # Loading work.RemoteComm(fast)
@@ -134,215 +15,47 @@ vsim -voptargs=+acc work.spart_tb
 # Loading work.UART_rx(fast)
 # Loading work.spart(fast)
 # Loading work.circular_queue(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (13) for port 'baud'. The port definition is at: I:/win/554_git/Mini_1_1/UART.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT/iUART File: I:/win/554_git/Mini_1_1/spart.sv Line: 50
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 80
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 78
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 76
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 75
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 68
-# Error loading design
-# End time: 13:57:19 on Feb 20,2024, Elapsed time: 0:00:06
-# Errors: 5, Warnings: 3
-# Compile of UART.sv was successful.
-# Compile of spart.sv was successful.
-# 2 compiles, 0 failed with no errors.
-# Optimization canceled
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 13:59:44 on Feb 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2685) [TFMPC] - Too few port connections for 'iTxQueue'.  Expected 10, found 9.
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2718) [TFMPC] - Missing connection for port 'containing'.
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2685) [TFMPC] - Too few port connections for 'iRxQueue'.  Expected 10, found 9.
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2718) [TFMPC] - Missing connection for port 'remaining'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (13) for port 'baud'. The port definition is at: I:/win/554_git/Mini_1_1/UART_tx.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/comms/iUART/iTX File: I:/win/554_git/Mini_1_1/UART.sv Line: 16
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (13) for port 'baud'. The port definition is at: I:/win/554_git/Mini_1_1/UART_rx.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/comms/iUART/iRX File: I:/win/554_git/Mini_1_1/UART.sv Line: 23
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (13) for port 'baud'. The port definition is at: I:/win/554_git/Mini_1_1/UART_tx.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT/iUART/iTX File: I:/win/554_git/Mini_1_1/UART.sv Line: 16
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (13) for port 'baud'. The port definition is at: I:/win/554_git/Mini_1_1/UART_rx.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT/iUART/iRX File: I:/win/554_git/Mini_1_1/UART.sv Line: 23
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 78
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 76
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 75
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 68
-# Error loading design
-# End time: 13:59:49 on Feb 20,2024, Elapsed time: 0:00:05
-# Errors: 4, Warnings: 10
-# Compile of UART_rx.sv was successful.
-# Compile of UART_tx.sv was successful.
-# Compile of spart.sv was successful.
-# 3 compiles, 0 failed with no errors.
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 14:00:59 on Feb 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2685) [TFMPC] - Too few port connections for 'iTxQueue'.  Expected 10, found 9.
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(47): (vopt-2718) [TFMPC] - Missing connection for port 'containing'.
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2685) [TFMPC] - Too few port connections for 'iRxQueue'.  Expected 10, found 9.
-# ** Warning: I:/win/554_git/Mini_1_1/spart.sv(48): (vopt-2718) [TFMPC] - Missing connection for port 'remaining'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 78
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 76
-# ** Error (suppressible): (vsim-3839) Variable '/spart_tb/iDUT/inter_databus', driven via a port connection, is multiply driven. See I:/win/554_git/Mini_1_1/spart.sv(48).
-#    Time: 0 ns  Iteration: 0  Instance: /spart_tb/iDUT File: I:/win/554_git/Mini_1_1/spart.sv Line: 75
-# Error loading design
-# End time: 14:01:04 on Feb 20,2024, Elapsed time: 0:00:05
-# Errors: 3, Warnings: 6
-# Compile of spart.sv was successful.
-# Compile of spart.sv was successful.
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 14:05:02 on Feb 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(56)
-#    Time: 45 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 56
-add wave -position insertpoint sim:/spart_tb/iDUT/*
+add wave -position insertpoint sim:/spart_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ramnarayanan  Hostname: WIN-8120  ProcessID: 12268
+#           Attempting to use alternate WLF file "./wlftm3ssab".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftm3ssab
 view -new wave
 # .main_pane.wave1.interior.cs.body.pw.wf
 add wave -position insertpoint sim:/spart_tb/comms/*
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(56)
-#    Time: 45 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 56
-add wave -position insertpoint sim:/spart_tb/comms/*
-view -new wave
-# .main_pane.wave1.interior.cs.body.pw.wf
-add wave -position insertpoint sim:/spart_tb/iDUT/*
-# Compile of RemoteComm.sv was successful.
-# Compile of spart_tb.sv was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(18): (vopt-2912) Port 'baud' not found in module 'spart' (11th connection).
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 14:05:02 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error (suppressible): I:/win/554_git/Mini_1_1/spart_tb.sv(18): (vopt-2912) Port 'baud' not found in module 'spart' (11th connection).
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
-# Error loading design
-# End time: 14:09:49 on Feb 20,2024, Elapsed time: 0:04:47
-# Errors: 2, Warnings: 1
-# Compile of spart_tb.sv was successful.
-vsim -voptargs=+acc work.spart_tb
-# vsim -voptargs="+acc" work.spart_tb 
-# Start time: 14:10:02 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(58)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 58
+add wave -position insertpoint sim:/spart_tb/comms/iUART/*
 view -new wave
 # .main_pane.wave2.interior.cs.body.pw.wf
-add wave -position insertpoint sim:/spart_tb/*
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
+add wave -position insertpoint sim:/spart_tb/iDUT/*
+add wave -position insertpoint sim:/spart_tb/iDUT/iTxQueue/*
+add wave -position insertpoint sim:/spart_tb/iDUT/iRxQueue/*
+add wave -position insertpoint sim:/spart_tb/iDUT/iUART/*
 run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(58)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 58
-# Compile of spart_tb.sv was successful.
-# Compile of spart.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
-run -all
-# Lower bits are set but is not correctly returned by databus
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(73)
-#    Time: 75 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 73
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Status Registers working incorrectly
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(290)
+#    Time: 808335 ns  Iteration: 2  Instance: /spart_tb
+# Break in NamedBeginStat test4 at I:/win/554_git/Mini_1_1/spart_tb.sv line 290
 # Causality operation skipped due to absence of debug database file
-# Compile of spart.sv failed with 1 errors.
-# Compile of spart.sv was successful.
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of spart_tb.sv was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
@@ -355,12 +68,26 @@ restart
 # Loading work.spart(fast)
 # Loading work.circular_queue(fast)
 run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
-restart
-# Compile of spart.sv was successful.
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Status Registers working incorrectly
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(290)
+#    Time: 808335 ns  Iteration: 2  Instance: /spart_tb
+# Break in NamedBeginStat test4 at I:/win/554_git/Mini_1_1/spart_tb.sv line 290
+# Compile of spart_tb.sv was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
@@ -373,271 +100,96 @@ restart
 # Loading work.spart(fast)
 # Loading work.circular_queue(fast)
 run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Status Registers working incorrectly. Got: 01
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(290)
+#    Time: 808335 ns  Iteration: 2  Instance: /spart_tb
+# Break in NamedBeginStat test4 at I:/win/554_git/Mini_1_1/spart_tb.sv line 290
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Status Registers working incorrectly. Got: 01
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(290)
+#    Time: 808335 ns  Iteration: 2  Instance: /spart_tb
+# Break in NamedBeginStat test4 at I:/win/554_git/Mini_1_1/spart_tb.sv line 290
+restart
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Status Registers working incorrectly. Got: 01
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(298)
+#    Time: 808415 ns  Iteration: 2  Instance: /spart_tb
+# Break in NamedBeginStat test4 at I:/win/554_git/Mini_1_1/spart_tb.sv line 298
 run
-# Lower bits are set but is not correctly returned by databus
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(73)
-#    Time: 75 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 73
-# Compile of spart.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# Compile of spart.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
-# Compile of spart.sv was successful.
-# Compile of spart_tb.sv was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
-# Compile of spart.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# Compile of spart.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Baud Rate Update failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(59)
-#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 59
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# Compile of spart_tb.sv was successful.
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(94)
-#    Time: 105 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 94
-run -all
-# Status Registers didn't return right values
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(108)
-#    Time: 115 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 108
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Status Registers didn't return right values
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(106)
-#    Time: 115 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 106
-run -all
-# Compile of spart_tb.sv was successful.
-run -all
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Status Registers didn't return right values
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(110)
-#    Time: 125 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 110
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Status Registers didn't return right values
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(108)
-#    Time: 115 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 108
+# Correct Data Recieved by spart
+# All test passed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(323)
+#    Time: 808425 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 323
 # Compile of spart_tb.sv was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
@@ -657,11 +209,20 @@ run -all
 # Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
 # Mini Test 3: Status Registers work as expected
 # All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# Test 1: Failed. Count is not equal to 8
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(159)
-#    Time: 116485 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 159
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Status Registers working incorrectly. Got: 01
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(299)
+#    Time: 808425 ns  Iteration: 1  Instance: /spart_tb
+# Break in NamedBeginStat test4 at I:/win/554_git/Mini_1_1/spart_tb.sv line 299
+# Compile of spart_tb.sv failed with 1 errors.
 # Compile of spart_tb.sv was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
@@ -681,12 +242,21 @@ run -all
 # Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
 # Mini Test 3: Status Registers work as expected
 # All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(138)
-#    Time: 5675 ns  Iteration: 2  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 138
-add wave -position end  sim:/spart_tb/comms/baud
-restart
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# All test passed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(327)
+#    Time: 808435 ns  Iteration: 2  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 327
 # Compile of spart_tb.sv was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
@@ -706,17 +276,288 @@ run -all
 # Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
 # Mini Test 3: Status Registers work as expected
 # All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(138)
-#    Time: 43675 ns  Iteration: 2  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 138
-add wave -position insertpoint sim:/spart_tb/iDUT/iUART/*
-view -new wave
-# .main_pane.wave3.interior.cs.body.pw.wf
-add wave -position insertpoint sim:/spart_tb/iDUT/iUART/*
-view -new wave
-# .main_pane.wave4.interior.cs.body.pw.wf
-add wave -position insertpoint sim:/spart_tb/comms/iUART/*
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Incorrect Data Recieved
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(337)
+#    Time: 838035 ns  Iteration: 3  Instance: /spart_tb
+# Break in NamedBeginStat test5 at I:/win/554_git/Mini_1_1/spart_tb.sv line 337
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Incorrect Data recieved
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(309)
+#    Time: 808435 ns  Iteration: 1  Instance: /spart_tb
+# Break in NamedBeginStat test4 at I:/win/554_git/Mini_1_1/spart_tb.sv line 309
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# All test passed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(354)
+#    Time: 838055 ns  Iteration: 4  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 354
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Status Registers working incorrectly. Got: 80
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(300)
+#    Time: 782825 ns  Iteration: 1  Instance: /spart_tb
+# Break in NamedBeginStat test4 at I:/win/554_git/Mini_1_1/spart_tb.sv line 300
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Status Registers working incorrectly. Got: 80
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(300)
+#    Time: 782825 ns  Iteration: 1  Instance: /spart_tb
+# Break in NamedBeginStat test4 at I:/win/554_git/Mini_1_1/spart_tb.sv line 300
+# Compile of spart.sv failed with 2 errors.
+# Compile of spart.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Baud Rate Update failed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(61)
+#    Time: 55 ns  Iteration: 1  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 61
+add wave -position insertpoint  \
+sim:/spart_tb/iDUT/chng_sig1
+add wave -position insertpoint  \
+sim:/spart_tb/iDUT/chng_sig2
+run -over
+# Compile of spart.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# First Baud Rate Change Works, Onto the next! Exciting!
+# Status Registers working incorrectly. Got: 80
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(384)
+#    Time: 899535 ns  Iteration: 1  Instance: /spart_tb
+# Break in NamedBeginStat test6 at I:/win/554_git/Mini_1_1/spart_tb.sv line 384
+# Compile of spart_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# First Baud Rate Change Works, Onto the next! Exciting!
+# Status Registers working incorrectly. Got: 80
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(384)
+#    Time: 899535 ns  Iteration: 1  Instance: /spart_tb
+# Break in NamedBeginStat test6 at I:/win/554_git/Mini_1_1/spart_tb.sv line 384
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+add wave -position insertpoint sim:/spart_tb/iDUT/iUART/iRX/*
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# First Baud Rate Change Works, Onto the next! Exciting!
+# Status Registers working incorrectly. Got: 80
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(384)
+#    Time: 899535 ns  Iteration: 1  Instance: /spart_tb
+# Break in NamedBeginStat test6 at I:/win/554_git/Mini_1_1/spart_tb.sv line 384
 add wave -position insertpoint sim:/spart_tb/comms/iUART/iTX/*
 restart
 # ** Note: (vsim-8009) Loading existing optimized design _opt
@@ -734,417 +575,24 @@ run -all
 # Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
 # Mini Test 3: Status Registers work as expected
 # All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(138)
-#    Time: 43675 ns  Iteration: 2  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 138
-# Compile of RemoteComm.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(138)
-#    Time: 43675 ns  Iteration: 2  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 138
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(140)
-#    Time: 43685 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 140
-add wave -position insertpoint sim:/spart_tb/iDUT/iRxQueue/*
-add wave -position insertpoint sim:/spart_tb/iDUT/iTxQueue/*
-add wave -position insertpoint sim:/spart_tb/iDUT/iRxQueue/*
-add wave -position insertpoint sim:/spart_tb/iDUT/iUART/*
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(140)
-#    Time: 43685 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 140
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(141)
-#    Time: 43705 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 141
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(141)
-#    Time: 43705 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 141
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(142)
-#    Time: 43715 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 142
-view -new wave
-# .main_pane.wave1.interior.cs.body.pw.wf
-add wave -position insertpoint sim:/spart_tb/iDUT/*
-# Compile of UART_rx.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(142)
-#    Time: 43715 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 142
-# Compile of UART_rx.sv was successful.
-add wave -position insertpoint sim:/spart_tb/iDUT/iUART/iRX/*
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(142)
-#    Time: 43715 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 142
-# Compile of UART_rx.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(142)
-#    Time: 43715 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 142
-# Compile of UART_rx.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Compile of UART_rx.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(142)
-#    Time: 43715 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 142
-view -new wave
-# .main_pane.wave2.interior.cs.body.pw.wf
-add wave -position insertpoint sim:/spart_tb/comms/*
-# Compile of UART_rx.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(142)
-#    Time: 52395 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 142
-# Compile of UART_rx.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(142)
-#    Time: 43715 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 142
-# Compile of UART_rx.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-restart
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# Compile of UART_rx.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(142)
-#    Time: 43695 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 142
-view -new wave
-# .main_pane.wave3.interior.cs.body.pw.wf
-add wave -position insertpoint sim:/spart_tb/*
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Compile of UART_rx.sv was successful.
-# Compile of RemoteComm.sv was successful.
-# Compile of spart_tb.sv was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
 # Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
-# Test 1: Failed. Count is not equal to 8
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(164)
-#    Time: 914505 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 164
-# Compile of spart_tb.sv was successful.
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# First Baud Rate Change Works, Onto the next! Exciting!
+# Status Registers working incorrectly. Got: 80
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(384)
+#    Time: 899535 ns  Iteration: 1  Instance: /spart_tb
+# Break in NamedBeginStat test6 at I:/win/554_git/Mini_1_1/spart_tb.sv line 384
+# Compile of UART_tx.sv was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
@@ -1164,228 +612,22 @@ run -all
 # Mini Test 3: Status Registers work as expected
 # All mini tests work! SPART by itself should not have issues. Hopefully (!?)
 # Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(147)
-#    Time: 43695 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 147
-# Compile of RemoteComm.sv was successful.
-# Compile of UART_rx.sv was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(147)
-#    Time: 43695 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 147
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
-# Test 1: Failed. Count is not equal to 8
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(166)
-#    Time: 914505 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 166
-add wave -position insertpoint  \
-sim:/spart_tb/iDUT/iTxQueue/queue
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-add log -r *
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
-# Test 1: Failed. Count is not equal to 8
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(166)
-#    Time: 914505 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 166
-add wave -position insertpoint  \
-sim:/spart_tb/iDUT/iRxQueue/queue
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
-# Test 1: Failed. Count is not equal to 8
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(166)
-#    Time: 914505 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 166
-view -new wave
-# .main_pane.wave2.interior.cs.body.pw.wf
-add wave -position insertpoint sim:/spart_tb/iDUT/iRxQueue/*
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
-# Test 1: Failed. Count is not equal to 8
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(166)
-#    Time: 87245 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 166
-view -new wave
-# .main_pane.wave.interior.cs.body.pw.wf
-add wave -position insertpoint sim:/spart_tb/comms/*
-add wave -position insertpoint  \
-sim:/spart_tb/count
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Test 1: Failed. Count is not equal to 8
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(167)
-#    Time: 87245 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 167
-# Compile of UART_rx.sv was successful.
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Hello
-# Test 1: Failed. Count is not equal to 8
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(167)
-#    Time: 87245 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 167
-# Compile of spart_tb.sv was successful.
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# First Baud Rate Change Works, Onto the next! Exciting!
+# Err: No Communication recieved
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(402)
+#    Time: 988175 ns  Iteration: 1  Instance: /spart_tb
+# Break in NamedBeginStat end6 at I:/win/554_git/Mini_1_1/spart_tb.sv line 402
 # Compile of spart_tb.sv was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
@@ -1407,6 +649,23 @@ run -all
 # All mini tests work! SPART by itself should not have issues. Hopefully (!?)
 # Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
 # Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# First Baud Rate Change Works, Onto the next! Exciting!
+# Random Test (not really anymore): Status Registers return correct value
+# Correct Data Recieved by spart
+# Err: No Communication recieved to RemoteComm
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(428)
+#    Time: 1509145 ns  Iteration: 1  Instance: /spart_tb
+# Break in NamedBeginStat end7 at I:/win/554_git/Mini_1_1/spart_tb.sv line 428
 # Compile of spart_tb.sv was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
@@ -1428,43 +687,30 @@ run -all
 # All mini tests work! SPART by itself should not have issues. Hopefully (!?)
 # Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
 # Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
-# Test 2: Sent and populated TX queue
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# First Baud Rate Change Works, Onto the next! Exciting!
+# Random Test (not really anymore): Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
 # All test passed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(201)
-#    Time: 392235 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 201
-# Compile of spart_tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.spart_tb(fast)
-# Loading work.RemoteComm(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-run -all
-# Mini Test 1: Baud Rate Update worked
-# Lower bits of DB are correctly set
-# Upper bits of DB are correctly set
-# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
-# Mini Test 3: Status Registers work as expected
-# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
-# Transmission from remote comm failed
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(142)
-#    Time: 43685 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 142
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(438)
+#    Time: 1804075 ns  Iteration: 4  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 438
+# Compile of spart_tb.sv failed with 1 errors.
 # Compile of spart_tb.sv failed with 1 errors.
 # Compile of spart_tb.sv was successful.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file I:/win/554_git/Mini_1_1/work/@_opt/_deps (0:0 1:1 186 0 4623 1708469930 0x53:0x1)
-# ** Warning: (vsim-56) Problem with optimized design dependency file "I:/win/554_git/Mini_1_1/work/@_opt/_deps" - file open failed.
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
 # Loading work.spart_tb(fast)
 # Loading work.RemoteComm(fast)
@@ -1482,297 +728,64 @@ run -all
 # All mini tests work! SPART by itself should not have issues. Hopefully (!?)
 # Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
 # Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
-# Test 2: Failed. Count is not equal to 8
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(185)
-#    Time: 392225 ns  Iteration: 1  Instance: /spart_tb
-# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 185
-quit -sim
-# End time: 18:09:25 on Feb 20,2024, Elapsed time: 3:59:23
-# Errors: 0, Warnings: 3
-# Compile of mini0tb.sv failed with 2 errors.
-# Compile of mini0tb.sv failed with 1 errors.
-# Compile of mini0tb.sv was successful.
-vsim -voptargs=+acc work.MiniLabO_tb
-# vsim -voptargs="+acc" work.MiniLabO_tb 
-# Start time: 18:10:33 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: I:/win/554_git/Mini_1_1/mini0tb.sv(11): Module 'MiniLab1' is not defined.
-#  For instance 'iDUT' at path 'MiniLabO_tb'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 18:10:37 on Feb 20,2024, Elapsed time: 0:00:04
-# Errors: 1, Warnings: 4
-# Compile of RemoteComm.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of UART_rx.sv was successful.
-# Compile of UART_tx.sv was successful.
-# Compile of UART_wrapper.sv was successful.
-# Compile of spart.sv was successful.
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# First Baud Rate Change Works, Onto the next! Exciting!
+# Random Test (not really anymore): Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# Good, Different Baud Rates work. Now let us try to interleave them. In practcallity, who is actually going to do this?
+# All test passed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(481)
+#    Time: 2361435 ns  Iteration: 4  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 481
 # Compile of spart_tb.sv was successful.
-# Compile of circular_queue.sv was successful.
-# Compile of mini0tb.sv was successful.
-# Compile of MiniLab1.v was successful.
-# 10 compiles, 0 failed with no errors.
-vsim -voptargs=+acc work.MiniLabO_tb
-# vsim -voptargs="+acc" work.MiniLabO_tb 
-# Start time: 18:11:32 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: I:/win/554_git/Mini_1_1/MiniLab1.v(29): Module 'reset_synch' is not defined.
-#  For instance 'rst' at path 'MiniLabO_tb.iDUT'
-# ** Error: I:/win/554_git/Mini_1_1/MiniLab1.v(33): Module 'cpu' is not defined.
-#  For instance 'iCPU' at path 'MiniLabO_tb.iDUT'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
-# Error loading design
-# End time: 18:11:36 on Feb 20,2024, Elapsed time: 0:00:04
-# Errors: 2, Warnings: 3
-# Compile of RemoteComm.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of UART_rx.sv was successful.
-# Compile of UART_tx.sv was successful.
-# Compile of UART_wrapper.sv was successful.
-# Compile of spart.sv was successful.
-# Compile of spart_tb.sv was successful.
-# Compile of circular_queue.sv was successful.
-# Compile of mini0tb.sv was successful.
-# Compile of cpu.v was successful.
-# Compile of br_bool.v was successful.
-# Compile of cpu_tb.v was successful.
-# Compile of alu.v was successful.
-# Compile of data_mem.v was successful.
-# Compile of instr_mem.v was successful.
-# Compile of id.v was successful.
-# Compile of dst_mux.v was successful.
-# Compile of src_mux.v was successful.
-# Compile of rf.v was successful.
-# Compile of MiniLab1.v was successful.
-# Compile of prgm_cntr.v was successful.
-# 21 compiles, 0 failed with no errors.
-# Compile of RemoteComm.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of UART_rx.sv was successful.
-# Compile of UART_tx.sv was successful.
-# Compile of UART_wrapper.sv was successful.
-# Compile of spart.sv was successful.
-vsim -voptargs=+acc work.MiniLabO_tb
-# vsim -voptargs="+acc" work.MiniLabO_tb 
-# Start time: 18:13:07 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: I:/win/554_git/Mini_1_1/MiniLab1.v(29): Module 'reset_synch' is not defined.
-#  For instance 'rst' at path 'MiniLabO_tb.iDUT'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 18:13:10 on Feb 20,2024, Elapsed time: 0:00:03
-# Errors: 1, Warnings: 4
-# Compile of spart_tb.sv was successful.
-# Compile of circular_queue.sv was successful.
-# Compile of mini0tb.sv was successful.
-# Compile of cpu.v was successful.
-# Compile of br_bool.v was successful.
-# Compile of cpu_tb.v was successful.
-# Compile of alu.v was successful.
-# Compile of data_mem.v was successful.
-# Compile of instr_mem.v was successful.
-# Compile of id.v was successful.
-# Compile of dst_mux.v was successful.
-# Compile of src_mux.v was successful.
-# Compile of rf.v was successful.
-# Compile of MiniLab1.v was successful.
-# Compile of prgm_cntr.v was successful.
-# 21 compiles, 0 failed with no errors.
-# Compile of RemoteComm.sv was successful.
-# Compile of UART.sv was successful.
-# Compile of UART_rx.sv was successful.
-# Compile of UART_tx.sv was successful.
-# Compile of UART_wrapper.sv was successful.
-vsim -voptargs=+acc work.MiniLabO_tb
-# vsim -voptargs="+acc" work.MiniLabO_tb 
-# Start time: 18:14:15 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: I:/win/554_git/Mini_1_1/MiniLab1.v(29): Module 'reset_synch' is not defined.
-#  For instance 'rst' at path 'MiniLabO_tb.iDUT'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 18:14:18 on Feb 20,2024, Elapsed time: 0:00:03
-# Errors: 1, Warnings: 3
-# Compile of spart.sv was successful.
-# Compile of spart_tb.sv was successful.
-# Compile of circular_queue.sv was successful.
-# Compile of mini0tb.sv was successful.
-# Compile of cpu.v was successful.
-# Compile of br_bool.v was successful.
-# Compile of cpu_tb.v was successful.
-# Compile of alu.v was successful.
-# Compile of data_mem.v was successful.
-# Compile of instr_mem.v was successful.
-# Compile of id.v was successful.
-# Compile of dst_mux.v was successful.
-# Compile of src_mux.v was successful.
-# Compile of rf.v was successful.
-# Compile of MiniLab1.v was successful.
-# Compile of prgm_cntr.v was successful.
-# Compile of reset_synch.sv was successful.
-# 22 compiles, 0 failed with no errors.
-vsim -voptargs=+acc work.MiniLabO_tb
-# vsim -voptargs="+acc" work.MiniLabO_tb 
-# Start time: 18:16:18 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error (suppressible): I:/win/554_git/Mini_1_1/mini0tb.sv(11): (vopt-8885) Illegal inout port connection for 'GPIO' (4th connection) to reg type. 
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 18:16:22 on Feb 20,2024, Elapsed time: 0:00:04
-# Errors: 1, Warnings: 2
-vsim -voptargs=+acc work.MiniLabO_tb
-# vsim -voptargs="+acc" work.MiniLabO_tb 
-# Start time: 18:17:13 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error (suppressible): I:/win/554_git/Mini_1_1/mini0tb.sv(11): (vopt-8885) Illegal inout port connection for 'GPIO' (4th connection) to reg type. 
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 18:17:17 on Feb 20,2024, Elapsed time: 0:00:04
-# Errors: 1, Warnings: 1
-# Compile of reset_synch.sv was successful.
-# Compile of mini0tb.sv was successful.
-# Compile of mini0tb.sv was successful.
-vsim -voptargs=+acc work.MiniLabO_tb
-# vsim -voptargs="+acc" work.MiniLabO_tb 
-# Start time: 18:18:04 on Feb 20,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading sv_std.std
-# Loading work.MiniLabO_tb(fast)
-# Loading work.MiniLab1(fast)
-# Loading work.reset_synch(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.cpu(fast)
-# Loading work.pc(fast)
-# Loading work.IM(fast)
-# Loading work.id(fast)
-# Loading work.rf(fast)
-# Loading work.src_mux(fast)
-# Loading work.alu(fast)
-# Loading work.DM(fast)
-# Loading work.dst_mux(fast)
-# Loading work.br_bool(fast)
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'GPIO'.
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT File: I:/win/554_git/Mini_1_1/mini0tb.sv Line: 11
-# ** Warning: (vsim-3015) [PCDPC] - Port size (36) does not match connection size (25) for port 'GPIO'. The port definition is at: I:/win/554_git/Mini_1_1/MiniLab1.v(17).
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT File: I:/win/554_git/Mini_1_1/mini0tb.sv Line: 11
-# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (8) for port 'rdata'. The port definition is at: I:/win/554_git/Mini_1_1/cpu.v(1).
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT/iCPU File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 33
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'wdata'. The port definition is at: I:/win/554_git/Mini_1_1/cpu.v(1).
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT/iCPU File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 33
-# Error loading design
-# End time: 18:18:09 on Feb 20,2024, Elapsed time: 0:00:05
-# Errors: 1, Warnings: 7
-# Compile of id.v was successful.
-vsim -voptargs=+acc work.MiniLabO_tb
-# vsim -voptargs="+acc" work.MiniLabO_tb 
-# Start time: 18:19:06 on Feb 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.MiniLabO_tb(fast)
-# Loading work.MiniLab1(fast)
-# Loading work.reset_synch(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.cpu(fast)
-# Loading work.pc(fast)
-# Loading work.IM(fast)
-# Loading work.id(fast)
-# Loading work.rf(fast)
-# Loading work.src_mux(fast)
-# Loading work.alu(fast)
-# Loading work.DM(fast)
-# Loading work.dst_mux(fast)
-# Loading work.br_bool(fast)
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'GPIO'.
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT File: I:/win/554_git/Mini_1_1/mini0tb.sv Line: 11
-# ** Warning: (vsim-3015) [PCDPC] - Port size (36) does not match connection size (25) for port 'GPIO'. The port definition is at: I:/win/554_git/Mini_1_1/MiniLab1.v(17).
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT File: I:/win/554_git/Mini_1_1/mini0tb.sv Line: 11
-# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (8) for port 'rdata'. The port definition is at: I:/win/554_git/Mini_1_1/cpu.v(1).
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT/iCPU File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 33
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'wdata'. The port definition is at: I:/win/554_git/Mini_1_1/cpu.v(1).
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT/iCPU File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 33
-# Error loading design
-# End time: 18:19:12 on Feb 20,2024, Elapsed time: 0:00:06
-# Errors: 1, Warnings: 5
-# Compile of mini0tb.sv was successful.
-# Optimization canceled
-vsim -voptargs=+acc work.MiniLabO_tb
-# vsim -voptargs="+acc" work.MiniLabO_tb 
-# Start time: 18:20:12 on Feb 20,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading sv_std.std
-# Loading work.MiniLabO_tb(fast)
-# Loading work.MiniLab1(fast)
-# Loading work.reset_synch(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
-# Loading work.UART(fast)
-# Loading work.UART_tx(fast)
-# Loading work.UART_rx(fast)
-# Loading work.cpu(fast)
-# Loading work.pc(fast)
-# Loading work.IM(fast)
-# Loading work.id(fast)
-# Loading work.rf(fast)
-# Loading work.src_mux(fast)
-# Loading work.alu(fast)
-# Loading work.DM(fast)
-# Loading work.dst_mux(fast)
-# Loading work.br_bool(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (8) for port 'rdata'. The port definition is at: I:/win/554_git/Mini_1_1/cpu.v(1).
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT/iCPU File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 33
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'wdata'. The port definition is at: I:/win/554_git/Mini_1_1/cpu.v(1).
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT/iCPU File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 33
-add wave -position insertpoint sim:/MiniLabO_tb/iDUT/*
-run -all
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/mini0tb.sv(23)
-#    Time: 1000005 ns  Iteration: 1  Instance: /MiniLabO_tb
-# Break in Module MiniLabO_tb at I:/win/554_git/Mini_1_1/mini0tb.sv line 23
-view -new wave
-# .main_pane.wave1.interior.cs.body.pw.wf
-add wave -position insertpoint sim:/MiniLabO_tb/iDUT/iSpart/*
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt2
-# Loading work.MiniLabO_tb(fast)
-# Loading work.MiniLab1(fast)
-# Loading work.reset_synch(fast)
-# Loading work.spart(fast)
-# Loading work.circular_queue(fast)
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.spart_tb(fast)
+# Loading work.RemoteComm(fast)
 # Loading work.UART(fast)
 # Loading work.UART_tx(fast)
 # Loading work.UART_rx(fast)
-# Loading work.cpu(fast)
-# Loading work.pc(fast)
-# Loading work.IM(fast)
-# Loading work.id(fast)
-# Loading work.rf(fast)
-# Loading work.src_mux(fast)
-# Loading work.alu(fast)
-# Loading work.DM(fast)
-# Loading work.dst_mux(fast)
-# Loading work.br_bool(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (8) for port 'rdata'. The port definition is at: I:/win/554_git/Mini_1_1/cpu.v(1).
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT/iCPU File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 33
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'wdata'. The port definition is at: I:/win/554_git/Mini_1_1/cpu.v(1).
-#    Time: 0 ns  Iteration: 0  Instance: /MiniLabO_tb/iDUT/iCPU File: I:/win/554_git/Mini_1_1/MiniLab1.v Line: 33
+# Loading work.spart(fast)
+# Loading work.circular_queue(fast)
 run -all
-# ** Note: $stop    : I:/win/554_git/Mini_1_1/mini0tb.sv(23)
-#    Time: 1000005 ns  Iteration: 1  Instance: /MiniLabO_tb
-# Break in Module MiniLabO_tb at I:/win/554_git/Mini_1_1/mini0tb.sv line 23
-# End time: 18:32:56 on Feb 20,2024, Elapsed time: 0:12:44
-# Errors: 0, Warnings: 3
+# Mini Test 1: Baud Rate Update worked
+# Lower bits of DB are correctly set
+# Upper bits of DB are correctly set
+# Mini test 2: Databus correctly returns Upper and Lower bits of Baud Rate
+# Mini Test 3: Status Registers work as expected
+# All mini tests work! SPART by itself should not have issues. Hopefully (!?)
+# Remote Comm Sent value of 8'hB5 and SPART recieved it. RX, TX lines are hooked right
+# Test 1: Sucess! Remote Comm sent values. SPART has recieved and stored only 8
+# Test 2: Sucess! TX Queue populated
+# Spart sent 1st 8 bits of data properly
+# Spart sent 2nd 8 bits of data properly
+# Only 8 transactions were sent. No Garbage values
+# Official Test 3: At the same Baud Rate, SPART is sending data to RemoteComm
+# Good, This means at the same Baud Rate, Bidirectional communication has been setup
+# We will start different baud rates
+# Random Test: Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# First Baud Rate Change Works, Onto the next! Exciting!
+# Random Test (not really anymore): Status Registers return correct value
+# Correct Data Recieved by spart
+# Correct Data Recieved by RemoteComm!
+# Good, Different Baud Rates work. Now let us try to interleave them. In practicallity, who is actually going to do this?
+# Test Bench sent ACDC in hex (not ascii) on different baud rates. Yipee!
+# We have tested interleaving of different baud rates from SPART to RemoteComm,I think we are done for now. Don't jinx it!
+# Yahoo! All test passed
+# ** Note: $stop    : I:/win/554_git/Mini_1_1/spart_tb.sv(481)
+#    Time: 2361435 ns  Iteration: 4  Instance: /spart_tb
+# Break in Module spart_tb at I:/win/554_git/Mini_1_1/spart_tb.sv line 481

@@ -9,7 +9,7 @@ input [12:0] baud;
 
 reg [8:0] shift_reg;	// 1-bit wider to store start bit
 reg [3:0] bit_cnt;		// bit counter
-reg [11:0] baud_cnt;	// baud rate counter (50MHz/19200) = div of 2604
+reg [12:0] baud_cnt;	// baud rate counter (50MHz/19200) = div of 2604
 reg tx_done;			// tx_done will be a set/reset flop
 
 reg load, trnsmttng;		// assigned in state machine
@@ -74,6 +74,7 @@ always @(posedge clk or negedge rst_n)
     tx_done <= 1'b0;
   else if (bit_cnt==4'b1010)
     tx_done <= 1'b1;
+
 
 //////////////////////////////////////////////
 // Now for hard part...State machine logic //

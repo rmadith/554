@@ -44,22 +44,56 @@ logic [3:0] tx_queue, rx_queue;
 logic [7:0] inter_databus, rx_bus;
 logic [1:0] inter_ioaddr;
 
-circular_queue iTxQueue(.clk(clk),.rst_n(rst_n),.data_in(databus),.add(add_tx),.remove(tx_done),.data_out(tx_data),.q_full(tx_q_full),.q_empty(tx_q_empty), .remaining(tx_queue), .containing());
+logic inter_trmt, inter_rm;
+
+typedef enum reg {IDLE, transmitting} state_t;
+state_t state, nxt_state;
+
+circular_queue iTxQueue(.clk(clk),.rst_n(rst_n),.data_in(databus),.add(add_tx),.remove(inter_rm),.data_out(tx_data),.q_full(tx_q_full),.q_empty(tx_q_empty), .remaining(tx_queue), .containing());
 circular_queue iRxQueue(.clk(clk),.rst_n(rst_n),.data_in(rx_data),.add(rx_rdy),.remove(remove_rx),.data_out(rx_bus),.q_full(rx_q_full),.q_empty(rx_q_empty), .containing(rx_queue), .remaining());
 
-UART iUART(.clk(clk),.rst_n(rst_n),.RX(RX),.TX(TX),.rx_rdy(rx_rdy),.clr_rx_rdy(),.rx_data(rx_data),.trmt(!tx_q_empty),.tx_data(tx_data),.tx_done(tx_done), .baud(DB));
+UART iUART(.clk(clk),.rst_n(rst_n),.RX(RX),.TX(TX),.rx_rdy(rx_rdy),.clr_rx_rdy(),.rx_data(rx_data),.trmt(inter_trmt),.tx_data(tx_data),.tx_done(tx_done), .baud(DB));
+
+
+// State Machine to keep track of tx transmission
+always @(posedge clk, negedge rst_n)
+    if(!rst_n)
+	state <= IDLE;
+    else
+	state <= nxt_state;
+
+always_comb begin
+    nxt_state = state;
+    inter_trmt = 0;
+    inter_rm = 0;
+    case(state)
+	IDLE: if(!tx_q_empty) begin
+		inter_trmt = 1;
+		nxt_state = transmitting;
+	      end
+	transmitting: if(tx_done) begin
+			 inter_rm = 1;
+			 nxt_state = IDLE;
+    		      end
+    endcase
+	
+end
+
 
 
 assign inter_ioaddr = (!iocs_n) ? ioaddr : 2'bz;
 assign databus = (iorw_n && !iocs_n) ? inter_databus : 8'bz;
 
+// Check if Databus has changed Values of Baud
+logic chng_sig1, chng_sig2;
+
 always @(posedge clk, negedge rst_n) 
      if(!rst_n)
 	DB = 'h1b2;
-     else if(inter_DB_2 != 0)
-	DB[12:8] = inter_DB_2;
-     else if(inter_DB_1 != 0)
-	DB[7:0] = inter_DB_1;
+     else if(chng_sig1)
+	DB[12:8] = databus[4:0];
+     else if(chng_sig2)
+	DB[7:0] = databus;
 
 
 always_comb begin
@@ -67,20 +101,22 @@ always_comb begin
     remove_rx = 0;
     inter_databus = 8'bz;
     inter_DB_2 = 0;
-    inter_DB_1 = 0; 
+    inter_DB_1 = 0;
+    chng_sig1 = 0; 
+    chng_sig2 = 0;
 
     case(inter_ioaddr)
-        00: begin if(iorw_n) begin 
+        2'b00: begin if(iorw_n) begin 
 		remove_rx = 1;
 		inter_databus = rx_bus;
 	    end
             else add_tx = 1;
 	    end
-        10: begin if(iorw_n) inter_databus = DB[7:0];
-            else if(!iorw_n) inter_DB_1 = databus;
-	    end
-        11: begin if(iorw_n) inter_databus = DB[12:8];
-            else inter_DB_2 = databus[4:0];
+        2'b10: begin if(iorw_n) inter_databus = DB[7:0];
+            	     else chng_sig1 = 1;
+		end
+        2'b11: begin if(iorw_n) inter_databus = DB[12:8];
+           	     else chng_sig2 = 1;
 	    end
         default: inter_databus = {tx_queue, rx_queue};
      endcase
