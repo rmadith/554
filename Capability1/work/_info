@@ -1,0 +1,519 @@
+m255
+K4
+z2
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/22.1std
+valu
+Z0 !s110 1708903419
+!i10b 1
+!s100 Qa:FE8TO6XQ^8@;Y`]NaL2
+IJb2S?O`dLkH]ZHIDP8TV>0
+Z1 dI:/win/554_git/Capability1
+Z2 w1707428831
+8I:/win/554_git/Capability1/alu.v
+FI:/win/554_git/Capability1/alu.v
+Z3 Fcommon_params.inc
+!i122 37
+L0 1 143
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z6 !s108 1708903419.000000
+!s107 common_params.inc|I:/win/554_git/Capability1/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/alu.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 tCvgOpt 0
+vBMP_display
+!s110 1708903415
+!i10b 1
+!s100 J;GT^4eamI]AER`i<5Y5>3
+I;fCPzc:FiSMcnEiNfj>j63
+R1
+Z9 w1708898844
+8I:/win/554_git/Capability1/BMP_display.v
+FI:/win/554_git/Capability1/BMP_display.v
+!i122 28
+L0 6 128
+R4
+R5
+r1
+!s85 0
+31
+Z10 !s108 1708903415.000000
+!s107 I:/win/554_git/Capability1/BMP_display.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/BMP_display.v|
+!i113 0
+R7
+R8
+n@b@m@p_display
+vBMP_ROM_Bucky
+Z11 !s110 1708903416
+!i10b 1
+!s100 ^WQGnae5j`ImM3ida@moC2
+IhL3Zo8Akg9`UzeLg:akLd1
+R1
+R9
+8I:/win/554_git/Capability1/BMP_ROM_Bucky.v
+FI:/win/554_git/Capability1/BMP_ROM_Bucky.v
+!i122 29
+Z12 L0 1 15
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 I:/win/554_git/Capability1/BMP_ROM_Bucky.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/BMP_ROM_Bucky.v|
+!i113 0
+R7
+R8
+n@b@m@p_@r@o@m_@bucky
+vBMP_ROM_Font
+R11
+!i10b 1
+!s100 bL3_fo7Qg5Q@7ELcNfOBm1
+IUBnMoWc;c3`je92j>TobU0
+R1
+R9
+8I:/win/554_git/Capability1/BMP_ROM_Font.v
+FI:/win/554_git/Capability1/BMP_ROM_Font.v
+!i122 30
+R12
+R4
+R5
+r1
+!s85 0
+31
+Z13 !s108 1708903416.000000
+!s107 I:/win/554_git/Capability1/BMP_ROM_Font.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/BMP_ROM_Font.v|
+!i113 0
+R7
+R8
+n@b@m@p_@r@o@m_@font
+vBMP_ROM_Mario
+Z14 !s110 1708903417
+!i10b 1
+!s100 [1]h5zFR:EXz8nko@z]?Y3
+I9m3KfY2DU5jTVI>3k7Ej@1
+R1
+R9
+8I:/win/554_git/Capability1/BMP_ROM_Mario.v
+FI:/win/554_git/Capability1/BMP_ROM_Mario.v
+!i122 31
+R12
+R4
+R5
+r1
+!s85 0
+31
+R13
+!s107 I:/win/554_git/Capability1/BMP_ROM_Mario.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/BMP_ROM_Mario.v|
+!i113 0
+R7
+R8
+n@b@m@p_@r@o@m_@mario
+vbr_bool
+Z15 !s110 1708903420
+!i10b 1
+!s100 E26GMAO3hRS^Pm`2Z_NLV0
+Ih]Fe>F[90XN^ffT;H8TB[3
+R1
+R2
+8I:/win/554_git/Capability1/br_bool.v
+FI:/win/554_git/Capability1/br_bool.v
+!i122 38
+L0 1 64
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 I:/win/554_git/Capability1/br_bool.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/br_bool.v|
+!i113 0
+R7
+R8
+vcpu
+R15
+!i10b 1
+!s100 FS^<7d[3mg^B_BmMK_XHa1
+IB1g;J1l9h2A4BK^dEE:XT2
+R1
+w1708591150
+8I:/win/554_git/Capability1/cpu.v
+FI:/win/554_git/Capability1/cpu.v
+!i122 39
+L0 1 114
+R4
+R5
+r1
+!s85 0
+31
+Z16 !s108 1708903420.000000
+!s107 I:/win/554_git/Capability1/cpu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/cpu.v|
+!i113 0
+R7
+R8
+vcpu_tb
+Z17 !s110 1708903421
+!i10b 1
+!s100 6`0mR8X`;XN3iJiE?57>a3
+IIUjL<ibZ2RLA8iRO]N6;C1
+R1
+R2
+8I:/win/554_git/Capability1/cpu_tb.v
+FI:/win/554_git/Capability1/cpu_tb.v
+!i122 40
+L0 1 19
+R4
+R5
+r1
+!s85 0
+31
+R16
+!s107 I:/win/554_git/Capability1/cpu_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/cpu_tb.v|
+!i113 0
+R7
+R8
+vDM
+R17
+!i10b 1
+!s100 OU5Y4[NkjYkX`Ri>WICzj3
+IAOZ167lk6E;54ZZam[0JX0
+R1
+w1708588471
+8I:/win/554_git/Capability1/data_mem.v
+FI:/win/554_git/Capability1/data_mem.v
+!i122 41
+L0 1 35
+R4
+R5
+r1
+!s85 0
+31
+Z18 !s108 1708903421.000000
+!s107 I:/win/554_git/Capability1/data_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/data_mem.v|
+!i113 0
+R7
+R8
+n@d@m
+vdst_mux
+Z19 !s110 1708903422
+!i10b 1
+!s100 :kE892UGSV5FgKWfaDcb?2
+IXCO3]eB=cALDO0aiOF27m3
+R1
+R2
+8I:/win/554_git/Capability1/dst_mux.v
+FI:/win/554_git/Capability1/dst_mux.v
+!i122 42
+Z20 L0 1 22
+R4
+R5
+r1
+!s85 0
+31
+R18
+!s107 I:/win/554_git/Capability1/dst_mux.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/dst_mux.v|
+!i113 0
+R7
+R8
+vid
+R19
+!i10b 1
+!s100 nk[7R]UDOJ`z=[VOXS>o@0
+If?H:>OLSVOLC_VfMNRK:l2
+R1
+w1708474729
+8I:/win/554_git/Capability1/id.v
+FI:/win/554_git/Capability1/id.v
+R3
+!i122 43
+L0 1 368
+R4
+R5
+r1
+!s85 0
+31
+Z21 !s108 1708903422.000000
+!s107 common_params.inc|I:/win/554_git/Capability1/id.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/id.v|
+!i113 0
+R7
+R8
+vIM
+R19
+!i10b 1
+!s100 gUd0j94gPO9hgK2JN_;Z^1
+IT^VNT2WgRcEJzYF`g^mk81
+R1
+w1707432999
+8I:/win/554_git/Capability1/instr_mem.v
+FI:/win/554_git/Capability1/instr_mem.v
+!i122 44
+R20
+R4
+R5
+r1
+!s85 0
+31
+R21
+!s107 I:/win/554_git/Capability1/instr_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/instr_mem.v|
+!i113 0
+R7
+R8
+n@i@m
+vpc
+Z22 !s110 1708903423
+!i10b 1
+!s100 PE1Pom<0:Zl97>AaRaWK81
+Ikz2MnL1791840Yd:R?IA32
+R1
+R2
+8I:/win/554_git/Capability1/prgm_cntr.v
+FI:/win/554_git/Capability1/prgm_cntr.v
+!i122 45
+L0 1 60
+R4
+R5
+r1
+!s85 0
+31
+R21
+!s107 I:/win/554_git/Capability1/prgm_cntr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/prgm_cntr.v|
+!i113 0
+R7
+R8
+vPlaceBMP
+Z23 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R14
+!i10b 1
+!s100 h1eTeNiCNE>_=Vkm3I<?<2
+I`=0GaB587AJRB=8HicA4D2
+S1
+R1
+Z24 w1708898845
+8I:/win/554_git/Capability1/PlaceBMP.sv
+FI:/win/554_git/Capability1/PlaceBMP.sv
+!i122 32
+L0 1 285
+R4
+R5
+r1
+!s85 0
+31
+Z25 !s108 1708903417.000000
+!s107 I:/win/554_git/Capability1/PlaceBMP.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Capability1/PlaceBMP.sv|
+!i113 0
+Z26 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+n@place@b@m@p
+vPLL
+Z27 !s110 1708903418
+!i10b 1
+!s100 jEO=::H_z[K5mB@:A2`:z0
+I88FCfDCU=_O0G3hBkZN:>3
+R1
+R24
+8I:/win/554_git/Capability1/PLL.v
+FI:/win/554_git/Capability1/PLL.v
+!i122 33
+L0 8 17
+R4
+R5
+r1
+!s85 0
+31
+R25
+!s107 I:/win/554_git/Capability1/PLL.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/PLL.v|
+!i113 0
+R7
+R8
+n@p@l@l
+vRemoteComm
+R23
+R22
+!i10b 1
+!s100 l9CBRZ2;78HLYiRclLZg32
+INIj5ih6MS7>DRZ1NEf5R`1
+S1
+R1
+w1708467734
+8I:/win/554_git/Capability1/RemoteComm.sv
+FI:/win/554_git/Capability1/RemoteComm.sv
+!i122 46
+L0 1 101
+R4
+R5
+r1
+!s85 0
+31
+Z28 !s108 1708903423.000000
+!s107 I:/win/554_git/Capability1/RemoteComm.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Capability1/RemoteComm.sv|
+!i113 0
+R26
+R8
+n@remote@comm
+vreset_synch
+R23
+Z29 !s110 1708903424
+!i10b 1
+!s100 n@m[9<dLH0b=7DcKH`KS52
+Ic5CQ6gY;jN9zTFOH;]T7`2
+S1
+R1
+R2
+8I:/win/554_git/Capability1/reset_synch.sv
+FI:/win/554_git/Capability1/reset_synch.sv
+!i122 47
+L0 1 17
+R4
+R5
+r1
+!s85 0
+31
+R28
+!s107 I:/win/554_git/Capability1/reset_synch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Capability1/reset_synch.sv|
+!i113 0
+R26
+R8
+vrf
+R29
+!i10b 1
+!s100 [`c4cIEQDIIAiM@9g0YE`2
+I@l7@G[T8Uf^MjVkP49WW12
+R1
+w1707432958
+8I:/win/554_git/Capability1/rf.v
+FI:/win/554_git/Capability1/rf.v
+!i122 48
+L0 1 67
+R4
+R5
+r1
+!s85 0
+31
+Z30 !s108 1708903424.000000
+!s107 I:/win/554_git/Capability1/rf.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/rf.v|
+!i113 0
+R7
+R8
+vrst_synch
+R27
+!i10b 1
+!s100 Fh6G9Mz<_m1ZF;7CPhc?V2
+IO?1;eZ3L`hQoh2MoizYdg0
+R1
+R24
+8I:/win/554_git/Capability1/rst_synch.v
+FI:/win/554_git/Capability1/rst_synch.v
+!i122 34
+L0 1 27
+R4
+R5
+r1
+!s85 0
+31
+Z31 !s108 1708903418.000000
+!s107 I:/win/554_git/Capability1/rst_synch.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/rst_synch.v|
+!i113 0
+R7
+R8
+vsrc_mux
+!s110 1708903425
+!i10b 1
+!s100 YfY5>1NKa[kU71O7UUT>21
+Ik`LW7:`PkD[k[305noLU?0
+R1
+R2
+8I:/win/554_git/Capability1/src_mux.v
+FI:/win/554_git/Capability1/src_mux.v
+R3
+!i122 49
+L0 1 120
+R4
+R5
+r1
+!s85 0
+31
+R30
+!s107 common_params.inc|I:/win/554_git/Capability1/src_mux.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Capability1/src_mux.v|
+!i113 0
+R7
+R8
+vVGA_timing
+R23
+R27
+!i10b 1
+!s100 jUL<6SBCd@KS<ONaKW:Zo0
+IH<AQKnIoz8f5117^2DEzk1
+S1
+R1
+R24
+8I:/win/554_git/Capability1/VGA_timing.sv
+FI:/win/554_git/Capability1/VGA_timing.sv
+!i122 35
+L0 1 212
+R4
+R5
+r1
+!s85 0
+31
+R31
+!s107 I:/win/554_git/Capability1/VGA_timing.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Capability1/VGA_timing.sv|
+!i113 0
+R26
+R8
+n@v@g@a_timing
+vvideoMem
+R23
+R0
+!i10b 1
+!s100 :7m7U@^XEajgWzoU_?Ylj3
+I2;Z7R`WkFNjFRn6TzVG:P0
+S1
+R1
+R24
+8I:/win/554_git/Capability1/videoMem.sv
+FI:/win/554_git/Capability1/videoMem.sv
+!i122 36
+L0 1 18
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 I:/win/554_git/Capability1/videoMem.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Capability1/videoMem.sv|
+!i113 0
+R26
+R8
+nvideo@mem

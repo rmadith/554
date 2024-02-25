@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at rst_synch.v(4): object "RST_n" differs only in case from object "rst_n" in the same scope File: I:/win/554_git/Capability1/rst_synch.v Line: 4
+Info (10281): Verilog HDL Declaration information at BMP_display.v(17): object "RST_n" differs only in case from object "rst_n" in the same scope File: I:/win/554_git/Capability1/BMP_display.v Line: 17
