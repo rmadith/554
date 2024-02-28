@@ -13,7 +13,7 @@ input [15:0] wrt_data;	// data to be written
 
 output reg [15:0] rd_data;	//output of data memory
 
-reg [15:0]data_mem[0:8191];
+reg [15:0]data_mem[0:2047];
 
 ///////////////////////////////////////////////
 // Model read, data is negedge  clock  //

@@ -1,0 +1,54 @@
+@0000 0001 //Checking POLL
+@0001 0040 // Xloc for Mario
+@0002 0050 // yloc for Mario, Badger and MAR
+@0003 0041 // Add Bucky image
+@0004 0180 // Xloc for buckyBadger
+@0005 0042 // Add BuckyBadger
+@0006 8000 // 0 Going Above and beyond(?)
+@0007 8200 // 1
+@0008 8400 // 2
+@0009 8600 // 3
+@000a 8800 // 4
+@000b 8A00 // 5
+@000c 8C00 // 6
+@000d 8E00 // 7
+@000e 9000 // 8
+@000f 9200 // 9
+@0010 9400 // A
+@0011 9600 // B
+@0012 9800 // C
+@0013 9A00 // D
+@0014 9C00 // E
+@0015 9E00 // F
+@0016 A000 // G
+@0017 A200 // H
+@0018 A400 // I
+@0019 A600 // J
+@001a A800 // K
+@001b AA00 // L
+@001c AC00 // M
+@001d AE00 // N
+@001e B000 // O
+@001f B200 // P
+@0020 B400 // Q
+@0021 B600 // R
+@0022 B800 // S
+@0023 BA00 // T
+@0024 BC00 // U
+@0025 BE00 // V
+@0026 C000 // W
+@0027 C200 // X
+@0028 C400 // Y
+@0029 C600 // Z
+@002a C800 // =
+@002b CA00 // >
+@002c CC00 // (
+@002d CE00 // )
+@002e 010D // Xloc for M of the MAR
+@002f 011A // Xloc for A of the MAR
+@0030 0127 // Xloc for R of the MAR
+@0031 005D // Yloc for VV
+@0032 006A // Yloc for ED
+@0033 0077 // Yloc for R
+@0034 0087 // Yloc for Eric Hoffman
+@0035 0043 // Hoffman Ctl

@@ -6,7 +6,7 @@ input rd_en;			// asserted when instruction read desired
 
 output reg [15:0] instr;	//output of insturction memory
 
-reg [15:0]instr_mem[0:16535];
+reg [15:0]instr_mem[0:8191];
 
 /////////////////////////////////////
 // Memory is floped on negedge clock  //

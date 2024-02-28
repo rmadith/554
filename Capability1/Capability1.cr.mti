@@ -40,19 +40,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	IM
 
-} {} {}} I:/win/554_git/Capability1/rf.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/rf.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module rf
-
-Top level modules:
-	rf
-
 } {} {}} I:/win/554_git/Capability1/data_mem.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/data_mem.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module DM
 
 Top level modules:
 	DM
+
+} {} {}} I:/win/554_git/Capability1/rf.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/rf.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module rf
+
+Top level modules:
+	rf
 
 } {} {}} I:/win/554_git/Capability1/src_mux.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/src_mux.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -89,12 +89,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	BMP_ROM_Mario
 
-} {} {}} I:/win/554_git/Capability1/BMP_display.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/BMP_display.v
+} {} {}} I:/win/554_git/Capability1/capability.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Capability1/capability.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module BMP_display
+-- Compiling module capability
 
 Top level modules:
-	BMP_display
+	capability
 
 } {} {}} I:/win/554_git/Capability1/cpu_tb.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/cpu_tb.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -102,6 +102,13 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 
 Top level modules:
 	cpu_tb
+
+} {} {}} I:/win/554_git/Capability1/br_bool.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/br_bool.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module br_bool
+
+Top level modules:
+	br_bool
 
 } {} {}} I:/win/554_git/Capability1/PlaceBMP.sv {2 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Capability1/PlaceBMP.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -113,19 +120,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	PlaceBMP
 
-} {} {}} I:/win/554_git/Capability1/br_bool.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/br_bool.v
+} {} {}} I:/win/554_git/Capability1/cpu.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/cpu.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module br_bool
+-- Compiling module cpu
 
 Top level modules:
-	br_bool
-
-} {} {}} I:/win/554_git/Capability1/PLL.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/PLL.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module PLL
-
-Top level modules:
-	PLL
+	cpu
 
 } {} {}} I:/win/554_git/Capability1/VGA_timing.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Capability1/VGA_timing.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -134,12 +134,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	VGA_timing
 
-} {} {}} I:/win/554_git/Capability1/cpu.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/cpu.v
+} {} {}} I:/win/554_git/Capability1/PLL.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/PLL.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module cpu
+-- Compiling module PLL
 
 Top level modules:
-	cpu
+	PLL
 
 } {} {}} I:/win/554_git/Capability1/BMP_ROM_Bucky.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Capability1/BMP_ROM_Bucky.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021

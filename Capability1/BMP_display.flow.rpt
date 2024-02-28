@@ -1,5 +1,5 @@
 Flow report for BMP_display
-Sun Feb 25 16:11:47 2024
+Tue Feb 27 17:17:45 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Sun Feb 25 16:11:35 2024          ;
+; Flow Status                     ; Successful - Tue Feb 27 17:17:32 2024          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; BMP_display                                    ;
 ; Top-level Entity Name           ; BMP_display                                    ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 392 / 32,070 ( 1 % )                           ;
-; Total registers                 ; 259                                            ;
+; Logic utilization (in ALMs)     ; 611 / 32,070 ( 2 % )                           ;
+; Total registers                 ; 488                                            ;
 ; Total pins                      ; 44 / 457 ( 10 % )                              ;
 ; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 2,079,384 / 4,065,280 ( 51 % )                 ;
+; Total block memory bits         ; 2,312,760 / 4,065,280 ( 57 % )                 ;
 ; Total DSP Blocks                ; 2 / 87 ( 2 % )                                 ;
 ; Total HSSI RX PCSs              ; 0                                              ;
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
@@ -68,30 +68,31 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/25/2024 16:09:09 ;
+; Start date & time ; 02/27/2024 17:14:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; BMP_display         ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 118933446293980.170889894913688        ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; MISC_FILE                           ; PLL.cmp                                ; --            ; --          ; --         ;
-; MISC_FILE                           ; PLL_sim/PLL.vo                         ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; SPD_FILE                            ; PLL.spd                                ; --            ; --          ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 118933446293980.170907569408512        ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; None                                   ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; PLL.cmp                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; PLL_sim/PLL.vo                         ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
+; SPD_FILE                            ; PLL.spd                                ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --          ; --             ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -99,11 +100,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 5082 MB             ; 00:00:10                           ;
-; Fitter               ; 00:01:32     ; 1.1                     ; 6771 MB             ; 00:02:10                           ;
-; Assembler            ; 00:00:13     ; 1.0                     ; 4899 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:11     ; 1.9                     ; 5279 MB             ; 00:00:10                           ;
-; Total                ; 00:02:21     ; --                      ; --                  ; 00:02:33                           ;
+; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 4911 MB             ; 00:00:12                           ;
+; Fitter               ; 00:01:40     ; 1.2                     ; 6780 MB             ; 00:02:22                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 4902 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:12     ; 2.1                     ; 5290 MB             ; 00:00:14                           ;
+; Total                ; 00:02:31     ; --                      ; --                  ; 00:02:52                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
