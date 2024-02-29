@@ -2,8 +2,6 @@
 llb R1, 0x08
 lhb R1, 0xC0
 
-
-
 // Starting Mario
 Mario:
     jal POLL
@@ -32,7 +30,6 @@ buckyBadger:
 
 // Since DataMem has exceeded 0 + 15 Addresses, I need to load the new "starting" point for locations
 llb R7, 0x2E
-
 
 M:
     jal POLL
@@ -171,8 +168,6 @@ Professor:
 
 // Halting. All further code is not meant to be run. Just Subroutines
 hlt
-
-
 
 POLL:
     lw R14, R1, 3

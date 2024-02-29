@@ -42,10 +42,10 @@ module BMP_display(
 );
 
 
-  localparam BMP_CTL = 16'hC008;
-  localparam BMP_XLOC =  16'hC009;
-  localparam BMP_YLOC =  16'hC00A;
-  localparam BMP_STAT = 16'hC00B;
+  // localparam BMP_CTL = 16'hC008;
+  // localparam BMP_XLOC =  16'hC009;
+  // localparam BMP_YLOC =  16'hC00A;
+  // localparam BMP_STAT = 16'hC00B;
 
   ////////////////////////////////////
   // internal nets for connections //
