@@ -1,0 +1,1 @@
+﻿On Sunday both Eric and Muthu got together to start working on the code for the BMP Display. Both Vishnu and Ryan were not available to work. Eric and Muthu got most of the work done before Tuesday. Vishnu fixed the clock not being in phase, and Ryan went through to make sure that everything was commented and the qsf file was set up correctly.

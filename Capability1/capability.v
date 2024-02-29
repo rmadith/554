@@ -6,13 +6,10 @@
 module capability(
 
 	//////////// CLOCK //////////
-	input 		          		CLOCK2_50,
-	input 		          		CLOCK3_50,
-	input 		          		CLOCK4_50,
-	input 		          		CLOCK_50,
+	input 		          		REF_CLK,
 
 	//////////// KEY //////////
-	input 		     [3:0]		KEY,
+	input 		     				RST_n	,
 
 	//////////// VGA //////////
 	output		          		VGA_BLANK_N,
@@ -46,13 +43,10 @@ module capability(
   wire [15:0] addr;  
   wire [15:0] inter_rdata;
 
-  // Clock was pulled out because the PLL clock output and CLOCK_50 are not in exact phase(?). There was no display when the cpu and flipflops for 
-  // xloc and yloc were posedge triggered by the ref clock
-
   // We pulled out clk and rst_n instead of pulling the module out because it would make BMP_display kind of useless. Originally we had BMP_display
   // as the top level and instantiated the cpu inside. Since we needed to change that, we pulled the cpu out. If we also pulled the PLL and the reset synch, the only
   // things left are Place_BMP, and videomem with VGA timing
-  BMP_display iDUT(.CLOCK2_50(CLOCK2_50), .CLOCK3_50(CLOCK3_50), .CLOCK4_50(CLOCK4_50), .REF_CLK(CLOCK_50), .RST_n(KEY[0]), .LEDR(LEDR), 
+  BMP_display iDUT(.REF_CLK(REF_CLK), .RST_n(RST_n), .LEDR(LEDR), 
     .VGA_BLANK_N(VGA_BLANK_N), .VGA_B(VGA_B), .VGA_CLK(VGA_CLK), .VGA_G(VGA_G), .VGA_HS(VGA_HS), .VGA_R(VGA_R), .VGA_SYNC_N(VGA_SYNC_N),
     .VGA_VS(VGA_VS), .xloc(xloc), .yloc(yloc), .add_fnt(add_fnt), .fnt_indx(fnt_indx), .add_img(add_img), .image_indx(image_indx), 
     .rem_img(rem_img), .busy(busy),.clk(clk),.rst_n(rst_n));

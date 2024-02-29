@@ -40,7 +40,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[0]",
+					"name" : "RST_n",
 					"strict" : false
 				}
 			]

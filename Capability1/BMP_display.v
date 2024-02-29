@@ -5,16 +5,11 @@
 
 module BMP_display(
 
-
 	//////////// CLOCK //////////
-	input 		          		CLOCK2_50,
-	input 		          		CLOCK3_50,
-	input 		          		CLOCK4_50,
 	input 		          		REF_CLK,
 
-	
 	//////////// KEY //////////
-	input 						RST_n,	// this is KEY[0]
+	input 						RST_n,	
 
 	//////////// LED //////////
 	output		     [9:0]		LEDR,
@@ -41,17 +36,9 @@ module BMP_display(
   output rst_n
 );
 
-
-  // localparam BMP_CTL = 16'hC008;
-  // localparam BMP_XLOC =  16'hC009;
-  // localparam BMP_YLOC =  16'hC00A;
-  // localparam BMP_STAT = 16'hC00B;
-
   ////////////////////////////////////
   // internal nets for connections //
   //////////////////////////////////
-  // wire rst_n;						// synchronized global reset signal
-  // wire clk;							// 50MHz clock from PLL
   wire pll_locked;					// PLL is locked on reference clock
   wire [9:0] xpix;					// current X coordinate of VGA
   wire [8:0] ypix;					// current Y coordinate of VGA
@@ -59,18 +46,8 @@ module BMP_display(
   wire [5:0] rdata;					// 6-bit color
   wire [18:0] waddr;				// write address to videoMem
   wire [5:0] wdata;					// write data to videoMem
-  // wire [4:0] image_indx;
-  // reg [9:0] xloc;
-  // reg [9:0] yloc;
-  wire we;
-  // wire add_img,add_fnt;
-  // wire [5:0] fnt_indx;
-
-  //wire busy;
-  
+  wire we;                  // write enable signal
   reg [18:0] count;					// generate a pulse on add_img
-  
-  // wire rem_img;
   
   ////////////////////////////////////////////////////////
   // Instantiate PLL to generate clk and 25MHz VGA_CLK //
@@ -82,16 +59,13 @@ module BMP_display(
   // instantiate rst_n synchronizer //
   ///////////////////////////////////
   rst_synch iRST(.clk(clk),.RST_n(RST_n), .pll_locked(pll_locked), .rst_n(rst_n));
-
-
-  //assign LEDR = 10'h3FF;
  
   ///////////////////////////////////////
   // Instantiate VGA Timing Generator //
   /////////////////////////////////////
   VGA_timing iVGATM(.clk25MHz(VGA_CLK), .rst_n(rst_n), .VGA_BLANK_N(VGA_BLANK_N),
                     .VGA_HS(VGA_HS),.VGA_SYNC_N(VGA_SYNC_N), .VGA_VS(VGA_VS), 
-					.xpix(xpix), .ypix(ypix), .addr_lead(raddr));
+					          .xpix(xpix), .ypix(ypix), .addr_lead(raddr));
 					
   /////////////////////////////////////
   // Instantiate 9-bit video memory //
@@ -108,84 +82,8 @@ module BMP_display(
   // them into the video memory              //
   ////////////////////////////////////////////				
   PlaceBMP(.clk(clk),.rst_n(rst_n),.add_fnt(add_fnt),.fnt_indx(fnt_indx),
-           .add_img(add_img),.rem_img(rem_img),.image_indx(image_indx),
-           .xloc(xloc),.yloc(yloc),.waddr(waddr),.wdata(wdata),.we(we),
-		   .busy(busy));
-
-  ///////////////////////////////////////////////
-  // What follows is a super cheese ball method
-  // of writing a few characters and images
-  // using the signals to PlaceBMP.  This would
-  // best be done through memory mapping PlaceBMP
-  // to the databus of your processor and using
-  // your processor code to write images and characters
-  ///////////////////////////////////////////////
-  // always @(posedge clk, negedge rst_n)
-  //   if (!rst_n)
-	//   count <= 19'h00000;
-	// else if (~&count)
-	//   count <= count + 1;
-	  
-  // assign add_fnt = (count==19'h00005) ? 1'b1 : 
-  //                  (count==19'h01005) ? 1'b1 :
-	// 			   (count==19'h02005) ? 1'b1 :
-	// 			   (count==19'h03005) ? 1'b1 :
-	// 			   (count==19'h04005) ? 1'b1 :
-	// 			   (count==19'h05005) ? 1'b1 :
-	// 			   1'b0;
-				   
-  // assign fnt_indx = (count==19'h00005) ? 6'd22 : // M
-  //                  (count==19'h01005) ? 6'd36 :  // ' '
-	// 			   (count==19'h02005) ? 6'd31 :	 // V
-	// 			   (count==19'h03005) ? 6'd28 :	 // S
-	// 			   (count==19'h04005) ? 6'd36 :  // ' '
-	// 			   (count==19'h05005) ? 6'd11 :  // B 
-	// 			   1'b0;
-				   
-  // assign add_img = ((count==19'h07000) || (count==19'h7FFFE)) ? 1'b1 : 1'b0;
-  // assign image_indx = (count[18]) ? 5'h02 : 5'h01;
-  // assign xloc = (count==19'h00005) ? 10'd256 :
-  //               (count==19'h01005) ? 10'd269 :
-	// 			(count==19'h02005) ? 10'd282 :
-	// 			(count==19'h03005) ? 10'd295 :
-	// 			(count==19'h04005) ? 10'd308 :
-	// 			(count==19'h05005) ? 10'd321 :
-  //               (count[18]) ? 10'h180 : 10'h40;
-	
-  // wire we_cpu, re;
-  // wire [15:0] databus;
-  // wire [15:0] addr;  
-  // wire [15:0] inter_rdata;
-
-  // cpu iCPU(.clk(clk), .rst_n(rst_n), .rdata(inter_rdata), .wdata(databus), .re(re), .we(we_cpu), .addr(addr));
-
-
-  // // Updating Xloc
-  // always @(posedge clk, negedge rst_n)
-  //   if(!rst_n)
-  //     xloc = 'b0;
-  //   else if(addr == BMP_XLOC && we_cpu)
-  //     xloc = databus[9:0];
-
-
-  // // Update Yloc
-  // always @(posedge clk, negedge rst_n)
-  //   if(!rst_n)
-  //     yloc = 'b0;
-  //   else if(addr == BMP_YLOC && we_cpu)
-  //     yloc = databus[9:0];
-
-  // // Updating BMP_CTL. Doing it this way allows us to deassert when we move to the next instruction. 
-  // // Saving us on one instruction cycle
-  // assign add_fnt = (addr == BMP_CTL && we_cpu) ? databus[15] : 1'b0;
-  // assign fnt_indx = (addr == BMP_CTL && we_cpu) ? databus[14:9] : 'b0;
-  // assign add_img = (addr == BMP_CTL && we_cpu) ? databus[6] : 'b0;
-  // assign image_indx = (addr == BMP_CTL  && we_cpu) ? databus[4:0] : 5'h01;
-  // assign rem_img = (addr == BMP_CTL && we_cpu) ? databus[5] : 1'b0;
-
-
-  // // Mux for rdata so that it can be expanded in the future
-  // assign inter_rdata = (addr == BMP_STAT && re) ? {{15{1'h0}}, busy} : 1'b0;
-
+            .add_img(add_img),.rem_img(rem_img),.image_indx(image_indx),
+            .xloc(xloc),.yloc(yloc),.waddr(waddr),.wdata(wdata),.we(we),
+		        .busy(busy));
 
  endmodule
