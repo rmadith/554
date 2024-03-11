@@ -1,0 +1,3 @@
+LBI r0, 0x01
+LBI r1, 0x02
+halt

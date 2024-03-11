@@ -1,0 +1,81 @@
+Reading line: // Author: Eric Dubberstein, Joash Shankar
+Reading line: // CS/ECE 552 Project Phase #3
+Reading line: //
+Reading line: // Filename: lru.asm
+Reading line: // 
+Reading line: // This demonstrates the benefit 
+Reading line: // of the LRU replacement policy
+Reading line: 
+Reading line: ///// Initializing values///////
+Reading line: // set r1 to 0xABC0
+Reading line: lbi r1, 0xAB         // upper bits
+Reading line: slbi r1, 0xC0        // lower bits
+Reading line: 
+Reading line: // set r2 to 0xBBC0
+Reading line: lbi r2, 0xBB          // upper bits
+Reading line: slbi r2, 0xC0        // lower bits
+Reading line: 
+Reading line: // set r3 to 0xCBC0
+Reading line: lbi r3, 0xCB          // upper bits
+Reading line: slbi r3, 0xC0         // lower bits
+Reading line: 
+Reading line: // Make sure that we have no hazards 
+Reading line: //going into inst tests. 
+Reading line: nop
+Reading line: nop
+Reading line: nop
+Reading line: nop
+Reading line: nop
+Reading line: 
+Reading line: // use r4 as a "dumping" register
+Reading line: 
+Reading line: LD r4, r1, 0x0E // miss
+Reading line: LD r4, r1, 0x0C // hit
+Reading line: 
+Reading line: LD r4, r2, 0x0E // miss
+Reading line: LD r4, r2, 0x0C // hit
+Reading line: 
+Reading line: LD r4, r3, 0x08 // miss
+Reading line: 
+Reading line: LD r4, r2, 0x0C // Hit if using LRU, 
+Reading line: //	it might be a miss 
+Reading line: //  if using victimway
+Reading line: 
+Reading line: halt
+@0
+c1
+ab
+91
+c0
+c2
+bb
+92
+c0
+c3
+cb
+93
+c0
+08
+00
+08
+00
+08
+00
+08
+00
+08
+00
+89
+8e
+89
+8c
+8a
+8e
+8a
+8c
+8b
+88
+8a
+8c
+00
+00

@@ -1,0 +1,44 @@
+          // Author: Eric Dubberstein, Joash Shankar
+          // CS/ECE 552 Project Phase #3
+          //
+          // Filename: lru.asm
+          // 
+          // This demonstrates the benefit 
+          // of the LRU replacement policy
+          
+          ///// Initializing values///////
+          // set r1 to 0xABC0
+0000 c1ab lbi r1, 0xAB         // upper bits
+0002 91c0 slbi r1, 0xC0        // lower bits
+          
+          // set r2 to 0xBBC0
+0004 c2bb lbi r2, 0xBB          // upper bits
+0006 92c0 slbi r2, 0xC0        // lower bits
+          
+          // set r3 to 0xCBC0
+0008 c3cb lbi r3, 0xCB          // upper bits
+000a 93c0 slbi r3, 0xC0         // lower bits
+          
+          // Make sure that we have no hazards 
+          //going into inst tests. 
+000c 0800 nop
+000e 0800 nop
+0010 0800 nop
+0012 0800 nop
+0014 0800 nop
+          
+          // use r4 as a "dumping" register
+          
+0016 898e LD r4, r1, 0x0E // miss
+0018 898c LD r4, r1, 0x0C // hit
+          
+001a 8a8e LD r4, r2, 0x0E // miss
+001c 8a8c LD r4, r2, 0x0C // hit
+          
+001e 8b88 LD r4, r3, 0x08 // miss
+          
+0020 8a8c LD r4, r2, 0x0C // Hit if using LRU, 
+          //	it might be a miss 
+          //  if using victimway
+          
+0022 0000 halt

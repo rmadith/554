@@ -1,0 +1,59 @@
+@0000 001B // ESC [CLEAR SCREEN START]
+@0001 005B // [
+@0002 0032 // 2
+@0003 004A // J [CLEAR SCREEN END]
+@0004 000A // new line pt1
+@0005 000D // new line pt2
+@0006 001B // ESC [MOVE CURSOR RIGHT START]
+@0007 005B // [
+@0008 0039 // 9
+@0009 0043 // C [MOVE CURSOR RIGHT END]
+@000a 0048 //H
+@000b 0065 //e
+@000c 006C //l
+@000d 006C //l
+@000e 006F //o
+@000f 0020 //space
+@0010 0057 //W
+@0011 006F //o
+@0012 0072 //r
+@0013 006C //l
+@0014 0064 //d
+@0015 0021 //!
+@0016 000A // new line pt1
+@0017 000D // new line pt2
+@0018 001B // ESC [MOVE CURSOR RIGHT START]
+@0019 005B // [
+@001a 0039 // 9
+@001b 0043 // C [MOVE CURSOR RIGHT END]
+@001c 0045 // E
+@001d 006E // n
+@001e 0074 // t
+@001f 0065 // e
+@0020 0072 // r
+@0021 0020 // SPACE
+@0022 0079 // y
+@0023 006F // o
+@0024 0075 // u
+@0025 0072 // r
+@0026 0020 // SPACE
+@0027 006E // n
+@0028 0061 // a
+@0029 006D // m
+@002a 0065 // e
+@002b 003A // : // end of initial output
+@002c 000A // new line pt1
+@002d 000D // new line pt2
+@002e 001B // ESC [MOVE CURSOR RIGHT START]
+@002f 005B // [
+@0030 0039 // 9
+@0031 0043 // C [MOVE CURSOR RIGHT END]
+@0032 0048 //H
+@0033 0065 //e
+@0034 006C //l
+@0035 006C //l
+@0036 006F //o
+@0037 0020 //space, next index would store the input from the terminal
+
+
+
