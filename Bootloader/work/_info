@@ -1,0 +1,551 @@
+m255
+K4
+z2
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/22.1std
+valu
+Z0 !s110 1710265999
+!i10b 1
+!s100 Qa:FE8TO6XQ^8@;Y`]NaL2
+IJDCj=:LDz7_]1gcUD^d8l2
+Z1 dI:/win/554_git/Bootloader
+Z2 w1707428831
+8I:/win/554_git/Bootloader/alu.v
+FI:/win/554_git/Bootloader/alu.v
+Z3 Fcommon_params.inc
+!i122 0
+L0 1 143
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1710265998.000000
+!s107 common_params.inc|I:/win/554_git/Bootloader/alu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/alu.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+vbr_bool
+R0
+!i10b 1
+!s100 E26GMAO3hRS^Pm`2Z_NLV0
+I;2hiTnV;ROO?nffMH;2<J3
+R1
+R2
+8I:/win/554_git/Bootloader/br_bool.v
+FI:/win/554_git/Bootloader/br_bool.v
+!i122 1
+L0 1 64
+R4
+R5
+r1
+!s85 0
+31
+Z8 !s108 1710265999.000000
+!s107 I:/win/554_git/Bootloader/br_bool.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/br_bool.v|
+!i113 0
+R6
+R7
+vcircular_queue
+Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z10 !s110 1710266000
+!i10b 1
+!s100 Gak84K>:eVBn?XkKYFCzc2
+I=5V_h5Y<1NVUzS>KXdG953
+S1
+R1
+w1708455371
+8I:/win/554_git/Bootloader/circular_queue.sv
+FI:/win/554_git/Bootloader/circular_queue.sv
+!i122 2
+L0 1 41
+R4
+R5
+r1
+!s85 0
+31
+R8
+!s107 I:/win/554_git/Bootloader/circular_queue.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/circular_queue.sv|
+!i113 0
+Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+vcircular_queue_tb
+R9
+R10
+!i10b 1
+!s100 :Ph>7E7F_71aRmIUAE;ko0
+Ig^`5NcF?hC<^5Q5`EFc8g0
+S1
+R1
+w1708025055
+8I:/win/554_git/Bootloader/circular_queue_tb.sv
+FI:/win/554_git/Bootloader/circular_queue_tb.sv
+!i122 3
+L0 1 71
+R4
+R5
+r1
+!s85 0
+31
+Z12 !s108 1710266000.000000
+!s107 I:/win/554_git/Bootloader/circular_queue_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/circular_queue_tb.sv|
+!i113 0
+R11
+R7
+vcpu
+Z13 !s110 1710266001
+!i10b 1
+!s100 FS^<7d[3mg^B_BmMK_XHa1
+IY[LWJ=cMAlY?eD`O1::Vi1
+R1
+w1708591150
+8I:/win/554_git/Bootloader/cpu.v
+FI:/win/554_git/Bootloader/cpu.v
+!i122 4
+L0 1 114
+R4
+R5
+r1
+!s85 0
+31
+R12
+!s107 I:/win/554_git/Bootloader/cpu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/cpu.v|
+!i113 0
+R6
+R7
+vcpu_tb
+R13
+!i10b 1
+!s100 6`0mR8X`;XN3iJiE?57>a3
+ISW5f70co>icf4BgaWjS@k2
+R1
+R2
+8I:/win/554_git/Bootloader/cpu_tb.v
+FI:/win/554_git/Bootloader/cpu_tb.v
+!i122 5
+L0 1 19
+R4
+R5
+r1
+!s85 0
+31
+Z14 !s108 1710266001.000000
+!s107 I:/win/554_git/Bootloader/cpu_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/cpu_tb.v|
+!i113 0
+R6
+R7
+vDM
+Z15 !s110 1710266002
+!i10b 1
+!s100 OU5Y4[NkjYkX`Ri>WICzj3
+IiE3NBf2o??CWli2g;o>Sm3
+R1
+w1708588471
+8I:/win/554_git/Bootloader/data_mem.v
+FI:/win/554_git/Bootloader/data_mem.v
+!i122 6
+L0 1 35
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 I:/win/554_git/Bootloader/data_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/data_mem.v|
+!i113 0
+R6
+R7
+n@d@m
+vdst_mux
+R15
+!i10b 1
+!s100 :kE892UGSV5FgKWfaDcb?2
+Ig26=V@^QbdY^ib=UFSG5:1
+R1
+R2
+8I:/win/554_git/Bootloader/dst_mux.v
+FI:/win/554_git/Bootloader/dst_mux.v
+!i122 7
+Z16 L0 1 22
+R4
+R5
+r1
+!s85 0
+31
+Z17 !s108 1710266002.000000
+!s107 I:/win/554_git/Bootloader/dst_mux.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/dst_mux.v|
+!i113 0
+R6
+R7
+vid
+R15
+!i10b 1
+!s100 nk[7R]UDOJ`z=[VOXS>o@0
+IenaoKkm=n@A]QLj1kkV0M2
+R1
+w1708474729
+8I:/win/554_git/Bootloader/id.v
+FI:/win/554_git/Bootloader/id.v
+R3
+!i122 8
+L0 1 368
+R4
+R5
+r1
+!s85 0
+31
+R17
+!s107 common_params.inc|I:/win/554_git/Bootloader/id.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/id.v|
+!i113 0
+R6
+R7
+vIM
+Z18 !s110 1710266003
+!i10b 1
+!s100 gUd0j94gPO9hgK2JN_;Z^1
+I>;<X4Abj9ol=gGAEBmBZX3
+R1
+w1707432999
+8I:/win/554_git/Bootloader/instr_mem.v
+FI:/win/554_git/Bootloader/instr_mem.v
+!i122 9
+R16
+R4
+R5
+r1
+!s85 0
+31
+R17
+!s107 I:/win/554_git/Bootloader/instr_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/instr_mem.v|
+!i113 0
+R6
+R7
+n@i@m
+vMiniLab1
+Z19 !s110 1710266004
+!i10b 1
+!s100 4CG^`=H]Q5H66:V7zU6:Z1
+I?@3WSQ5A9i=a^A:J`NG:_1
+R1
+w1708588816
+8I:/win/554_git/Bootloader/MiniLab1.v
+FI:/win/554_git/Bootloader/MiniLab1.v
+!i122 11
+L0 6 50
+R4
+R5
+r1
+!s85 0
+31
+Z20 !s108 1710266003.000000
+!s107 I:/win/554_git/Bootloader/MiniLab1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/MiniLab1.v|
+!i113 0
+R6
+R7
+n@mini@lab1
+vMiniLab1_tb
+R9
+R18
+!i10b 1
+!s100 D9kGJULJmzH4bI5Pj>@^m0
+I2_4?MHffGJz]eQ`<;N<b10
+S1
+R1
+w1708635122
+8I:/win/554_git/Bootloader/mini0tb.sv
+FI:/win/554_git/Bootloader/mini0tb.sv
+!i122 10
+L0 1 34
+R4
+R5
+r1
+!s85 0
+31
+R20
+!s107 I:/win/554_git/Bootloader/mini0tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/mini0tb.sv|
+!i113 0
+R11
+R7
+n@mini@lab1_tb
+vpc
+R19
+!i10b 1
+!s100 PE1Pom<0:Zl97>AaRaWK81
+IZlni4BISzTekOzIVJzeI=1
+R1
+R2
+8I:/win/554_git/Bootloader/prgm_cntr.v
+FI:/win/554_git/Bootloader/prgm_cntr.v
+!i122 12
+L0 1 60
+R4
+R5
+r1
+!s85 0
+31
+Z21 !s108 1710266004.000000
+!s107 I:/win/554_git/Bootloader/prgm_cntr.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/prgm_cntr.v|
+!i113 0
+R6
+R7
+vRemoteComm
+R9
+Z22 !s110 1710266005
+!i10b 1
+!s100 l9CBRZ2;78HLYiRclLZg32
+IP>RXJoKz?BLD7[gd5EKK^1
+S1
+R1
+w1708467734
+8I:/win/554_git/Bootloader/RemoteComm.sv
+FI:/win/554_git/Bootloader/RemoteComm.sv
+!i122 13
+L0 1 101
+R4
+R5
+r1
+!s85 0
+31
+R21
+!s107 I:/win/554_git/Bootloader/RemoteComm.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/RemoteComm.sv|
+!i113 0
+R11
+R7
+n@remote@comm
+vreset_synch
+R9
+R22
+!i10b 1
+!s100 n@m[9<dLH0b=7DcKH`KS52
+IA6lgXaCka?AX4no_c_2CN2
+S1
+R1
+R2
+8I:/win/554_git/Bootloader/reset_synch.sv
+FI:/win/554_git/Bootloader/reset_synch.sv
+!i122 14
+L0 1 17
+R4
+R5
+r1
+!s85 0
+31
+Z23 !s108 1710266005.000000
+!s107 I:/win/554_git/Bootloader/reset_synch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/reset_synch.sv|
+!i113 0
+R11
+R7
+vrf
+R22
+!i10b 1
+!s100 [`c4cIEQDIIAiM@9g0YE`2
+I`6UdXhZUI[4ogOfX1=YK51
+R1
+w1707432958
+8I:/win/554_git/Bootloader/rf.v
+FI:/win/554_git/Bootloader/rf.v
+!i122 15
+L0 1 67
+R4
+R5
+r1
+!s85 0
+31
+R23
+!s107 I:/win/554_git/Bootloader/rf.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/rf.v|
+!i113 0
+R6
+R7
+vspart
+R9
+Z24 !s110 1710266006
+!i10b 1
+!s100 0a[o8Mk?L_6gKOGAeO<7J2
+Im0o;?a^ingh>Dz8zoT;>e1
+S1
+R1
+w1708639686
+8I:/win/554_git/Bootloader/spart.sv
+FI:/win/554_git/Bootloader/spart.sv
+!i122 16
+L0 20 107
+R4
+R5
+r1
+!s85 0
+31
+R23
+!s107 I:/win/554_git/Bootloader/spart.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/spart.sv|
+!i113 0
+R11
+R7
+vspart_tb
+R9
+R24
+!i10b 1
+!s100 ^FG;`K=zTXl1W9j6zREBg2
+IBM5:723NEViFoNj2cRXk41
+S1
+R1
+w1708579746
+8I:/win/554_git/Bootloader/spart_tb.sv
+FI:/win/554_git/Bootloader/spart_tb.sv
+!i122 17
+L0 1 489
+R4
+R5
+r1
+!s85 0
+31
+Z25 !s108 1710266006.000000
+!s107 I:/win/554_git/Bootloader/spart_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/spart_tb.sv|
+!i113 0
+R11
+R7
+vsrc_mux
+!s110 1710266007
+!i10b 1
+!s100 YfY5>1NKa[kU71O7UUT>21
+I4<7:QJKo6PK3cm<j7;JQO3
+R1
+R2
+8I:/win/554_git/Bootloader/src_mux.v
+FI:/win/554_git/Bootloader/src_mux.v
+R3
+!i122 18
+L0 1 120
+R4
+R5
+r1
+!s85 0
+31
+R25
+!s107 common_params.inc|I:/win/554_git/Bootloader/src_mux.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Bootloader/src_mux.v|
+!i113 0
+R6
+R7
+vUART
+R9
+Z26 !s110 1710266008
+!i10b 1
+!s100 XORQ1nIF_:gHEh7hH2aVc3
+ICNASKFU<Hd24mbZkM?ZSA1
+S1
+R1
+w1708459096
+8I:/win/554_git/Bootloader/UART.sv
+FI:/win/554_git/Bootloader/UART.sv
+!i122 19
+L0 1 26
+R4
+R5
+r1
+!s85 0
+31
+!s108 1710266007.000000
+!s107 I:/win/554_git/Bootloader/UART.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/UART.sv|
+!i113 0
+R11
+R7
+n@u@a@r@t
+vUART_rx
+R9
+R26
+!i10b 1
+!s100 `lPTd1QAb>;IY_mcVAE[I2
+IkkRX8ifcVL0mnBcE8FJJ92
+S1
+R1
+w1708467776
+8I:/win/554_git/Bootloader/UART_rx.sv
+FI:/win/554_git/Bootloader/UART_rx.sv
+!i122 20
+L0 1 110
+R4
+R5
+r1
+!s85 0
+31
+Z27 !s108 1710266008.000000
+!s107 I:/win/554_git/Bootloader/UART_rx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/UART_rx.sv|
+!i113 0
+R11
+R7
+n@u@a@r@t_rx
+vUART_tx
+R9
+Z28 !s110 1710266009
+!i10b 1
+!s100 EZAfTIQk8_b^WZA7HX1GS2
+If6gmNX6YaYMMZGU`RoL;o3
+S1
+R1
+w1708578523
+8I:/win/554_git/Bootloader/UART_tx.sv
+FI:/win/554_git/Bootloader/UART_tx.sv
+!i122 21
+L0 1 118
+R4
+R5
+r1
+!s85 0
+31
+R27
+!s107 I:/win/554_git/Bootloader/UART_tx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/UART_tx.sv|
+!i113 0
+R11
+R7
+n@u@a@r@t_tx
+vUART_wrapper
+R9
+R28
+!i10b 1
+!s100 eSA>SBjXbLQSPO3gYKPnf2
+I>LM66NQV<YD0a7emkd=9K0
+S1
+R1
+w1702163064
+8I:/win/554_git/Bootloader/UART_wrapper.sv
+FI:/win/554_git/Bootloader/UART_wrapper.sv
+!i122 22
+L0 1 81
+R4
+R5
+r1
+!s85 0
+31
+!s108 1710266009.000000
+!s107 I:/win/554_git/Bootloader/UART_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Bootloader/UART_wrapper.sv|
+!i113 0
+R11
+R7
+n@u@a@r@t_wrapper
