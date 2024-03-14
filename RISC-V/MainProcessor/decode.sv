@@ -34,7 +34,7 @@ logic regWriteEnable; // remove this later for pipelining
 logic branch,jump;
 logic [4:0] dstRegAddr; // remove this late for pipelining
 logic flush;	// remove this later for pipelineing (add to output)
-
+logic branchFlag;
 ////////////////////////////////////////
 ///////////////////////////////////////
 //////////////////////////////////////
@@ -59,15 +59,15 @@ assign dstRegAddr = instruction[11:7];
 rf iRF(.clk(clk),.p0_addr(instruction[19:15]),.p1_addr(instruction[24:20]),.p0(SrcA),.p1(SrcB),.re0(1),.re1(1),
 	.dst_addr(dstRegAddr),.dst(dataIn),.we(regWriteEnable));
 
-branch_unit(
+branch_unit iBU(
 	//Inputs
 	.branch(branch),.jump(jump),.currPC(currPC),.PC_plus4(PC_plus4),.immediate(immValue),.SrcA(SrcA),.SrcB(SrcB),.funct3(instruction[14:12]),
 	.j_opcode(instruction[6:0]),
 	//Outputs
-	.newPC(updatePC)
+	.newPC(updatePC),.branchFlag(branchFlag)
 	);
 
-assign flush = (branch | jump) & (updatePC != PC_plus4);
+assign flush = (branchFlag | jump) & (updatePC != PC_plus4);
 
 
 

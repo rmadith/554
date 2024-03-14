@@ -1,8 +1,8 @@
-module fetch (clk, rst_n,flush, Branch_PC,PC_in, PC_out, inst, old_PC_HALT,PC_en);
+module fetch (clk, rst_n,flush, Branch_PC,PC_in, PC_out, inst, old_PC,PC_en);
 	
 	input wire clk, rst_n,flush,PC_en;
 	input wire [31:0] PC_in, Branch_PC;
-	output wire [31:0] PC_out,old_PC_HALT;
+	output wire [31:0] PC_out,old_PC;
 	output reg [31:0] inst;
 
 	logic [31:0] nextPC,PC;
@@ -31,7 +31,7 @@ module fetch (clk, rst_n,flush, Branch_PC,PC_in, PC_out, inst, old_PC_HALT,PC_en
     always @(*) // should it be negedge clk ??
         inst <= instr_mem[PC>>2]; // PC/4 (PC >>2) if increament by 4
    
-	assign old_PC_HALT = PC_in;
+    assign old_PC = PC;
     assign PC_out = PC + 4; // increament by 4 bytes (32 bit instruction set)
 
 endmodule
