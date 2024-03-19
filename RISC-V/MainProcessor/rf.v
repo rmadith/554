@@ -29,22 +29,22 @@ reg [31:0] temp_p0,temp_p1;
 
 /////////////////////////////////////////////// BLock 1
 
-always @(posedge clk)
+always @(*) // ??
   if (re0)
     temp_p0 <= mem0[p0_addr];
-	
-always @(posedge clk)
+	 
+always @(negedge clk) // ??
   if (we)
     mem0[dst_addr] <= dst;
 
 
 ///////////////////////////////////////////////// Block 2
 
-always @(posedge clk)
+always @(*) // ??
   if (re1)
     temp_p1 <= mem1[p1_addr];
 
-always @(posedge clk)
+always @(negedge clk) // ??
   if (we)
     mem1[dst_addr] <= dst;
 

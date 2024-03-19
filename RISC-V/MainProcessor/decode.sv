@@ -3,7 +3,7 @@ module decode(
 	clk,rst_n,instruction,currPC,dataIn,PC_plus4,
 	// Outputs
 	updatePC,addConstant4,memType,setDataZero,alu_op,memRead,memWrite,pc_operand,
-	immSel,SrcA,SrcB,immValue
+	immSel,SrcA,SrcB,immValue,memWrData
 	);
 ///////////////////////////////////////
 /////////////// Inputs ///////////////
@@ -23,7 +23,7 @@ output memRead,memWrite;
 output pc_operand;
 output [31:0] updatePC;
 output immSel;
-output [31:0] SrcA,SrcB,immValue;
+output [31:0] SrcA,SrcB,immValue,memWrData;
 
 //////////////////////////////////////////
 /////////////// Variables ///////////////
@@ -34,7 +34,7 @@ logic regWriteEnable; // remove this later for pipelining
 logic branch,jump;
 logic [4:0] dstRegAddr; // remove this late for pipelining
 logic flush;	// remove this later for pipelineing (add to output)
-logic branchFlag;
+logic takeBranch;
 ////////////////////////////////////////
 ///////////////////////////////////////
 //////////////////////////////////////
@@ -54,21 +54,21 @@ extension_unit iEU(
 	.immediate(immValue)
 	);
 
-assign dstRegAddr = instruction[11:7];
+assign dstRegAddr = (instruction[6:0] == 7'b1100011 | instruction[6:0] == 7'b0100011) ? 5'bz : instruction[11:7]; // need to fix this 
 
-rf iRF(.clk(clk),.p0_addr(instruction[19:15]),.p1_addr(instruction[24:20]),.p0(SrcA),.p1(SrcB),.re0(1),.re1(1),
+rf iRF(.clk(clk),.p0_addr(instruction[19:15]),.p1_addr(instruction[24:20]),.p0(SrcA),.p1(SrcB),.re0(1'b1),.re1(1'b1),
 	.dst_addr(dstRegAddr),.dst(dataIn),.we(regWriteEnable));
 
 branch_unit iBU(
 	//Inputs
 	.branch(branch),.jump(jump),.currPC(currPC),.PC_plus4(PC_plus4),.immediate(immValue),.SrcA(SrcA),.SrcB(SrcB),.funct3(instruction[14:12]),
-	.j_opcode(instruction[6:0]),
+	.opcode(instruction[6:0]),
 	//Outputs
-	.newPC(updatePC),.branchFlag(branchFlag)
+	.newPC(updatePC),.takeBranch(takeBranch)
 	);
 
-assign flush = (branchFlag | jump) & (updatePC != PC_plus4);
-
+assign flush = (takeBranch | jump) & (updatePC != PC_plus4);
+assign memWrData = SrcB;
 
 
 endmodule

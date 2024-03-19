@@ -32,7 +32,7 @@ logic [6:0] opcode;
 logic [2:0] funct3;
 logic [6:0] funct7;
 logic [3:0] inter_alu_op; // ???? Set number of bits
-logic [2:0] inter_memType; 
+//logic [2:0] inter_memType; 
 ////////////////////////////////////////
 ///////////////////////////////////////
 //////////////////////////////////////
@@ -43,27 +43,12 @@ assign funct7 = instr[31:25];
 
 always@(*) begin 
 	case(funct3)
-		3'b000: begin
-			inter_alu_op = funct7[5]; // if 1 SUB, if 0 ADD 
-			inter_memType = 0; // B
-			end
-		3'b001: begin
-			inter_alu_op = 2; // SLLI,SLL
-			inter_memType = 1; // H
-			end
-		3'b010: begin
-			inter_alu_op = 3; // SLTI,SLT
-			inter_memType = 2; // W
-			end
+		3'b000: inter_alu_op = (funct7 == 7'b0100000 & opcode == 7'b0110011) ? 1: 0; // if 1 SUB, if 0 ADD/ADDI 
+		3'b001: inter_alu_op = 2; // SLLI,SLL
+		3'b010: inter_alu_op = 3; // SLTI,SLT
 		3'b011: inter_alu_op = 4; // SLTIU,SLTU
-		3'b100: begin
-			inter_alu_op = 5; // XORI,XOR
-			inter_memType = 3; // BU
-			end
-		3'b101: begin
-			inter_alu_op = (funct7[5]) ? 7 : 6;  // 7 - SRAI,SRA // 6 - SRLI,SRL
-			inter_memType = 4; // HU
-			end
+		3'b100: inter_alu_op = 5; // XORI,XOR
+		3'b101: inter_alu_op = (funct7 == 7'b0100000) ? 7 : 6;  // 7 - SRAI,SRA // 6 - SRLI,SRL
 		3'b110: inter_alu_op = 8; // ORI,OR
 		3'b111: inter_alu_op = 9; // ANDI,AND			
 	endcase
@@ -127,19 +112,19 @@ always@(*) begin
 				immType = 0;
 				memRead = 1;
 				alu_op = 0; // ADD here
-				memType = inter_memType; 
+				memType = funct3; 
 			    end
 		7'b0100011: begin // STORE
 				immSel = 1;
 				immType = 2;
 				memWrite = 1;
 				alu_op = 0; // ADD here
-				memType = inter_memType;
+				memType = funct3;
 			    end
 		7'b0010011: begin // ADDI,SLTI,SLTIU,XORI,ORI,ANDI,SLLI,SRLI,SRAI
 				regWriteEnable = 1;
 				immSel = 1;
-				immType = 0; // Sext immediate for those
+				immType = 0; // Sext immediate for these
 				alu_op = inter_alu_op;
 			    end
 		7'b0110011: begin // ADD,SUB,SLL,SLT,SLTU,XOR,SRL,SRA,OR,AND

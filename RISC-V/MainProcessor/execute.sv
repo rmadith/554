@@ -1,15 +1,15 @@
 module execute(
 	// Inputs
-	setDataZero,pc_as_operand,currPC,SrcA,SrcB,alu_op,immValue,immSel,addConstant4,
+	setDataZero,pc_operand,currPC,SrcA,SrcB,alu_op,immValue,immSel,addConstant4,
 	//Outputs
 	alu_out
 	);
 ///////////////////////////////////////
 /////////////// Inputs ///////////////
 /////////////////////////////////////
-input setDataZero,pc_as_operand,immSel,addConstant4;
+input setDataZero,pc_operand,immSel,addConstant4;
 input [31:0]currPC,SrcA,SrcB,immValue;
-input [4:0] alu_op;
+input [3:0] alu_op;
 ////////////////////////////////////////
 /////////////// Outputs ///////////////
 //////////////////////////////////////
@@ -25,8 +25,10 @@ logic [31:0] alu_inA,alu_inB;
 ///////////////////////////////////////
 //////////////////////////////////////
 
-assign alu_inA = (setDataZero) ? 32'h0 : (pc_as_operand) ? currPC : SrcA;
+assign alu_inA = (setDataZero) ? 32'h0 : (pc_operand) ? currPC : SrcA;
 assign alu_inB = (addConstant4) ? 32'h4 : (immSel) ? immValue : SrcB;
+
+ALU iALU(.A(alu_inA),.B(alu_inB),.ALU_op(alu_op),.out(alu_out));
 
 
 

@@ -1,10 +1,10 @@
-module wb (memRead, memData, ALUResIn,outToReg);
+module wb (memRead, memData, ALUResIn,writeBackData);
 
         input wire [31:0] ALUResIn, memData;
 	input wire memRead;
-        output wire [31:0] outToReg;
+        output wire [31:0] writeBackData;
 
-        assign outToReg = (memRead) ? memData : ALUResIn;
+        assign writeBackData = (memRead) ? memData : ALUResIn;
 
 
 endmodule

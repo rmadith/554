@@ -21,15 +21,15 @@ module fetch (clk, rst_n,flush, Branch_PC,PC_in, PC_out, inst, old_PC,PC_en);
         if (!rst_n)
             PC <= 32'h0;    // Reset program counter to 0
         else if (PC_en)  
-            PC <= (flush) ? Branch_PC : PC_in;   // update PC accordingly 
+            PC <= (flush) ? Branch_PC : PC_in;   // update PC accordingly // flush is branch take variable
     end
 
 
     /////////////////////////////////
     // Memory is floped on _______ //
     /////////////////////////////////
-    always @(*) // should it be negedge clk ??
-        inst <= instr_mem[PC>>2]; // PC/4 (PC >>2) if increament by 4
+// should it be negedge clk ??
+    assign inst = instr_mem[PC>>2]; // PC/4 (PC >>2) if increament by 4
    
     assign old_PC = PC;
     assign PC_out = PC + 4; // increament by 4 bytes (32 bit instruction set)
