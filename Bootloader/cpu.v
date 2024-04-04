@@ -1,4 +1,4 @@
-module cpu(clk,rst_n,rdata,we,re,wdata,addr);
+module cpu(clk,rst_n,rdata,we,re,wdata,oaddr, debug, wr_data);
 
 input clk,rst_n;
 input [9:0] rdata;
@@ -6,8 +6,9 @@ input [9:0] rdata;
 output we,re;
 
 output [15:0] wdata;
-output [15:0] addr;
-
+inout [15:0] oaddr;
+input debug;
+input [15:0] wr_data;
 
 
 wire [15:0] instr;				// instruction from IM
@@ -30,6 +31,10 @@ wire [1:0] src1sel_ID_EX;		// select for src1 bus
 wire [2:0] cc_ID_EX;			// condition code pipeline from instr[11:9]
 wire [15:0] p0_EX_DM;			// data to be stored for SW
 
+wire [15:0] addr;
+
+assign oaddr = (debug) ? 15'hz : addr;
+
 //////////////////////////////////
 // Instantiate program counter //
 ////////////////////////////////
@@ -39,7 +44,7 @@ pc iPC(.clk(clk), .rst_n(rst_n), .stall_IM_ID(stall_IM_ID), .pc(iaddr), .dst_ID_
 /////////////////////////////////////
 // Instantiate instruction memory //
 ///////////////////////////////////
-IM iIM(.clk(clk), .addr(iaddr), .rd_en(1'b1), .instr(instr));
+IM iIM(.clk(clk), .addr(iaddr), .rd_en(1'b1), .instr(instr), .debug(debug), .wr_instr(wr_data), .in_addr(oaddr));
 
 //////////////////////////////////////////////
 // Instantiate register instruction decode //
@@ -94,7 +99,7 @@ assign addr = dst_EX_DM;
 assign wdata = p0_EX_DM;
 
 DM iDM(.clk(clk),.addr(dst_EX_DM[12:0]), .re(&dm_re_EX_DM), .we(dm_we), .wrt_data(p0_EX_DM),
-       .rd_data(in_data));
+       .rd_data(in_data), .debug(debug), .wr_data(wr_data), .in_addr(oaddr));
 
 //////////////////////////
 // Instantiate dst mux //

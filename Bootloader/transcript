@@ -1,0 +1,36 @@
+# Compile of cpu.v failed with 2 errors.
+# Compile of data_mem.v failed with 2 errors.
+# Compile of instr_mem.v failed with 2 errors.
+# Compile of MiniLab1.v failed with 2 errors.
+# 4 compiles, 4 failed with 8 errors.
+# Compile of cpu.v failed with 2 errors.
+# Compile of data_mem.v failed with 2 errors.
+# Compile of instr_mem.v was successful.
+# Compile of MiniLab1.v failed with 2 errors.
+# 4 compiles, 3 failed with 6 errors.
+# Compile of cpu.v failed with 2 errors.
+# Compile of data_mem.v failed with 1 errors.
+# Compile of MiniLab1.v failed with 2 errors.
+# 3 compiles, 3 failed with 5 errors.
+# Compile of cpu.v failed with 2 errors.
+# Compile of data_mem.v was successful.
+# Compile of MiniLab1.v failed with 2 errors.
+# 3 compiles, 2 failed with 4 errors.
+# Compile of cpu.v was successful.
+# Compile of cpu.v failed with 1 errors.
+# Compile of cpu.v was successful.
+# Compile of cpu.v failed with 1 errors.
+# Compile of data_mem.v was successful.
+# Compile of instr_mem.v was successful.
+# Compile of MiniLab1.v failed with 2 errors.
+# 4 compiles, 2 failed with 3 errors.
+# Compile of cpu.v was successful.
+# Compile of MiniLab1.v failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of MiniLab1.v failed with 1 errors.
+# Compile of cpu.v was successful.
+# Compile of MiniLab1.v was successful.
+# Compile of bootloader.sv failed with 5 errors.
+# 2 compiles, 1 failed with 5 errors.
+# Compile of bootloader.sv failed with 1 errors.
+# Compile of bootloader.sv was successful.
