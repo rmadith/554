@@ -1,19 +1,10 @@
-module wb (MemToReg, JALInst, ALUResIn, memReadOut, next_PC, outToReg, RegWriteSel, RegWriteSelOut, RegWriteEn, RegWriteEnOut);
+module wb (memRead, memData, ALUResIn,writeBackData);
 
-        input wire MemToReg, JALInst, RegWriteEn;
-        input wire [15:0] ALUResIn, memReadOut, next_PC;
-        input wire [2:0] RegWriteSel;
+        input wire [31:0] ALUResIn, memData;
+	input wire memRead;
+        output wire [31:0] writeBackData;
 
-        output wire [15:0] outToReg;
-        output wire [2:0] RegWriteSelOut;
-        output wire RegWriteEnOut;
-
-        assign outToReg = JALInst ? (next_PC) : (MemToReg ? (memReadOut) : (ALUResIn));
-
-        assign RegWriteEnOut = RegWriteEn;
-        assign RegWriteSelOut = RegWriteSel;
-
-
+        assign writeBackData = (memRead) ? memData : ALUResIn;
 
 
 endmodule

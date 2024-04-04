@@ -1,0 +1,70 @@
+# //  Questa Sim
+# //  Version 2023.2_1 linux May 12 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project Architecture
+# Compile of cpu.sv was successful.
+# Compile of fetchTB.sv was successful.
+# Compile of decode.sv was successful.
+# Compile of fetch.sv was successful.
+# Compile of rf.v was successful.
+# Compile of fetchTB.sv was successful.
+# Compile of decode.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of extension_unit.sv was successful.
+# Compile of branch_unit.sv was successful.
+# Compile of execute.sv was successful.
+# Compile of wb.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of memory.sv was successful.
+# Compile of cpu.sv was successful.
+# 12 compiles, 0 failed with no errors.
+# Compile of fetch.sv was successful.
+# Compile of rf.v was successful.
+# Compile of fetchTB.sv was successful.
+# Compile of decode.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of extension_unit.sv was successful.
+# Compile of branch_unit.sv was successful.
+# Compile of execute.sv was successful.
+# Compile of wb.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of memory.sv was successful.
+# Compile of cpu.sv was successful.
+# 12 compiles, 0 failed with no errors.
+# Compile of fetch.sv was successful.
+# Compile of rf.v was successful.
+# Compile of fetchTB.sv was successful.
+# Compile of decode.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of extension_unit.sv was successful.
+# Compile of branch_unit.sv was successful.
+# Compile of execute.sv was successful.
+# Compile of wb.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of memory.sv was successful.
+# Compile of cpu.sv was successful.
+# 12 compiles, 0 failed with no errors.
+# Compile of fetch.sv was successful.
+# Compile of rf.v was successful.
+# Compile of fetchTB.sv was successful.
+# Compile of decode.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of extension_unit.sv was successful.
+# Compile of branch_unit.sv was successful.
+# Compile of execute.sv was successful.
+# Compile of wb.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of memory.sv was successful.
+# Compile of cpu.sv was successful.
+# 12 compiles, 0 failed with no errors.
