@@ -1,0 +1,37 @@
+# Compile of BMP_display.v was successful.
+# Compile of BMP_ROM_Bucky.v was successful.
+# Compile of BMP_ROM_Font.v was successful.
+# Compile of BMP_ROM_Mario.v was successful.
+# Compile of PlaceBMP.sv was successful with warnings.
+# Compile of PLL.v was successful.
+# Compile of rst_synch.v was successful.
+# Compile of VGA_timing.sv was successful.
+# Compile of videoMem.sv was successful.
+# Compile of alu.v was successful.
+# Compile of br_bool.v was successful.
+# Compile of cpu.v was successful.
+# Compile of cpu_tb.v was successful.
+# Compile of data_mem.v was successful.
+# Compile of dst_mux.v was successful.
+# Compile of id.v was successful.
+# Compile of instr_mem.v was successful.
+# Compile of prgm_cntr.v was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of rf.v was successful.
+# Compile of src_mux.v was successful.
+# 22 compiles, 0 failed with no errors.
+# Compile of capability.sv was successful.
+vsim work.capability -voptargs=+acc
+# vsim work.capability -voptargs="+acc" 
+# Start time: 12:13:48 on Feb 27,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): I:/win/554_git/Capability1/BMP_display.v(82): (vopt-13259) Missing instance name in instantiation of module/program/interface 'videoMem'.
+# ** Error (suppressible): I:/win/554_git/Capability1/BMP_display.v(96): (vopt-13259) Missing instance name in instantiation of module/program/interface 'PlaceBMP'.
+# ** Error: I:/win/554_git/Capability1/PLL.v(16): Module 'PLL_0002' is not defined.
+#  For instance 'pll_inst' at path 'capability.iDUT.iPLL'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=3, Warnings=0.
+# Error loading design
+# End time: 12:13:53 on Feb 27,2024, Elapsed time: 0:00:05
+# Errors: 3, Warnings: 4

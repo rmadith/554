@@ -1,0 +1,20 @@
+Fitter Status : Successful - Tue Feb  6 19:00:06 2024
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Revision Name : mini_01
+Top-level Entity Name : mini_01
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 242 / 32,070 ( < 1 % )
+Total registers : 266
+Total pins : 28 / 457 ( 6 % )
+Total virtual pins : 0
+Total block memory bits : 393,728 / 4,065,280 ( 10 % )
+Total RAM Blocks : 50 / 397 ( 13 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

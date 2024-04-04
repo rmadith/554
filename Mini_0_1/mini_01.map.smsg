@@ -1,1 +1,0 @@
-Info (10281): Verilog HDL Declaration information at reset_synch.sv(1): object "RST_n" differs only in case from object "rst_n" in the same scope File: I:/win/554/Mini_0_1/reset_synch.sv Line: 1

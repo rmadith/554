@@ -1,0 +1,20 @@
+Fitter Status : Successful - Tue Feb 27 17:17:15 2024
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Revision Name : BMP_display
+Top-level Entity Name : BMP_display
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 611 / 32,070 ( 2 % )
+Total registers : 488
+Total pins : 44 / 457 ( 10 % )
+Total virtual pins : 0
+Total block memory bits : 2,312,760 / 4,065,280 ( 57 % )
+Total RAM Blocks : 288 / 397 ( 73 % )
+Total DSP Blocks : 2 / 87 ( 2 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 0 / 4 ( 0 % )
