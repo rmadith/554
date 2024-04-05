@@ -10,7 +10,7 @@ module fetch (clk, rst_n,flush, Branch_PC,PC_in, PC_out, inst, old_PC,PC_en);
     reg [31:0]instr_mem[0:65535];   // 2 ^ 16
 
     initial begin
-        $readmemh("test.hex",instr_mem);
+        $readmemh("Verification/basic_test_1.hex",instr_mem);
     end
     
     ///////////////////////////////

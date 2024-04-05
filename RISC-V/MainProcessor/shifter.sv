@@ -2,12 +2,12 @@ module shifter(
     input [31:0] A, B,
     input [3:0] ALU_op,
     output [31:0] out
-)
+);
 
 // Need to handle SRA, SRL, SLL
 
-wire [31:0] shift_out;
-wire [4:0] shift_amount;
+logic [31:0] shift_out;
+logic [4:0] shift_amount;
 
 assign shift_amount = B[4:0];
 
@@ -125,7 +125,7 @@ always_comb begin : shifter_block
             endcase
         end
         default: begin
-            out = 32'b0;
+            shift_out = 32'b0;
         end
     endcase
 end

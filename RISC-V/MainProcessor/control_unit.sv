@@ -5,7 +5,8 @@ module control_unit(
 	alu_op,immSel,immType,setDataZero,regWriteEnable,memRead,memWrite,branch,pc_operand,jump,
 	addConstant4, memType
 	);
-`include "common_params.inc"
+//`include "common_params.inc"
+
 ///////////////////////////////////////
 /////////////// Inputs ///////////////
 /////////////////////////////////////

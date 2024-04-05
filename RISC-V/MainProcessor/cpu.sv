@@ -1,6 +1,10 @@
-module cpu();
+module cpu(
+	input logic clk, 
+	input logic rst_n
 
-  logic clk,rst_n,setDataZero,addConstant4,pc_operand,memRead,memWrite,immSel;
+);
+
+  logic setDataZero,addConstant4,pc_operand,memRead,memWrite,immSel;
   logic [2:0] memType;
   wire [31:0] inst,PC,oldPC,temp_PC;
   wire [31:0] SrcA,SrcB,memWrData,immValue;
@@ -8,8 +12,8 @@ module cpu();
   wire [31:0] alu_out,memDataOut,writeBackData;
 
 
-  fetch iFetch(.clk(clk), .rst_n(rst_n), .PC_in(temp_PC), .PC_out(PC), .inst(inst), .old_PC(oldPC),.flush(0),
-		.Branch_PC(0),.PC_en(1));
+  fetch iFetch(.clk(clk), .rst_n(rst_n), .PC_in(temp_PC), .PC_out(PC), .inst(inst), .old_PC(oldPC),.flush(1'b0),
+		.Branch_PC(32'b0),.PC_en(1'b1));
   decode iDecode(
 	// Inputs
 	.clk(clk),.rst_n(rst_n),.instruction(inst),.currPC(oldPC),.dataIn(writeBackData),.PC_plus4(PC),
@@ -30,7 +34,7 @@ module cpu();
 	//Outputs
 	.memDataOut(memDataOut)
 	); 
-	
+
   wb iWB(.memRead(memRead), .memData(memDataOut), .ALUResIn(alu_out),.writeBackData(writeBackData));
 
 endmodule
