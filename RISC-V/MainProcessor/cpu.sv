@@ -30,6 +30,7 @@ module cpu();
 	//Outputs
 	.memDataOut(memDataOut)
 	); 
+	
   wb iWB(.memRead(memRead), .memData(memDataOut), .ALUResIn(alu_out),.writeBackData(writeBackData));
 
 endmodule
