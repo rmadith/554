@@ -1,3 +1,5 @@
+`default_nettype none
+
 module cpu_tb();
 
     logic clk, rst_n;
@@ -18,3 +20,5 @@ module cpu_tb();
         #1 clk = ~clk;
   
 endmodule
+
+`default_nettype wire

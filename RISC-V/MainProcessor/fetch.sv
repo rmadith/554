@@ -1,37 +1,57 @@
-module fetch (clk, rst_n,flush, Branch_PC,PC_in, PC_out, inst, old_PC,PC_en);
+`default_nettype none
+module fetch (
 	
-	input wire clk, rst_n,flush,PC_en;
-	input wire [31:0] PC_in, Branch_PC;
-	output wire [31:0] PC_out,old_PC;
-	output reg [31:0] inst;
+    ///// INPUTS  /////
+	input wire clk,
+    input wire rst_n,
 
-	logic [31:0] nextPC,PC;
+    input wire PC_enable, 
+    input wire takeBranch,
+    input wire [31:0] branch_PC, 
+    input wire incorrect_b_prediction,
+    input wire [31:0] PC_IFID_IDEX,
+    input wire [31:0] PC_plus4_IFID_out,
 
-    reg [31:0]instr_mem[0:65535];   // 2 ^ 16
+    ///// OUTPUTS /////
+	output wire [31:0] PC_plus4_IFID_in,
+	output reg [31:0] instruction_IFID_in,
+    output reg [31:0] PC_IFID_in
+    );
+
+    // Declare instruction memory and load contents from the code we wish to execute. 
+    reg [31:0] instr_mem[0:65535];   // 2 ^ 16
 
     initial begin
-        $readmemh("Verification/basic_test_1.hex",instr_mem);
-    end
-    
-    ///////////////////////////////
-    // Program Counter is floped //
-    ///////////////////////////////
-
-    always @ (posedge clk, negedge rst_n) begin
-        if (!rst_n)
-            PC <= 32'h0;    // Reset program counter to 0
-        else if (PC_en)  
-            PC <= (flush) ? Branch_PC : PC_in;   // update PC accordingly // flush is branch take variable
+        $readmemh("Verification/basic_jmp_test.hex",instr_mem);
     end
 
 
-    /////////////////////////////////
-    // Memory is floped on _______ //
-    /////////////////////////////////
-// should it be negedge clk ??
-    assign inst = instr_mem[PC>>2]; // PC/4 (PC >>2) if increament by 4
+    // Instaniate BTB/PC module
+    BTB_and_PC btb_pc (
+        ///// INPUTS  /////
+        .clk(clk), 
+        .rst_n(rst_n), 
+
+        .PC_enable(PC_enable), 
+        .takeBranch(takeBranch), 
+        .PC_plus_4(PC_plus4_IFID_in),
+
+        .instruction_IFID_in(instruction_IFID_in),
+        .branch_PC(branch_PC),
+        .incorrect_b_prediction(incorrect_b_prediction),
+        .PC_IFID_IDEX(PC_IFID_IDEX),
+        .PC_plus4_IFID_out(PC_plus4_IFID_out),
+
+        ///// OUTPUTS /////
+        .PC_IFID_in(PC_IFID_in)
+    );
+
+    // Read instruction out of memory
+    assign instruction_IFID_in = instr_mem[PC_IFID_in>>2]; // PC/4 (PC >>2) if increament by 4
    
-    assign old_PC = PC;
-    assign PC_out = PC + 4; // increament by 4 bytes (32 bit instruction set)
+    // Increment the PC
+    assign PC_plus4_IFID_in = PC_IFID_in + 3'h4; // increament by 4 bytes (32 bit instruction set)
 
 endmodule
+
+`default_nettype wire

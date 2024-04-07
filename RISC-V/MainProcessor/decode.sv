@@ -1,73 +1,107 @@
+`default_nettype none
 module decode(
-	// Inputs
-	clk,rst_n,instruction,currPC,dataIn,PC_plus4,
-	// Outputs
-	updatePC,addConstant4,memType,setDataZero,alu_op,memRead,memWrite,pc_operand,
-	immSel,SrcA,SrcB,immValue,memWrData
+	///// INPUTS  /////
+	input wire clk,
+    input wire rst_n,
+
+	input wire [31:0] instruction_IFID_IDEX,
+	input wire [31:0] PC_IFID_IDEX,
+	input wire [31:0] PC_plus4_IFID_out,
+
+	input wire [31:0] instruction_MEMWB_out,
+	input wire [31:0] writeBackData,
+	
+
+	///// OUTPUTS /////
+	output logic [31:0] regData1_IDEX_in,
+	output logic [31:0] regData2_IDEX_in,
+	output logic [31:0] sext_imm_IDEX_in,
+
+	output logic immSel_IDEX_in,
+	output logic PC_as_operand_IDEX_in,
+	output logic setDataZero_IDEX_in,
+	output logic [3:0] ALU_op_IDEX_in,
+	output logic memRead_IDEX_in, 
+	output logic [2:0] memType_IDEX_in, 
+	output logic memWrite_IDEX_in,
+	output logic addConstant4_IDEX_in,
+	output logic regWriteEnable_IDEX_in,
+
+	output logic [31:0] branch_PC,
+	output logic takeBranch
+	
 	);
 
-	///////////////////////////////////////
-	/////////////// Inputs ///////////////
-	/////////////////////////////////////
-	input clk,rst_n;
-	input [31:0] instruction,currPC,PC_plus4;
-	input [31:0] dataIn;
-	////////////////////////////////////////
-	/////////////// Outputs ///////////////
-	//////////////////////////////////////
-	output addConstant4;
-	output [2:0] memType;
-	output setDataZero;
-	output [3:0] alu_op;
-	// output regWriteEnable; // for pipeline
-	output memRead,memWrite;
-	output pc_operand;
-	output [31:0] updatePC;
-	output immSel;
-	output [31:0] SrcA,SrcB,immValue,memWrData;
-
-	//////////////////////////////////////////
-	/////////////// Variables ///////////////
-	////////////////////////////////////////
-
+	///////////////////////////// Declare internal nets //////////////////////////////////
 	logic [2:0] immType;
-	logic regWriteEnable; // remove this later for pipelining
-	logic branch,jump;
-	logic [4:0] dstRegAddr; // remove this late for pipelining
-	logic flush;	// remove this later for pipelineing (add to output)
-	logic takeBranch;
-	////////////////////////////////////////
-	///////////////////////////////////////
-	//////////////////////////////////////
-	control_unit iCU(
-		//Inputs
-		.instr(instruction),
-		//Outputs
-		.alu_op(alu_op),.immSel(immSel),.immType(immType),.setDataZero(setDataZero),.regWriteEnable(regWriteEnable),.memRead(memRead),.memWrite(memWrite),
-		.branch(branch),.pc_operand(pc_operand),.jump(jump),.addConstant4(addConstant4),.memType(memType)
-		);
+	logic jump;
+	logic branch;
+	//////////////////////////////////////////////////////////////////////////////////////
 
+
+	///////////////////////////// CONTROL UNIT //////////////////////////////////
+	control_unit iControl_Unit(
+		///// INPUTS /////
+		.instr(instruction_IFID_IDEX),
+
+		///// OUTPUTS /////
+		.alu_op(ALU_op_IDEX_in),.immSel(immSel_IDEX_in),.immType(immType),.setDataZero(setDataZero_IDEX_in),.regWriteEnable(regWriteEnable_IDEX_in),
+		.memRead(memRead_IDEX_in),.memWrite(memWrite_IDEX_in), .branch(branch),.pc_operand(PC_as_operand_IDEX_in),.jump(jump),
+		.addConstant4(addConstant4_IDEX_in), .memType(memType_IDEX_in)
+	);
+
+
+	///////////////////////////// SIGN EXTENSION UNIT ////////////////////////////////
 	extension_unit iEU(
-		//Input
-		.immType(immType),.inst(instruction),
-		//Outputs
-		.immediate(immValue)
-		);
+		///// INPUTS /////
+		.immType(immType),.inst(instruction_IFID_IDEX),
 
-	assign dstRegAddr = (instruction[6:0] == 7'b1100011 | instruction[6:0] == 7'b0100011) ? 5'bz : instruction[11:7]; // need to fix this 
+		///// OUTPUTS /////
+		.immediate(sext_imm_IDEX_in)
+	);
 
-	rf iRF(.clk(clk),.p0_addr(instruction[19:15]),.p1_addr(instruction[24:20]),.p0(SrcA),.p1(SrcB),.re0(1'b1),.re1(1'b1),
-		.dst_addr(dstRegAddr),.dst(dataIn),.we(regWriteEnable));
 
+	// Separate variable declared for ease of debugging.
+	logic [4:0] reg_dst_addr;
+	assign reg_dst_addr = instruction_MEMWB_out[11:7];
+
+	///////////////////////////// REGISTER FILE ////////////////////////////////
+	rf iRF(
+		///// INPUTS /////
+		.clk(clk),
+		.p0_addr(instruction_IFID_IDEX[19:15]),
+		.p1_addr(instruction_IFID_IDEX[24:20]),
+		.re0(1'b1),
+		.re1(1'b1),
+		.dst_addr(reg_dst_addr),
+		.dst(writeBackData),
+		.we(regWriteEnable_IDEX_in),
+		
+		///// OUTPUTS /////
+		.p0(regData1_IDEX_in),
+		.p1(regData2_IDEX_in)
+	);
+
+
+	///////////////////////////// BRANCH UNIT ////////////////////////////////
 	branch_unit iBU(
-		//Inputs
-		.branch(branch),.jump(jump),.currPC(currPC),.PC_plus4(PC_plus4),.immediate(immValue),.SrcA(SrcA),.SrcB(SrcB),.funct3(instruction[14:12]),
-		.opcode(instruction[6:0]),
-		//Outputs
-		.newPC(updatePC),.takeBranch(takeBranch)
-		);
+		///// INPUTS /////
+		.branch(branch),
+		.jump(jump),
+		.currPC(PC_IFID_IDEX),
+		.PC_plus4(PC_plus4_IFID_out),
+		.immediate(sext_imm_IDEX_in),
+		.SrcA(regData1_IDEX_in),
+		.SrcB(regData2_IDEX_in),
+		.funct3(instruction_IFID_IDEX[14:12]),
+		.opcode(instruction_IFID_IDEX[6:0]),
+		
+		///// OUTPUTS /////
+		.takeBranch(takeBranch),
+		.branch_PC(branch_PC)
+	);
 
-	assign flush = (takeBranch | jump) & (updatePC != PC_plus4);
-	assign memWrData = SrcB;
 
 endmodule
+
+`default_nettype wire

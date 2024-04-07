@@ -1,3 +1,5 @@
+`default_nettype none
+
 module extension_unit(
 	//Input
 	immType,inst,
@@ -7,8 +9,8 @@ module extension_unit(
 ///////////////////////////////////////
 /////////////// Inputs ///////////////
 /////////////////////////////////////
-input [2:0] immType;
-input [31:0] inst;
+input wire [2:0] immType;
+input wire [31:0] inst;
 ////////////////////////////////////////
 /////////////// Outputs ///////////////
 //////////////////////////////////////
@@ -25,3 +27,5 @@ always @(*) begin
 	endcase
 end
 endmodule
+
+`default_nettype wire

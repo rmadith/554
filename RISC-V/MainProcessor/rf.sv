@@ -1,3 +1,5 @@
+`default_nettype none
+
 module rf(clk,p0_addr,p1_addr,p0,p1,re0,re1,dst_addr,dst,we);
 //////////////////////////////////////////////////////////////////
 // Triple ported register file.  Two read ports (p0 & p1), and //
@@ -5,12 +7,12 @@ module rf(clk,p0_addr,p1_addr,p0,p1,re0,re1,dst_addr,dst,we);
 // read on clock low //////////////////////////////////////////
 //////////////////////
 
-input clk;
-input [4:0] p0_addr, p1_addr;			// two read port addresses
-input re0,re1;							// read enables (power not functionality)
-input [4:0] dst_addr;					// write address
-input [31:0] dst;						// dst bus
-input we;								// write enable								// not a functional input.  Used to dump register contents when
+input wire clk;
+input wire [4:0] p0_addr, p1_addr;			// two read port addresses
+input wire re0,re1;							// read enables (power not functionality)
+input wire [4:0] dst_addr;					// write address
+input wire [31:0] dst;						// dst bus
+input wire we;								// write enable								// not a functional input.  Used to dump register contents when
 									
 
 output wire [31:0] p0,p1;  				//output read ports
@@ -58,4 +60,6 @@ assign p1 =  (p1_addr == 4'h0) ? 31'h0 : (((we === 1'b1) && (dst_addr === p1_add
 
 	
 endmodule
+
+`default_nettype wire
   
