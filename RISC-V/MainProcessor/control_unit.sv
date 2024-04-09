@@ -44,7 +44,8 @@ assign opcode = instr[6:0];
 assign funct3 = instr[14:12];
 assign funct7 = instr[31:25];
 
-always@(*) begin 
+always@(*) begin
+       inter_alu_op = 0;	
 	case(funct3)
 		3'b000: inter_alu_op = (funct7 == 7'b0100000 & opcode == 7'b0110011) ? 1: 0; // if 1 SUB, if 0 ADD/ADDI 
 		3'b001: inter_alu_op = 2; // SLLI,SLL

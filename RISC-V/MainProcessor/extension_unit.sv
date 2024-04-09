@@ -17,6 +17,7 @@ input wire [31:0] inst;
 output reg [31:0] immediate;
 
 always @(*) begin 
+	immediate = 0;
 	case(immType) 
 		3'b000: immediate = {{20{inst[31]}},inst[31:20]};  // I-immediate (sign-exntension)
 		3'b001: immediate = 'h0;

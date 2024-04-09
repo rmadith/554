@@ -55,10 +55,10 @@ module memory(
 	///////////////////////////////////////////////
 	// Model read, data is ___________________  //
 	/////////////////////////////////////////////
-	always @(*) // not sure about the clock edge ??
-	if (memRead_EXMEM_MEMWB && ~memWrite_EXMEM_out)
-		inter_memData <= data_mem[memAddr[15:0]];
-		
+	//always @(*) // not sure about the clock edge ??
+	//if (memRead_EXMEM_MEMWB && ~memWrite_EXMEM_out)
+	//	inter_memData <= data_mem[memAddr[15:0]];
+	assign inter_memData = (memRead_EXMEM_MEMWB && ~memWrite_EXMEM_out) ? data_mem[memAddr[15:0]] : 32'hz;	
 	////////////////////////////////////////////////
 	// Model write, data is written on _________ //
 	//////////////////////////////////////////////
