@@ -50,9 +50,15 @@ always @(negedge clk) // ??
 
 // Register Bypass Added edge case to make R0 return 0
 
+<<<<<<< HEAD
 //assign p0 =  (p0_addr == 4'h0) ? 31'h0 : (((we === 1'b1) && (dst_addr === p0_addr)) ? dst: temp_p0);
 
 //assign p1 =  (p1_addr == 4'h0) ? 31'h0 : (((we === 1'b1) && (dst_addr === p1_addr)) ? dst: temp_p1);
+=======
+assign p0 =  (p0_addr == 4'h0) ? 31'h0 : temp_p0;//: (((we === 1'b1) && (dst_addr === p0_addr)) ? dst: temp_p0);
+
+assign p1 =  (p1_addr == 4'h0) ? 31'h0 : temp_p1;//: (((we === 1'b1) && (dst_addr === p1_addr)) ? dst: temp_p1);
+>>>>>>> eeb6a681b620f99d65e87bba3992ad8e658c24d2
 
 assign p0 = (p0_addr == 4'h0) ? 'h0 : temp_p0; // only for single cycle
 assign p1 = (p1_addr == 4'h0) ? 'h0 : temp_p1; // only for single cycle

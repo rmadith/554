@@ -1,5 +1,6 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
+add wave -noupdate /cpu_tb/instruction_IFID_in
 add wave -noupdate -divider -height 25 {Global signals}
 add wave -noupdate /cpu_tb/iCPU/clk
 add wave -noupdate /cpu_tb/iCPU/rst_n
@@ -100,7 +101,7 @@ add wave -noupdate -radix decimal /cpu_tb/iCPU/writeBackData
 add wave -noupdate -divider -height 25 {Writeback signals in Decode Module}
 add wave -noupdate /cpu_tb/iCPU/iDecode/reg_dst_addr
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {5 ns} 0}
+WaveRestoreCursors {{Cursor 1} {6 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 293
 configure wave -valuecolwidth 87
