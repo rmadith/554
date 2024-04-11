@@ -1,0 +1,2 @@
+	addi x1, zero, 200	# load x1 with the value 200
+	addi x2, zero, 350

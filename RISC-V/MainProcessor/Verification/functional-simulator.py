@@ -14,8 +14,15 @@ class RISCVEmulator:
         with open(filename, 'r') as file:
             for line in file:
                 instruction = int(line.strip(), base_for_instruction)
-                self.memory[self.pc] = instruction
-                self.pc += 1
+                
+                # Memory is byte addressable, so break instr into four bytes and store in appropriate locations
+                self.memory[self.pc] = instruction & 0xFF
+                self.memory[self.pc + 1] = (instruction & 0xFF00) >> 8
+                self.memory[self.pc + 2] = (instruction & 0xFF0000) >> 8
+                self.memory[self.pc + 3] = (instruction & 0xFF000000) >> 8
+
+                # go to where we will store the next instruction in memory.
+                self.pc += 4
         self.pc = 0  # Reset PC to start execution from the beginning
 
     def decode_execute(self, instruction):
@@ -31,7 +38,9 @@ class RISCVEmulator:
         imm_j = sign_extend(((instruction >> 31) << 20) | ((instruction & (0x3FF << 21)) >> (21 - 1)) | ((instruction & (0x1 << 20)) >> (20 - 11)) | ((instruction & 0xFF000)), 21)
         imm = sign_extend((instruction >> 20), 12)  # For I-type instructions
         shamt = rs2  # For shift instructions, the shift amount is in rs2
-        pc_next = self.pc + 1  # Default next PC
+        pc_next = self.pc + 4  # Default next PC
+
+        print(f"PC = {self.pc} , ", end = '')
 
         if opcode == 0x37:  # LUI
             self.registers[rd] = imm_u
@@ -40,9 +49,13 @@ class RISCVEmulator:
         elif opcode == 0x6F:  # JAL
             self.registers[rd] = pc_next
             pc_next = self.pc + imm_j
+            print(f"JAL: PC ({self.pc + imm_j}) <- PC ({self.pc}) + imm_j ({imm_j}) , rd ({self.pc + 4}) <- PC ({self.pc}) + 4")
+
         elif opcode == 0x67:  # JALR
             self.registers[rd] = pc_next
-            pc_next = (self.registers[rs1] + imm_i) & ~1
+            pc_next = self.registers[rs1] + imm_i
+            print(f"JALR: PC ({pc_next}) <- rs1<{rs1}> ({self.registers[rs1]}) + imm_i ({imm_i}) , rd ({self.pc + 4}) <- PC ({self.pc}) + 4")
+
         elif opcode == 0x63:  # Branch instructions (BEQ, BNE, BLT, BGE, BLTU, BGEU)
             if (funct3 == 0 and self.registers[rs1] == self.registers[rs2]) or \
             (funct3 == 1 and self.registers[rs1] != self.registers[rs2]) or \
@@ -57,30 +70,48 @@ class RISCVEmulator:
 
             # Define the operation function for simplicity
         def operation(op, rd, rs1, operand2, is_imm=False):
+            rhs_string = "ERROR"
+            
             if op == 'add':
                 self.registers[rd] = self.registers[rs1] + operand2
+                rhs_string = f"rs1 ({rs1}) + " + (f"imm_i" if is_imm else "rs2") + f" ({operand2})"
+
             elif op == 'sub':
                 self.registers[rd] = self.registers[rs1] - operand2
+                rhs_string = f"rs1 ({rs1}) - rs2{operand2})"
+
             elif op == 'sll':
                 self.registers[rd] = self.registers[rs1] << operand2
+                rhs_string = f"rs1 ({rs1}) << " + (f"imm_i" if is_imm else "rs2") + f" ({operand2})"
+
             elif op == 'slt':
                 self.registers[rd] = int(self.registers[rs1] < operand2)
             elif op == 'sltu':
                 self.registers[rd] = int((self.registers[rs1] & 0xFFFFFFFF) < (operand2 & 0xFFFFFFFF))
             elif op == 'xor':
                 self.registers[rd] = self.registers[rs1] ^ operand2
+                rhs_string = f"rs1 ({rs1}) ^ " + (f"imm_i" if is_imm else "rs2") + f" ({operand2})"
+
             elif op == 'srl':
                 self.registers[rd] = (self.registers[rs1] & 0xFFFFFFFF) >> operand2
+                rhs_string = f"rs1 ({rs1}) >> " + (f"imm_i" if is_imm else "rs2") + f" ({operand2})"
+
             elif op == 'sra':
                 self.registers[rd] = self.registers[rs1] >> operand2
+                rhs_string = f"rs1 ({rs1}) >> " + (f"imm_i" if is_imm else "rs2") + f" ({operand2})"
+
             elif op == 'or':
                 self.registers[rd] = self.registers[rs1] | operand2
+                rhs_string = f"rs1 ({rs1}) | " + (f"imm_i" if is_imm else "rs2") + f" ({operand2})"
+                
             elif op == 'and':
                 self.registers[rd] = self.registers[rs1] & operand2
+                rhs_string = f"rs1 ({rs1}) & " + (f"imm_i" if is_imm else "rs2") + f" ({operand2})"
         
             # Print the operation
             op_type = "I" if is_imm else "R"
-            print(f"{op.upper()} ({op_type}-Type): x{rd} = x{rs1} ({self.registers[rs1]}) {'immediate' if is_imm else 'x'+str(rs2)} ({operand2}) -> x{rd} = {self.registers[rd]}")
+            #print(f"{op.upper()} ({op_type}-Type): x{rd} = x{rs1} ({self.registers[rs1]}) {'immediate' if is_imm else 'x'+str(rs2)} ({operand2}) -> x{rd} = {self.registers[rd]}")
+            print(f"{op.upper()} ({op_type}-Type): x{rd} ({self.registers[rd]}) <- " + rhs_string)
 
         # Immediate operations (I-type)
         if opcode == 0x13:  # This includes ADDI, SLTI, SLTIU, XORI, ORI, ANDI, SLLI, SRLI, SRAI
@@ -165,13 +196,12 @@ class RISCVEmulator:
                 print(f"SW: MEM[{address}] = x{rs2} ({self.registers[rs2]})")
 
 
-        self.pc += 1  # Advance program counter for the next instruction
+        self.pc += 4  # Advance program counter for the next instruction
 
     def run(self):
         while self.pc < len(self.memory) and self.memory[self.pc] != 0:
             instruction = self.memory[self.pc]
             self.decode_execute(instruction)
-            #self.pc += 1
 
 if __name__ == "__main__":
     emulator = RISCVEmulator()

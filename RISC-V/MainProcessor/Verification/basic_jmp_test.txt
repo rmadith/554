@@ -1,0 +1,12 @@
+		### Test jal ###
+		addi x1, zero, 200	# load x1 with non-zero
+		jal x30, ROUTINE	# jump
+		addi x1, x1, 50		# Shouldn't reach this code
+		addi x2, zero, 350	# Shouldn't reach this code
+
+	
+				
+ROUTINE:	addi x1, x1, 100
+			addi x3, zero, 100
+
+

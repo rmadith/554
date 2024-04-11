@@ -1,3 +1,5 @@
+`default_nettype none
+
 module fetchTB();
 
 
@@ -59,3 +61,5 @@ initial begin
   
 
 endmodule
+
+`default_nettype wire
