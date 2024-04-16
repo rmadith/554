@@ -1,0 +1,39 @@
+insn:     0x000000 ---   _start                            -auipc gp, 4096;  // gp = pc + 4096
+insn:     0x000004 ---   _start                            -addi gp, gp, 0xfffff8f0;  // gp = gp + 0xfffff8f0
+insn:     0x000008 ---   _start                            -auipc sp, 134217728;  // sp = pc + 134217728
+insn:     0x00000c ---   _start                            -addi sp, sp, 0xfffffff8;  // sp = sp + 0xfffffff8
+insn:     0x000010 ---   _start                            -add s0, sp, zero;  // s0 = sp + zero
+insn:     0x000014 ---   _start                            -jal ra, 16;
+insn:     0x000024 ---   main                              -addi sp, sp, 0xffffffe0;  // sp = sp + 0xffffffe0
+insn:     0x000028 ---   main                              -sw ra, 28(sp);
+insn:     0x00002c ---   main                              -sw s0, 24(sp);
+insn:     0x000030 ---   main                              -addi s0, sp, 0x20;  // s0 = sp + 0x20
+insn:     0x000034 ---   main                              -addi a5, zero, 0x1;  // a5 = zero + 0x1
+insn:     0x000038 ---   main                              -sw a5, -20(s0);
+insn:     0x00003c ---   main                              -addi a5, zero, 0x2;  // a5 = zero + 0x2
+insn:     0x000040 ---   main                              -sw a5, -24(s0);
+insn:     0x000044 ---   main                              -lw a1, -24(s0);
+insn:     0x000048 ---   main                              -lw a0, -20(s0);
+insn:     0x00004c ---   main                              -jal ra, 32;
+insn:     0x00006c ---   add                               -addi sp, sp, 0xffffffe0;  // sp = sp + 0xffffffe0
+insn:     0x000070 ---   add                               -sw s0, 28(sp);
+insn:     0x000074 ---   add                               -addi s0, sp, 0x20;  // s0 = sp + 0x20
+insn:     0x000078 ---   add                               -sw a0, -20(s0);
+insn:     0x00007c ---   add                               -sw a1, -24(s0);
+insn:     0x000080 ---   add                               -lw a4, -20(s0);
+insn:     0x000084 ---   add                               -lw a5, -24(s0);
+insn:     0x000088 ---   add                               -add a5, a4, a5;  // a5 = a4 + a5
+insn:     0x00008c ---   add                               -addi a0, a5, 0;  // a0 = a5 + 0
+insn:     0x000090 ---   add                               -lw s0, 28(sp);
+insn:     0x000094 ---   add                               -addi sp, sp, 0x20;  // sp = sp + 0x20
+insn:     0x000098 ---   add                               -jalr zero, ra, 0;
+insn:     0x000050 ---   main                              -sw a0, -28(s0);
+insn:     0x000054 ---   main                              -addi a5, zero, 0;  // a5 = zero + 0
+insn:     0x000058 ---   main                              -addi a0, a5, 0;  // a0 = a5 + 0
+insn:     0x00005c ---   main                              -lw ra, 28(sp);
+insn:     0x000060 ---   main                              -lw s0, 24(sp);
+insn:     0x000064 ---   main                              -addi sp, sp, 0x20;  // sp = sp + 0x20
+insn:     0x000068 ---   main                              -jalr zero, ra, 0;
+insn:     0x000018 ---   _start                            -jal ra, 4;
+insn:     0x00001c ---   _exit                             -addi a7, zero, 0x5d;  // a7 = zero + 0x5d
+insn:     0x000020 ---   _exit                             -ecall;
