@@ -4,6 +4,7 @@ module cpu(
 	input wire clk, 
 	input wire rst_n,
     input wire debug,
+    input wire [31:0] joystick_data,
     input wire [31:0] data_cpu,
     input wire [31:0] waddr_cpu,
     output wire [31:0] waddr_out,
@@ -260,7 +261,14 @@ module cpu(
 		.execute_rst_EXMEM_MEMWB(execute_rst_EXMEM_MEMWB)
 
     );
+    	logic re,we,dm_we;
+	logic [31:0] dataMem;
+	assign re = |execute_rst_EXMEM_MEMWB[31:16] & memRead_EXMEM_MEMWB;
+	assign we = |execute_rst_EXMEM_MEMWB[31:16] & memWrite_EXMEM_out;
 
+	assign dm_we = ~|execute_rst_EXMEM_MEMWB[31:16] & memWrite_EXMEM_out;
+
+	assign dataMem  = re ? joystick_data : memReadRst_MEMWB_in;
 
 
 	memory iMemory(
@@ -268,7 +276,7 @@ module cpu(
 		.clk(clk),
 		.rst_n(rst_n),
 		.execute_rst_EXMEM_MEMWB(execute_rst_EXMEM_MEMWB),
-		.memWrite_EXMEM_out(memWrite_EXMEM_out),
+		.memWrite_EXMEM_out(dm_we),
 		.memRead_EXMEM_MEMWB(memRead_EXMEM_MEMWB),
 		.regData2_EXMEM_out(regData2_EXMEM_out),
 		.memType_EXMEM_out(memType_EXMEM_out),
@@ -315,7 +323,7 @@ module cpu(
 
 	wb iWB(
         ///// INPUTS  /////
-        .memReadRst_MEMWB_out(memReadRst_MEMWB_out),
+        .memReadRst_MEMWB_out(dataMem),
         .memRead_MEMWB_out(memRead_MEMWB_out),
         .execute_rst_MEMWB_out(execute_rst_MEMWB_out),
 
