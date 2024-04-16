@@ -62,7 +62,7 @@ module memory(
 	////////////////////////////////////////////////
 	// Model write, data is written on _________ //
 	//////////////////////////////////////////////
-	always @(*) // not sure about the clock edge ??
+	always @(negedge clk) // not sure about the clock edge ??
 	if (memWrite_EXMEM_out && ~memRead_EXMEM_MEMWB)
 		data_mem[memAddr[15:0]] <= inter_memWrData;
 
