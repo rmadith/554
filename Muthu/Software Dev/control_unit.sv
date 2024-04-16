@@ -5,7 +5,7 @@ module control_unit(
 	instr,
 	//Outputs
 	alu_op,immSel,immType,setDataZero,regWriteEnable,memRead,memWrite,branch,pc_operand,jump,
-	addConstant4, memType
+	addConstant4, memType, halt
 	);
 //`include "common_params.inc"
 
@@ -28,6 +28,7 @@ output reg pc_operand;
 output reg jump;
 output reg addConstant4;
 output reg [2:0] memType;
+output reg halt;
 //////////////////////////////////////////
 /////////////// Variables ///////////////
 ////////////////////////////////////////
@@ -72,6 +73,7 @@ always@(*) begin
 	alu_op = 0;
 	addConstant4 = 0;
 	memType = 0;
+	halt = 0;
    	case(opcode)
 		7'b0110111: begin  // LUI 
 				setDataZero = 1;
@@ -135,6 +137,7 @@ always@(*) begin
 				regWriteEnable = 1;				
 				alu_op = inter_alu_op;
 			    end
+		7'b1110011: halt = 1;
 	endcase
     end
 endmodule

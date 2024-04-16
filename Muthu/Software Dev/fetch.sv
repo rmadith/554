@@ -15,7 +15,12 @@ module fetch (
     ///// OUTPUTS /////
 	output wire [31:0] PC_plus4_IFID_in,
 	output reg [31:0] instruction_IFID_in,
-    output reg [31:0] PC_IFID_in
+    output reg [31:0] PC_IFID_in,
+
+
+    // Bootloader ////
+    input wire debug, 
+    input wire [31:0] data_cpu, waddr_cpu
     );
 
     // Declare instruction memory and load contents from the code we wish to execute. 
@@ -24,6 +29,11 @@ module fetch (
     initial begin
         $readmemh("Verification/jal_tests.hex",instr_mem);
     end
+    ///////////////////////// for bootloader /////////////////////
+    always @(negedge clk)
+        if(debug)
+            instr_mem[waddr_cpu[15:0]] <= data_cpu;
+    /////////////////////////////////////////////////////////////
 
 
     // Instaniate BTB/PC module

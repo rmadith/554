@@ -1,0 +1,784 @@
+# Compile of bootloader.sv was successful.
+# Compile of bootloadertb.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of bootloadertb.sv was successful.
+vsim work.bootloadertb -voptargs=+acc
+# vsim work.bootloadertb -voptargs="+acc" 
+# Start time: 14:43:24 on Apr 13,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (13) does not match connection size (32) for port 'baud'. The port definition is at: I:/win/554_git/Muthu/Software Dev/UART.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /bootloadertb/iDUT/iUART File: I:/win/554_git/Muthu/Software Dev/bootloader.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'data_out'. The port definition is at: I:/win/554_git/Muthu/Software Dev/circular_queue.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /bootloadertb/iDUT/iCPUQueue File: I:/win/554_git/Muthu/Software Dev/bootloader.sv Line: 89
+# ** Warning: (vsim-3015) [PCDPC] - Port size (13) does not match connection size (32) for port 'baud'. The port definition is at: I:/win/554_git/Muthu/Software Dev/UART.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /bootloadertb/iUART File: I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv Line: 15
+# Compile of bootloader.sv was successful.
+# Compile of circular_queue.sv was successful.
+# Compile of bootloadertb.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (13) does not match connection size (32) for port 'baud'. The port definition is at: I:/win/554_git/Muthu/Software Dev/UART.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /bootloadertb/iDUT/iUART File: I:/win/554_git/Muthu/Software Dev/bootloader.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (13) does not match connection size (32) for port 'baud'. The port definition is at: I:/win/554_git/Muthu/Software Dev/UART.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /bootloadertb/iUART File: I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv Line: 15
+# Compile of bootloader.sv was successful.
+# Compile of bootloadertb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(77)
+#    Time: 200015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 77
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(77)
+#    Time: 200015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 77
+add wave -position insertpoint sim:/bootloadertb/*
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(77)
+#    Time: 200015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 77
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Compile of bootloader.sv was successful.
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Compile of bootloadertb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(80)
+#    Time: 200015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 80
+# Compile of bootloadertb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(86)
+#    Time: 300015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 86
+# Compile of bootloadertb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(91)
+#    Time: 300015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 91
+# Compile of bootloader.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(91)
+#    Time: 300015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 91
+add wave -position insertpoint  \
+sim:/bootloadertb/iDUT/rx_count
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(91)
+#    Time: 300015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 91
+log * -r
+log * -r
+log * -r
+add wave -position insertpoint  \
+sim:/bootloadertb/iDUT/shift
+# Compile of bootloader.sv was successful.
+# Compile of bootloadertb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# end1: Wrong data recieved
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(71)
+#    Time: 128485 ns  Iteration: 3  Instance: /bootloadertb
+# Break in NamedBeginStat end1 at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 71
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# end1: Wrong data recieved
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(71)
+#    Time: 128485 ns  Iteration: 3  Instance: /bootloadertb
+# Break in NamedBeginStat end1 at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 71
+# Compile of bootloader.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Write value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(91)
+#    Time: 300015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 91
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Write value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(91)
+#    Time: 300015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 91
+# Compile of bootloader.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# end1: Wrong data recieved
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(71)
+#    Time: 215545 ns  Iteration: 3  Instance: /bootloadertb
+# Break in NamedBeginStat end1 at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 71
+# Compile of bootloader.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Write value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(91)
+#    Time: 300015 ns  Iteration: 2  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 91
+# Compile of bootloader.sv was successful.
+# Compile of bootloadertb.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of bootloadertb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# Compile of bootloadertb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(100)
+#    Time: 471965 ns  Iteration: 3  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 100
+add wave -position insertpoint  \
+sim:/bootloadertb/iDUT/transmission_count
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/bootloadertb/iDUT/write
+add wave -position insertpoint  \
+sim:/bootloadertb/iDUT/tx_increment
+add wave -position insertpoint  \
+sim:/bootloadertb/iDUT/iUART/tx_done
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(100)
+#    Time: 471965 ns  Iteration: 3  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 100
+add wave -position insertpoint  \
+sim:/bootloadertb/iDUT/iUART/trmt
+# Compile of bootloader.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(100)
+#    Time: 471965 ns  Iteration: 3  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 100
+run
+# Compile of bootloadertb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(101)
+#    Time: 471975 ns  Iteration: 3  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 101
+# Compile of bootloader.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(101)
+#    Time: 471985 ns  Iteration: 3  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 101
+# Causality operation skipped due to absence of debug database file
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+add wave -position insertpoint  \
+sim:/bootloadertb/iUART/iRX/nxt_state
+add wave -position insertpoint  \
+sim:/bootloadertb/iDUT/nxt_tx_state
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart
+# Compile of bootloader.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(101)
+#    Time: 471985 ns  Iteration: 3  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 101
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/bootloadertb/iDUT/tx_done
+# Compile of bootloader.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(101)
+#    Time: 471985 ns  Iteration: 3  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 101
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of bootloadertb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(113)
+#    Time: 472025 ns  Iteration: 1  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 113
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/bootloadertb/iDUT/iCPUQueue/remove
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(113)
+#    Time: 472025 ns  Iteration: 1  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 113
+# Compile of bootloader.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.bootloadertb(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+run -all
+# Recieved 4 bytes of data
+# Right value recieved
+# All bytes sent
+# Did you recieve the value?
+# tests done
+# ** Note: $stop    : I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv(113)
+#    Time: 472025 ns  Iteration: 1  Instance: /bootloadertb
+# Break in Module bootloadertb at I:/win/554_git/Muthu/Software_Dev_questa/bootloadertb.sv line 113
+run
+quit -sim
+# End time: 15:28:53 on Apr 13,2024, Elapsed time: 0:45:29
+# Errors: 0, Warnings: 1

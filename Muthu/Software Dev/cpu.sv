@@ -1,9 +1,14 @@
 `default_nettype none
 
 module cpu(
-	input wire logic clk, 
-	input wire logic rst_n
-
+	input wire clk, 
+	input wire rst_n,
+    input wire debug,
+    input wire [31:0] data_cpu,
+    input wire [31:0] waddr_cpu,
+    output wire [31:0] waddr_out,
+    output wire [31:0] data_out,
+	output wire halt
 );
 
 	/////////////// fetch (outputs) //////////////////
@@ -99,7 +104,12 @@ module cpu(
 		///// OUTPUTS /////
 		.PC_plus4_IFID_in(PC_plus4_IFID_in),
 		.instruction_IFID_in(instruction_IFID_in),
-		.PC_IFID_in(PC_IFID_in)
+		.PC_IFID_in(PC_IFID_in),
+
+		// Bootloader
+		.debug(debug),
+		.data_cpu(data_cpu),
+		.waddr_cpu(waddr_cpu)
     );
 
 	IFIDpipelineReg iIFID_pipeline_reg(
@@ -138,7 +148,7 @@ module cpu(
 		.regData1_IDEX_in(regData1_IDEX_in),
 		.regData2_IDEX_in(regData2_IDEX_in),
 		.sext_imm_IDEX_in(sext_imm_IDEX_in),
-
+		.halt(halt),
 		.immSel_IDEX_in(immSel_IDEX_in),
 		.PC_as_operand_IDEX_in(PC_as_operand_IDEX_in),
 		.setDataZero_IDEX_in(setDataZero_IDEX_in),
@@ -264,7 +274,13 @@ module cpu(
 		.memType_EXMEM_out(memType_EXMEM_out),
 
 		///// OUTPUTS  /////
-		.memReadRst_MEMWB_in(memReadRst_MEMWB_in)
+		.memReadRst_MEMWB_in(memReadRst_MEMWB_in),
+		.memData(data_out), // Data to be written to memory
+
+		// Bootloader
+		.debug(debug),
+		.data_cpu(data_cpu),
+		.waddr_cpu(waddr_cpu)
 	
 	);
 
@@ -293,6 +309,8 @@ module cpu(
 		.memReadRst_MEMWB_out(memReadRst_MEMWB_out)
 
 	);
+
+        assign waddr_out = execute_rst_EXMEM_MEMWB;  // Addresss to where data is written
 
 
 	wb iWB(

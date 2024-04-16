@@ -26,7 +26,7 @@ module decode(
 	output logic memWrite_IDEX_in,
 	output logic addConstant4_IDEX_in,
 	output logic regWriteEnable_IDEX_in,
-
+	output logic halt,
 	output logic [31:0] branch_PC,
 	output logic takeBranch
 	
@@ -47,7 +47,7 @@ module decode(
 		///// OUTPUTS /////
 		.alu_op(ALU_op_IDEX_in),.immSel(immSel_IDEX_in),.immType(immType),.setDataZero(setDataZero_IDEX_in),.regWriteEnable(regWriteEnable_IDEX_in),
 		.memRead(memRead_IDEX_in),.memWrite(memWrite_IDEX_in), .branch(branch),.pc_operand(PC_as_operand_IDEX_in),.jump(jump),
-		.addConstant4(addConstant4_IDEX_in), .memType(memType_IDEX_in)
+		.addConstant4(addConstant4_IDEX_in), .memType(memType_IDEX_in), .halt(halt)
 	);
 
 

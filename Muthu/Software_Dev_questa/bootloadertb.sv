@@ -1,0 +1,122 @@
+module bootloadertb();
+
+reg clk, rst_n, debug, write, trmt;
+reg [31:0] outdata;
+reg [7:0] tx_data;
+
+wire increment, RX, TX;
+wire [31:0] addr, data;
+
+wire [7:0] rx_data;
+
+
+bootloader iDUT(.clk(clk), .rst_n(rst_n), .debug(debug), .addr(addr), .data(data), .increment(increment), .RX(RX), .TX(TX), .outdata(outdata), .write(write));
+
+UART iUART(.clk(clk),.rst_n(rst_n),.RX(TX),.TX(RX),.rx_rdy(rx_rdy),.clr_rx_rdy(clr_rx_rdy),.rx_data(rx_data),.trmt(trmt),.tx_data(tx_data),.tx_done(tx_done), .baud(13'h1b2));
+
+
+initial begin
+    clk = 0;
+    rst_n = 1;
+    debug = 0;
+    write = 0;
+    trmt = 0;
+    @(posedge clk) rst_n = 0;
+    @(posedge clk) rst_n = 1;
+    debug = 1;
+
+    // Testing address begin sent to bootloader
+    fork
+         test1: begin
+    		@(posedge clk);
+    		tx_data = 8'hAB;
+    		trmt = 1;
+                @(posedge clk);
+                trmt = 0;
+    		@(posedge tx_done);
+    		@(posedge clk);
+    		tx_data = 8'hCD;
+    		trmt = 1;
+                @(posedge clk);
+                trmt = 0;
+    		@(posedge tx_done);
+    		@(posedge clk);
+    		tx_data = 8'hEF;
+    		trmt = 1;
+                @(posedge clk);
+                trmt = 0;
+    		@(posedge tx_done);
+    		@(posedge clk);
+    		tx_data = 8'h01;
+    		trmt = 1;
+                @(posedge clk);
+                trmt = 0;
+
+   		// Sending an extra bit to check if increment doesn't increment randomly
+    		@(posedge tx_done);
+    		@(posedge clk);
+    		tx_data = 8'h78;
+    		trmt = 1;
+                @(posedge clk);
+                trmt = 0;
+
+                @(posedge tx_done) $display("All bytes sent");
+               end
+         end1: begin
+		 @(posedge increment);
+                 $display("Recieved 4 bytes of data");
+                 if(data === 32'h01EFCDAB) $display("Right value recieved");
+                 else begin
+			$display("end1: Wrong data recieved");
+			$stop();
+		 end
+               end
+         end2: begin
+		@(posedge increment);
+                @(posedge increment);
+                $display("end2: Failed, incremented twice");
+                $stop();
+               end
+         end3: begin 
+		repeat(30000) @(posedge clk);
+		$display("Did you recieve the value?");
+                disable end1;
+                disable end2;
+                disable test1;
+               end
+    join
+    debug = 0;
+
+    @(posedge clk);
+    outdata = 32'h56565656;
+    write = 1;
+    @(posedge clk);
+    write = 0;
+    @(posedge rx_rdy);
+    @(posedge rx_rdy);
+    @(posedge rx_rdy);
+    @(posedge rx_rdy);
+
+    @(posedge clk);
+    outdata = 32'h56565656;
+    write = 1;
+    @(posedge clk);
+    write = 0;
+
+    @(posedge clk);
+    outdata = 32'h56565656;
+    write = 1;
+    @(posedge clk);
+    write = 0;
+
+    $display("tests done");
+   $stop();
+
+end
+
+
+
+always #5 clk = ~clk;
+
+
+endmodule

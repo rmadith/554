@@ -3,7 +3,7 @@
 module memory(
 	///// INPUTS  /////
 	input wire clk,
-    input wire rst_n,
+        input wire rst_n,
 	input wire [31:0] execute_rst_EXMEM_MEMWB,
 	input wire memWrite_EXMEM_out,
 	input wire memRead_EXMEM_MEMWB,
@@ -11,9 +11,14 @@ module memory(
 	input wire [2:0] memType_EXMEM_out,
 
 	///// OUTPUTS  /////
-	output logic [31:0] memReadRst_MEMWB_in
-	
-	);
+	output logic [31:0] memReadRst_MEMWB_in,
+	output logic [31:0] memData,
+
+
+    // Bootloader ////
+    input wire debug, 
+    input wire [31:0] data_cpu, waddr_cpu
+);
 
 	reg [31:0]data_mem[0:65535];  // Uh this value should be very less ??
 	reg [31:0] inter_memWrData;
@@ -62,11 +67,15 @@ module memory(
 	////////////////////////////////////////////////
 	// Model write, data is written on _________ //
 	//////////////////////////////////////////////
-	always @(*) // not sure about the clock edge ??
-	if (memWrite_EXMEM_out && ~memRead_EXMEM_MEMWB)
-		data_mem[memAddr[15:0]] <= inter_memWrData;
+	always @(negedge clk) begin// not sure about the clock edge ??
+        if(debug)
+			data_mem[waddr_cpu[15:0]] <= data_cpu;
+        if (memWrite_EXMEM_out && ~memRead_EXMEM_MEMWB)
+			data_mem[memAddr[15:0]] <= inter_memWrData;
+	end
 
 	assign memReadRst_MEMWB_in = memDataOut;
+        assign memData = inter_memWrData;
 
 endmodule
 
