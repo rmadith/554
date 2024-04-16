@@ -19,7 +19,7 @@ module fetch (
 
 
     // Bootloader ////
-    input wire debug, 
+    input wire debug,
     input wire [31:0] data_cpu, waddr_cpu
     );
 
