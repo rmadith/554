@@ -99,11 +99,12 @@ reset_synch irst(.RST_n(KEY[0]), .clk(CLOCK2_50), .rst_n(rst_n), .pll_locked(1'b
 reset_synch idebug(.RST_n(KEY[1]), .clk(CLOCK2_50), .rst_n(debug_sig), .pll_locked(1'b1));
 
 // Bootloader
-bootloader iBoot(.clk(CLOCK2_50), .rst_n(rst_n), .debug(state), .addr(waddr_cpu_bootloader), .data(data_cpu_bootloader), .increment(LEDR[6]), .RX(), .TX(), .outdata(), .write());
+bootloader iBoot(.clk(CLOCK2_50), .rst_n(rst_n), .debug(state), .addr(waddr_cpu), .data(data_cpu), .increment(LEDR[6]), .RX(), .TX(), .outdata(), .write());
 
 
 // CPU
 cpu iCPU(.clk(CLOCK2_50), .rst_n(rst_n), .debug(state), .data_cpu(data_cpu), .waddr_cpu(waddr_cpu), .waddr_out(), .data_out(), .halt(LEDR[9]));
+
 
 
 

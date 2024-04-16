@@ -41,7 +41,7 @@ state_t state, nxt_state;
 reg X1_update, Y1_update, PS1_update, X2_update, Y2_update, PS2_update;
 reg [2:0] addr;
 reg addr_rst;
-reg [12:0] x1_val, y1_val, ps1_val, x2_val, y2_val, ps2_val /* synthesis keep */;
+reg [11:0] x1_val, y1_val, ps1_val, x2_val, y2_val, ps2_val/* synthesis keep */;
 wire clk;
 
 //=======================================================
@@ -102,27 +102,27 @@ always_comb begin
 	addr_rst = 0;
 	case(state)
 		default: if(update) begin
-					X1_update = 1;
+					Y2_update = 1;
 					nxt_state = Y1;
 				 end
 		Y1: 	if(update) begin
-					PS1_update = 1;
+					PS2_update = 1;
 					nxt_state = PS1;
 				 end
 		PS1: 	if(update) begin
-					Y2_update = 1;
+					X1_update = 1;
 					nxt_state = X2;
 				 end
 		X2: 	if(update) begin
-					X2_update = 1;
+					Y1_update = 1;
 					nxt_state = Y2;
 				 end
 		Y2: 	if(update) begin
-					PS2_update = 1;
+					PS1_update = 1;
 					nxt_state = PS2;
 				 end
 		PS2: 	if(update) begin
-					Y1_update = 1;
+					X2_update = 1;
 					nxt_state = X1;
 					addr_rst = 1;
 				 end
@@ -164,9 +164,10 @@ always_ff @(posedge clk, negedge rst_n)
 		ps2_val <= 'b0;
 	else if(PS2_update)
 		ps2_val <= volume;
+		
+wire [11:0] main; 
+assign main = x1_val | x2_val | y1_val | y2_val | ps1_val | ps2_val;
 
-wire [11:0] main;
-assign main = x1_val | y1_val | ps1_val | x2_val | y2_val | ps2_val;
-assign LEDR = main[9:0];
+assign LEDR[9] = &main;
 
 endmodule

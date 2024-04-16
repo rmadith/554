@@ -75,7 +75,6 @@ module memory(
 	end
 
 	assign memReadRst_MEMWB_in = memDataOut;
-        assign memData = inter_memWrData;
 
 endmodule
 
