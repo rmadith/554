@@ -4,7 +4,7 @@ module memory(
 	///// INPUTS  /////
 	input wire clk,
     input wire rst_n,
-	input wire [31:0] execute_rst_EXMEM_MEMWB,
+	input wire [31:0] execute_result_EXMEM_MEMWB,
 	input wire memWrite_EXMEM_out,
 	input wire memRead_EXMEM_MEMWB,
 	input wire [31:0] regData2_EXMEM_out,
@@ -22,7 +22,7 @@ module memory(
 	logic [31:0] memDataOut;
 	logic [31:0] memAddr;
 
-	assign memAddr = execute_rst_EXMEM_MEMWB;
+	assign memAddr = execute_result_EXMEM_MEMWB;
 
 	always @(*) begin 
 		memDataOut = 0;

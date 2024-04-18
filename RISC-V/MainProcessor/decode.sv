@@ -69,6 +69,7 @@ module decode(
 	rf iRF(
 		///// INPUTS /////
 		.clk(clk),
+		.rst_n(rst_n),
 		.p0_addr(instruction_IFID_IDEX[19:15]),
 		.p1_addr(instruction_IFID_IDEX[24:20]),
 		.re0(1'b1),

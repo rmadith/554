@@ -53,7 +53,7 @@ module cpu(
 	logic [31:0] PC_IDEX_EXMEM;
 
 	////////////////// execute (outputs) //////////////////
-	logic [31:0] execute_rst_EXMEM_in;
+	logic [31:0] execute_result_EXMEM_in;
 
 
 	/////////////// EXMEM pipeline register (outputs) //////////////////
@@ -64,7 +64,7 @@ module cpu(
     logic [2:0] memType_EXMEM_out;
     logic memRead_EXMEM_MEMWB;
     logic memWrite_EXMEM_out;
-    logic [31:0] execute_rst_EXMEM_MEMWB;
+    logic [31:0] execute_result_EXMEM_MEMWB;
 
 
 	////////////////// memory (outputs) //////////////////
@@ -74,7 +74,7 @@ module cpu(
 	logic regWriteEnable_MEMWB_out;
     logic [31:0] instruction_MEMWB_out;
     logic PC_MEMWB_out;
-    logic [31:0] execute_rst_MEMWB_out;
+    logic [31:0] execute_result_MEMWB_out;
     logic memRead_MEMWB_out;
     logic [31:0] memReadRst_MEMWB_out;
 
@@ -218,7 +218,7 @@ module cpu(
 		.addConstant4_IDEX_out(addConstant4_IDEX_out),
 
 		///// OUTPUTS  /////
-		.execute_rst_EXMEM_in(execute_rst_EXMEM_in)
+		.execute_result_EXMEM_in(execute_result_EXMEM_in)
 	);
 
 	EXMEMpipelineReg iEXMEM_pipeline_reg(
@@ -237,7 +237,7 @@ module cpu(
 		.memType_IDEX_EXMEM(memType_IDEX_EXMEM),
 		.memRead_IDEX_EXMEM(memRead_IDEX_EXMEM),
 		.memWrite_IDEX_EXMEM(memWrite_IDEX_EXMEM),
-		.execute_rst_EXMEM_in(execute_rst_EXMEM_in),
+		.execute_result_EXMEM_in(execute_result_EXMEM_in),
 
 		///// PIPELINE OUTPUTS  /////
 		.regWriteEnable_EXMEM_MEMWB(regWriteEnable_EXMEM_MEMWB),
@@ -247,7 +247,7 @@ module cpu(
 		.memType_EXMEM_out(memType_EXMEM_out),
 		.memRead_EXMEM_MEMWB(memRead_EXMEM_MEMWB),
 		.memWrite_EXMEM_out(memWrite_EXMEM_out),
-		.execute_rst_EXMEM_MEMWB(execute_rst_EXMEM_MEMWB)
+		.execute_result_EXMEM_MEMWB(execute_result_EXMEM_MEMWB)
 
     );
 
@@ -257,7 +257,7 @@ module cpu(
 		///// INPUTS  /////
 		.clk(clk),
 		.rst_n(rst_n),
-		.execute_rst_EXMEM_MEMWB(execute_rst_EXMEM_MEMWB),
+		.execute_result_EXMEM_MEMWB(execute_result_EXMEM_MEMWB),
 		.memWrite_EXMEM_out(memWrite_EXMEM_out),
 		.memRead_EXMEM_MEMWB(memRead_EXMEM_MEMWB),
 		.regData2_EXMEM_out(regData2_EXMEM_out),
@@ -280,7 +280,7 @@ module cpu(
 		.regWriteEnable_EXMEM_MEMWB(regWriteEnable_EXMEM_MEMWB),
 		.instruction_EXMEM_MEMWB(instruction_EXMEM_MEMWB),
 		.PC_EXMEM_MEMWB(PC_EXMEM_MEMWB),
-		.execute_rst_EXMEM_MEMWB(execute_rst_EXMEM_MEMWB),
+		.execute_result_EXMEM_MEMWB(execute_result_EXMEM_MEMWB),
 		.memRead_EXMEM_MEMWB(memRead_EXMEM_MEMWB),
 		.memReadRst_MEMWB_in(memReadRst_MEMWB_in),
 
@@ -288,7 +288,7 @@ module cpu(
 		.regWriteEnable_MEMWB_out(regWriteEnable_MEMWB_out),
 		.instruction_MEMWB_out(instruction_MEMWB_out),
 		.PC_MEMWB_out(PC_MEMWB_out),
-		.execute_rst_MEMWB_out(execute_rst_MEMWB_out),
+		.execute_result_MEMWB_out(execute_result_MEMWB_out),
 		.memRead_MEMWB_out(memRead_MEMWB_out),
 		.memReadRst_MEMWB_out(memReadRst_MEMWB_out)
 
@@ -299,7 +299,7 @@ module cpu(
         ///// INPUTS  /////
         .memReadRst_MEMWB_out(memReadRst_MEMWB_out),
         .memRead_MEMWB_out(memRead_MEMWB_out),
-        .execute_rst_MEMWB_out(execute_rst_MEMWB_out),
+        .execute_result_MEMWB_out(execute_result_MEMWB_out),
 
         ///// OUTPUTS  /////
         .writeBackData(writeBackData)

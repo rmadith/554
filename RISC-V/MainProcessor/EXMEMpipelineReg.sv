@@ -16,7 +16,7 @@ module EXMEMpipelineReg(
     input wire [2:0] memType_IDEX_EXMEM,
     input wire memRead_IDEX_EXMEM,
     input wire memWrite_IDEX_EXMEM,
-    input wire [31:0] execute_rst_EXMEM_in,
+    input wire [31:0] execute_result_EXMEM_in,
 
     ///// PIPELINE OUTPUTS  /////
     output logic regWriteEnable_EXMEM_MEMWB,
@@ -26,7 +26,7 @@ module EXMEMpipelineReg(
     output logic [2:0] memType_EXMEM_out,
     output logic memRead_EXMEM_MEMWB,
     output logic memWrite_EXMEM_out,
-    output logic [31:0] execute_rst_EXMEM_MEMWB
+    output logic [31:0] execute_result_EXMEM_MEMWB
 
     );
     
@@ -38,7 +38,7 @@ module EXMEMpipelineReg(
     assign memType_EXMEM_out = memType_IDEX_EXMEM ;
     assign memRead_EXMEM_MEMWB = memRead_IDEX_EXMEM ;
     assign memWrite_EXMEM_out = memWrite_IDEX_EXMEM ;
-    assign execute_rst_EXMEM_MEMWB = execute_rst_EXMEM_in ;
+    assign execute_result_EXMEM_MEMWB = execute_result_EXMEM_in ;
 
 
 

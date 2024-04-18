@@ -16,7 +16,7 @@ module execute(
 
 
 	///// OUTPUTS  /////
-	output wire [31:0] execute_rst_EXMEM_in
+	output wire [31:0] execute_result_EXMEM_in
 	);
 
 	//////////////////////////////////////////
@@ -32,7 +32,7 @@ module execute(
 	assign alu_inA = (setDataZero_IDEX_out) ? 32'h0 : (PC_as_operand_IDEX_out) ? PC_IDEX_EXMEM : regData1_IDEX_out;
 	assign alu_inB = (addConstant4_IDEX_out) ? 32'h4 : (immSel_IDEX_out) ? sext_imm_IDEX_out : regData2_IDEX_out;
 
-	ALU iALU(.A(alu_inA),.B(alu_inB),.ALU_op(ALU_op_IDEX_out),.out(execute_rst_EXMEM_in));
+	ALU iALU(.A(alu_inA),.B(alu_inB),.ALU_op(ALU_op_IDEX_out),.out(execute_result_EXMEM_in));
 
 
 endmodule
