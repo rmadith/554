@@ -12,7 +12,8 @@ logic [9:0] funct3_and_opcode;
 
 always_comb begin 
 	case(instruction) inside
-		32'bxxxxxxxxxxxxxxxxxxxxxxxxx0110111: inst_name = LUI;
+		32'b00000000000000000000000000010011: inst_name = NOP;
+        32'bxxxxxxxxxxxxxxxxxxxxxxxxx0110111: inst_name = LUI;
         32'bxxxxxxxxxxxxxxxxxxxxxxxxx0010111: inst_name = AUIPC;
         32'bxxxxxxxxxxxxxxxxxxxxxxxxx1101111: inst_name = JAL;
         32'bxxxxxxxxxxxxxxxxx000xxxxx1100111: inst_name = JALR;
@@ -49,7 +50,6 @@ always_comb begin
         32'b0100000xxxxxxxxxx101xxxxx0110011: inst_name = SRA;
         32'b0000000xxxxxxxxxx110xxxxx0110011: inst_name = OR;
         32'b0000000xxxxxxxxxx111xxxxx0110011: inst_name = AND;
-        32'b00000000000000000000000000010011: inst_name = NOP;
         32'h00000073: inst_name = ECALL;
         default: inst_name = INVALID;
 	endcase

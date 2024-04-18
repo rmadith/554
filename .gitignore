@@ -12,3 +12,7 @@ RISC-V/MainProcessorNoPipe/RISC-V-SIM.cr.mti
 RISC-V/MainProcessorNoPipe/RISC-V-SIM.mpf
 RISC-V/MainProcessorNoPipe/transcript
 RISC-V/MainProcessorNoPipe/vsim.wlf
+RISC-V/MainProcessorPipe/transcript
+RISC-V/MainProcessorPipe/vsim.wlf
+RISC-V/MainProcessorPipe/RISC-V-PIPE-SIM.mpf
+RISC-V/MainProcessorPipe/RISC-V-PIPE-SIM.cr.mti
