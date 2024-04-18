@@ -1,0 +1,19 @@
+START:
+        addi x1, zero, 0	# load x1 with the value 0
+        addi x1, x1, 1	# add 1 to x1
+        addi x1, x1, 2	# add 1 to x1
+        addi x1, x1, 3	# add 1 to x1
+        addi x1, x1, 4	# add 1 to x1
+        addi x1, x1, 5	# add 1 to x1
+        beq x1, zero, START # branch should NOT be taken
+        addi x1, zero, 0	# load x1 with the value 0
+        beq x1, zero, END # branch should be taken
+
+        addi x2, zero, 99	# This instruction shouldn't execute
+
+END:
+        ECALL
+
+        
+
+

@@ -50,6 +50,7 @@ always_comb begin
         32'b0000000xxxxxxxxxx110xxxxx0110011: inst_name = OR;
         32'b0000000xxxxxxxxxx111xxxxx0110011: inst_name = AND;
         32'b00000000000000000000000000010011: inst_name = NOP;
+        32'h00000073: inst_name = ECALL;
         default: inst_name = INVALID;
 	endcase
 end

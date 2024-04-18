@@ -1,5 +1,5 @@
 `default_nettype none
-`define FOR_SYNTHESIS
+`define FOR_SYNTHESIS // YOU MUST DELETE this line of code for the TA's automated test suite to work.
 
 module rf(clk,rst_n, p0_addr,p1_addr,p0,p1,re0,re1,dst_addr,dst,we);
 //////////////////////////////////////////////////////////////////
