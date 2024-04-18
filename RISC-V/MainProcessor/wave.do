@@ -4,6 +4,7 @@ add wave -noupdate /cpu_tb/instruction_IFID_in
 add wave -noupdate -divider -height 25 {Global signals}
 add wave -noupdate /cpu_tb/iCPU/clk
 add wave -noupdate /cpu_tb/iCPU/rst_n
+add wave -noupdate /cpu_tb/iCPU/iFetch/ECALL
 add wave -noupdate -divider -height 25 {BTB and PC module internal}
 add wave -noupdate /cpu_tb/iCPU/iFetch/btb_pc/clk
 add wave -noupdate /cpu_tb/iCPU/iFetch/btb_pc/rst_n
@@ -77,7 +78,7 @@ add wave -noupdate /cpu_tb/iCPU/iExecute/iALU/B
 add wave -noupdate /cpu_tb/iCPU/iExecute/iALU/ALU_op
 add wave -noupdate /cpu_tb/iCPU/iExecute/iALU/out
 add wave -noupdate -divider -height 25 {Execute Outputs}
-add wave -noupdate /cpu_tb/iCPU/execute_rst_EXMEM_in
+add wave -noupdate /cpu_tb/iCPU/iEXMEM_pipeline_reg/execute_result_EXMEM_in
 add wave -noupdate -divider -height 25 {EXMEM pipeline reg outputs}
 add wave -noupdate /cpu_tb/iCPU/regWriteEnable_EXMEM_MEMWB
 add wave -noupdate /cpu_tb/iCPU/instruction_EXMEM_MEMWB
@@ -86,24 +87,24 @@ add wave -noupdate /cpu_tb/iCPU/regData2_EXMEM_out
 add wave -noupdate /cpu_tb/iCPU/memType_EXMEM_out
 add wave -noupdate /cpu_tb/iCPU/memRead_EXMEM_MEMWB
 add wave -noupdate /cpu_tb/iCPU/memWrite_EXMEM_out
-add wave -noupdate /cpu_tb/iCPU/execute_rst_EXMEM_MEMWB
+add wave -noupdate /cpu_tb/iCPU/iEXMEM_pipeline_reg/execute_result_EXMEM_MEMWB
 add wave -noupdate -divider -height 25 {Memory Outputs}
 add wave -noupdate /cpu_tb/iCPU/memReadRst_MEMWB_in
 add wave -noupdate -divider -height 25 {MEMWB pipeline reg outputs}
 add wave -noupdate /cpu_tb/iCPU/regWriteEnable_MEMWB_out
 add wave -noupdate /cpu_tb/iCPU/instruction_MEMWB_out
 add wave -noupdate /cpu_tb/iCPU/PC_MEMWB_out
-add wave -noupdate /cpu_tb/iCPU/execute_rst_MEMWB_out
 add wave -noupdate /cpu_tb/iCPU/memRead_MEMWB_out
 add wave -noupdate /cpu_tb/iCPU/memReadRst_MEMWB_out
+add wave -noupdate /cpu_tb/iCPU/iMEMWB_pipeline_reg/execute_result_MEMWB_out
 add wave -noupdate -divider -height 25 {Writeback outputs}
 add wave -noupdate -radix decimal /cpu_tb/iCPU/writeBackData
 add wave -noupdate -divider -height 25 {Writeback signals in Decode Module}
 add wave -noupdate /cpu_tb/iCPU/iDecode/reg_dst_addr
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {6 ns} 0}
+WaveRestoreCursors {{Cursor 1} {57 ns} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 293
+configure wave -namecolwidth 352
 configure wave -valuecolwidth 87
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -117,4 +118,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ns} {8 ns}
+WaveRestoreZoom {51 ns} {57 ns}
