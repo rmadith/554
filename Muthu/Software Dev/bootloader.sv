@@ -32,6 +32,8 @@ UART iUART(.clk(clk),.rst_n(rst_n),.RX(RX),.TX(TX),.rx_rdy(rx_rdy),.clr_rx_rdy(c
 always_ff @(posedge clk, negedge rst_n) begin : counter
        if(!rst_n)
               addr <= 0;
+       else if(!debug)
+              addr <= 0;
        else if(increment)
               addr <= addr + 1;
 end

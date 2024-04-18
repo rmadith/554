@@ -321,3 +321,6 @@ set_location_assignment PIN_AC22 -to GPIO[35]
 # End of pin assignments by Terasic System Builder
 #============================================================
 
+
+set_global_assignment -name QIP_FILE PLL.qip
+set_global_assignment -name SIP_FILE PLL.sip

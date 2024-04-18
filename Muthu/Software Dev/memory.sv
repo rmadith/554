@@ -70,11 +70,12 @@ module memory(
 	always @(negedge clk) begin// not sure about the clock edge ??
         if(debug)
 			data_mem[waddr_cpu[15:0]] <= data_cpu;
-        if (memWrite_EXMEM_out && ~memRead_EXMEM_MEMWB)
+        else if (memWrite_EXMEM_out && ~memRead_EXMEM_MEMWB)
 			data_mem[memAddr[15:0]] <= inter_memWrData;
 	end
 
 	assign memReadRst_MEMWB_in = memDataOut;
+    assign memData = inter_memWrData;
 
 endmodule
 

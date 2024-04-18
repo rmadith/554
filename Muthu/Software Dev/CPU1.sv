@@ -54,13 +54,26 @@ module CPU1(
 );
 
 
+localparam BMP_CTL =  32'hFFFFC008;          // address for BMP Control
+localparam BMP_XLOC = 32'hFFFFC009;         // address for BMP X Location
+localparam BMP_YLOC = 32'hFFFFC00A;         // address for BMP Y Location
+localparam BMP_STAT = 32'hFFFFC00B;         // address for BMP Status 
+
 
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
 
 wire debug_sig, rst_n;
-wire [31:0] data_cpu, waddr_cpu, waddr_cpu_bootloader, data_cpu_bootloader;
+wire clk, pll_locked, VGA_CLK;
+wire [31:0] data_cpu, waddr_cpu;
+
+wire [31:0] waddr_out, data_out;
+
+wire [11:0] joystick_data;
+reg [5:0] done;
+
+reg write, we_cpu;
 
 // I know this can be simpler but my brain is not working at 04/16/2023
 // Holding the debug state
@@ -95,18 +108,59 @@ assign LEDR[8] = rst_n;
 assign LEDR[7] = state;
 
 // Debouncing Keys
-reset_synch irst(.RST_n(KEY[0]), .clk(CLOCK2_50), .rst_n(rst_n), .pll_locked(1'b1));
-reset_synch idebug(.RST_n(KEY[1]), .clk(CLOCK2_50), .rst_n(debug_sig), .pll_locked(1'b1));
+reset_synch irst(.RST_n(KEY[0]), .clk(clk), .rst_n(rst_n), .pll_locked(pll_locked));
+reset_synch idebug(.RST_n(KEY[1]), .clk(clk), .rst_n(debug_sig), .pll_locked(1'b1));
+
+// PLL
+PLL iPLL(.refclk(CLOCK2_50), .rst(~RST_n),.outclk_0(clk),.outclk_1(VGA_CLK),
+           .locked(pll_locked));
 
 // Bootloader
-bootloader iBoot(.clk(CLOCK2_50), .rst_n(rst_n), .debug(state), .addr(waddr_cpu), .data(data_cpu), .increment(LEDR[6]), .RX(), .TX(), .outdata(), .write());
+bootloader iboot(.clk(clk), .rst_n(rst_n), .debug(state), .addr(waddr_cpu), .data(data_cpu), .increment(LEDR[6]), .RX(GPIO[5]), .TX(GPIO[3]), .outdata(data_out), .write(write));
 
 
 // CPU
-cpu iCPU(.clk(CLOCK2_50), .rst_n(rst_n), .debug(state), .data_cpu(data_cpu), .waddr_cpu(waddr_cpu), .waddr_out(), .data_out(), .halt(LEDR[9]));
+cpu iCPU(.clk(clk), .rst_n(rst_n | state), .debug(state), .data_cpu(data_cpu), .waddr_cpu(waddr_cpu), .waddr_out(waddr_out), .data_out(data_out), .halt(LEDR[9]), .joystick_data({busy, 19'b0, joystick_data}));
 
+// Joystick
+joystick ijoy(.ADC_CONVST(ADC_CONVST), .ADC_DIN(ADC_DIN), .ADC_DOUT(ADC_DOUT), .ADC_SCLK(ADC_SCLK), .clk(clk), .rst_n(rst_n), .done(done), .val(joystick_data));
 
+BMP_display IBMP(.clk(clk), .VGA_CLK(VGA_CLK), .rst_n(), .VGA_BLANK_N(), .VGA_B(), .VGA_G(), .VGA_HS(), .VGA_R(), .VGA_SYNC_N(), .VGA_VS(),
+					.xloc(), .yloc(), .add_fnt(), .fnt_indx(), .add_img(), .image_indx(), .rem_img(), .busy(busy));
 
+always_comb begin
+	write = 0;
+	done = 'b0;
+	we_cpu = 0;
+	case(waddr_out)
+		32'hFFFC001: 	write = 1;
+		32'hFFFC002: 	done = data_out[5:0];
+		BMP_CTL: 		we_cpu = 1;
+		BMP_YLOC: 		we_cpu = 1;
+		BMP_XLOC: 		we_cpu = 1;
+		default: 		write = 0;
+	endcase
+end
+
+  // Updating Xloc
+always @(posedge clk, negedge rst_n)
+    if(!rst_n)
+      xloc = 'b0;
+    else if(addr == BMP_XLOC && we_cpu) // Qualifying the write
+      xloc = databus[9:0];
+
+  // Update Yloc
+always @(posedge clk, negedge rst_n)
+    if(!rst_n)
+      yloc = 'b0;
+    else if(addr == BMP_YLOC && we_cpu) // Qualifying the read
+      yloc = databus[9:0];
+
+assign add_fnt = (addr == BMP_CTL && we_cpu) ? databus[15] : 1'b0;
+assign fnt_indx = (addr == BMP_CTL && we_cpu) ? databus[14:9] : 'b0;
+assign add_img = (addr == BMP_CTL && we_cpu) ? databus[6] : 'b0;
+assign image_indx = (addr == BMP_CTL  && we_cpu) ? databus[4:0] : 5'h01;
+assign rem_img = (addr == BMP_CTL && we_cpu) ? databus[5] : 1'b0;
 
 
 endmodule

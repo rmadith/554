@@ -41,8 +41,12 @@ state_t state, nxt_state;
 reg X1_update, Y1_update, PS1_update, X2_update, Y2_update, PS2_update;
 reg [2:0] addr;
 reg addr_rst;
-reg [11:0] x1_val, y1_val, ps1_val, x2_val, y2_val, ps2_val/* synthesis keep */;
+reg [2:0] x1_val, y1_val, ps1_val, x2_val, y2_val, ps2_val/* synthesis keep */;
 wire clk;
+
+wire x1_done, x2_done, y1_done, y2_done, ps1_done, ps2_done;
+
+assign {x1_done, x2_done, y1_done, y2_done, ps1_done, ps2_done} = SW[5:0];
 
 //=======================================================
 //  Structural coding
@@ -132,38 +136,59 @@ end
 always_ff @(posedge clk, negedge rst_n)
 	if(!rst_n)
 		x1_val <= 'b0;
-	else if(X1_update)
-		x1_val <= volume;
+	else if(X1_update && (volume > 12'hDFF))
+		x1_val <= 2'b10;
+	else if(X1_update && (volume < 12'h05F))
+		x1_val <= 2'b01;
+	else if(x1_done)
+		x1_val <= 2'b00;
 
 always_ff @(posedge clk, negedge rst_n)
 	if(!rst_n)
 		y1_val <= 'b0;
-	else if(Y1_update)
-		y1_val <= volume;
+	else if(Y1_update && (volume > 12'hDFF))
+		y1_val <= 2'b10;
+	else if(Y1_update && (volume < 12'h05F))
+		y1_val <= 2'b01;
+	else if(y1_done)
+		y1_val <= 2'b00;
 
 always_ff @(posedge clk, negedge rst_n)
 	if(!rst_n)
 		ps1_val <= 'b0;
-	else if(PS1_update)
-		ps1_val <= volume;
+	else if(PS1_update && volume < 12'h05F)
+		ps1_val <= 2'b10;
+	else if(ps1_done)
+		ps1_val <= 2'b00;
 
 always_ff @(posedge clk, negedge rst_n)
 	if(!rst_n)
 		x2_val <= 'b0;
-	else if(X2_update)
-		x2_val <= volume;
+	else if(X2_update && (volume > 12'hDFF))
+		x2_val <= 2'b10;
+	else if(X2_update && (volume < 12'h05F))
+		x2_val <= 2'b01;
+	else if(x2_done)
+		x2_val <= 2'b00;
+
 
 always_ff @(posedge clk, negedge rst_n)
 	if(!rst_n)
 		y2_val <= 'b0;
-	else if(Y2_update)
-		y2_val <= volume;
+	else if(Y2_update && (volume > 12'hDFF))
+		y2_val <= 2'b10;
+	else if(Y2_update && (volume < 12'h05F))
+		y2_val <= 2'b01;
+	else if(y2_done)
+		y2_val <= 2'b00;
 
 always_ff @(posedge clk, negedge rst_n)
 	if(!rst_n)
 		ps2_val <= 'b0;
-	else if(PS2_update)
-		ps2_val <= volume;
+	else if(PS2_update && volume < 12'h05F)
+		ps2_val <= 2'b10;
+	else if(ps2_done)
+		ps2_val <= 2'b00;
 		
 wire [11:0] main; 
 assign main = x1_val | x2_val | y1_val | y2_val | ps1_val | ps2_val;

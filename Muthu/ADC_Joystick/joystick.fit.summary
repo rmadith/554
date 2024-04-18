@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue Apr 16 17:14:24 2024
+Fitter Status : Successful - Thu Apr 18 16:39:25 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : joystick
 Top-level Entity Name : joystick
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 535 / 32,070 ( 2 % )
-Total registers : 1442
+Logic utilization (in ALMs) : 336 / 32,070 ( 1 % )
+Total registers : 725
 Total pins : 32 / 457 ( 7 % )
 Total virtual pins : 0
-Total block memory bits : 9,600 / 4,065,280 ( < 1 % )
-Total RAM Blocks : 2 / 397 ( < 1 % )
+Total block memory bits : 2,688 / 4,065,280 ( < 1 % )
+Total RAM Blocks : 1 / 397 ( < 1 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
