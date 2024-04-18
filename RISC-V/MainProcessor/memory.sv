@@ -21,51 +21,52 @@ module memory(
 
 	logic [31:0] memDataOut;
 	logic [31:0] memAddr;
+	logic [31:0] wrt_data;
 
 	assign memAddr = execute_result_EXMEM_MEMWB;
 
-	always @(*) begin 
+	assign wrt_data = regData2_EXMEM_out;
+
+	// TODO: Check with Eric Hoffman if this is the right way to do our data memory. 
+	
+	////////////////////////////////////////////////
+	// Model write, data is written on negedge clk //
+	//////////////////////////////////////////////
+	always @(negedge clk) begin
+		if (memWrite_EXMEM_out && ~memRead_EXMEM_MEMWB) begin
+			if (memType_EXMEM_out == 3'b010)
+				data_mem[memAddr] <= wrt_data;
+			else if (memType_EXMEM_out == 3'b000)
+				data_mem[memAddr] <= {data_mem[memAddr][31:8], wrt_data[7:0]};
+			else if (memType_EXMEM_out == 3'b001)
+				data_mem[memAddr] <= {data_mem[memAddr][31:16], wrt_data[15:0]};
+		end
+			
+	end
+	
+	
+	///////////////////////////////////////////////
+	// Model read, data is negedge  clock  //
+	/////////////////////////////////////////////
+	always @(negedge clk) begin
+		if (memRead_EXMEM_MEMWB && ~memWrite_EXMEM_out)
+			inter_memData <= data_mem[memAddr];
+	end
+
+	// This always_comb block infers a multiplexor that selects between the different formats for a load word.
+	always_comb begin 
 		memDataOut = 0;
-		inter_memWrData = 0;
+
 		case(memType_EXMEM_out)
-			3'b000: begin 
-				inter_memWrData = {{24{regData2_EXMEM_out[7]}},regData2_EXMEM_out[7:0]}; // SB
-				memDataOut = {{24{inter_memData[7]}},inter_memData[7:0]}; //LB
-				end
-			3'b001: begin 
-				inter_memWrData = {{16{regData2_EXMEM_out[15]}},regData2_EXMEM_out[15:0]}; //SH
-				memDataOut = {{16{inter_memData[15]}},inter_memData[15:0]}; //LH
-				end
-			3'b010: begin 
-				inter_memWrData = regData2_EXMEM_out; //SW
-				memDataOut = inter_memData; //LW
-				end
-			3'b100: begin 
-				memDataOut = {24'h0,inter_memData[7:0]}; //LBU
-				end
-			3'b101: begin 
-				memDataOut = {16'h0,inter_memData[15:0]}; //LHU
-				end
-
-
+			3'b000: memDataOut = {{24{inter_memData[7]}},inter_memData[7:0]}; //LB
+			3'b001: memDataOut = {{16{inter_memData[15]}},inter_memData[15:0]}; //LH
+			3'b010: memDataOut = inter_memData; //LW
+			3'b100: memDataOut = {24'h0,inter_memData[7:0]}; //LBU
+			3'b101: memDataOut = {16'h0,inter_memData[15:0]}; //LHU
 		endcase
 
 	end
-
-	///////////////////////////////////////////////
-	// Model read, data is ___________________  //
-	/////////////////////////////////////////////
-	//always @(*) // not sure about the clock edge ??
-	//if (memRead_EXMEM_MEMWB && ~memWrite_EXMEM_out)
-	//	inter_memData <= data_mem[memAddr[15:0]];
-	assign inter_memData = (memRead_EXMEM_MEMWB && ~memWrite_EXMEM_out) ? data_mem[memAddr[15:0]] : 32'hz;	
-	////////////////////////////////////////////////
-	// Model write, data is written on _________ //
-	//////////////////////////////////////////////
-	always @(negedge clk) // not sure about the clock edge ??
-	if (memWrite_EXMEM_out && ~memRead_EXMEM_MEMWB)
-		data_mem[memAddr[15:0]] <= inter_memWrData;
-
+	
 	assign memReadRst_MEMWB_in = memDataOut;
 
 endmodule

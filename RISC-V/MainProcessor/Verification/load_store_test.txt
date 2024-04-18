@@ -1,0 +1,20 @@
+addi x1, zero, 0	# load x1 with the value 0
+
+addi x2, zero, 123	# load x2 with the value 123
+
+SW x2, (x1) # store the value 123 into mem address 0
+
+SW x2, 4(x1) # store the value 123 into mem address 4
+
+
+LW x3, (x1) 
+
+LW x4, 4(x1) 
+
+addi x3, x3, 1
+
+addi x4, x4, 1
+
+ECALL
+
+
