@@ -27,6 +27,7 @@ always @(*) begin
 		3'b011: immediate = {{20{inst[31]}},inst[7],inst[30:25],inst[11:8], 1'b0}; // B-immediate (sign-extension)
 		3'b100: immediate = {inst[31:12],12'h0}; // U-immediate (zero-filled)
 		3'b101: immediate = {{12{inst[31]}},inst[19:12],inst[20],inst[30:21],1'b0}; // J-immediate should it be 13 or 12
+		default: immediate = 'b0;
 	endcase
 end
 endmodule

@@ -138,6 +138,7 @@ always@(*) begin
 				alu_op = inter_alu_op;
 			    end
 		7'b1110011: halt = 1;
+		default: halt = 0;
 	endcase
     end
 endmodule
