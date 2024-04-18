@@ -59,8 +59,6 @@ assign branch_PC = (jump & jumpFlag) ? jalrSum :
 
 assign takeBranch = jump | branch_internal;
 
-//assign flush = (takeBranch | jump) & (updatePC != PC_plus4);
-
 endmodule
 
 `default_nettype wire

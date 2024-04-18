@@ -15,7 +15,8 @@ module fetch (
     ///// OUTPUTS /////
 	output wire [31:0] PC_plus4_IFID_in,
 	output reg [31:0] instruction_IFID_in,
-    output reg [31:0] PC_IFID_in
+    output reg [31:0] PC_IFID_in, 
+    output wire ECALL
     );
 
     // Declare instruction memory and load contents from the code we wish to execute. 
@@ -51,6 +52,8 @@ module fetch (
    
     // Increment the PC
     assign PC_plus4_IFID_in = PC_IFID_in + 3'h4; // increament by 4 bytes (32 bit instruction set)
+
+    assign ECALL = instruction_IFID_in == 32'h73;
 
 endmodule
 
