@@ -44,7 +44,7 @@ add wave -noupdate /cpu_tb/iCPU/iDecode/iBU/jalrSum
 add wave -noupdate /cpu_tb/iCPU/iDecode/iBU/jumpFlag
 add wave -noupdate /cpu_tb/iCPU/iDecode/iBU/branch_internal
 add wave -noupdate -divider -height 25 {Decode outputs}
-add wave -noupdate /cpu_tb/iCPU/regData1_IDEX_in
+add wave -noupdate -radix decimal /cpu_tb/iCPU/regData1_IDEX_in
 add wave -noupdate /cpu_tb/iCPU/regData2_IDEX_in
 add wave -noupdate /cpu_tb/iCPU/sext_imm_IDEX_in
 add wave -noupdate /cpu_tb/iCPU/immSel_IDEX_in
@@ -103,7 +103,7 @@ add wave -noupdate -radix decimal /cpu_tb/iCPU/writeBackData
 add wave -noupdate -divider -height 25 {Writeback signals in Decode Module}
 add wave -noupdate /cpu_tb/iCPU/iDecode/reg_dst_addr
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {18 ns} 0}
+WaveRestoreCursors {{Cursor 1} {12 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 352
 configure wave -valuecolwidth 87
@@ -119,4 +119,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {16 ns} {22 ns}
+WaveRestoreZoom {6 ns} {12 ns}

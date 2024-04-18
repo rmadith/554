@@ -4,4 +4,11 @@ RISC-V/MainProcessor/RISCV_sim.mpf
 RISC-V/MainProcessor/RISCV_sim.cr.mti
 RISC-V/MainProcessor/vsim.wlf
 RISC-V/MainProcessor/transcript
-RISC-V/MainProcessor/Verification/jal_tests.hex
+RISC-V/MainProcessorNoPipe/work/
+RISC-V/MainProcessorPipe/work/
+.gitignore
+RISC-V/MainProcessorNoPipe/rf.sv.bak
+RISC-V/MainProcessorNoPipe/RISC-V-SIM.cr.mti
+RISC-V/MainProcessorNoPipe/RISC-V-SIM.mpf
+RISC-V/MainProcessorNoPipe/transcript
+RISC-V/MainProcessorNoPipe/vsim.wlf
