@@ -51,6 +51,10 @@ module memory(
 			3'b101: begin 
 				memDataOut = {16'h0,inter_memData[15:0]}; //LHU
 				end
+			default: begin
+					memDataOut = 'b0;
+					inter_memWrData = 'b0;
+			end
 
 
 		endcase
