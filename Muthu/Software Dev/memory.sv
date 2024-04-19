@@ -35,11 +35,21 @@ module memory(
 
 	always @(*) begin 
 		memDataOut = 0;
+		
 		wdata_bnk0 = 0;
 		wdata_bnk1 = 0;
 		wdata_bnk2 = 0;
 		wdata_bnk3 = 0;
+		
+		we0 = 0;
+		we1 = 0;
+		we2 = 0;
+		we3 = 0;
 
+		re0 = 0;
+		re1 = 0;
+		re2 = 0;
+		re3 = 0;
 		case(memType)
 			3'b000: begin 
 				case (memAddr[1:0]) // SB and LB 
