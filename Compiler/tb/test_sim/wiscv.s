@@ -25,8 +25,8 @@ Disassembly of section .text:
   34:	00170713          	add	a4,a4,1 # fffc001 <__stack_top+0x7ffc001>
   38:	0ae02223          	sw	a4,164(zero) # a4 <x>
   3c:	0a402783          	lw	a5,164(zero) # a4 <x>
-  40:	00001737          	lui	a4,0x1
-  44:	23470713          	add	a4,a4,564 # 1234 <__SDATA_BEGIN__+0x190>
+  40:	0fffc737          	lui	a4,0xfffc
+  44:	00170713          	add	a4,a4,1 # fffc001 <__stack_top+0x7ffc001>
   48:	00e7a023          	sw	a4,0(a5)
   4c:	0000006f          	j	4c <main+0x28>
 
