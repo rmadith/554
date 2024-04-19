@@ -4,7 +4,7 @@ module memory(
 	///// INPUTS  /////
 	input wire clk,
         input wire rst_n,
-	input wire [31:0] execute_rst_EXMEM_MEMWB,
+	input wire [14:0] execute_rst_EXMEM_MEMWB,
 	input wire memWrite_EXMEM_out,
 	input wire memRead_EXMEM_MEMWB,
 	input wire [31:0] regData2_EXMEM_out,
@@ -25,7 +25,17 @@ module memory(
 	reg [31:0] inter_memData;
 
 	logic [31:0] memDataOut;
-	logic [31:0] memAddr;
+	logic [14:0] memAddr;
+	
+	logic we0,we1,we2,we3;
+	
+	
+	dmem8 iBNK0(.clk(clk),.addr(memAddr[14:2]),.re(re0),.we(we0),.rdata(rdata_bnk0),.wdata(wdata_bnk0));
+	dmem8 iBNK1(.clk(clk),.addr(memAddr[14:2]),.re(re1),.we(we1),.rdata(rdata_bnk1),.wdata(wdata_bnk1));
+	dmem8 iBNK2(.clk(clk),.addr(memAddr[14:2]),.re(re2),.we(we2),.rdata(rdata_bnk2),.wdata(wdata_bnk2));
+	dmem8 iBNK3(.clk(clk),.addr(memAddr[14:2]),.re(re3),.we(we3),.rdata(rdata_bnk3),.wdata(wdata_bnk3));	
+	
+	
 
 	assign memAddr = execute_rst_EXMEM_MEMWB;
 
@@ -60,6 +70,10 @@ module memory(
 		endcase
 
 	end
+
+	initial begin
+        $readmemh("jal_tests.hex",data_mem);
+    end
 
 	///////////////////////////////////////////////
 	// Model read, data is ___________________  //

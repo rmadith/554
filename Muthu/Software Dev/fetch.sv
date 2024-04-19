@@ -27,7 +27,7 @@ module fetch (
     reg [31:0] instr_mem[0:65535];   // 2 ^ 16
 
     initial begin
-        $readmemh("Verification/jal_tests.hex",instr_mem);
+        $readmemh("jal_tests.hex",instr_mem);
     end
     ///////////////////////// for bootloader /////////////////////
     always @(negedge clk)

@@ -51,7 +51,7 @@ module CPU1(
 	output		          		VGA_VS,
 
 	//////////// GPIO_1, GPIO_1 connect to GPIO Default //////////
-	inout 		    [35:0]		GPIO
+	inout 		    [35:0]		GPIO,
 
 	///////// HEX0 /////////
 	output      [6:0]  HEX0,
@@ -69,7 +69,7 @@ module CPU1(
 	output      [6:0]  HEX4,
 
 	///////// HEX5 /////////
-	output      [6:0]  HEX5,
+	output      [6:0]  HEX5
 );
 
 
@@ -148,7 +148,7 @@ reset_synch irst(.RST_n(KEY[0]), .clk(clk), .rst_n(rst_n), .pll_locked(pll_locke
 reset_synch idebug(.RST_n(KEY[1]), .clk(clk), .rst_n(debug_sig), .pll_locked(1'b1));
 
 // PLL
-PLL iPLL (.refclk(CLOCK2_50), .rst(~RST_n),.outclk_0(clk),.outclk_1(VGA_CLK),
+PLL iPLL (.refclk(CLOCK2_50), .rst(~KEY[0]),.outclk_0(clk),.outclk_1(VGA_CLK),
            .locked(pll_locked));
 
 // Bootloader
@@ -187,21 +187,21 @@ end
 always @(posedge clk, negedge rst_n)
     if(!rst_n)
       xloc = 'b0;
-    else if(addr == BMP_XLOC && we_cpu) // Qualifying the write
+    else if(waddr_cpu == BMP_XLOC && we_cpu) // Qualifying the write
       xloc = data_out[9:0];
 
   // Update Yloc
 always @(posedge clk, negedge rst_n)
     if(!rst_n)
       yloc = 'b0;
-    else if(addr == BMP_YLOC && we_cpu) // Qualifying the read
+    else if(waddr_cpu == BMP_YLOC && we_cpu) // Qualifying the read
       yloc = data_out[9:0];
 
-assign add_fnt = (addr === BMP_CTL && we_cpu) ? data_out[15] : 1'b0;
-assign fnt_indx = (addr === BMP_CTL && we_cpu) ? data_out[14:9] : 'b0;
-assign add_img = (addr === BMP_CTL && we_cpu) ? data_out[6] : 'b0;
-assign image_indx = (addr === BMP_CTL  && we_cpu) ? data_out[4:0] : 5'h01;
-assign rem_img = (addr === BMP_CTL && we_cpu) ? data_out[5] : 1'b0;
+assign add_fnt = (waddr_cpu === BMP_CTL && we_cpu) ? data_out[15] : 1'b0;
+assign fnt_indx = (waddr_cpu === BMP_CTL && we_cpu) ? data_out[14:9] : 'b0;
+assign add_img = (waddr_cpu === BMP_CTL && we_cpu) ? data_out[6] : 'b0;
+assign image_indx = (waddr_cpu === BMP_CTL  && we_cpu) ? data_out[4:0] : 5'h01;
+assign rem_img = (waddr_cpu === BMP_CTL && we_cpu) ? data_out[5] : 1'b0;
 
 
 endmodule
