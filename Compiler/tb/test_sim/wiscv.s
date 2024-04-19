@@ -6,7 +6,7 @@ Disassembly of section .text:
 
 00000000 <_start>:
    0:	00002197          	auipc	gp,0x2
-   4:	8a418193          	add	gp,gp,-1884 # 18a4 <__global_pointer$>
+   4:	8b818193          	add	gp,gp,-1864 # 18b8 <__global_pointer$>
    8:	08000117          	auipc	sp,0x8000
    c:	ff810113          	add	sp,sp,-8 # 8000000 <__stack_top>
   10:	00010433          	add	s0,sp,zero
@@ -23,53 +23,58 @@ Disassembly of section .text:
   2c:	01010413          	add	s0,sp,16
   30:	0fffc737          	lui	a4,0xfffc
   34:	00170713          	add	a4,a4,1 # fffc001 <__stack_top+0x7ffc001>
-  38:	0ae02223          	sw	a4,164(zero) # a4 <x>
-  3c:	0a402783          	lw	a5,164(zero) # a4 <x>
-  40:	0fffc737          	lui	a4,0xfffc
-  44:	00170713          	add	a4,a4,1 # fffc001 <__stack_top+0x7ffc001>
+  38:	0ae02c23          	sw	a4,184(zero) # b8 <x>
+  3c:	0b802783          	lw	a5,184(zero) # b8 <x>
+  40:	00001737          	lui	a4,0x1
+  44:	23470713          	add	a4,a4,564 # 1234 <__SDATA_BEGIN__+0x17c>
   48:	00e7a023          	sw	a4,0(a5)
-  4c:	fe5ff06f          	j	30 <main+0xc>
+  4c:	00000013          	nop
+  50:	00000793          	li	a5,0
+  54:	00078513          	mv	a0,a5
+  58:	00c12403          	lw	s0,12(sp)
+  5c:	01010113          	add	sp,sp,16
+  60:	00008067          	ret
 
 Disassembly of section .eh_frame:
 
-00000050 <__DATA_BEGIN__-0x54>:
-  50:	0014                	.insn	2, 0x0014
-  52:	0000                	.insn	2, 0x
-  54:	0000                	.insn	2, 0x
-  56:	0000                	.insn	2, 0x
-  58:	00527a03          	.insn	4, 0x00527a03
-  5c:	7c01                	.insn	2, 0x7c01
-  5e:	0101                	.insn	2, 0x0101
-  60:	07020d1b          	.insn	4, 0x07020d1b
-  64:	0001                	.insn	2, 0x0001
+00000064 <__DATA_BEGIN__-0x54>:
+  64:	0014                	.insn	2, 0x0014
   66:	0000                	.insn	2, 0x
-  68:	0010                	.insn	2, 0x0010
+  68:	0000                	.insn	2, 0x
   6a:	0000                	.insn	2, 0x
-  6c:	001c                	.insn	2, 0x001c
-  6e:	0000                	.insn	2, 0x
-  70:	ff90                	.insn	2, 0xff90
-  72:	ffff                	.insn	2, 0xffff
-  74:	001c                	.insn	2, 0x001c
-  76:	0000                	.insn	2, 0x
-  78:	0000                	.insn	2, 0x
+  6c:	00527a03          	.insn	4, 0x00527a03
+  70:	7c01                	.insn	2, 0x7c01
+  72:	0101                	.insn	2, 0x0101
+  74:	07020d1b          	.insn	4, 0x07020d1b
+  78:	0001                	.insn	2, 0x0001
   7a:	0000                	.insn	2, 0x
   7c:	0010                	.insn	2, 0x0010
   7e:	0000                	.insn	2, 0x
-  80:	0000                	.insn	2, 0x
+  80:	001c                	.insn	2, 0x001c
   82:	0000                	.insn	2, 0x
-  84:	00527a03          	.insn	4, 0x00527a03
-  88:	7c01                	.insn	2, 0x7c01
-  8a:	0101                	.insn	2, 0x0101
-  8c:	00020d1b          	.insn	4, 0x00020d1b
+  84:	ff7c                	.insn	2, 0xff7c
+  86:	ffff                	.insn	2, 0xffff
+  88:	001c                	.insn	2, 0x001c
+  8a:	0000                	.insn	2, 0x
+  8c:	0000                	.insn	2, 0x
+  8e:	0000                	.insn	2, 0x
   90:	0010                	.insn	2, 0x0010
   92:	0000                	.insn	2, 0x
-  94:	0018                	.insn	2, 0x0018
+  94:	0000                	.insn	2, 0x
   96:	0000                	.insn	2, 0x
-  98:	ff84                	.insn	2, 0xff84
-  9a:	ffff                	.insn	2, 0xffff
-  9c:	0008                	.insn	2, 0x0008
-  9e:	0000                	.insn	2, 0x
-  a0:	0000                	.insn	2, 0x
+  98:	00527a03          	.insn	4, 0x00527a03
+  9c:	7c01                	.insn	2, 0x7c01
+  9e:	0101                	.insn	2, 0x0101
+  a0:	00020d1b          	.insn	4, 0x00020d1b
+  a4:	0010                	.insn	2, 0x0010
+  a6:	0000                	.insn	2, 0x
+  a8:	0018                	.insn	2, 0x0018
+  aa:	0000                	.insn	2, 0x
+  ac:	ff70                	.insn	2, 0xff70
+  ae:	ffff                	.insn	2, 0xffff
+  b0:	0008                	.insn	2, 0x0008
+  b2:	0000                	.insn	2, 0x
+  b4:	0000                	.insn	2, 0x
 	...
 
 Disassembly of section .comment:
