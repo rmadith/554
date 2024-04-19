@@ -10,6 +10,9 @@ module decode(
 
 	input wire [31:0] instruction_MEMWB_out,
 	input wire [31:0] writeBackData,
+
+	input wire [31:0] RegData1_after_forward_D,
+	input wire [31:0] RegData2_after_forward_D,
 	
 
 	///// OUTPUTS /////
@@ -92,8 +95,8 @@ module decode(
 		.currPC(PC_IFID_IDEX),
 		.PC_plus4(PC_plus4_IFID_out),
 		.immediate(sext_imm_IDEX_in),
-		.SrcA(regData1_IDEX_in),
-		.SrcB(regData2_IDEX_in),
+		.SrcA(RegData1_after_forward_D),
+		.SrcB(RegData2_after_forward_D),
 		.funct3(instruction_IFID_IDEX[14:12]),
 		.opcode(instruction_IFID_IDEX[6:0]),
 		

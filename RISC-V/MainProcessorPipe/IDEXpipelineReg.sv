@@ -82,7 +82,7 @@ module IDEXpipelineReg(
             memWrite_IDEX_EXMEM <=  '0 ;
             addConstant4_IDEX_out <=  '0 ;
             regWriteEnable_IDEX_EXMEM <=  '0 ;
-            instruction_IDEX_EXMEM <=  '0 ;
+            instruction_IDEX_EXMEM <=  NOP_INSTR_HEX ;
             PC_IDEX_EXMEM <=  '0 ;
             ECALL_IDEX_EXMEM <= '0;
         end else if (flush | instruction_IFID_IDEX == NOP_INSTR_HEX) begin

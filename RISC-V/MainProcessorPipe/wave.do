@@ -110,8 +110,15 @@ add wave -noupdate -divider -height 25 {Writeback outputs}
 add wave -noupdate -radix decimal /cpu_tb/iCPU/writeBackData
 add wave -noupdate -divider -height 25 {Writeback signals in Decode Module}
 add wave -noupdate /cpu_tb/iCPU/iDecode/reg_dst_addr
+add wave -noupdate -divider -height 30 {Hazard Detection Unit Outputs}
+add wave -noupdate /cpu_tb/iCPU/incorrect_b_prediction
+add wave -noupdate /cpu_tb/iCPU/PC_enable
+add wave -noupdate /cpu_tb/iCPU/Flush_IFID
+add wave -noupdate /cpu_tb/iCPU/Flush_IDEX
+add wave -noupdate /cpu_tb/iCPU/Flush_EXMEM
+add wave -noupdate /cpu_tb/iCPU/Flush_MEMWB
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {41 ns} 0}
+WaveRestoreCursors {{Cursor 1} {2 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 352
 configure wave -valuecolwidth 87
@@ -127,4 +134,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {34 ns} {58 ns}
+WaveRestoreZoom {0 ns} {24 ns}

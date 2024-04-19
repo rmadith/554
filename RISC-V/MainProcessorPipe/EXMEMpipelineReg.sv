@@ -1,5 +1,7 @@
 `default_nettype none
 
+import common_def::*;
+
 module EXMEMpipelineReg(
     ///// INPUTS  /////
     input wire clk,
@@ -45,7 +47,7 @@ module EXMEMpipelineReg(
     always_ff @( posedge clk, negedge rst_n) begin 
         if (!rst_n) begin
             regWriteEnable_EXMEM_MEMWB <= '0 ;
-            instruction_EXMEM_MEMWB <= '0 ;
+            instruction_EXMEM_MEMWB <= NOP_INSTR_HEX ;
             PC_EXMEM_MEMWB <= '0 ;
             regData2_EXMEM_out <= '0 ;
             memType_EXMEM_out <= '0 ;

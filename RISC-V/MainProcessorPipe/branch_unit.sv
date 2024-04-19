@@ -57,7 +57,7 @@ assign branch_PC = (jump & jumpFlag) ? jalrSum :
 		(branch & branch_internal) ? branchSum : 
 		(jump & ~jumpFlag) ? jumpSum : PC_plus4;
 
-assign takeBranch = jump | branch_internal;
+assign takeBranch = jump | (branch_internal & branch);
 
 endmodule
 

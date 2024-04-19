@@ -9,4 +9,6 @@
 ROUTINE:	addi x1, x1, 100
 			addi x3, zero, 100
 
+			ECALL
+
 

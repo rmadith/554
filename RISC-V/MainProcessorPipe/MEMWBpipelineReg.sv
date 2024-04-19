@@ -1,5 +1,7 @@
 `default_nettype none
 
+import common_def::*;
+
 module MEMWBpipelineReg(
     ///// INPUTS  /////
     input wire clk,
@@ -38,7 +40,7 @@ module MEMWBpipelineReg(
     always_ff @( posedge clk, negedge rst_n) begin 
         if (!rst_n) begin
             regWriteEnable_MEMWB_out <=  '0;
-            instruction_MEMWB_out <=  '0;
+            instruction_MEMWB_out <=  NOP_INSTR_HEX;
             PC_MEMWB_out <=  '0;
             execute_result_MEMWB_out <=  '0;
             memRead_MEMWB_out <= '0 ;

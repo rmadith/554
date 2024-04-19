@@ -33,7 +33,7 @@ module IFIDpipelineReg(
     always_ff @( posedge clk, negedge rst_n) begin 
         if (!rst_n) begin
             PC_plus4_IFID_out <= '0;
-            instruction_IFID_IDEX <= '0;
+            instruction_IFID_IDEX <= NOP_INSTR_HEX;
             PC_IFID_IDEX <= '0;
             ECALL_IFID_IDEX <= '0;
         end else if (flush | instruction_IFID_in == NOP_INSTR_HEX) begin
