@@ -1,5 +1,7 @@
 `default_nettype none
 
+import common_def::*;
+
 module IDEXpipelineReg(
     ///// INPUTS  /////
     input wire clk,
@@ -82,6 +84,22 @@ module IDEXpipelineReg(
             regWriteEnable_IDEX_EXMEM <=  '0 ;
             instruction_IDEX_EXMEM <=  '0 ;
             PC_IDEX_EXMEM <=  '0 ;
+            ECALL_IDEX_EXMEM <= '0;
+        end else if (flush | instruction_IFID_IDEX == NOP_INSTR_HEX) begin
+            regData1_IDEX_out <=  '0 ;
+            regData2_IDEX_out <=  '0 ;
+            sext_imm_IDEX_out <=  '0 ;
+            immSel_IDEX_out <=  '0 ;
+            PC_as_operand_IDEX_out <=  '0 ;
+            setDataZero_IDEX_out <=  '0 ;
+            ALU_op_IDEX_out <=  '0 ;
+            memRead_IDEX_EXMEM <=  '0 ;
+            memType_IDEX_EXMEM <=  '0 ;
+            memWrite_IDEX_EXMEM <=  '0 ;
+            addConstant4_IDEX_out <=  '0 ;
+            regWriteEnable_IDEX_EXMEM <=  '0 ;
+            instruction_IDEX_EXMEM <=  NOP_INSTR_HEX ;
+            PC_IDEX_EXMEM <=  PC_IFID_IDEX ;
             ECALL_IDEX_EXMEM <= '0;
         end else begin
             regData1_IDEX_out <=  regData1_IDEX_in ;

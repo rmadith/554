@@ -1,5 +1,7 @@
 `default_nettype none
 
+import common_def::*;
+
 module IFIDpipelineReg(
     ///// INPUTS  /////
     input wire clk,
@@ -33,6 +35,11 @@ module IFIDpipelineReg(
             PC_plus4_IFID_out <= '0;
             instruction_IFID_IDEX <= '0;
             PC_IFID_IDEX <= '0;
+            ECALL_IFID_IDEX <= '0;
+        end else if (flush | instruction_IFID_in == NOP_INSTR_HEX) begin
+            PC_plus4_IFID_out <= PC_plus4_IFID_in;
+            instruction_IFID_IDEX <= NOP_INSTR_HEX;
+            PC_IFID_IDEX <= PC_IFID_in;
             ECALL_IFID_IDEX <= '0;
         end else begin
             PC_plus4_IFID_out <= PC_plus4_IFID_in;
