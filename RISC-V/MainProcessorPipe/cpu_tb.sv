@@ -32,7 +32,7 @@ module cpu_tb();
         rst_n = 0;
         #2 rst_n = 1;
 
-        @(posedge iCPU.iFetch.ECALL);
+        @(posedge iCPU.ECALL_MEMWB_out);
         $display("Hit ECALL");
         $stop();
         

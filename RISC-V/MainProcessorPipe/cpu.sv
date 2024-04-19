@@ -10,11 +10,13 @@ module cpu(
 	logic [31:0] PC_plus4_IFID_in;
 	logic [31:0] instruction_IFID_in;
     logic [31:0] PC_IFID_in;
+	logic ECALL_IFID_in;
 
 	/////////////// IFID pipeline register (outputs) //////////////////
 	logic [31:0] PC_plus4_IFID_out;
 	logic [31:0] instruction_IFID_IDEX;
     logic [31:0] PC_IFID_IDEX;
+	logic ECALL_IFID_IDEX;
 
 	////////////////// decode (outputs) //////////////////
 	logic [31:0] regData1_IDEX_in;
@@ -52,6 +54,8 @@ module cpu(
 	logic [31:0] instruction_IDEX_EXMEM;
 	logic [31:0] PC_IDEX_EXMEM;
 
+	logic ECALL_IDEX_EXMEM;
+
 	////////////////// execute (outputs) //////////////////
 	logic [31:0] execute_result_EXMEM_in;
 
@@ -65,6 +69,7 @@ module cpu(
     logic memRead_EXMEM_MEMWB;
     logic memWrite_EXMEM_out;
     logic [31:0] execute_result_EXMEM_MEMWB;
+	logic ECALL_EXMEM_MEMWB;
 
 
 	////////////////// memory (outputs) //////////////////
@@ -73,10 +78,11 @@ module cpu(
 	/////////////// MEMWB pipeline register (outputs) //////////////////
 	logic regWriteEnable_MEMWB_out;
     logic [31:0] instruction_MEMWB_out;
-    logic PC_MEMWB_out;
+    logic [31:0] PC_MEMWB_out;
     logic [31:0] execute_result_MEMWB_out;
     logic memRead_MEMWB_out;
     logic [31:0] memReadRst_MEMWB_out;
+	logic ECALL_MEMWB_out;
 
 	////////////////// writeback (outputs) //////////////////
 	logic [31:0] writeBackData;
@@ -99,7 +105,8 @@ module cpu(
 		///// OUTPUTS /////
 		.PC_plus4_IFID_in(PC_plus4_IFID_in),
 		.instruction_IFID_in(instruction_IFID_in),
-		.PC_IFID_in(PC_IFID_in)
+		.PC_IFID_in(PC_IFID_in), 
+		.ECALL(ECALL_IFID_in)
     );
 
 	IFIDpipelineReg iIFID_pipeline_reg(
@@ -113,11 +120,13 @@ module cpu(
 		.PC_plus4_IFID_in(PC_plus4_IFID_in),
 		.instruction_IFID_in(instruction_IFID_in),
 		.PC_IFID_in(PC_IFID_in),
+		.ECALL_IFID_in(ECALL_IFID_in),
 
 		///// PIPELINE OUTPUTS  /////
 		.PC_plus4_IFID_out(PC_plus4_IFID_out),
 		.instruction_IFID_IDEX(instruction_IFID_IDEX),
-		.PC_IFID_IDEX(PC_IFID_IDEX)
+		.PC_IFID_IDEX(PC_IFID_IDEX), 
+		.ECALL_IFID_IDEX(ECALL_IFID_IDEX)
 	);
 	
 
@@ -178,6 +187,7 @@ module cpu(
 
 		.instruction_IFID_IDEX(instruction_IFID_IDEX),
 		.PC_IFID_IDEX(PC_IFID_IDEX),
+		.ECALL_IFID_IDEX(ECALL_IFID_IDEX),
 
 
 		///// PIPELINE OUTPUTS  /////
@@ -196,7 +206,9 @@ module cpu(
 		.regWriteEnable_IDEX_EXMEM(regWriteEnable_IDEX_EXMEM),
 
 		.instruction_IDEX_EXMEM(instruction_IDEX_EXMEM),
-		.PC_IDEX_EXMEM(PC_IDEX_EXMEM)
+		.PC_IDEX_EXMEM(PC_IDEX_EXMEM), 
+
+		.ECALL_IDEX_EXMEM(ECALL_IDEX_EXMEM)
 
 	);
 
@@ -238,6 +250,7 @@ module cpu(
 		.memRead_IDEX_EXMEM(memRead_IDEX_EXMEM),
 		.memWrite_IDEX_EXMEM(memWrite_IDEX_EXMEM),
 		.execute_result_EXMEM_in(execute_result_EXMEM_in),
+		.ECALL_IDEX_EXMEM(ECALL_IDEX_EXMEM),
 
 		///// PIPELINE OUTPUTS  /////
 		.regWriteEnable_EXMEM_MEMWB(regWriteEnable_EXMEM_MEMWB),
@@ -247,7 +260,8 @@ module cpu(
 		.memType_EXMEM_out(memType_EXMEM_out),
 		.memRead_EXMEM_MEMWB(memRead_EXMEM_MEMWB),
 		.memWrite_EXMEM_out(memWrite_EXMEM_out),
-		.execute_result_EXMEM_MEMWB(execute_result_EXMEM_MEMWB)
+		.execute_result_EXMEM_MEMWB(execute_result_EXMEM_MEMWB), 
+		.ECALL_EXMEM_MEMWB(ECALL_EXMEM_MEMWB)
 
     );
 
@@ -283,6 +297,7 @@ module cpu(
 		.execute_result_EXMEM_MEMWB(execute_result_EXMEM_MEMWB),
 		.memRead_EXMEM_MEMWB(memRead_EXMEM_MEMWB),
 		.memReadRst_MEMWB_in(memReadRst_MEMWB_in),
+		.ECALL_EXMEM_MEMWB(ECALL_EXMEM_MEMWB),
 
 		///// PIPELINE OUTPUTS  /////
 		.regWriteEnable_MEMWB_out(regWriteEnable_MEMWB_out),
@@ -290,7 +305,8 @@ module cpu(
 		.PC_MEMWB_out(PC_MEMWB_out),
 		.execute_result_MEMWB_out(execute_result_MEMWB_out),
 		.memRead_MEMWB_out(memRead_MEMWB_out),
-		.memReadRst_MEMWB_out(memReadRst_MEMWB_out)
+		.memReadRst_MEMWB_out(memReadRst_MEMWB_out),
+		.ECALL_MEMWB_out(ECALL_MEMWB_out)
 
 	);
 
