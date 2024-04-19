@@ -3,10 +3,7 @@
 volatile unsigned int *x;
 
 int main(){
-   while(1){
-      x = (volatile unsigned int *) 0xFFFC001;
-      *x = 0x1234;
-      break;
-   }
+   x = (volatile unsigned int *) 0xFFFC001;
+   *x = 0x1234;
    return 0;
 }
