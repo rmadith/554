@@ -21,11 +21,13 @@ add wave -noupdate /cpu_tb/iCPU/iFetch/btb_pc/PC_IFID_in
 add wave -noupdate -divider -height 25 {Fetch outputs}
 add wave -noupdate /cpu_tb/iCPU/PC_plus4_IFID_in
 add wave -noupdate /cpu_tb/iCPU/instruction_IFID_in
+add wave -noupdate /cpu_tb/iCPU/ECALL_IFID_in
 add wave -noupdate /cpu_tb/iCPU/PC_IFID_in
 add wave -noupdate -divider -height 25 {IFID pipeline reg outputs}
 add wave -noupdate /cpu_tb/iCPU/PC_plus4_IFID_out
 add wave -noupdate /cpu_tb/iCPU/instruction_IFID_IDEX
 add wave -noupdate /cpu_tb/iCPU/PC_IFID_IDEX
+add wave -noupdate /cpu_tb/iCPU/ECALL_IFID_IDEX
 add wave -noupdate -divider -height 25 {Branch Unit Internal}
 add wave -noupdate /cpu_tb/iCPU/iDecode/iBU/currPC
 add wave -noupdate /cpu_tb/iCPU/iDecode/iBU/immediate
@@ -73,6 +75,7 @@ add wave -noupdate /cpu_tb/iCPU/addConstant4_IDEX_out
 add wave -noupdate /cpu_tb/iCPU/regWriteEnable_IDEX_EXMEM
 add wave -noupdate /cpu_tb/iCPU/instruction_IDEX_EXMEM
 add wave -noupdate /cpu_tb/iCPU/PC_IDEX_EXMEM
+add wave -noupdate /cpu_tb/iCPU/ECALL_IDEX_EXMEM
 add wave -noupdate -divider -height 25 {ALU internal}
 add wave -noupdate /cpu_tb/iCPU/iExecute/iALU/A
 add wave -noupdate /cpu_tb/iCPU/iExecute/iALU/B
@@ -89,6 +92,7 @@ add wave -noupdate /cpu_tb/iCPU/memType_EXMEM_out
 add wave -noupdate /cpu_tb/iCPU/memRead_EXMEM_MEMWB
 add wave -noupdate /cpu_tb/iCPU/memWrite_EXMEM_out
 add wave -noupdate /cpu_tb/iCPU/iEXMEM_pipeline_reg/execute_result_EXMEM_MEMWB
+add wave -noupdate /cpu_tb/iCPU/ECALL_EXMEM_MEMWB
 add wave -noupdate -divider -height 25 {Memory Outputs}
 add wave -noupdate /cpu_tb/iCPU/memReadRst_MEMWB_in
 add wave -noupdate -divider -height 25 {MEMWB pipeline reg outputs}
@@ -98,6 +102,7 @@ add wave -noupdate /cpu_tb/iCPU/PC_MEMWB_out
 add wave -noupdate /cpu_tb/iCPU/memRead_MEMWB_out
 add wave -noupdate /cpu_tb/iCPU/memReadRst_MEMWB_out
 add wave -noupdate /cpu_tb/iCPU/iMEMWB_pipeline_reg/execute_result_MEMWB_out
+add wave -noupdate /cpu_tb/iCPU/ECALL_MEMWB_out
 add wave -noupdate -divider -height 25 {Writeback outputs}
 add wave -noupdate -radix decimal /cpu_tb/iCPU/writeBackData
 add wave -noupdate -divider -height 25 {Writeback signals in Decode Module}
@@ -119,4 +124,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {6 ns} {12 ns}
+WaveRestoreZoom {43 ns} {49 ns}
