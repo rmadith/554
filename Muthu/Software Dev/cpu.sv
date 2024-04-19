@@ -274,21 +274,20 @@ module cpu(
 	memory iMemory(
 		///// INPUTS  /////
 		.clk(clk),
-		.rst_n(rst_n),
-		.execute_rst_EXMEM_MEMWB(execute_rst_EXMEM_MEMWB),
-		.memWrite_EXMEM_out(dm_we),
-		.memRead_EXMEM_MEMWB(memRead_EXMEM_MEMWB),
-		.regData2_EXMEM_out(regData2_EXMEM_out),
-		.memType_EXMEM_out(memType_EXMEM_out),
+		.memAddr(execute_rst_EXMEM_MEMWB),
+		.memWrite(dm_we),
+		.memRead(memRead_EXMEM_MEMWB),
+		.memDataIn(regData2_EXMEM_out),
+		.memType(memType_EXMEM_out),
 
 		///// OUTPUTS  /////
-		.memReadRst_MEMWB_in(memReadRst_MEMWB_in),
-		.memData(data_out), // Data to be written to memory
+		.memDataOut(memReadRst_MEMWB_in),
+		//.memData(data_out), // Data to be written to memory
 
 		// Bootloader
-		.debug(debug),
-		.data_cpu(data_cpu),
-		.waddr_cpu(waddr_cpu)
+		//.debug(debug),
+		//.data_cpu(data_cpu),
+		//.waddr_cpu(waddr_cpu)
 	
 	);
 
