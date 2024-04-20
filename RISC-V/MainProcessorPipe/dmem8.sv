@@ -15,11 +15,13 @@ module dmem8(clk,addr,re,we,rdata,wdata);
   input re, we;
   input [7:0] wdata;
 
-  output [7:0] rdata;
+  output logic [7:0] rdata;
   
   reg [7:0]mem[0:8191];
-  
-  assign rdata = (re) ? mem[addr] : 8'hzz;
+
+  always @(negedge clk)
+    if (re)
+	    rdata <= mem[addr];
   
   always @(negedge clk)
     if (we)

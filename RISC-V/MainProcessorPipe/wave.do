@@ -24,9 +24,9 @@ add wave -noupdate -color Magenta /cpu_tb/inst_name_IFID_in
 add wave -noupdate /cpu_tb/iCPU/ECALL_IFID_in
 add wave -noupdate -divider -height 25 {IFID pipeline reg outputs}
 add wave -noupdate /cpu_tb/iCPU/instruction_IFID_IDEX
-add wave -noupdate -color Magenta /cpu_tb/iCPU/PC_plus4_IFID_out
+add wave -noupdate /cpu_tb/iCPU/PC_plus4_IFID_out
+add wave -noupdate -color Magenta /cpu_tb/iCPU/PC_IFID_IDEX
 add wave -noupdate -color Magenta /cpu_tb/inst_name_IFID_IDEX
-add wave -noupdate /cpu_tb/iCPU/PC_IFID_IDEX
 add wave -noupdate /cpu_tb/iCPU/ECALL_IFID_IDEX
 add wave -noupdate -divider -height 25 {Branch Unit Internal}
 add wave -noupdate /cpu_tb/iCPU/iDecode/iBU/currPC
@@ -190,7 +190,7 @@ add wave -noupdate /cpu_tb/iCPU/iForwardToD/WB_destination_reg
 add wave -noupdate /cpu_tb/iCPU/iForwardToD/RegData1_MEMtoEX_forward
 add wave -noupdate /cpu_tb/iCPU/iForwardToD/RegData2_MEMtoEX_forward
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {12 ns} 0}
+WaveRestoreCursors {{Cursor 1} {356 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 496
 configure wave -valuecolwidth 87
@@ -206,4 +206,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {5 ns} {27 ns}
+WaveRestoreZoom {337 ns} {361 ns}

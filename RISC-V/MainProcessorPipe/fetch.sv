@@ -55,7 +55,8 @@ module fetch (
     );
 
     // Read instruction out of memory
-    assign instruction_IFID_in = instr_mem[PC_IFID_in>>2]; // PC/4 (PC >>2) if increament by 4
+    always @(negedge clk)
+        instruction_IFID_in <= instr_mem[PC_IFID_in>>2]; // PC/4 (PC >>2) if increament by 4
    
     // Increment the PC
     assign PC_plus4_IFID_in = PC_IFID_in + 3'h4; // increament by 4 bytes (32 bit instruction set)
