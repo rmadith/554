@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at CPU1.sv(126): always construct contains both blocking and non-blocking assignments File: I:/win/554_git/Muthu/Software Dev/CPU1.sv Line: 126
+Info (10281): Verilog HDL Declaration information at reset_synch.sv(4): object "RST_n" differs only in case from object "rst_n" in the same scope File: I:/win/554_git/Muthu/Software Dev/reset_synch.sv Line: 4
+Info (10281): Verilog HDL Declaration information at uart_rx.sv(10): object "receiving" differs only in case from object "RECEIVING" in the same scope File: I:/win/554_git/Muthu/Software Dev/uart_rx.sv Line: 10

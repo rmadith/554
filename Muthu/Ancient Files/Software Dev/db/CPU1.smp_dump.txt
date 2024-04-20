@@ -1,0 +1,29 @@
+
+State Machine - |CPU1|joystick:ijoy|state
+Name state.PS2 state.Y2 state.X2 state.PS1 state.Y1 state.X1 
+state.X1 0 0 0 0 0 0 
+state.Y1 0 0 0 0 1 1 
+state.PS1 0 0 0 1 0 1 
+state.X2 0 0 1 0 0 1 
+state.Y2 0 1 0 0 0 1 
+state.PS2 1 0 0 0 0 1 
+
+State Machine - |CPU1|joystick:ijoy|A2D_intf:iADC|state
+Name state.CONV state.READ state.FIRST state.WAIT 
+state.WAIT 0 0 0 0 
+state.FIRST 0 0 1 1 
+state.READ 0 1 0 1 
+state.CONV 1 0 0 1 
+
+State Machine - |CPU1|joystick:ijoy|A2D_intf:iADC|SPI_M:iSPI|n000
+Name n000.S3 n000.S2 n000.S1 n000.S0 
+n000.S0 0 0 0 0 
+n000.S1 0 0 1 1 
+n000.S2 0 1 0 1 
+n000.S3 1 0 0 1 
+
+State Machine - |CPU1|bootloader:iboot|tx_state
+Name tx_state.STEADY tx_state.SEND tx_state.SPLIT 
+tx_state.STEADY 0 0 0 
+tx_state.SPLIT 1 0 1 
+tx_state.SEND 1 1 0 

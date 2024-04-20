@@ -1,0 +1,823 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/intelFPGA_lite/22.1std
+T_opt
+!s110 1713550237
+VCFjA:B:zh?cM_i8^`F66H1
+04 12 4 work bootloadertb fast 0
+=6-6c2b59d179dc-6622b39c-1c2-3bdc
+!s124 OEM10U9 
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;2021.2;73
+R1
+T_opt1
+!s110 1713636895
+V;[214XozACWKOoboWmIHS2
+04 6 4 work cpu_tb fast 0
+=7-6c2b59d179dc-6624061e-87-1eb8
+!s124 OEM10U22 
+R2
+R3
+n@_opt1
+R4
+vALU
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1713028685
+!i10b 1
+!s100 WzS3H]?k0j=8fMNYcob>i3
+IZ]24D7T=FnHBZKG<EKDnY2
+S1
+Z6 dI:/win/554_git/Muthu/Software Dev
+Z7 w1712858959
+8I:/win/554_git/Muthu/Software Dev/ALU.sv
+FI:/win/554_git/Muthu/Software Dev/ALU.sv
+!i122 0
+L0 3 40
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1713028685.000000
+!s107 I:/win/554_git/Muthu/Software Dev/ALU.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/ALU.sv|
+!i113 0
+Z10 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@a@l@u
+vbootloader
+R5
+Z11 !s110 1713549545
+!i10b 1
+!s100 ROQRHG:8Adc`HGiU_E9Go0
+IF^TRl>Ui[g7;JPM=EFk5L0
+S1
+Z12 dI:/win/554_git/Muthu/Software_Dev_questa
+w1713547593
+8I:/win/554_git/Muthu/Software Dev/bootloader.sv
+FI:/win/554_git/Muthu/Software Dev/bootloader.sv
+!i122 68
+Z13 L0 3 162
+R8
+R9
+r1
+!s85 0
+31
+Z14 !s108 1713549544.000000
+!s107 I:/win/554_git/Muthu/Software Dev/bootloader.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/bootloader.sv|
+!i113 0
+R10
+R3
+vbootloadertb
+R5
+!s110 1713550232
+!i10b 1
+!s100 UibTRUYA8_;JY8el_[RE70
+IBL3FW3:7=[PVm271B27732
+S1
+R12
+w1713550229
+8I:\win\554_git\Muthu\Software_Dev_questa\bootloadertb.sv
+FI:\win\554_git\Muthu\Software_Dev_questa\bootloadertb.sv
+!i122 71
+L0 1 122
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713550232.000000
+!s107 I:\win\554_git\Muthu\Software_Dev_questa\bootloadertb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\win\554_git\Muthu\Software_Dev_questa\bootloadertb.sv|
+!i113 0
+R10
+R3
+vbranch_unit
+R5
+Z15 !s110 1713549540
+!i10b 1
+!s100 ?681:UD_0SPW]B2UZ=1@[0
+ImP<cacDO0?4ng[]jP;AAP0
+S1
+R12
+w1713473755
+8I:/win/554_git/Muthu/Software Dev/branch_unit.sv
+FI:/win/554_git/Muthu/Software Dev/branch_unit.sv
+!i122 60
+L0 2 62
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713549539.000000
+!s107 I:/win/554_git/Muthu/Software Dev/branch_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/branch_unit.sv|
+!i113 0
+R10
+R3
+vBTB_and_PC
+R5
+!s110 1713028686
+!i10b 1
+!s100 :]K[9QKOOjnG4bXdgZ8U=1
+I3fPg096cUg1>e5fRaCJfa2
+S1
+R6
+R7
+8I:/win/554_git/Muthu/Software Dev/BTB_and_PC.sv
+FI:/win/554_git/Muthu/Software Dev/BTB_and_PC.sv
+!i122 2
+L0 3 35
+R8
+R9
+r1
+!s85 0
+31
+Z16 !s108 1713028686.000000
+!s107 I:/win/554_git/Muthu/Software Dev/BTB_and_PC.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/BTB_and_PC.sv|
+!i113 0
+R10
+R3
+n@b@t@b_and_@p@c
+vcircular_queue
+R5
+R11
+!i10b 1
+!s100 Si@?<5]eiZ;39M;SzfPCB0
+I7?E>]clUQIhZe;ZGm_caA3
+S1
+R12
+w1713538415
+8I:/win/554_git/Muthu/Software Dev/circular_queue.sv
+FI:/win/554_git/Muthu/Software Dev/circular_queue.sv
+!i122 69
+L0 1 43
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713549545.000000
+!s107 I:/win/554_git/Muthu/Software Dev/circular_queue.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/circular_queue.sv|
+!i113 0
+R10
+R3
+Xcommon_def
+R5
+!s110 1713028687
+!i10b 1
+!s100 a3K:@3Ni:g6i<4ZH<J<``2
+I]WXIN0CX]Eo65kgH_GDn^0
+S1
+R6
+R7
+8I:/win/554_git/Muthu/Software Dev/common_def.sv
+FI:/win/554_git/Muthu/Software Dev/common_def.sv
+!i122 3
+Z17 L0 1 0
+V]WXIN0CX]Eo65kgH_GDn^0
+R9
+r1
+!s85 0
+31
+R16
+!s107 I:/win/554_git/Muthu/Software Dev/common_def.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/common_def.sv|
+!i113 0
+R10
+R3
+vcontrol_unit
+R5
+R15
+!i10b 1
+!s100 nEfMZF7X[Gm5=iSXjT[_P3
+IR;F9jN3K`L7??]JG<:M>h0
+S1
+R12
+w1713481067
+8I:/win/554_git/Muthu/Software Dev/control_unit.sv
+FI:/win/554_git/Muthu/Software Dev/control_unit.sv
+!i122 61
+L0 3 142
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713549540.000000
+!s107 I:/win/554_git/Muthu/Software Dev/control_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/control_unit.sv|
+!i113 0
+R10
+R3
+vcpu
+R5
+!s110 1713636659
+!i10b 1
+!s100 PgLF6llN`dERK9VoP;^cI3
+IWfHJN0M2gOJS@DAFflR;H3
+S1
+R12
+w1713636656
+8I:/win/554_git/Muthu/Software Dev/cpu.sv
+FI:/win/554_git/Muthu/Software Dev/cpu.sv
+!i122 77
+L0 3 334
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713636659.000000
+!s107 I:/win/554_git/Muthu/Software Dev/cpu.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/cpu.sv|
+!i113 0
+R10
+R3
+vcpu_tb
+R5
+Z18 DXx4 work 10 common_def 0 22 ]WXIN0CX]Eo65kgH_GDn^0
+DXx4 work 14 cpu_tb_sv_unit 0 22 I1e@Ldf4dFhSibf^RbWBX0
+Z19 !s110 1713028688
+R8
+r1
+!s85 0
+!i10b 1
+!s100 oN6iR1mLeW9Mf3na`Ka<c2
+I0bl1i0maHBLTZOkZA4ZJe2
+!s105 cpu_tb_sv_unit
+S1
+R6
+R7
+Z20 8I:/win/554_git/Muthu/Software Dev/cpu_tb.sv
+Z21 FI:/win/554_git/Muthu/Software Dev/cpu_tb.sv
+!i122 6
+L0 5 36
+R9
+31
+Z22 !s108 1713028687.000000
+Z23 !s107 I:/win/554_git/Muthu/Software Dev/cpu_tb.sv|
+Z24 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/cpu_tb.sv|
+!i113 0
+R10
+R3
+Xcpu_tb_sv_unit
+R5
+R18
+R19
+VI1e@Ldf4dFhSibf^RbWBX0
+r1
+!s85 0
+!i10b 1
+!s100 cFdQHz39?Dc_`_YODi<@T2
+II1e@Ldf4dFhSibf^RbWBX0
+!i103 1
+S1
+R6
+R7
+R20
+R21
+!i122 6
+L0 3 0
+R9
+31
+R22
+R23
+R24
+!i113 0
+R10
+R3
+vdecode
+R5
+Z25 !s110 1713549542
+!i10b 1
+!s100 h:T^i8>9`^<l6WO`>=G:i0
+IYkYl_jQa:?RnQcl[BX5O83
+S1
+R12
+w1713300563
+8I:/win/554_git/Muthu/Software Dev/decode.sv
+FI:/win/554_git/Muthu/Software Dev/decode.sv
+!i122 63
+L0 2 104
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713549541.000000
+!s107 I:/win/554_git/Muthu/Software Dev/decode.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/decode.sv|
+!i113 0
+R10
+R3
+vdmem8
+R5
+!s110 1713636141
+!i10b 1
+!s100 nH?LYm15aP_T3eC02Y?oS2
+IkCYFOeOQf7=NBnWzT3A?:3
+S1
+R12
+w1713539027
+8I:/win/554_git/Muthu/Software Dev/dmem8.sv
+FI:/win/554_git/Muthu/Software Dev/dmem8.sv
+!i122 72
+L0 1 38
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713636141.000000
+!s107 I:/win/554_git/Muthu/Software Dev/dmem8.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/dmem8.sv|
+!i113 0
+R10
+R3
+vexecute
+R5
+R19
+!i10b 1
+!s100 _JeRZQEdUL>EDHBOThO_V3
+IM:LKkH0jbm;TcPT2d8UjG1
+S1
+R6
+R7
+8I:/win/554_git/Muthu/Software Dev/execute.sv
+FI:/win/554_git/Muthu/Software Dev/execute.sv
+!i122 8
+L0 3 36
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713028688.000000
+!s107 I:/win/554_git/Muthu/Software Dev/execute.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/execute.sv|
+!i113 0
+R10
+R3
+vEXMEMpipelineReg
+R5
+!s110 1713028689
+!i10b 1
+!s100 >lJnETmbUk<4DZzoIR5k53
+IHX4boDB4^0Vz1O_A6h:d70
+S1
+R6
+R7
+8I:/win/554_git/Muthu/Software Dev/EXMEMpipelineReg.sv
+FI:/win/554_git/Muthu/Software Dev/EXMEMpipelineReg.sv
+!i122 9
+L0 3 45
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713028689.000000
+!s107 I:/win/554_git/Muthu/Software Dev/EXMEMpipelineReg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/EXMEMpipelineReg.sv|
+!i113 0
+R10
+R3
+n@e@x@m@e@mpipeline@reg
+vextension_unit
+R5
+R25
+!i10b 1
+!s100 dHP:`9h20c6k>002]7zTA3
+ISPeXJ;mgmPjQi?nG^:l2Y0
+S1
+R12
+w1713481045
+8I:/win/554_git/Muthu/Software Dev/extension_unit.sv
+FI:/win/554_git/Muthu/Software Dev/extension_unit.sv
+!i122 64
+L0 3 31
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713549542.000000
+!s107 I:/win/554_git/Muthu/Software Dev/extension_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/extension_unit.sv|
+!i113 0
+R10
+R3
+vfetch
+R5
+!s110 1713636883
+!i10b 1
+!s100 [;Mz;<mbKT6RHAOcHNlLl0
+I46^R`B^hf5T:B3]N5b<c[2
+S1
+R12
+w1713636880
+8I:/win/554_git/Muthu/Software Dev/fetch.sv
+FI:/win/554_git/Muthu/Software Dev/fetch.sv
+!i122 80
+L0 2 66
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713636882.000000
+!s107 I:/win/554_git/Muthu/Software Dev/fetch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/fetch.sv|
+!i113 0
+R10
+R3
+vfetchTB
+R5
+Z26 !s110 1713028690
+!i10b 1
+!s100 DSN]lDcBdMSzZfXA<POBo0
+IhhA6DW_z;gAWagY6XM4[81
+S1
+R6
+R7
+8I:/win/554_git/Muthu/Software Dev/fetchTB.sv
+FI:/win/554_git/Muthu/Software Dev/fetchTB.sv
+!i122 12
+L0 3 61
+R8
+R9
+r1
+!s85 0
+31
+Z27 !s108 1713028690.000000
+!s107 I:/win/554_git/Muthu/Software Dev/fetchTB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/fetchTB.sv|
+!i113 0
+R10
+R3
+nfetch@t@b
+vIDEXpipelineReg
+R5
+R26
+!i10b 1
+!s100 zHf`J?1YFz]A5T6m^8L^32
+IG^SYSiDe_04PJ<N>VW2Z>2
+S1
+R6
+R7
+8I:/win/554_git/Muthu/Software Dev/IDEXpipelineReg.sv
+FI:/win/554_git/Muthu/Software Dev/IDEXpipelineReg.sv
+!i122 13
+L0 3 66
+R8
+R9
+r1
+!s85 0
+31
+R27
+!s107 I:/win/554_git/Muthu/Software Dev/IDEXpipelineReg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/IDEXpipelineReg.sv|
+!i113 0
+R10
+R3
+n@i@d@e@xpipeline@reg
+vIFIDpipelineReg
+R5
+Z28 !s110 1713028691
+!i10b 1
+!s100 eon<;a_49<B`dF8?^Wj^K0
+IAdP?Kd_7zamkO;b=f9jVA2
+S1
+R6
+R7
+8I:/win/554_git/Muthu/Software Dev/IFIDpipelineReg.sv
+FI:/win/554_git/Muthu/Software Dev/IFIDpipelineReg.sv
+!i122 14
+L0 3 29
+R8
+R9
+r1
+!s85 0
+31
+R27
+!s107 I:/win/554_git/Muthu/Software Dev/IFIDpipelineReg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/IFIDpipelineReg.sv|
+!i113 0
+R10
+R3
+n@i@f@i@dpipeline@reg
+vinstruction_debug
+R5
+R18
+DXx4 work 25 instruction_debug_sv_unit 0 22 NTNj4a`P>5E0`]QUddU=23
+R28
+R8
+r1
+!s85 0
+!i10b 1
+!s100 LbVOZnZB=G4?m=hYXnIe91
+I5Vi8>AFY?h[f9JGcdTX[B2
+!s105 instruction_debug_sv_unit
+S1
+R6
+R7
+Z29 8I:/win/554_git/Muthu/Software Dev/instruction_debug.sv
+Z30 FI:/win/554_git/Muthu/Software Dev/instruction_debug.sv
+!i122 15
+Z31 L0 3 58
+R9
+31
+Z32 !s108 1713028691.000000
+Z33 !s107 I:/win/554_git/Muthu/Software Dev/instruction_debug.sv|
+Z34 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/instruction_debug.sv|
+!i113 0
+R10
+R3
+Xinstruction_debug_sv_unit
+R5
+R18
+R28
+VNTNj4a`P>5E0`]QUddU=23
+r1
+!s85 0
+!i10b 1
+!s100 kA]RhBSZ^>onWG;4=id:a1
+INTNj4a`P>5E0`]QUddU=23
+!i103 1
+S1
+R6
+R7
+R29
+R30
+!i122 15
+R17
+R9
+31
+R32
+R33
+R34
+!i113 0
+R10
+R3
+vmemory
+R5
+!s110 1713636660
+!i10b 1
+!s100 A@UQDRZjQ@iz2LB;GT[EQ1
+IdinOm13TUo<nfb5P]@>]H2
+S1
+R12
+w1713636535
+8I:/win/554_git/Muthu/Software Dev/memory.sv
+FI:/win/554_git/Muthu/Software Dev/memory.sv
+!i122 78
+R13
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713636660.000000
+!s107 I:/win/554_git/Muthu/Software Dev/memory.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/memory.sv|
+!i113 0
+R10
+R3
+vMEMWBpipelineReg
+R5
+!s110 1713028692
+!i10b 1
+!s100 Se[>m_T89WW@cF21H5mQI0
+I7XhNn;`oNLSOCcXEY51jZ3
+S1
+R6
+R7
+8I:/win/554_git/Muthu/Software Dev/MEMWBpipelineReg.sv
+FI:/win/554_git/Muthu/Software Dev/MEMWBpipelineReg.sv
+!i122 17
+L0 3 38
+R8
+R9
+r1
+!s85 0
+31
+Z35 !s108 1713028692.000000
+!s107 I:/win/554_git/Muthu/Software Dev/MEMWBpipelineReg.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/MEMWBpipelineReg.sv|
+!i113 0
+R10
+R3
+n@m@e@m@w@bpipeline@reg
+vrf
+R5
+!s110 1713549544
+!i10b 1
+!s100 QE^4Z>k`J7^a;3;dZPAF:2
+I=aL:cD:eGXY6l6HF1dKlG1
+S1
+R12
+w1713481479
+8I:/win/554_git/Muthu/Software Dev/rf.sv
+FI:/win/554_git/Muthu/Software Dev/rf.sv
+!i122 67
+R31
+R8
+R9
+r1
+!s85 0
+31
+R14
+!s107 I:/win/554_git/Muthu/Software Dev/rf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/rf.sv|
+!i113 0
+R10
+R3
+vshifter
+R5
+Z36 !s110 1713028693
+!i10b 1
+!s100 C:Sobn:>nb>_I1@Uf=LHZ2
+ISCA5liUmlhPg@<<e<TbDZ2
+S1
+R6
+R7
+8I:/win/554_git/Muthu/Software Dev/shifter.sv
+FI:/win/554_git/Muthu/Software Dev/shifter.sv
+!i122 18
+L0 1 137
+R8
+R9
+r1
+!s85 0
+31
+R35
+!s107 I:/win/554_git/Muthu/Software Dev/shifter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/shifter.sv|
+!i113 0
+R10
+R3
+vUART
+R5
+!s110 1713030626
+!i10b 1
+!s100 XORQ1nIF_:gHEh7hH2aVc3
+IL>^1denoB33n7]D^d_ai?1
+S1
+R6
+Z37 w1712858915
+8I:/win/554_git/Muthu/Software Dev/UART.sv
+FI:/win/554_git/Muthu/Software Dev/UART.sv
+!i122 26
+L0 1 26
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713030626.000000
+!s107 I:/win/554_git/Muthu/Software Dev/UART.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/UART.sv|
+!i113 0
+R10
+R3
+n@u@a@r@t
+vUART_rx
+R5
+Z38 !s110 1713030627
+!i10b 1
+!s100 `lPTd1QAb>;IY_mcVAE[I2
+IG8J6AAhL1l<YA^QYFnY]83
+S1
+R6
+R37
+8I:/win/554_git/Muthu/Software Dev/UART_rx.sv
+FI:/win/554_git/Muthu/Software Dev/UART_rx.sv
+!i122 27
+L0 1 110
+R8
+R9
+r1
+!s85 0
+31
+Z39 !s108 1713030627.000000
+!s107 I:/win/554_git/Muthu/Software Dev/UART_rx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/UART_rx.sv|
+!i113 0
+R10
+R3
+n@u@a@r@t_rx
+vUART_tx
+R5
+R38
+!i10b 1
+!s100 EZAfTIQk8_b^WZA7HX1GS2
+I[?CT];[nQM2=PH5^1Yf`i1
+S1
+R6
+R37
+8I:/win/554_git/Muthu/Software Dev/UART_tx.sv
+FI:/win/554_git/Muthu/Software Dev/UART_tx.sv
+!i122 28
+L0 1 118
+R8
+R9
+r1
+!s85 0
+31
+R39
+!s107 I:/win/554_git/Muthu/Software Dev/UART_tx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/UART_tx.sv|
+!i113 0
+R10
+R3
+n@u@a@r@t_tx
+vUART_wrapper
+R5
+!s110 1713030628
+!i10b 1
+!s100 eSA>SBjXbLQSPO3gYKPnf2
+Ib`NIPE[EeV^]53N@kYDQH0
+S1
+R6
+w1702163064
+8I:/win/554_git/Muthu/Software Dev/UART_wrapper.sv
+FI:/win/554_git/Muthu/Software Dev/UART_wrapper.sv
+!i122 29
+L0 1 81
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713030628.000000
+!s107 I:/win/554_git/Muthu/Software Dev/UART_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/UART_wrapper.sv|
+!i113 0
+R10
+R3
+n@u@a@r@t_wrapper
+vwb
+R5
+R36
+!i10b 1
+!s100 ?g9aD>PHl`;jn@P1XhPKM2
+I4TmK?fg3koMNi=CK9C9`F1
+S1
+R6
+R7
+8I:/win/554_git/Muthu/Software Dev/wb.sv
+FI:/win/554_git/Muthu/Software Dev/wb.sv
+!i122 19
+L0 3 14
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713028693.000000
+!s107 I:/win/554_git/Muthu/Software Dev/wb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/Software Dev/wb.sv|
+!i113 0
+R10
+R3
