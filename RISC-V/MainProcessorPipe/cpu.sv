@@ -162,6 +162,8 @@ module cpu(
 		.instruction_MEMWB_out(instruction_MEMWB_out),
 		.writeBackData(writeBackData),
 
+		.regWriteEnable_MEMWB_out(regWriteEnable_MEMWB_out),
+
 		.RegData1_after_forward_D(RegData1_after_forward_D),
 		.RegData2_after_forward_D(RegData2_after_forward_D),
 		
@@ -268,7 +270,7 @@ module cpu(
 		.regWriteEnable_IDEX_EXMEM(regWriteEnable_IDEX_EXMEM),
 		.instruction_IDEX_EXMEM(instruction_IDEX_EXMEM),
 		.PC_IDEX_EXMEM(PC_IDEX_EXMEM),
-		.regData2_EXMEM_in(regData2_IDEX_out), // NOTE: will be connected to output of forwarding unit eventually.
+		.regData2_EXMEM_in(RegData2_after_forward_EX), // NOTE: will be connected to output of forwarding unit eventually.
 		.memType_IDEX_EXMEM(memType_IDEX_EXMEM),
 		.memRead_IDEX_EXMEM(memRead_IDEX_EXMEM),
 		.memWrite_IDEX_EXMEM(memWrite_IDEX_EXMEM),
@@ -381,8 +383,8 @@ module cpu(
 		.execute_result_EXMEM_MEMWB(execute_result_EXMEM_MEMWB),
 		.writebackData(writeBackData),
 
-		.RegData1_IDEX_out(regData1_IDEX_out),
-		.RegData2_IDEX_out(regData2_IDEX_out),
+		.RegData1_IDEX_out(regData1_IDEX_in),
+		.RegData2_IDEX_out(regData2_IDEX_in),
 		
 		///// OUTPUTS  /////
 		.RegData1_after_forward_EX(RegData1_after_forward_D),

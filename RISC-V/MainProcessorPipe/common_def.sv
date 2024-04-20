@@ -10,7 +10,7 @@ parameter AUIPC_opcode_hex = 7'b0010111;
 
 parameter JAL_opcode_hex = 7'b1101111;
 
-parameter BRANCH_opcode = 7'b1100111;
+parameter BRANCH_opcode = 7'b1100011;
 
 parameter SW_opcode = 7'b0100011;
 

@@ -42,8 +42,8 @@ module CheckForControlToUse(
 	assign w_reg_sel = InstructionDownPipeline[11:7];
 
 	// Check if the register that the instruction farther down the pipeline will write to the register that the instruction in fetch needs to read.
-	assign WRS_RR1 = (ReadReg1InFetch == w_reg_sel);
-	assign WRS_RR2 = (ReadReg2InFetch == w_reg_sel);
+	assign WRS_RR1 = (ReadReg1InFetch == w_reg_sel && (| w_reg_sel));
+	assign WRS_RR2 = (ReadReg2InFetch == w_reg_sel && (| w_reg_sel));
 	
 	// Check if the instruction in fetch is a branch instruction (or jump instruction)
 	assign isBranchInstruction = (InstructionInFetch[6:0] == BRANCH_opcode) | (InstructionInFetch[6:0] == JALR_opcode);

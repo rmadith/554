@@ -10,6 +10,7 @@ module decode(
 
 	input wire [31:0] instruction_MEMWB_out,
 	input wire [31:0] writeBackData,
+	input wire regWriteEnable_MEMWB_out,
 
 	input wire [31:0] RegData1_after_forward_D,
 	input wire [31:0] RegData2_after_forward_D,
@@ -79,7 +80,7 @@ module decode(
 		.re1(1'b1),
 		.dst_addr(reg_dst_addr),
 		.dst(writeBackData),
-		.we(regWriteEnable_IDEX_in),
+		.we(regWriteEnable_MEMWB_out),
 		
 		///// OUTPUTS /////
 		.p0(regData1_IDEX_in),

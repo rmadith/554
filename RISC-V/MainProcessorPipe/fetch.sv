@@ -1,4 +1,7 @@
 `default_nettype none
+
+`define LOAD_INSTR_FILE
+
 module fetch (
 	
     ///// INPUTS  /////
@@ -22,9 +25,13 @@ module fetch (
     // Declare instruction memory and load contents from the code we wish to execute. 
     reg [31:0] instr_mem[0:65535];   // 2 ^ 16
 
+
+    `ifdef LOAD_INSTR_FILE
     initial begin
-        $readmemh("../Verification/basic_jmp_test.hex",instr_mem);
+        $readmemh("../Verification/jal.hex",instr_mem);
     end
+
+    `endif
 
 
     // Instaniate BTB/PC module

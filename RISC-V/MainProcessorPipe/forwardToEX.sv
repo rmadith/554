@@ -53,22 +53,22 @@ module forwardToEX (
 	// MEM -> EX forwarding (from start of WB to start of EX stage)
 	wire [31:0] RegData1_MEMtoEX_forward;
 	assign RegData1_MEMtoEX_forward = RegWriteEnable_MEMWB_out ? 
-										(((WB_destination_reg==EX_read_register_1)) ? writebackData : RegData1_IDEX_out) : RegData1_IDEX_out;
+										(((WB_destination_reg==EX_read_register_1 && (| EX_read_register_1))) ? writebackData : RegData1_IDEX_out) : RegData1_IDEX_out;
 	
 	// EX -> EX forwarding (from start of MEM to start of EX stage)
 	assign RegData1_after_forward_EX = RegWriteEnable_EXMEM_MEMWB ? 
-										(((MEM_destination_reg==EX_read_register_1)) ? execute_result_EXMEM_MEMWB : RegData1_MEMtoEX_forward) : RegData1_MEMtoEX_forward;
+										(((MEM_destination_reg==EX_read_register_1 && (| EX_read_register_1))) ? execute_result_EXMEM_MEMWB : RegData1_MEMtoEX_forward) : RegData1_MEMtoEX_forward;
 
 
 	//////////////////////REG 2 Forwarding ////////////////////////
 	// MEM -> EX forwarding (from start of WB to start of EX stage)
 	wire [31:0] RegData2_MEMtoEX_forward;
 	assign RegData2_MEMtoEX_forward = RegWriteEnable_MEMWB_out ? 
-										(((WB_destination_reg==EX_read_register_2)) ? writebackData : RegData2_IDEX_out) : RegData2_IDEX_out;
+										(((WB_destination_reg==EX_read_register_2 && (| EX_read_register_2))) ? writebackData : RegData2_IDEX_out) : RegData2_IDEX_out;
 	
 	// EX -> EX forwarding (from start of MEM to start of EX stage)
 	assign RegData2_after_forward_EX = RegWriteEnable_EXMEM_MEMWB ? 
-										(((MEM_destination_reg==EX_read_register_2)) ? execute_result_EXMEM_MEMWB : RegData2_MEMtoEX_forward) : RegData2_MEMtoEX_forward;
+										(((MEM_destination_reg==EX_read_register_2 && (| EX_read_register_2))) ? execute_result_EXMEM_MEMWB : RegData2_MEMtoEX_forward) : RegData2_MEMtoEX_forward;
 
 	
 endmodule

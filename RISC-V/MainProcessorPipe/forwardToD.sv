@@ -6,7 +6,7 @@
 */
 `default_nettype none
 module forwardToD (
-	// allows us to determine the registers we are reading in EX stage.
+	// allows us to determine the registers we are reading in D stage.
 	input wire [31:0] Instruction_IFID_IDEX,
 	
 	// allows us to determine write reg in MEM stage.
@@ -50,23 +50,23 @@ module forwardToD (
 	// NOTE: For both registers, the second mux (EX->EX) has priority over the first mux (MEM->EX). 
 	
 	//////////////////////REG 1 Forwarding ////////////////////////
-	// MEM -> EX forwarding (from start of WB to start of EX stage)
+	// MEM -> D forwarding (from start of WB to start of D stage)
 	wire [31:0] RegData1_MEMtoEX_forward;
 	assign RegData1_MEMtoEX_forward = RegWriteEnable_MEMWB_out ? 
 										(((WB_destination_reg==D_read_register_1)) ? writebackData : RegData1_IDEX_out) : RegData1_IDEX_out;
 	
-	// EX -> EX forwarding (from start of MEM to start of EX stage)
+	// EX -> D forwarding (from start of MEM to start of D stage)
 	assign RegData1_after_forward_EX = RegWriteEnable_EXMEM_MEMWB ? 
 										(((MEM_destination_reg==D_read_register_1)) ? execute_result_EXMEM_MEMWB : RegData1_MEMtoEX_forward) : RegData1_MEMtoEX_forward;
 
 
 	//////////////////////REG 2 Forwarding ////////////////////////
-	// MEM -> EX forwarding (from start of WB to start of EX stage)
+	// MEM -> D forwarding (from start of WB to start of D stage)
 	wire [31:0] RegData2_MEMtoEX_forward;
 	assign RegData2_MEMtoEX_forward = RegWriteEnable_MEMWB_out ? 
 										(((WB_destination_reg==D_read_register_2)) ? writebackData : RegData2_IDEX_out) : RegData2_IDEX_out;
 	
-	// EX -> EX forwarding (from start of MEM to start of EX stage)
+	// EX -> D forwarding (from start of MEM to start of D stage)
 	assign RegData2_after_forward_EX = RegWriteEnable_EXMEM_MEMWB ? 
 										(((MEM_destination_reg==D_read_register_2)) ? execute_result_EXMEM_MEMWB : RegData2_MEMtoEX_forward) : RegData2_MEMtoEX_forward;
 

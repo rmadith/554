@@ -74,7 +74,7 @@ module HazardDetection(
 	// Tell each pipeline register whether it should flush and/or stall.
 	assign Flush_IFID = TakeBranch_from_D | stall; 
 	
-	assign Flush_IDEX = TakeBranch_from_D;
+	assign Flush_IDEX = 1'b0;
 	
 	assign Flush_EXMEM = 1'b0;
 	

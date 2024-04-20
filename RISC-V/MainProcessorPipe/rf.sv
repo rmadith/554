@@ -1,5 +1,5 @@
 `default_nettype none
-`define FOR_SYNTHESIS // YOU MUST DELETE this line of code for the TA's automated test suite to work.
+//`define FOR_SYNTHESIS // YOU MUST DELETE this line of code for the TA's automated test suite to work.
 
 module rf(clk,rst_n, p0_addr,p1_addr,p0,p1,re0,re1,dst_addr,dst,we);
 //////////////////////////////////////////////////////////////////
@@ -14,7 +14,7 @@ input wire [4:0] p0_addr, p1_addr;			// two read port addresses
 input wire re0,re1;							// read enables (power not functionality)
 input wire [4:0] dst_addr;					// write address
 input wire [31:0] dst;						// dst bus
-input wire we;								// write enable								// not a functional input.  Used to dump register contents when
+input wire we;								// write enable							
 									
 
 output wire [31:0] p0,p1;  				//output read ports
@@ -80,9 +80,9 @@ always @(posedge clk) // ??
 
 // Register Bypass Added edge case to make R0 return 0
 
-assign p0 =  (p0_addr == 4'h0) ? 31'h0 : temp_p0;//: (((we === 1'b1) && (dst_addr === p0_addr)) ? dst: temp_p0);
+assign p0 =  (p0_addr == 4'h0) ? 31'h0 : (((we === 1'b1) && (dst_addr === p0_addr)) ? dst: temp_p0);
 
-assign p1 =  (p1_addr == 4'h0) ? 31'h0 : temp_p1;//: (((we === 1'b1) && (dst_addr === p1_addr)) ? dst: temp_p1);
+assign p1 =  (p1_addr == 4'h0) ? 31'h0 : (((we === 1'b1) && (dst_addr === p1_addr)) ? dst: temp_p1);
 	
 endmodule
 

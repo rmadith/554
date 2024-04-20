@@ -45,6 +45,18 @@ add wave -noupdate /cpu_tb/iCPU/iDecode/iBU/jumpSum
 add wave -noupdate /cpu_tb/iCPU/iDecode/iBU/jalrSum
 add wave -noupdate /cpu_tb/iCPU/iDecode/iBU/jumpFlag
 add wave -noupdate /cpu_tb/iCPU/iDecode/iBU/branch_internal
+add wave -noupdate -divider -height 25 {Register File Internal}
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/p0_addr
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/p1_addr
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/re0
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/re1
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/dst_addr
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/dst
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/we
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/p0
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/p1
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/temp_p0
+add wave -noupdate /cpu_tb/iCPU/iDecode/iRF/temp_p1
 add wave -noupdate -divider -height 25 {Decode outputs}
 add wave -noupdate -radix decimal /cpu_tb/iCPU/regData1_IDEX_in
 add wave -noupdate /cpu_tb/iCPU/regData2_IDEX_in
@@ -95,6 +107,35 @@ add wave -noupdate /cpu_tb/iCPU/memRead_EXMEM_MEMWB
 add wave -noupdate /cpu_tb/iCPU/memWrite_EXMEM_out
 add wave -noupdate /cpu_tb/iCPU/iEXMEM_pipeline_reg/execute_result_EXMEM_MEMWB
 add wave -noupdate /cpu_tb/iCPU/ECALL_EXMEM_MEMWB
+add wave -noupdate -divider -height 30 {Memory Internal}
+add wave -noupdate /cpu_tb/iCPU/iMemory/execute_result_EXMEM_MEMWB
+add wave -noupdate /cpu_tb/iCPU/iMemory/memWrite_EXMEM_out
+add wave -noupdate /cpu_tb/iCPU/iMemory/memRead_EXMEM_MEMWB
+add wave -noupdate /cpu_tb/iCPU/iMemory/regData2_EXMEM_out
+add wave -noupdate /cpu_tb/iCPU/iMemory/memType_EXMEM_out
+add wave -noupdate /cpu_tb/iCPU/iMemory/memReadRst_MEMWB_in
+add wave -noupdate /cpu_tb/iCPU/iMemory/memAddr
+add wave -noupdate /cpu_tb/iCPU/iMemory/memWrite
+add wave -noupdate /cpu_tb/iCPU/iMemory/memRead
+add wave -noupdate /cpu_tb/iCPU/iMemory/memDataIn
+add wave -noupdate /cpu_tb/iCPU/iMemory/memType
+add wave -noupdate /cpu_tb/iCPU/iMemory/memDataOut
+add wave -noupdate /cpu_tb/iCPU/iMemory/we0
+add wave -noupdate /cpu_tb/iCPU/iMemory/we1
+add wave -noupdate /cpu_tb/iCPU/iMemory/we2
+add wave -noupdate /cpu_tb/iCPU/iMemory/we3
+add wave -noupdate /cpu_tb/iCPU/iMemory/re0
+add wave -noupdate /cpu_tb/iCPU/iMemory/re1
+add wave -noupdate /cpu_tb/iCPU/iMemory/re2
+add wave -noupdate /cpu_tb/iCPU/iMemory/re3
+add wave -noupdate /cpu_tb/iCPU/iMemory/rdata_bnk0
+add wave -noupdate /cpu_tb/iCPU/iMemory/rdata_bnk1
+add wave -noupdate /cpu_tb/iCPU/iMemory/rdata_bnk2
+add wave -noupdate /cpu_tb/iCPU/iMemory/rdata_bnk3
+add wave -noupdate /cpu_tb/iCPU/iMemory/wdata_bnk0
+add wave -noupdate /cpu_tb/iCPU/iMemory/wdata_bnk1
+add wave -noupdate /cpu_tb/iCPU/iMemory/wdata_bnk2
+add wave -noupdate /cpu_tb/iCPU/iMemory/wdata_bnk3
 add wave -noupdate -divider -height 25 {Memory Outputs}
 add wave -noupdate /cpu_tb/iCPU/memReadRst_MEMWB_in
 add wave -noupdate -divider -height 25 {MEMWB pipeline reg outputs}
@@ -107,7 +148,7 @@ add wave -noupdate /cpu_tb/iCPU/memReadRst_MEMWB_out
 add wave -noupdate /cpu_tb/iCPU/iMEMWB_pipeline_reg/execute_result_MEMWB_out
 add wave -noupdate /cpu_tb/iCPU/ECALL_MEMWB_out
 add wave -noupdate -divider -height 25 {Writeback outputs}
-add wave -noupdate -radix decimal /cpu_tb/iCPU/writeBackData
+add wave -noupdate -radix hexadecimal /cpu_tb/iCPU/writeBackData
 add wave -noupdate -divider -height 25 {Writeback signals in Decode Module}
 add wave -noupdate /cpu_tb/iCPU/iDecode/reg_dst_addr
 add wave -noupdate -divider -height 30 {Hazard Detection Unit Outputs}
@@ -117,10 +158,41 @@ add wave -noupdate /cpu_tb/iCPU/Flush_IFID
 add wave -noupdate /cpu_tb/iCPU/Flush_IDEX
 add wave -noupdate /cpu_tb/iCPU/Flush_EXMEM
 add wave -noupdate /cpu_tb/iCPU/Flush_MEMWB
+add wave -noupdate -divider -height 30 {Check ALU op to branch Hazard detect internal}
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/InstructionInFetch
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/ReadReg1InFetch
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/ReadReg2InFetch
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/InstructionDownPipeline
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/RegWriteEnableDownPipeline
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/stall
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/WRS_RR1
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/WRS_RR2
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/isBranchInstruction
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/stall_intermediate_1
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/stall_intermediate_2
+add wave -noupdate /cpu_tb/iCPU/iHazardDetect/check_for_alu_op_to_branch/w_reg_sel
+add wave -noupdate -divider -height 30 {Forwarding unit to DECODE}
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/Instruction_IFID_IDEX
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/RegWriteEnable_EXMEM_MEMWB
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/Instruction_EXMEM_MEMWB
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/RegWriteEnable_MEMWB_out
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/Instruction_MEMWB_out
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/execute_result_EXMEM_MEMWB
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/writebackData
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/RegData1_IDEX_out
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/RegData2_IDEX_out
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/RegData1_after_forward_EX
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/RegData2_after_forward_EX
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/D_read_register_1
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/D_read_register_2
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/MEM_destination_reg
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/WB_destination_reg
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/RegData1_MEMtoEX_forward
+add wave -noupdate /cpu_tb/iCPU/iForwardToD/RegData2_MEMtoEX_forward
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2 ns} 0}
+WaveRestoreCursors {{Cursor 1} {12 ns} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 352
+configure wave -namecolwidth 496
 configure wave -valuecolwidth 87
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -134,4 +206,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ns} {24 ns}
+WaveRestoreZoom {5 ns} {27 ns}
