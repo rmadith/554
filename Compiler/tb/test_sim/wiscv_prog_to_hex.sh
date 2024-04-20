@@ -35,6 +35,7 @@ awk 'NR%4==1' wiscv.hex > wiscv0.hex
 awk 'NR%4==2' wiscv.hex > wiscv1.hex
 awk 'NR%4==3' wiscv.hex > wiscv2.hex
 awk 'NR%4==0' wiscv.hex > wiscv3.hex
+source bank_hex.sh
 if [[ "$2" -eq 0 ]]; then
    if [[ "$3" -eq 0 ]]; then
        perl ./extract_regs.pl -elf_run_out wiscv.golden_run
