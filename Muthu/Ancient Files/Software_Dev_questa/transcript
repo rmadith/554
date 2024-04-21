@@ -1,0 +1,245 @@
+# Compile of dmem8.sv was successful.
+# Compile of memory.sv was successful.
+# Load canceled
+# Compile of fetch.sv was successful.
+# Compile of fetch.sv was successful.
+# Compile of memory.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.cpu_tb -voptargs=+acc
+# vsim work.cpu_tb -voptargs="+acc" 
+# Start time: 13:08:03 on Apr 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: I:/win/554_git/Muthu/Software Dev/cpu_tb.sv(17): (vopt-2685) [TFMPC] - Too few port connections for 'iCPU'.  Expected 9, found 2.
+# ** Warning: I:/win/554_git/Muthu/Software Dev/cpu_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'halt'.
+# ** Warning: I:/win/554_git/Muthu/Software Dev/cpu_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'data_out'.
+# ** Warning: I:/win/554_git/Muthu/Software Dev/cpu_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'waddr_out'.
+# ** Warning: I:/win/554_git/Muthu/Software Dev/cpu_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'waddr_cpu'.
+# ** Warning: I:/win/554_git/Muthu/Software Dev/cpu_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'data_cpu'.
+# ** Warning: I:/win/554_git/Muthu/Software Dev/cpu_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'joystick_data'.
+# ** Warning: I:/win/554_git/Muthu/Software Dev/cpu_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'debug'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=8.
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (32) for port 'memAddr'. The port definition is at: I:/win/554_git/Muthu/Software Dev/memory.sv(6).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory File: I:/win/554_git/Muthu/Software Dev/cpu.sv Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'PC_MEMWB_out'. The port definition is at: I:/win/554_git/Muthu/Software Dev/MEMWBpipelineReg.sv(22).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMEMWB_pipeline_reg File: I:/win/554_git/Muthu/Software Dev/cpu.sv Line: 296
+# Compile of cpu.sv was successful.
+# Compile of memory.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "I:winl_gitRISC-VVerificationload_store_test.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : I:/win/554_git/Muthu/Software Dev/fetch.sv(31)
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iFetch
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+add wave -position insertpoint sim:/cpu_tb/iCPU/iMemory/*
+add wave -position insertpoint  \
+sim:/cpu_tb/iDEBUG_IFID_in/inst_name
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "I:winl_gitRISC-VVerificationload_store_test.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : I:/win/554_git/Muthu/Software Dev/fetch.sv(31)
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iFetch
+# Compile of fetch.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Compile of fetch.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+do I:/win/554_git/Muthu/Software_Dev_questa/wave.do
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run
+# End time: 13:31:17 on Apr 20,2024, Elapsed time: 0:23:14
+# Errors: 0, Warnings: 1

@@ -1,6 +1,7 @@
 import serial
 import sys
 import threading
+import time
 
 def read_from_uart(ser):
     """
@@ -10,10 +11,9 @@ def read_from_uart(ser):
         ser (serial.Serial): The open serial port.
     """
     try:
-        while True:
-            if ser.in_waiting > 0:
-                data = ser.readline()
-                print(f"Received: {data.decode().strip()}")
+        data = ser.read(ser.in_waiting or 1)
+        # convert bytes to hex
+        print(f"Received: {data.decode('utf-8')}")
     except serial.SerialException as e:
         print(f"Error reading from UART: {e}")
 
@@ -35,6 +35,14 @@ def send_file_over_uart(filename, port="/dev/tty.usbserial-FT0DJN8X", baudrate=1
     try:
         # Open the file in binary read mode
         ser = serial.Serial(port, baudrate)
+        ser.parity = serial.PARITY_NONE
+        ser.bytesize = serial.EIGHTBITS
+        ser.stopbits = serial.STOPBITS_ONE
+        ser.xonxoff = 0
+        ser.rtscts = 0
+        # IF you don't set the timeout for reads the code will hang
+        #ser.timeout = 2
+
 
         # Start the reading thread
         read_thread = threading.Thread(target=read_from_uart, args=(ser,))
@@ -74,4 +82,3 @@ if __name__ == "__main__":
 
     # Send the file
     send_file_over_uart(filename)
-

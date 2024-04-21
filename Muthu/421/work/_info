@@ -1,0 +1,1302 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dI:/win/554_git/Muthu/420
+T_opt
+!s110 1713675541
+V`lD]dCn4^ln_fZh;a^[d:1
+04 10 4 work toplevelTB fast 0
+=17-6c2b59d179dc-66249d13-384-40d4
+!s124 OEM10U45 
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+R1
+vA2D_intf
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1713673582
+!i10b 1
+!s100 [4200HkTL`<4N^@0W8=Lj2
+IES@XJ60d5A4XN[;@dzlo<0
+S1
+Z4 dI:/win/554_git/Muthu/421
+w1713046583
+8I:/win/554_git/Muthu/421/Peripherals/A2D_intf.sv
+FI:/win/554_git/Muthu/421/Peripherals/A2D_intf.sv
+!i122 28
+L0 1 99
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z7 !s108 1713673581.000000
+!s107 I:/win/554_git/Muthu/421/Peripherals/A2D_intf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/Peripherals/A2D_intf.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@a2@d_intf
+vALU
+R3
+!s110 1713673567
+!i10b 1
+!s100 WzS3H]?k0j=8fMNYcob>i3
+ISi3g>LTCHXAE];=^A<JRd2
+S1
+R4
+Z9 w1713484802
+8I:/win/554_git/Muthu/421/ALU.sv
+FI:/win/554_git/Muthu/421/ALU.sv
+!i122 0
+L0 3 40
+R5
+R6
+r1
+!s85 0
+31
+Z10 !s108 1713673567.000000
+!s107 I:/win/554_git/Muthu/421/ALU.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/ALU.sv|
+!i113 0
+R8
+R2
+n@a@l@u
+vbootloader
+R3
+!s110 1713674831
+!i10b 1
+!s100 H2YAkKQDZak5gcjN9ZIXQ0
+IG5lTn_`mH<_R@3192UYX73
+S1
+R4
+w1713674827
+8I:/win/554_git/Muthu/421/Peripherals/bootloader.sv
+FI:/win/554_git/Muthu/421/Peripherals/bootloader.sv
+!i122 53
+L0 3 162
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713674830.000000
+!s107 I:/win/554_git/Muthu/421/Peripherals/bootloader.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/Peripherals/bootloader.sv|
+!i113 0
+R8
+R2
+vbranch_unit
+R3
+Z11 !s110 1713673568
+!i10b 1
+!s100 ZYa33@P^jh^iF]K^Qh@ll3
+IXg93zfiE5OHkVRQB=l<=e3
+S1
+R4
+Z12 w1713537520
+8I:/win/554_git/Muthu/421/branch_unit.sv
+FI:/win/554_git/Muthu/421/branch_unit.sv
+!i122 1
+L0 2 61
+R5
+R6
+r1
+!s85 0
+31
+R10
+!s107 I:/win/554_git/Muthu/421/branch_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/branch_unit.sv|
+!i113 0
+R8
+R2
+vBTB_and_PC
+R3
+R11
+!i10b 1
+!s100 :]K[9QKOOjnG4bXdgZ8U=1
+IGW@_aXEmTQL[`T3oiGiKa3
+S1
+R4
+R9
+8I:/win/554_git/Muthu/421/BTB_and_PC.sv
+FI:/win/554_git/Muthu/421/BTB_and_PC.sv
+!i122 2
+L0 3 35
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713673568.000000
+!s107 I:/win/554_git/Muthu/421/BTB_and_PC.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/BTB_and_PC.sv|
+!i113 0
+R8
+R2
+n@b@t@b_and_@p@c
+vCheckForControlToUse
+R3
+Z13 DXx4 work 10 common_def 0 22 4=i0@?:4i4XcZUOV^En`00
+DXx4 work 28 CheckForControlToUse_sv_unit 0 22 ohZZiiA:ZRfm7BFZ`dGXz1
+Z14 !s110 1713673636
+R5
+r1
+!s85 0
+!i10b 1
+!s100 Sdn2^88ZRHcbI4Y=WSU:l2
+I92k8z8LjK?XYoiMH4jz`g0
+!s105 CheckForControlToUse_sv_unit
+S1
+R4
+Z15 w1713654653
+Z16 8I:/win/554_git/Muthu/421/CheckForControlToUse.sv
+Z17 FI:/win/554_git/Muthu/421/CheckForControlToUse.sv
+!i122 39
+L0 10 51
+R6
+31
+Z18 !s108 1713673635.000000
+Z19 !s107 I:/win/554_git/Muthu/421/CheckForControlToUse.sv|
+Z20 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/CheckForControlToUse.sv|
+!i113 0
+R8
+R2
+n@check@for@control@to@use
+XCheckForControlToUse_sv_unit
+R3
+R13
+R14
+VohZZiiA:ZRfm7BFZ`dGXz1
+r1
+!s85 0
+!i10b 1
+!s100 lf9::S84:J7305HlNOjLf2
+IohZZiiA:ZRfm7BFZ`dGXz1
+!i103 1
+S1
+R4
+R15
+R16
+R17
+!i122 39
+Z21 L0 8 0
+R6
+31
+R18
+R19
+R20
+!i113 0
+R8
+R2
+n@check@for@control@to@use_sv_unit
+vCheckForLoadToUse
+R3
+R13
+DXx4 work 25 CheckForLoadToUse_sv_unit 0 22 ba^]aN`b?cGO>=NOHii4@2
+Z22 !s110 1713673637
+R5
+r1
+!s85 0
+!i10b 1
+!s100 KLM6mVDd]]zJEMIz:`6[B0
+IgP@?6g[=VCGfccjiA4[=W3
+!s105 CheckForLoadToUse_sv_unit
+S1
+R4
+R12
+Z23 8I:/win/554_git/Muthu/421/CheckForLoadToUse.sv
+Z24 FI:/win/554_git/Muthu/421/CheckForLoadToUse.sv
+!i122 40
+L0 10 71
+R6
+31
+Z25 !s108 1713673636.000000
+Z26 !s107 I:/win/554_git/Muthu/421/CheckForLoadToUse.sv|
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/CheckForLoadToUse.sv|
+!i113 0
+R8
+R2
+n@check@for@load@to@use
+XCheckForLoadToUse_sv_unit
+R3
+R13
+R22
+Vba^]aN`b?cGO>=NOHii4@2
+r1
+!s85 0
+!i10b 1
+!s100 P]OgdoOP8l[<^6gZPnhIb3
+Iba^]aN`b?cGO>=NOHii4@2
+!i103 1
+S1
+R4
+R12
+R23
+R24
+!i122 40
+R21
+R6
+31
+R25
+R26
+R27
+!i113 0
+R8
+R2
+n@check@for@load@to@use_sv_unit
+vcircular_queue
+R3
+!s110 1713673583
+!i10b 1
+!s100 Si@?<5]eiZ;39M;SzfPCB0
+Ie=k1eQaof9;GiS^Yd]z753
+S1
+R4
+w1713538415
+8I:/win/554_git/Muthu/421/Peripherals/circular_queue.sv
+FI:/win/554_git/Muthu/421/Peripherals/circular_queue.sv
+!i122 30
+L0 1 43
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713673582.000000
+!s107 I:/win/554_git/Muthu/421/Peripherals/circular_queue.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/Peripherals/circular_queue.sv|
+!i113 0
+R8
+R2
+Xcommon_def
+R3
+!s110 1713673569
+!i10b 1
+!s100 gCzN0779E=QT`YcYi@0772
+I4=i0@?:4i4XcZUOV^En`00
+S1
+R4
+R15
+8I:/win/554_git/Muthu/421/common_def.sv
+FI:/win/554_git/Muthu/421/common_def.sv
+!i122 3
+Z28 L0 1 0
+V4=i0@?:4i4XcZUOV^En`00
+R6
+r1
+!s85 0
+31
+!s108 1713673569.000000
+!s107 I:/win/554_git/Muthu/421/common_def.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/common_def.sv|
+!i113 0
+R8
+R2
+vcontrol_unit
+R3
+Z29 !s110 1713673570
+!i10b 1
+!s100 GbXm1MmDa8G0onQS<@Ehn1
+ILRl8L8MidVaIYN9zgOIjn0
+S1
+R4
+w1713658856
+8I:/win/554_git/Muthu/421/control_unit.sv
+FI:/win/554_git/Muthu/421/control_unit.sv
+!i122 4
+L0 3 139
+R5
+R6
+r1
+!s85 0
+31
+Z30 !s108 1713673570.000000
+!s107 I:/win/554_git/Muthu/421/control_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/control_unit.sv|
+!i113 0
+R8
+R2
+vcpu
+R3
+R29
+!i10b 1
+!s100 FBocKDY@N;n;2oT@RalAO0
+I]E=cD9FOW7MQ1IW3_G8@02
+S1
+R4
+w1713665132
+8I:/win/554_git/Muthu/421/cpu.sv
+FI:/win/554_git/Muthu/421/cpu.sv
+!i122 5
+L0 3 467
+R5
+R6
+r1
+!s85 0
+31
+R30
+!s107 I:/win/554_git/Muthu/421/cpu.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/cpu.sv|
+!i113 0
+R8
+R2
+vcpu_tb
+R3
+Z31 !s110 1713673572
+!i10b 1
+!s100 :7DB85V<CBhX51leoVUFD3
+I31AgP7T3hUN]OljzbEfUh0
+S1
+R4
+w1713670286
+8I:/win/554_git/Muthu/421/DE1_SOC_tb.sv
+FI:/win/554_git/Muthu/421/DE1_SOC_tb.sv
+!i122 7
+L0 1 48
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713673571.000000
+!s107 I:/win/554_git/Muthu/421/DE1_SOC_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/DE1_SOC_tb.sv|
+!i113 0
+R8
+R2
+Xcpu_tb_sv_unit
+R3
+R13
+!s110 1713673571
+VLSYnI1H4?PlCHPJj>0l271
+r1
+!s85 0
+!i10b 1
+!s100 L6zT1dl;Rb4IlNJk[=U]N2
+ILSYnI1H4?PlCHPJj>0l271
+!i103 1
+S1
+R4
+w1713656373
+8I:/win/554_git/Muthu/421/cpu_tb.sv
+FI:/win/554_git/Muthu/421/cpu_tb.sv
+!i122 6
+Z32 L0 3 0
+R6
+31
+R30
+!s107 I:/win/554_git/Muthu/421/cpu_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/cpu_tb.sv|
+!i113 0
+R8
+R2
+vDE1_SOC
+R3
+!s110 1713674885
+!i10b 1
+!s100 IOUnK=K51n_VN[gKTG9:00
+IOem`YMZb7=0m@=hN]`keO1
+S1
+R4
+w1713674877
+8I:/win/554_git/Muthu/421/DE1_SOC.sv
+FI:/win/554_git/Muthu/421/DE1_SOC.sv
+!i122 54
+L0 6 156
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713674885.000000
+!s107 I:/win/554_git/Muthu/421/DE1_SOC.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/DE1_SOC.sv|
+!i113 0
+R8
+R2
+n@d@e1_@s@o@c
+vdecode
+R3
+R31
+!i10b 1
+!s100 1TLd]@_SVjmUjHilP:f2b0
+Io4@8N;gGFXXI5@^kZ9VPU1
+S1
+R4
+w1713655706
+8I:/win/554_git/Muthu/421/decode.sv
+FI:/win/554_git/Muthu/421/decode.sv
+!i122 8
+L0 2 109
+R5
+R6
+r1
+!s85 0
+31
+Z33 !s108 1713673572.000000
+!s107 I:/win/554_git/Muthu/421/decode.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/decode.sv|
+!i113 0
+R8
+R2
+vdmem8
+R3
+R31
+!i10b 1
+!s100 c4MPWUTKWYg9kL^HJf2jW1
+IVi:7Y]I[5E:B246L0iG1D3
+S1
+R4
+w1713656792
+8I:/win/554_git/Muthu/421/dmem8.sv
+FI:/win/554_git/Muthu/421/dmem8.sv
+!i122 9
+L0 1 39
+R5
+R6
+r1
+!s85 0
+31
+R33
+!s107 I:/win/554_git/Muthu/421/dmem8.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/dmem8.sv|
+!i113 0
+R8
+R2
+vexecute
+R3
+Z34 !s110 1713673573
+!i10b 1
+!s100 id[DMnzYKhYQEElcb]O[n2
+I_Q_M1^YdIMbd4B0BcQ]OJ1
+S1
+R4
+R9
+8I:/win/554_git/Muthu/421/execute.sv
+FI:/win/554_git/Muthu/421/execute.sv
+!i122 10
+L0 3 36
+R5
+R6
+r1
+!s85 0
+31
+R33
+!s107 I:/win/554_git/Muthu/421/execute.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/execute.sv|
+!i113 0
+R8
+R2
+vEXMEMpipelineReg
+R3
+R13
+DXx4 work 24 EXMEMpipelineReg_sv_unit 0 22 ^Sm6UOTB1z40MmMWiXgn42
+R34
+R5
+r1
+!s85 0
+!i10b 1
+!s100 UDiOLR6=Ud=CN4Xc6<=<z2
+IEVL^kZU=2S;<ei8CFXGHA2
+!s105 EXMEMpipelineReg_sv_unit
+S1
+R4
+R12
+Z35 8I:/win/554_git/Muthu/421/EXMEMpipelineReg.sv
+Z36 FI:/win/554_git/Muthu/421/EXMEMpipelineReg.sv
+!i122 11
+L0 5 72
+R6
+31
+Z37 !s108 1713673573.000000
+Z38 !s107 I:/win/554_git/Muthu/421/EXMEMpipelineReg.sv|
+Z39 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/EXMEMpipelineReg.sv|
+!i113 0
+R8
+R2
+n@e@x@m@e@mpipeline@reg
+XEXMEMpipelineReg_sv_unit
+R3
+R13
+R34
+V^Sm6UOTB1z40MmMWiXgn42
+r1
+!s85 0
+!i10b 1
+!s100 faT?[1WmjWQ;^eEc6d^H13
+I^Sm6UOTB1z40MmMWiXgn42
+!i103 1
+S1
+R4
+R12
+R35
+R36
+!i122 11
+R32
+R6
+31
+R37
+R38
+R39
+!i113 0
+R8
+R2
+n@e@x@m@e@mpipeline@reg_sv_unit
+vextension_unit
+R3
+Z40 !s110 1713673574
+!i10b 1
+!s100 F[LICQSdgHFIlX[ma6CK53
+IgYS_`Z3^5RC5oPK7FGH711
+S1
+R4
+w1713658780
+8I:/win/554_git/Muthu/421/extension_unit.sv
+FI:/win/554_git/Muthu/421/extension_unit.sv
+!i122 12
+L0 3 31
+R5
+R6
+r1
+!s85 0
+31
+R37
+!s107 I:/win/554_git/Muthu/421/extension_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/extension_unit.sv|
+!i113 0
+R8
+R2
+vfetch
+R3
+!s110 1713674664
+!i10b 1
+!s100 5@6h^IbM34<BCeU^`g@B43
+I<ij@O[z6Uz_oX@5k[Sk1@1
+S1
+R4
+w1713674662
+8I:/win/554_git/Muthu/421/fetch.sv
+FI:/win/554_git/Muthu/421/fetch.sv
+!i122 52
+L0 4 68
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713674664.000000
+!s107 I:/win/554_git/Muthu/421/fetch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/fetch.sv|
+!i113 0
+R8
+R2
+vfetchTB
+R3
+R40
+!i10b 1
+!s100 DSN]lDcBdMSzZfXA<POBo0
+IaAFVaLkaYSdY>IJ5a4^VE2
+S1
+R4
+R9
+8I:/win/554_git/Muthu/421/fetchTB.sv
+FI:/win/554_git/Muthu/421/fetchTB.sv
+!i122 14
+L0 3 61
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713673574.000000
+!s107 I:/win/554_git/Muthu/421/fetchTB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/fetchTB.sv|
+!i113 0
+R8
+R2
+nfetch@t@b
+vforwardToD
+R3
+!s110 1713673575
+!i10b 1
+!s100 kN5_OcTBNG4C4l2XY32mM2
+I8izBbF[efR3Q9OHnmaEXZ0
+S1
+R4
+R15
+8I:/win/554_git/Muthu/421/forwardToD.sv
+FI:/win/554_git/Muthu/421/forwardToD.sv
+!i122 15
+Z41 L0 8 67
+R5
+R6
+r1
+!s85 0
+31
+Z42 !s108 1713673575.000000
+!s107 I:/win/554_git/Muthu/421/forwardToD.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/forwardToD.sv|
+!i113 0
+R8
+R2
+nforward@to@d
+vforwardToEX
+R3
+Z43 !s110 1713673576
+!i10b 1
+!s100 W^Li9oQQJ`hgLPeiK:PUG1
+I`6M6hbia^IH7T_zV1gZS[3
+S1
+R4
+R15
+8I:/win/554_git/Muthu/421/forwardToEX.sv
+FI:/win/554_git/Muthu/421/forwardToEX.sv
+!i122 16
+R41
+R5
+R6
+r1
+!s85 0
+31
+R42
+!s107 I:/win/554_git/Muthu/421/forwardToEX.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/forwardToEX.sv|
+!i113 0
+R8
+R2
+nforward@to@e@x
+vforwardToMEM
+R3
+R43
+!i10b 1
+!s100 zm6Z_AO:fXid4iZRGUARf2
+Im5575jJW6a07mWgK^LeY03
+S1
+R4
+R12
+8I:/win/554_git/Muthu/421/forwardToMEM.sv
+FI:/win/554_git/Muthu/421/forwardToMEM.sv
+!i122 17
+L0 8 37
+R5
+R6
+r1
+!s85 0
+31
+Z44 !s108 1713673576.000000
+!s107 I:/win/554_git/Muthu/421/forwardToMEM.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/forwardToMEM.sv|
+!i113 0
+R8
+R2
+nforward@to@m@e@m
+vHazardDetection
+R3
+R43
+!i10b 1
+!s100 >mag3J5oeG4Wc:Cb8zckm2
+Io:k;V=n6VNWd?__@;A7B13
+S1
+R4
+R15
+8I:/win/554_git/Muthu/421/HazardDetection.sv
+FI:/win/554_git/Muthu/421/HazardDetection.sv
+!i122 18
+L0 6 81
+R5
+R6
+r1
+!s85 0
+31
+R44
+!s107 I:/win/554_git/Muthu/421/HazardDetection.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/HazardDetection.sv|
+!i113 0
+R8
+R2
+n@hazard@detection
+vIDEXpipelineReg
+R3
+R13
+DXx4 work 23 IDEXpipelineReg_sv_unit 0 22 ?CBhck0DhRJd0KVe`2hai0
+Z45 !s110 1713673577
+R5
+r1
+!s85 0
+!i10b 1
+!s100 5LIe:5HYhL4h5WPHl]_UP0
+IAb0B6LjJ]`j3nI7J?0Gf_3
+!s105 IDEXpipelineReg_sv_unit
+S1
+R4
+R15
+Z46 8I:/win/554_git/Muthu/421/IDEXpipelineReg.sv
+Z47 FI:/win/554_git/Muthu/421/IDEXpipelineReg.sv
+!i122 19
+L0 5 120
+R6
+31
+Z48 !s108 1713673577.000000
+Z49 !s107 I:/win/554_git/Muthu/421/IDEXpipelineReg.sv|
+Z50 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/IDEXpipelineReg.sv|
+!i113 0
+R8
+R2
+n@i@d@e@xpipeline@reg
+XIDEXpipelineReg_sv_unit
+R3
+R13
+R45
+V?CBhck0DhRJd0KVe`2hai0
+r1
+!s85 0
+!i10b 1
+!s100 >QO9bRnRe1XaC?FU6Ufm^3
+I?CBhck0DhRJd0KVe`2hai0
+!i103 1
+S1
+R4
+R15
+R46
+R47
+!i122 19
+R32
+R6
+31
+R48
+R49
+R50
+!i113 0
+R8
+R2
+n@i@d@e@xpipeline@reg_sv_unit
+vIFIDpipelineReg
+R3
+R13
+DXx4 work 23 IFIDpipelineReg_sv_unit 0 22 aMJ6?aR=lj32cG5]I<@Af2
+R45
+R5
+r1
+!s85 0
+!i10b 1
+!s100 jJW23:k6E5VS=UUO0KB3J2
+IbJ`g<CL1lYjYlg451Udlc2
+!s105 IFIDpipelineReg_sv_unit
+S1
+R4
+R12
+Z51 8I:/win/554_git/Muthu/421/IFIDpipelineReg.sv
+Z52 FI:/win/554_git/Muthu/421/IFIDpipelineReg.sv
+!i122 20
+L0 5 52
+R6
+31
+R48
+Z53 !s107 I:/win/554_git/Muthu/421/IFIDpipelineReg.sv|
+Z54 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/IFIDpipelineReg.sv|
+!i113 0
+R8
+R2
+n@i@f@i@dpipeline@reg
+XIFIDpipelineReg_sv_unit
+R3
+R13
+R45
+VaMJ6?aR=lj32cG5]I<@Af2
+r1
+!s85 0
+!i10b 1
+!s100 MULG<fa:doT>8Pe]M`z<V0
+IaMJ6?aR=lj32cG5]I<@Af2
+!i103 1
+S1
+R4
+R12
+R51
+R52
+!i122 20
+R32
+R6
+31
+R48
+R53
+R54
+!i113 0
+R8
+R2
+n@i@f@i@dpipeline@reg_sv_unit
+vinstruction_debug
+R3
+R13
+DXx4 work 25 instruction_debug_sv_unit 0 22 2RA8C>eIA41^_17oRmLcC3
+Z55 !s110 1713673578
+R5
+r1
+!s85 0
+!i10b 1
+!s100 lNGJoB4]2Cf[A[:CM2VXn3
+InUY8^4bh_3iNLFPf4angO0
+!s105 instruction_debug_sv_unit
+S1
+R4
+R9
+Z56 8I:/win/554_git/Muthu/421/instruction_debug.sv
+Z57 FI:/win/554_git/Muthu/421/instruction_debug.sv
+!i122 21
+L0 3 59
+R6
+31
+R48
+Z58 !s107 I:/win/554_git/Muthu/421/instruction_debug.sv|
+Z59 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/instruction_debug.sv|
+!i113 0
+R8
+R2
+Xinstruction_debug_sv_unit
+R3
+R13
+R55
+V2RA8C>eIA41^_17oRmLcC3
+r1
+!s85 0
+!i10b 1
+!s100 0WQ43Vf8=]mB05h6CeDIW2
+I2RA8C>eIA41^_17oRmLcC3
+!i103 1
+S1
+R4
+R9
+R56
+R57
+!i122 21
+R28
+R6
+31
+R48
+R58
+R59
+!i113 0
+R8
+R2
+vmemory
+R3
+R55
+!i10b 1
+!s100 <hjUb2[Z71hdV=YYa27?g0
+I51@0FUF@o@E]R29i5Id<83
+S1
+R4
+w1713656709
+8I:/win/554_git/Muthu/421/memory.sv
+FI:/win/554_git/Muthu/421/memory.sv
+!i122 22
+L0 3 181
+R5
+R6
+r1
+!s85 0
+31
+Z60 !s108 1713673578.000000
+!s107 I:/win/554_git/Muthu/421/memory.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/memory.sv|
+!i113 0
+R8
+R2
+vMEMWBpipelineReg
+R3
+R13
+DXx4 work 24 MEMWBpipelineReg_sv_unit 0 22 6[l52AS3gPj_Szl5eIQCP0
+Z61 !s110 1713673579
+R5
+r1
+!s85 0
+!i10b 1
+!s100 :m4<T341Vb=TGzIDkOS?i2
+I^n`[lTihX84N5TWoh<OOO2
+!s105 MEMWBpipelineReg_sv_unit
+S1
+R4
+R12
+Z62 8I:/win/554_git/Muthu/421/MEMWBpipelineReg.sv
+Z63 FI:/win/554_git/Muthu/421/MEMWBpipelineReg.sv
+!i122 23
+L0 5 61
+R6
+31
+R60
+Z64 !s107 I:/win/554_git/Muthu/421/MEMWBpipelineReg.sv|
+Z65 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/MEMWBpipelineReg.sv|
+!i113 0
+R8
+R2
+n@m@e@m@w@bpipeline@reg
+XMEMWBpipelineReg_sv_unit
+R3
+R13
+R61
+V6[l52AS3gPj_Szl5eIQCP0
+r1
+!s85 0
+!i10b 1
+!s100 38LQ67]8]U3hdA8LaHA813
+I6[l52AS3gPj_Szl5eIQCP0
+!i103 1
+S1
+R4
+R12
+R62
+R63
+!i122 23
+R32
+R6
+31
+R60
+R64
+R65
+!i113 0
+R8
+R2
+n@m@e@m@w@bpipeline@reg_sv_unit
+vRemoteComm
+R3
+R61
+!i10b 1
+!s100 l9CBRZ2;78HLYiRclLZg32
+Ig`7Pa87H>5W6:JN?kFMm:3
+S1
+R4
+w1712858878
+8I:/win/554_git/Muthu/421/RemoteComm.sv
+FI:/win/554_git/Muthu/421/RemoteComm.sv
+!i122 24
+L0 1 101
+R5
+R6
+r1
+!s85 0
+31
+Z66 !s108 1713673579.000000
+!s107 I:/win/554_git/Muthu/421/RemoteComm.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/RemoteComm.sv|
+!i113 0
+R8
+R2
+n@remote@comm
+vreset_synch
+R3
+Z67 !s110 1713673584
+!i10b 1
+!s100 Sg`JlH:VG8g_hUUik[5b53
+IzGb<2C]2mWJz1B8eT@RdP2
+S1
+R4
+w1713299804
+8I:/win/554_git/Muthu/421/Peripherals/reset_synch.sv
+FI:/win/554_git/Muthu/421/Peripherals/reset_synch.sv
+!i122 31
+L0 1 27
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713673583.000000
+!s107 I:/win/554_git/Muthu/421/Peripherals/reset_synch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/Peripherals/reset_synch.sv|
+!i113 0
+R8
+R2
+vrf
+R3
+Z68 !s110 1713673580
+!i10b 1
+!s100 IShY8KWoQLQZ]mb6mY<2B0
+IG8h<eoiQGA41gW<zf[YZR3
+S1
+R4
+R15
+8I:/win/554_git/Muthu/421/rf.sv
+FI:/win/554_git/Muthu/421/rf.sv
+!i122 25
+L0 4 84
+R5
+R6
+r1
+!s85 0
+31
+R66
+!s107 I:/win/554_git/Muthu/421/rf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/rf.sv|
+!i113 0
+R8
+R2
+vSEG7_LUT
+R67
+!i10b 1
+!s100 o1P=QAl9SobWckCbL^Flb3
+IXQOkQ0<z7;KI`=i`kO>em0
+R4
+Z69 w1712858877
+8I:/win/554_git/Muthu/421/Peripherals/SEG7_LUT.v
+FI:/win/554_git/Muthu/421/Peripherals/SEG7_LUT.v
+!i122 32
+L0 43 28
+R5
+R6
+r1
+!s85 0
+31
+Z70 !s108 1713673584.000000
+!s107 I:/win/554_git/Muthu/421/Peripherals/SEG7_LUT.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Muthu/421/Peripherals/SEG7_LUT.v|
+!i113 0
+Z71 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@s@e@g7_@l@u@t
+vSEG7_LUT_6
+Z72 !s110 1713673585
+!i10b 1
+!s100 M2C49lj?<V]`o_<DP^3<^1
+I2:h5Kc=]g^_e4LFlgcS_K3
+R4
+R69
+8I:/win/554_git/Muthu/421/Peripherals/SEG7_LUT_6.v
+FI:/win/554_git/Muthu/421/Peripherals/SEG7_LUT_6.v
+!i122 33
+L0 43 13
+R5
+R6
+r1
+!s85 0
+31
+R70
+!s107 I:/win/554_git/Muthu/421/Peripherals/SEG7_LUT_6.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/win/554_git/Muthu/421/Peripherals/SEG7_LUT_6.v|
+!i113 0
+R71
+R2
+n@s@e@g7_@l@u@t_6
+vshifter
+R3
+R68
+!i10b 1
+!s100 C:Sobn:>nb>_I1@Uf=LHZ2
+I@n0k5>6iDEbeHNekmR2X73
+S1
+R4
+R9
+8I:/win/554_git/Muthu/421/shifter.sv
+FI:/win/554_git/Muthu/421/shifter.sv
+!i122 26
+L0 1 137
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713673580.000000
+!s107 I:/win/554_git/Muthu/421/shifter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/shifter.sv|
+!i113 0
+R8
+R2
+vSPI_M
+R3
+R72
+!i10b 1
+!s100 2;dPTL]748eX8b2mI`Y[21
+IfE_aNleba]B55fY`A7SYA3
+S1
+R4
+w1706216646
+8I:/win/554_git/Muthu/421/Peripherals/SPI_M.sv
+FI:/win/554_git/Muthu/421/Peripherals/SPI_M.sv
+!i122 34
+L0 13 129
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713673585.000000
+!s107 I:/win/554_git/Muthu/421/Peripherals/SPI_M.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/Peripherals/SPI_M.sv|
+!i113 0
+R8
+R2
+n@s@p@i_@m
+vtoplevelTB
+R3
+!s110 1713675536
+!i10b 1
+!s100 cnQz4IAH6kneX<032l<;z2
+I:=jDM1KBDM@P7NnLj_5M>0
+S1
+R4
+w1713675533
+8I:/win/554_git/Muthu/421/topleveltb.sv
+FI:/win/554_git/Muthu/421/topleveltb.sv
+!i122 59
+L0 1 76
+R5
+R6
+r1
+!s85 0
+31
+!s108 1713675535.000000
+!s107 I:/win/554_git/Muthu/421/topleveltb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/topleveltb.sv|
+!i113 0
+R8
+R2
+ntoplevel@t@b
+vUART
+R3
+Z73 !s110 1713673586
+!i10b 1
+!s100 XORQ1nIF_:gHEh7hH2aVc3
+INKoVYzA0<21]XMjjoJzZC0
+S1
+R4
+Z74 w1712858915
+8I:/win/554_git/Muthu/421/Peripherals/UART.sv
+FI:/win/554_git/Muthu/421/Peripherals/UART.sv
+!i122 35
+L0 1 26
+R5
+R6
+r1
+!s85 0
+31
+Z75 !s108 1713673586.000000
+!s107 I:/win/554_git/Muthu/421/Peripherals/UART.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/Peripherals/UART.sv|
+!i113 0
+R8
+R2
+n@u@a@r@t
+vUART_rx
+R3
+R73
+!i10b 1
+!s100 `lPTd1QAb>;IY_mcVAE[I2
+Inb;c4[fS7I>VznO0APDHH0
+S1
+R4
+R74
+8I:/win/554_git/Muthu/421/Peripherals/UART_rx.sv
+FI:/win/554_git/Muthu/421/Peripherals/UART_rx.sv
+!i122 36
+L0 1 110
+R5
+R6
+r1
+!s85 0
+31
+R75
+!s107 I:/win/554_git/Muthu/421/Peripherals/UART_rx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/Peripherals/UART_rx.sv|
+!i113 0
+R8
+R2
+n@u@a@r@t_rx
+vUART_tx
+R3
+!s110 1713673587
+!i10b 1
+!s100 EZAfTIQk8_b^WZA7HX1GS2
+IgXedHLo@=Smk3E0e56]LN0
+S1
+R4
+R74
+8I:/win/554_git/Muthu/421/Peripherals/UART_tx.sv
+FI:/win/554_git/Muthu/421/Peripherals/UART_tx.sv
+!i122 37
+L0 1 118
+R5
+R6
+r1
+!s85 0
+31
+Z76 !s108 1713673587.000000
+!s107 I:/win/554_git/Muthu/421/Peripherals/UART_tx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/Peripherals/UART_tx.sv|
+!i113 0
+R8
+R2
+n@u@a@r@t_tx
+vUART_wrapper
+R3
+!s110 1713673588
+!i10b 1
+!s100 eSA>SBjXbLQSPO3gYKPnf2
+IFM9H@hc6IQT7SZ;3V>_W:1
+S1
+R4
+w1702163064
+8I:/win/554_git/Muthu/421/Peripherals/UART_wrapper.sv
+FI:/win/554_git/Muthu/421/Peripherals/UART_wrapper.sv
+!i122 38
+L0 1 81
+R5
+R6
+r1
+!s85 0
+31
+R76
+!s107 I:/win/554_git/Muthu/421/Peripherals/UART_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/Peripherals/UART_wrapper.sv|
+!i113 0
+R8
+R2
+n@u@a@r@t_wrapper
+vwb
+R3
+!s110 1713673581
+!i10b 1
+!s100 z7@o=[9B?]BIUL@7A3F>63
+I1^V3;GYD]lIO@C0XJM>Ab0
+S1
+R4
+R9
+8I:/win/554_git/Muthu/421/wb.sv
+FI:/win/554_git/Muthu/421/wb.sv
+!i122 27
+L0 3 14
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 I:/win/554_git/Muthu/421/wb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/Muthu/421/wb.sv|
+!i113 0
+R8
+R2

@@ -75,19 +75,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	UART
 
-} {} {}} I:/win/554_git/Bootloader/data_mem.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Bootloader/data_mem.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module DM
-
-Top level modules:
-	DM
-
 } {} {}} I:/win/554_git/Bootloader/rf.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Bootloader/rf.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module rf
 
 Top level modules:
 	rf
+
+} {} {}} I:/win/554_git/Bootloader/data_mem.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Bootloader/data_mem.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module DM
+
+Top level modules:
+	DM
 
 } {} {}} I:/win/554_git/Bootloader/src_mux.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Bootloader/src_mux.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -96,19 +96,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	src_mux
 
-} {} {}} I:/win/554_git/Bootloader/spart_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Bootloader/spart_tb.sv
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module spart_tb
-
-Top level modules:
-	spart_tb
-
 } {} {}} I:/win/554_git/Bootloader/alu.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Bootloader/alu.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module alu
 
 Top level modules:
 	alu
+
+} {} {}} I:/win/554_git/Bootloader/spart_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Bootloader/spart_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module spart_tb
+
+Top level modules:
+	spart_tb
 
 } {} {}} I:/win/554_git/Bootloader/cpu_tb.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Bootloader/cpu_tb.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -124,19 +124,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	br_bool
 
-} {} {}} I:/win/554_git/Bootloader/cpu.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Bootloader/cpu.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module cpu
-
-Top level modules:
-	cpu
-
 } {} {}} I:/win/554_git/Bootloader/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Bootloader/UART_rx.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module UART_rx
 
 Top level modules:
 	UART_rx
+
+} {} {}} I:/win/554_git/Bootloader/cpu.v {1 {vlog -work work -vopt -stats=none I:/win/554_git/Bootloader/cpu.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module cpu
+
+Top level modules:
+	cpu
 
 } {} {}} I:/win/554_git/Bootloader/circular_queue_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Bootloader/circular_queue_tb.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -145,18 +145,18 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	circular_queue_tb
 
-} {} {}} I:/win/554_git/Bootloader/UART_tx.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Bootloader/UART_tx.sv
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module UART_tx
-
-Top level modules:
-	UART_tx
-
 } {} {}} I:/win/554_git/Bootloader/reset_synch.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Bootloader/reset_synch.sv
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module reset_synch
 
 Top level modules:
 	reset_synch
+
+} {} {}} I:/win/554_git/Bootloader/UART_tx.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/Bootloader/UART_tx.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module UART_tx
+
+Top level modules:
+	UART_tx
 
 } {} {}}
