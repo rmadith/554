@@ -1,0 +1,188 @@
+# Compile of ALU.sv was successful.
+# Compile of branch_unit.sv was successful.
+# Compile of BTB_and_PC.sv was successful.
+# Compile of CheckForControlToUse.sv failed with 4 errors.
+# Compile of CheckForLoadToUse.sv failed with 9 errors.
+# Compile of common_def.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of cpu.sv failed with 2 errors.
+# Compile of cpu_tb.sv was successful.
+# Compile of decode.sv was successful.
+# Compile of dmem8.sv failed with 9 errors.
+# Compile of execute.sv was successful.
+# Compile of EXMEMpipelineReg.sv was successful.
+# Compile of extension_unit.sv was successful.
+# Compile of fetch.sv failed with 1 errors.
+# Compile of fetchTB.sv was successful.
+# Compile of forwardToD.sv was successful.
+# Compile of forwardToEX.sv was successful.
+# Compile of forwardToMEM.sv was successful.
+# Compile of HazardDetection.sv was successful.
+# Compile of IDEXpipelineReg.sv was successful.
+# Compile of IFIDpipelineReg.sv was successful.
+# Compile of instruction_debug.sv was successful.
+# Compile of memory.sv failed with 1 errors.
+# Compile of MEMWBpipelineReg.sv was successful.
+# Compile of rf.sv was successful.
+# Compile of shifter.sv was successful.
+# Compile of wb.sv was successful.
+# 28 compiles, 6 failed with 26 errors.
+# Compile of CheckForControlToUse.sv was successful.
+# Compile of CheckForLoadToUse.sv was successful.
+# Compile of cpu.sv was successful.
+# Compile of dmem8.sv was successful.
+# Compile of fetch.sv failed with 3 errors.
+# Compile of memory.sv failed with 3 errors.
+# 6 compiles, 2 failed with 6 errors.
+# Compile of fetch.sv was successful.
+# Compile of memory.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.cpu_tb -voptargs=+acc
+# vsim work.cpu_tb -voptargs="+acc" 
+# Start time: 18:45:23 on Apr 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: I:\win\554_git\Muthu\420\cpu.sv(314): (vopt-2685) [TFMPC] - Too few port connections for 'iMemory'.  Expected 11, found 8.
+# ** Warning: I:\win\554_git\Muthu\420\cpu.sv(314): (vopt-2718) [TFMPC] - Missing connection for port 'boot_data'.
+# ** Warning: I:\win\554_git\Muthu\420\cpu.sv(314): (vopt-2718) [TFMPC] - Missing connection for port 'boot_addr'.
+# ** Warning: I:\win\554_git\Muthu\420\cpu.sv(314): (vopt-2718) [TFMPC] - Missing connection for port 'debug'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (13) for port 'boot_addr'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK0 File: I:/win/554_git/Muthu/420/memory.sv Line: 48
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'boot_data'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK0 File: I:/win/554_git/Muthu/420/memory.sv Line: 48
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (13) for port 'boot_addr'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK1 File: I:/win/554_git/Muthu/420/memory.sv Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'boot_data'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK1 File: I:/win/554_git/Muthu/420/memory.sv Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (13) for port 'boot_addr'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK2 File: I:/win/554_git/Muthu/420/memory.sv Line: 50
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'boot_data'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK2 File: I:/win/554_git/Muthu/420/memory.sv Line: 50
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (13) for port 'boot_addr'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK3 File: I:/win/554_git/Muthu/420/memory.sv Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'boot_data'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK3 File: I:/win/554_git/Muthu/420/memory.sv Line: 51
+# Compile of dmem8.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/Muthu/420/cpu_tb.sv(87)
+#    Time: 359 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/Muthu/420/cpu_tb.sv line 87
+do I:/win/554_git/Muthu/420/wave.do
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/Muthu/420/cpu_tb.sv(87)
+#    Time: 359 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/Muthu/420/cpu_tb.sv line 87

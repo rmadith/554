@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at UART_rx.sv(10): object "receiving" differs only in case from object "RECEIVING" in the same scope File: I:/win/554_git/Muthu/420/Peripherals/UART_rx.sv Line: 10
+Info (10281): Verilog HDL Declaration information at reset_synch.sv(4): object "RST_n" differs only in case from object "rst_n" in the same scope File: I:/win/554_git/Muthu/420/Peripherals/reset_synch.sv Line: 4
+Warning (10268): Verilog HDL information at rf.sv(57): always construct contains both blocking and non-blocking assignments File: I:/win/554_git/Muthu/420/rf.sv Line: 57
+Warning (10268): Verilog HDL information at de1_soc.sv(101): always construct contains both blocking and non-blocking assignments File: I:/win/554_git/Muthu/420/Questa/de1_soc.sv Line: 101
