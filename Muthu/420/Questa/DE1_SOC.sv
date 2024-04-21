@@ -113,7 +113,7 @@ always_ff @(posedge clk, negedge rst_n)
 always_comb begin
 	nxt_state = state;
 	case(state)
-		default: if(!debug_sig) nxt_state <= DEBUG;
+		default: if(debug_sig) nxt_state <= DEBUG;
 		DEBUG: if(!debug_sig) nxt_state <= IDLE;
 	endcase
 end
@@ -140,8 +140,9 @@ bootloader iboot (.clk(clk), .rst_n(rst_n), .debug(state), .addr(boot_addr), .da
 					
 assign cpu_rst_n = (state) ? 1'b0 : rst_n;
 // CPU
-cpu iCPU(.clk(clk), .rst_n(rst_n | state), .boot_addr(boot_addr), .boot_data(boot_data), 
-			.debug(state), .memMappedAddr(memMappedAddr), .memMappedDataOut(memMappedDataOut), .joystick_data({busy,19'b0,joystick_data}), .halt(LEDR[9]));
+cpu iCPU(.clk(clk), .rst_n(cpu_rst_n), .boot_addr(boot_addr), .boot_data(boot_data), 
+			.debug(state), .memMappedAddr(memMappedAddr), .memMappedDataOut(memMappedDataOut), 
+			.joystick_data({busy,19'b0,joystick_data}), .halt(LEDR[9]));
 
 // Memory Mapping
 always_comb begin
@@ -162,8 +163,11 @@ end
 joystick ijoy (.ADC_CONVST(ADC_CONVST), .ADC_DIN(ADC_DIN), .ADC_DOUT(ADC_DOUT), 
 					.ADC_SCLK(ADC_SCLK), .clk(clk), .rst_n(rst_n), .done(done), .val(joystick_data));
 
+wire [23:0] seg_addr;
+assign seg_addr = (debug_sig) ? boot_addr[23:0] : memMappedAddr[23:0];
+
 // Debug : SEG7 display
-SEG7_LUT_6 	iseg (.oSEG0(HEX0),.oSEG1(HEX1), .oSEG2(HEX2),.oSEG3(HEX3), .oSEG4(HEX4),.oSEG5(HEX5), .iDIG(boot_addr[23:0]));
+SEG7_LUT_6 	iseg (.oSEG0(HEX0),.oSEG1(HEX1), .oSEG2(HEX2),.oSEG3(HEX3), .oSEG4(HEX4),.oSEG5(HEX5), .iDIG(seg_addr));
 
 
 // BitMap Display
