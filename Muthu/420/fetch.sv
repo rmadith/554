@@ -1,6 +1,5 @@
 `default_nettype none
 
-`define LOAD_INSTR_FILE
 
 module fetch (
 	
@@ -30,12 +29,9 @@ module fetch (
     reg [31:0] instr_mem[0:8191];   // 2 ^ 13
 
 
-    `ifdef LOAD_INSTR_FILE
     initial begin
-        $readmemh("jal.hex",instr_mem);
+        $readmemh("muthu.hex",instr_mem);
     end
-
-    `endif
 
 
     // Instaniate BTB/PC module

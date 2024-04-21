@@ -73,19 +73,32 @@ module DE1_SOC(
 	inout 		    [35:0]		GPIO
 );
 
-
+localparam BMP_CTL =  32'hFFFFC008;          // address for BMP Control
+localparam BMP_XLOC = 32'hFFFFC009;         // address for BMP X Location
+localparam BMP_YLOC = 32'hFFFFC00A;         // address for BMP Y Location
+localparam BMP_STAT = 32'hFFFFC00B;         // address for BMP Status 
 
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
 wire rst_n, clk, pll_locked, debug_sig;
 wire [31:0] boot_addr, boot_data;
+wire cpu_rst_n;
 
 reg write;
 reg [5:0] done;
 wire [11:0] joystick_data;
 
 wire [31:0] memMappedAddr, memMappedDataOut;
+
+// VGA
+reg [9:0] xloc, yloc;  
+wire add_fnt;
+wire [5:0] fnt_indx;
+wire add_img;
+wire [4:0] image_indx;
+wire rem_img;
+wire busy;
 
 // Debug State Machine
 typedef enum reg {IDLE, DEBUG} debug_state_t;
@@ -114,7 +127,7 @@ assign LEDR[7] = state;
 
 // Debouncing
 reset_synch irst(.RST_n(KEY[0]), .clk(clk), .rst_n(rst_n), .pll_locked(pll_locked));
-reset_synch idebug(.RST_n(KEY[1]), .clk(clk), .rst_n(debug_sig), .pll_locked(1'b1));
+reset_synch idebug(.RST_n(SW[0]), .clk(clk), .rst_n(debug_sig), .pll_locked(1'b1));
 
 // PLL
 pll iPLL (.refclk(CLOCK2_50), .rst(~KEY[0]),.outclk_0(clk),.outclk_1(VGA_CLK),
@@ -124,22 +137,23 @@ pll iPLL (.refclk(CLOCK2_50), .rst(~KEY[0]),.outclk_0(clk),.outclk_1(VGA_CLK),
 bootloader iboot (.clk(clk), .rst_n(rst_n), .debug(state), .addr(boot_addr), .data(boot_data), 
 					.increment(LEDR[6]), .RX(GPIO[5]), .TX(GPIO[3]), .outdata(memMappedDataOut), .write(write));
 
-
+					
+assign cpu_rst_n = (state) ? 1'b0 : rst_n;
 // CPU
 cpu iCPU(.clk(clk), .rst_n(rst_n | state), .boot_addr(boot_addr), .boot_data(boot_data), 
-			.debug(state), .memMappedAddr(memMappedAddr), .memMappedDataOut(memMappedDataOut), .joystick_data({20'b0,joystick_data}), .halt(LEDR[9]));
+			.debug(state), .memMappedAddr(memMappedAddr), .memMappedDataOut(memMappedDataOut), .joystick_data({busy,19'b0,joystick_data}), .halt(LEDR[9]));
 
 // Memory Mapping
 always_comb begin
 	write = 0;
 	done = 'b0;
-	// we_cpu = 0;
+	we_cpu = 0;
 	case(memMappedAddr)
 		32'hFFFFC001: 	write = 1;								// TX from bootloader to Macbook
 		32'hFFFFC002: 	done = memMappedDataOut[5:0];			// Write to joystick
-		// BMP_CTL: 		we_cpu = 1;
-		// BMP_YLOC: 		we_cpu = 1;
-		// BMP_XLOC: 		we_cpu = 1;
+		BMP_CTL: 		we_cpu = 1;
+		BMP_YLOC: 		we_cpu = 1;
+		BMP_XLOC: 		we_cpu = 1;
 		default: 		write = 0;
 	endcase
 end
@@ -150,6 +164,32 @@ joystick ijoy (.ADC_CONVST(ADC_CONVST), .ADC_DIN(ADC_DIN), .ADC_DOUT(ADC_DOUT),
 
 // Debug : SEG7 display
 SEG7_LUT_6 	iseg (.oSEG0(HEX0),.oSEG1(HEX1), .oSEG2(HEX2),.oSEG3(HEX3), .oSEG4(HEX4),.oSEG5(HEX5), .iDIG(boot_addr[23:0]));
+
+
+// BitMap Display
+BMP_display IBMP (.clk(clk), .VGA_CLK(VGA_CLK), .rst_n(rst_n), .VGA_BLANK_N(VGA_BLANK_N), .VGA_B(VGA_B), .VGA_G(VGA_G), .VGA_HS(VGA_HS), .VGA_R(VGA_R), 
+					.VGA_SYNC_N(VGA_SYNC_N), .VGA_VS(VGA_VS), .xloc(xloc), .yloc(yloc), .add_fnt(add_fnt), .fnt_indx(fnt_indx), .add_img(add_img), 
+					.image_indx(image_indx), .rem_img(rem_img), .busy(busy));
+
+//   // Updating Xloc
+always @(posedge clk, negedge rst_n)
+    if(!rst_n)
+      xloc = 'b0;
+    else if((memMappedAddr == BMP_XLOC) && we_cpu) // Qualifying the write
+      xloc = memMappedDataOut[9:0];
+
+//   // Update Yloc
+always @(posedge clk, negedge rst_n)
+    if(!rst_n)
+      yloc = 'b0;
+    else if((memMappedAddr == BMP_YLOC) && we_cpu) // Qualifying the read
+      yloc = memMappedDataOut[9:0];
+
+assign add_fnt = (memMappedAddr === BMP_CTL && we_cpu) ? memMappedDataOut[15] : 1'b0;
+assign fnt_indx = (memMappedAddr === BMP_CTL && we_cpu) ? memMappedDataOut[14:9] : 'b0;
+assign add_img = (memMappedAddr === BMP_CTL && we_cpu) ? memMappedDataOut[6] : 'b0;
+assign image_indx = (memMappedAddr === BMP_CTL  && we_cpu) ? memMappedDataOut[4:0] : 5'h01;
+assign rem_img = (memMappedAddr === BMP_CTL && we_cpu) ? memMappedDataOut[5] : 1'b0;
 
 
 

@@ -152,7 +152,7 @@ always_comb begin : txStateMachine
                                    trmt = 1;
                                    tx_increment = 1;
                             end
-                            if(transmission_count === 3'b101) begin
+                            if(transmission_count === 3'b100) begin
                                    nxt_tx_state = STEADY;
                                    tx_rst = 1;
                             end 

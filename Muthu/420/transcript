@@ -5,14 +5,16 @@
 # Compile of CheckForLoadToUse.sv failed with 9 errors.
 # Compile of common_def.sv was successful.
 # Compile of control_unit.sv was successful.
-# Compile of cpu.sv failed with 2 errors.
+# Compile of cpu.sv was successful.
 # Compile of cpu_tb.sv was successful.
+# Compile of DE1_SOC.sv failed with 45 errors.
+# Compile of DE1_SOC_tb.sv was successful.
 # Compile of decode.sv was successful.
-# Compile of dmem8.sv failed with 9 errors.
+# Compile of dmem8.sv was successful.
 # Compile of execute.sv was successful.
 # Compile of EXMEMpipelineReg.sv was successful.
 # Compile of extension_unit.sv was successful.
-# Compile of fetch.sv failed with 1 errors.
+# Compile of fetch.sv was successful.
 # Compile of fetchTB.sv was successful.
 # Compile of forwardToD.sv was successful.
 # Compile of forwardToEX.sv was successful.
@@ -21,38 +23,115 @@
 # Compile of IDEXpipelineReg.sv was successful.
 # Compile of IFIDpipelineReg.sv was successful.
 # Compile of instruction_debug.sv was successful.
-# Compile of memory.sv failed with 1 errors.
+# Compile of memory.sv was successful.
 # Compile of MEMWBpipelineReg.sv was successful.
+# Compile of RemoteComm.sv was successful.
 # Compile of rf.sv was successful.
 # Compile of shifter.sv was successful.
+# Compile of topleveltb.sv failed with 3 errors.
 # Compile of wb.sv was successful.
-# 28 compiles, 6 failed with 26 errors.
+# Compile of A2D_intf.sv was successful.
+# Compile of bootloader.sv was successful.
+# Compile of circular_queue.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# Compile of reset_synch.sv was successful.
+# Compile of SEG7_LUT.v was successful.
+# Compile of SEG7_LUT_6.v was successful.
+# Compile of SPI_M.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 44 compiles, 5 failed with 76 errors.
 # Compile of CheckForControlToUse.sv was successful.
 # Compile of CheckForLoadToUse.sv was successful.
-# Compile of cpu.sv was successful.
-# Compile of dmem8.sv was successful.
-# Compile of fetch.sv failed with 3 errors.
-# Compile of memory.sv failed with 3 errors.
-# 6 compiles, 2 failed with 6 errors.
-# Compile of fetch.sv was successful.
-# Compile of memory.sv was successful.
-# 2 compiles, 0 failed with no errors.
-vsim work.cpu_tb -voptargs=+acc
-# vsim work.cpu_tb -voptargs="+acc" 
-# Start time: 18:45:23 on Apr 20,2024
+# Compile of DE1_SOC.sv failed with 45 errors.
+# Compile of topleveltb.sv failed with 3 errors.
+# Compile of joystick.sv failed with 15 errors.
+# 5 compiles, 3 failed with 63 errors.
+# Compile of DE1_SOC.sv failed with 45 errors.
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 3 compiles, 2 failed with 60 errors.
+# Compile of DE1_SOC.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+vsim -voptargs=+acc work.toplevelTB
+# vsim -voptargs="+acc" work.toplevelTB 
+# Start time: 23:28:28 on Apr 20,2024
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: I:\win\554_git\Muthu\420\cpu.sv(314): (vopt-2685) [TFMPC] - Too few port connections for 'iMemory'.  Expected 11, found 8.
-# ** Warning: I:\win\554_git\Muthu\420\cpu.sv(314): (vopt-2718) [TFMPC] - Missing connection for port 'boot_data'.
-# ** Warning: I:\win\554_git\Muthu\420\cpu.sv(314): (vopt-2718) [TFMPC] - Missing connection for port 'boot_addr'.
-# ** Warning: I:\win\554_git\Muthu\420\cpu.sv(314): (vopt-2718) [TFMPC] - Missing connection for port 'debug'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# ** Error: I:/win/554_git/Muthu/421/DE1_SOC.sv(153): Module 'joystick' is not defined.
+#  For instance 'ijoy' at path 'toplevelTB.DE'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 23:28:32 on Apr 20,2024, Elapsed time: 0:00:04
+# Errors: 1, Warnings: 9
+# Compile of DE1_SOC.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+vsim -voptargs=+acc work.toplevelTB
+# vsim -voptargs="+acc" work.toplevelTB 
+# Start time: 23:29:12 on Apr 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(8): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
 # Loading sv_std.std
-# Loading work.common_def(fast)
-# Loading work.cpu_tb_sv_unit(fast)
-# Loading work.cpu_tb(fast)
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
 # Loading work.cpu(fast)
 # Loading work.fetch(fast)
 # Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
 # Loading work.IFIDpipelineReg_sv_unit(fast)
 # Loading work.IFIDpipelineReg(fast)
 # Loading work.decode(fast)
@@ -80,35 +159,821 @@ vsim work.cpu_tb -voptargs=+acc
 # Loading work.CheckForControlToUse_sv_unit(fast)
 # Loading work.CheckForControlToUse(fast)
 # Loading work.CheckForControlToUse(fast__1)
-# Loading work.instruction_debug_sv_unit(fast)
-# Loading work.instruction_debug(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (13) for port 'boot_addr'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK0 File: I:/win/554_git/Muthu/420/memory.sv Line: 48
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'boot_data'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK0 File: I:/win/554_git/Muthu/420/memory.sv Line: 48
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (13) for port 'boot_addr'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK1 File: I:/win/554_git/Muthu/420/memory.sv Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'boot_data'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK1 File: I:/win/554_git/Muthu/420/memory.sv Line: 49
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (13) for port 'boot_addr'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK2 File: I:/win/554_git/Muthu/420/memory.sv Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'boot_data'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK2 File: I:/win/554_git/Muthu/420/memory.sv Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (13) for port 'boot_addr'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK3 File: I:/win/554_git/Muthu/420/memory.sv Line: 51
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'boot_data'. The port definition is at: I:/win/554_git/Muthu/420/dmem8.sv(1).
-#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iMemory/iBNK3 File: I:/win/554_git/Muthu/420/memory.sv Line: 51
-# Compile of dmem8.sv was successful.
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'GPIO'.
+#    Time: 0 ns  Iteration: 0  Instance: /toplevelTB/DE File: I:/win/554_git/Muthu/421/topleveltb.sv Line: 8
+# Error loading design
+# End time: 23:29:18 on Apr 20,2024, Elapsed time: 0:00:06
+# Errors: 1, Warnings: 44
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+vsim -voptargs=+acc work.toplevelTB
+# vsim -voptargs="+acc" work.toplevelTB 
+# Start time: 23:30:51 on Apr 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'GPIO'.
+#    Time: 0 ns  Iteration: 0  Instance: /toplevelTB/DE File: I:/win/554_git/Muthu/421/topleveltb.sv Line: 9
+# Error loading design
+# End time: 23:30:58 on Apr 20,2024, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 46
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+vsim -voptargs=+acc work.toplevelTB
+# vsim -voptargs="+acc" work.toplevelTB 
+# Start time: 23:33:29 on Apr 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'GPIO'.
+#    Time: 0 ns  Iteration: 0  Instance: /toplevelTB/DE File: I:/win/554_git/Muthu/421/topleveltb.sv Line: 9
+# Error loading design
+# End time: 23:33:35 on Apr 20,2024, Elapsed time: 0:00:06
+# Errors: 1, Warnings: 45
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+vsim -voptargs=+acc work.toplevelTB
+# vsim -voptargs="+acc" work.toplevelTB 
+# Start time: 23:34:35 on Apr 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'GPIO'.
+#    Time: 0 ns  Iteration: 0  Instance: /toplevelTB/DE File: I:/win/554_git/Muthu/421/topleveltb.sv Line: 9
+# Error loading design
+# End time: 23:34:43 on Apr 20,2024, Elapsed time: 0:00:08
+# Errors: 1, Warnings: 45
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+vsim -voptargs=+acc work.toplevelTB
+# vsim -voptargs="+acc" work.toplevelTB 
+# Start time: 23:35:12 on Apr 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(9): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'GPIO'.
+#    Time: 0 ns  Iteration: 0  Instance: /toplevelTB/DE File: I:/win/554_git/Muthu/421/topleveltb.sv Line: 9
+# Error loading design
+# End time: 23:35:17 on Apr 20,2024, Elapsed time: 0:00:05
+# Errors: 1, Warnings: 45
+# Optimization canceled
+# Load canceled
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+vsim -voptargs=+acc work.toplevelTB
+# vsim -voptargs="+acc" work.toplevelTB 
+# Start time: 23:39:33 on Apr 20,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+add wave -position insertpoint sim:/toplevelTB/*
+run -all
+run -all
+run -all
+run -all
+run -all
+run -all
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 30 errors.
+# Compile of joystick.sv failed with 30 errors.
+# 2 compiles, 1 failed with 30 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(55)
+#    Time: 174205 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 55
+# Compile of fetch.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
-# Loading work.common_def(fast)
-# Loading work.cpu_tb_sv_unit(fast)
-# Loading work.cpu_tb(fast)
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
 # Loading work.cpu(fast)
 # Loading work.fetch(fast)
 # Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
 # Loading work.IFIDpipelineReg_sv_unit(fast)
 # Loading work.IFIDpipelineReg(fast)
 # Loading work.decode(fast)
@@ -136,22 +1001,93 @@ restart
 # Loading work.CheckForControlToUse_sv_unit(fast)
 # Loading work.CheckForControlToUse(fast)
 # Loading work.CheckForControlToUse(fast__1)
-# Loading work.instruction_debug_sv_unit(fast)
-# Loading work.instruction_debug(fast)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
 run -all
-# Hit ECALL
-# ** Note: $stop    : I:/win/554_git/Muthu/420/cpu_tb.sv(87)
-#    Time: 359 ns  Iteration: 2  Instance: /cpu_tb
-# Break in Module cpu_tb at I:/win/554_git/Muthu/420/cpu_tb.sv line 87
-do I:/win/554_git/Muthu/420/wave.do
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(55)
+#    Time: 174205 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 55
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of bootloader.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "bootloader(fast)".
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(55)
+#    Time: 174205 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 55
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(55)
+#    Time: 348375 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 55
 restart
 # ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.common_def(fast)
-# Loading work.cpu_tb_sv_unit(fast)
-# Loading work.cpu_tb(fast)
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
 # Loading work.cpu(fast)
 # Loading work.fetch(fast)
 # Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
 # Loading work.IFIDpipelineReg_sv_unit(fast)
 # Loading work.IFIDpipelineReg(fast)
 # Loading work.decode(fast)
@@ -179,10 +1115,919 @@ restart
 # Loading work.CheckForControlToUse_sv_unit(fast)
 # Loading work.CheckForControlToUse(fast)
 # Loading work.CheckForControlToUse(fast__1)
-# Loading work.instruction_debug_sv_unit(fast)
-# Loading work.instruction_debug(fast)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+# Compile of DE1_SOC.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
 run -all
-# Hit ECALL
-# ** Note: $stop    : I:/win/554_git/Muthu/420/cpu_tb.sv(87)
-#    Time: 359 ns  Iteration: 2  Instance: /cpu_tb
-# Break in Module cpu_tb at I:/win/554_git/Muthu/420/cpu_tb.sv line 87
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(55)
+#    Time: 174205 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 55
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(55)
+#    Time: 348375 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 55
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(55)
+#    Time: 522545 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 55
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(55)
+#    Time: 696715 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 55
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(55)
+#    Time: 870885 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 55
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(55)
+#    Time: 1045055 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 55
+log * -r
+# Compile of topleveltb.sv was successful.
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+run -all
+run -all
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+add wave -position insertpoint  \
+sim:/toplevelTB/DE/state
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(57)
+#    Time: 1045055 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 57
+restart
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(57)
+#    Time: 870885 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 57
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(57)
+#    Time: 1045055 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 57
+add wave -position insertpoint  \
+sim:/toplevelTB/DE/iboot/addr
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(57)
+#    Time: 1045055 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 57
+# Compile of topleveltb.sv was successful.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 1 failed with 15 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2685) [TFMPC] - Too few port connections for 'DE'.  Expected 45, found 3.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_VS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_SYNC_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_R'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_HS'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_G'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_B'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'VGA_BLANK_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'SW'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'FPGA_I2C_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_WE_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_UDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_RAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_LDQM'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_DQ'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CKE'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_CAS_N'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_BA'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'DRAM_ADDR'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK4_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'CLOCK3_50'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_XCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_DACDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_BCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCLRCK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'AUD_ADCDAT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: I:/win/554_git/Muthu/421/topleveltb.sv(10): (vopt-2718) [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading sv_std.std
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(57)
+#    Time: 1045055 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 57
+add wave -position insertpoint  \
+sim:/toplevelTB/DE/iboot/data
+add wave -position insertpoint  \
+sim:/toplevelTB/DE/iboot/addr
+run -all
+add wave -position insertpoint  \
+sim:/toplevelTB/DE/iboot/RX \
+sim:/toplevelTB/DE/iboot/TX
+add wave -position insertpoint  \
+sim:/toplevelTB/DE/iboot/iUART/tx_data
+add wave -position insertpoint  \
+sim:/toplevelTB/DE/iboot/iUART/tx_done
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(57)
+#    Time: 1045055 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 57
+run -all
+add wave -position insertpoint  \
+sim:/toplevelTB/iREMOTE/resp_rdy
+add wave -position insertpoint  \
+sim:/toplevelTB/iREMOTE/RX
+# Compile of topleveltb.sv failed with 1 errors.
+# Compile of joystick.sv failed with 15 errors.
+# 2 compiles, 2 failed with 16 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(57)
+#    Time: 1045055 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 57
+run -all
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=43.
+# Loading work.toplevelTB(fast)
+# Loading work.DE1_SOC(fast)
+# Loading work.bootloader(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.circular_queue(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.common_def(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.SEG7_LUT_6(fast)
+# Loading work.SEG7_LUT(fast)
+# Loading work.RemoteComm(fast)
+run -all
+# ** Note: $stop    : I:/win/554_git/Muthu/421/topleveltb.sv(57)
+#    Time: 1045055 ns  Iteration: 2  Instance: /toplevelTB
+# Break in Module toplevelTB at I:/win/554_git/Muthu/421/topleveltb.sv line 57
+# End time: 00:15:12 on Apr 21,2024, Elapsed time: 0:35:39
+# Errors: 0, Warnings: 44
