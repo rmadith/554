@@ -21,6 +21,9 @@ module BTB_and_PC (
     output logic [31:0] PC_IFID_in,
     output logic predict_branch_taken
 );
+
+    parameter turn_off_DBP = 1'b0;
+
 //////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////
     // Dynamic Branch Prediction //
@@ -46,8 +49,8 @@ module BTB_and_PC (
     assign current_location = PC_IFID_in[8:0];    // use the 9 LSB of the current PC as the location in the registers
     assign last_location = last_PC[8:0];
     assign last_tag = last_PC[15:9];
-    assign tag = PC_IFID_in[15:9];                // use bits 9 - 15 of the current PC as the tag  
-    assign pulled_branch_reg = branch_reg[location];
+    assign current_tag = PC_IFID_in[15:9];                // use bits 9 - 15 of the current PC as the tag  
+    assign pulled_branch_reg = branch_reg[current_location];
 
     ////////////////////////////
     // Config Branch Register //
@@ -59,7 +62,8 @@ module BTB_and_PC (
         // predict branch taken if the strong bit is set at the current location
         if(valid_reg[current_location] == 1'b1 && 
             strong_reg[current_location] == 1'b1 && 
-            pulled_branch_reg[38:32] == current_tag) begin           // check to see if strong bit is set                                 
+            pulled_branch_reg[38:32] == current_tag &&
+            turn_off_DBP != 1'b1) begin           // check to see if strong bit is set                                 
             predict_branch_taken <= 1'b1;
         end
 
@@ -67,7 +71,7 @@ module BTB_and_PC (
         if(branch | jumpAL) begin
             // if cache location is not valid, fill the location with data
             if(!valid_reg[last_location]) begin
-                branch_reg[last_location] <= {last_tag, Branch_PC};
+                branch_reg[last_location] <= {last_tag, branch_PC};
             end
         end
     end
@@ -77,7 +81,7 @@ module BTB_and_PC (
     ///////////////////////
     always @(posedge clk, negedge rst_n) begin
         if(!rst_n)                                  //on reset set strong bit to 0
-            strong_cache <= '{default:1'b0};     
+            strong_reg <= '{default:1'b0};     
         else if (branch | jumpAL) begin           
             if(takeBranch) begin                    // branch is taken for the current instruction      
                 strong_reg[last_location] <= 1'b1;

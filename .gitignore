@@ -6,7 +6,7 @@ RISC-V/MainProcessor/vsim.wlf
 RISC-V/MainProcessor/transcript
 RISC-V/MainProcessorNoPipe/work/
 RISC-V/MainProcessorPipe/work/
-.gitignore
+RISC-V/MainProcessorPipeBDP/work/
 RISC-V/MainProcessorNoPipe/rf.sv.bak
 RISC-V/MainProcessorNoPipe/RISC-V-SIM.cr.mti
 RISC-V/MainProcessorNoPipe/RISC-V-SIM.mpf
@@ -16,3 +16,7 @@ RISC-V/MainProcessorPipe/transcript
 RISC-V/MainProcessorPipe/vsim.wlf
 RISC-V/MainProcessorPipe/RISC-V-PIPE-SIM.mpf
 RISC-V/MainProcessorPipe/RISC-V-PIPE-SIM.cr.mti
+RISC-V/MainProcessorPipeBDP/DBP.cr.mti
+RISC-V/MainProcessorPipeBDP/DBP.mpf
+RISC-V/MainProcessorPipeBDP/transcript
+RISC-V/MainProcessorPipeBDP/vsim.wlf

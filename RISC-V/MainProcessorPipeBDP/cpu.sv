@@ -37,6 +37,8 @@ module cpu(
 
 	logic [31:0] branch_PC;
 	logic takeBranch;
+	logic branch;
+	logic jumpAL;
 
 	/////////////// IDEX pipeline register (outputs) //////////////////
 	logic [31:0] regData1_IDEX_out;
