@@ -1,0 +1,11 @@
+		### Dynamic Branch Test ###
+		addi x1, zero, 600	# load x1 with non-zero
+        addi x2, zero, 50   # load x2 with non-zero
+
+START:  addi x2, x2, 50     # increment x2 till x2 = x1
+		add x2, x2, zero
+		add x2, x2, zero
+        bne x1, x2, START
+
+        addi ra, zero, 0xAA
+		ECALL
