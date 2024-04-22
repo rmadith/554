@@ -31,7 +31,7 @@ module fetch (
 
     `ifdef LOAD_INSTR_FILE
     initial begin
-        $readmemh("../Verification/beq.hex",instr_mem);
+        $readmemh("../Verification/dynamic_branch_test.hex",instr_mem);
     end
 
     `endif
