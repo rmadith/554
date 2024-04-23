@@ -17,7 +17,7 @@ module BMP_display(
 	//////////// VGA //////////
 	output		          		VGA_BLANK_N,
 	output		     [7:0]		VGA_B,
-	output		          		VGA_CLK,
+	input		          		VGA_CLK,
 	output		     [7:0]		VGA_G,
 	output		          		VGA_HS,
 	output		     [7:0]		VGA_R,
@@ -32,8 +32,8 @@ module BMP_display(
   input [4:0] image_indx,
   input rem_img,
   output busy,
-  output clk,
-  output rst_n
+  input clk,
+  input rst_n
 );
 
   ////////////////////////////////////
@@ -52,13 +52,13 @@ module BMP_display(
   ////////////////////////////////////////////////////////
   // Instantiate PLL to generate clk and 25MHz VGA_CLK //
   //////////////////////////////////////////////////////
-  PLL iPLL(.refclk(REF_CLK), .rst(~RST_n),.outclk_0(clk),.outclk_1(VGA_CLK),
-           .locked(pll_locked));
+  // PLL iPLL(.refclk(REF_CLK), .rst(~RST_n),.outclk_0(clk),.outclk_1(VGA_CLK),
+  //          .locked(pll_locked));
  
   /////////////////////////////////////
   // instantiate rst_n synchronizer //
   ///////////////////////////////////
-  rst_synch iRST(.clk(clk),.RST_n(RST_n), .pll_locked(pll_locked), .rst_n(rst_n));
+  // rst_synch iRST(.clk(clk),.RST_n(RST_n), .pll_locked(pll_locked), .rst_n(rst_n));
  
   ///////////////////////////////////////
   // Instantiate VGA Timing Generator //

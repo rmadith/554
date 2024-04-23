@@ -79,6 +79,24 @@ always_ff @(posedge clk, negedge rst_n)
 		addr <= 3'b0;
 	else if(update)
 		addr <= addr + 1;
+		
+typedef enum reg {FIRST, AFTER} Y2_state_t;
+Y2_state_t curr, nxt;
+
+always_ff @(posedge clk, negedge rst_n)
+	if(!rst_n)
+		curr <= FIRST;
+	else
+		curr <= nxt;
+		
+always_comb begin
+	nxt = curr;
+	case(curr)
+		FIRST: if (Y2_update) nxt = AFTER;
+		default: nxt = AFTER;
+	endcase
+end
+		
 
 
 
@@ -175,9 +193,9 @@ always_ff @(posedge clk, negedge rst_n)
 always_ff @(posedge clk, negedge rst_n)
 	if(!rst_n)
 		y2_val <= 'b0;
-	else if(Y2_update && (volume > 12'hDFF))
+	else if(Y2_update && (volume > 12'hDFF) && curr)
 		y2_val <= 2'b10;
-	else if(Y2_update && (volume < 12'h05F))
+	else if(Y2_update && (volume < 12'h05F) && curr)
 		y2_val <= 2'b01;
 	else if(y2_done)
 		y2_val <= 2'b00;

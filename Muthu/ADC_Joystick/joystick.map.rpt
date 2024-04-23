@@ -1,5 +1,5 @@
 Analysis & Synthesis report for joystick
-Thu Apr 18 16:38:04 2024
+Tue Apr 23 11:14:15 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -60,13 +60,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr 18 16:38:04 2024          ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 23 11:14:15 2024          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; joystick                                       ;
 ; Top-level Entity Name           ; joystick                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 703                                            ;
+; Total registers                 ; 704                                            ;
 ; Total pins                      ; 32                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 2,688                                          ;
@@ -259,14 +259,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Estimate of Logic utilization (ALMs needed) ; 403                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 406                      ;
+; Combinational ALUT usage for logic          ; 407                      ;
 ;     -- 7 input functions                    ; 2                        ;
-;     -- 6 input functions                    ; 91                       ;
-;     -- 5 input functions                    ; 86                       ;
-;     -- 4 input functions                    ; 53                       ;
+;     -- 6 input functions                    ; 92                       ;
+;     -- 5 input functions                    ; 85                       ;
+;     -- 4 input functions                    ; 54                       ;
 ;     -- <=3 input functions                  ; 174                      ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 703                      ;
+; Dedicated logic registers                   ; 704                      ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 32                       ;
 ; Total MLAB memory bits                      ; 0                        ;
@@ -276,7 +276,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 393                      ;
-; Total fan-out                               ; 4385                     ;
+; Total fan-out                               ; 4393                     ;
 ; Average fan-out                             ; 3.65                     ;
 +---------------------------------------------+--------------------------+
 
@@ -286,7 +286,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                  ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |joystick                                                                                                                               ; 406 (36)            ; 703 (27)                  ; 2688              ; 0          ; 32   ; 0            ; |joystick                                                                                                                                                                                                                                                                                                                                            ; joystick                          ; work         ;
+; |joystick                                                                                                                               ; 407 (37)            ; 704 (28)                  ; 2688              ; 0          ; 32   ; 0            ; |joystick                                                                                                                                                                                                                                                                                                                                            ; joystick                          ; work         ;
 ;    |A2D_intf:iADC|                                                                                                                      ; 47 (19)             ; 60 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |joystick|A2D_intf:iADC                                                                                                                                                                                                                                                                                                                              ; A2D_intf                          ; work         ;
 ;       |SPI_M:iSPI|                                                                                                                      ; 28 (28)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |joystick|A2D_intf:iADC|SPI_M:iSPI                                                                                                                                                                                                                                                                                                                   ; SPI_M                             ; work         ;
 ;    |reset_synch:iRST|                                                                                                                   ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |joystick|reset_synch:iRST                                                                                                                                                                                                                                                                                                                           ; reset_synch                       ; work         ;
@@ -466,10 +466,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 703   ;
+; Total registers                              ; 704   ;
 ; Number of registers using Synchronous Clear  ; 109   ;
 ; Number of registers using Synchronous Load   ; 129   ;
-; Number of registers using Asynchronous Clear ; 291   ;
+; Number of registers using Asynchronous Clear ; 292   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 375   ;
 ; Number of registers using Preset             ; 0     ;
@@ -502,9 +502,9 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |joystick|addr[1]                           ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |joystick|A2D_intf:iADC|SPI_M:iSPI|n004[11] ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |joystick|A2D_intf:iADC|SPI_M:iSPI|n004[9]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |joystick|A2D_intf:iADC|SPI_M:iSPI|n003[2]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |joystick|A2D_intf:iADC|SPI_M:iSPI|n004[15] ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |joystick|A2D_intf:iADC|SPI_M:iSPI|n004[1]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |joystick|A2D_intf:iADC|SPI_M:iSPI|n003[3]  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |joystick|A2D_intf:iADC|Selector3           ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |joystick|A2D_intf:iADC|Selector1           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
@@ -643,26 +643,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 89                          ;
-;     CLR               ; 37                          ;
+; arriav_ff             ; 90                          ;
+;     CLR               ; 38                          ;
 ;     ENA               ; 4                           ;
 ;     ENA CLR           ; 31                          ;
 ;     ENA CLR SCLR      ; 11                          ;
 ;     plain             ; 6                           ;
-; arriav_lcell_comb     ; 85                          ;
+; arriav_lcell_comb     ; 86                          ;
 ;     arith             ; 11                          ;
 ;         1 data inputs ; 10                          ;
 ;         2 data inputs ; 1                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 73                          ;
+;     normal            ; 74                          ;
 ;         0 data inputs ; 9                           ;
 ;         1 data inputs ; 3                           ;
 ;         2 data inputs ; 4                           ;
 ;         3 data inputs ; 9                           ;
-;         4 data inputs ; 15                          ;
-;         5 data inputs ; 16                          ;
-;         6 data inputs ; 17                          ;
+;         4 data inputs ; 16                          ;
+;         5 data inputs ; 15                          ;
+;         6 data inputs ; 18                          ;
 ; boundary_port         ; 53                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
@@ -768,7 +768,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Thu Apr 18 16:37:37 2024
+    Info: Processing started: Tue Apr 23 11:13:43 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off joystick -c joystick
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -782,7 +782,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file a2d_int
     Info (12023): Found entity 1: A2D_intf File: I:/win/554_git/Muthu/ADC_Joystick/A2D_intf.sv Line: 1
 Info (12127): Elaborating entity "joystick" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at joystick.sv(81): truncated value with size 32 to match size of target (3) File: I:/win/554_git/Muthu/ADC_Joystick/joystick.sv Line: 81
-Info (10264): Verilog HDL Case Statement information at joystick.sv(107): all case item expressions in this case statement are onehot File: I:/win/554_git/Muthu/ADC_Joystick/joystick.sv Line: 107
+Info (10264): Verilog HDL Case Statement information at joystick.sv(125): all case item expressions in this case statement are onehot File: I:/win/554_git/Muthu/ADC_Joystick/joystick.sv Line: 125
 Warning (10034): Output port "LEDR[8..0]" at joystick.sv(24) has no driver File: I:/win/554_git/Muthu/ADC_Joystick/joystick.sv Line: 24
 Info (12128): Elaborating entity "reset_synch" for hierarchy "reset_synch:iRST" File: I:/win/554_git/Muthu/ADC_Joystick/joystick.sv Line: 56
 Info (12128): Elaborating entity "A2D_intf" for hierarchy "A2D_intf:iADC" File: I:/win/554_git/Muthu/ADC_Joystick/joystick.sv Line: 59
@@ -810,7 +810,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: I:/win/554_git/Muthu/ADC_Joystick/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.04.18.16:37:54 Progress: Loading sld88bcff22/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.04.23.11:14:04 Progress: Loading sld88bcff22/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -861,16 +861,16 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: I:/win/554_git/Muthu/ADC_Joystick/joystick.sv Line: 28
     Warning (15610): No output dependent on input pin "SW[8]" File: I:/win/554_git/Muthu/ADC_Joystick/joystick.sv Line: 28
     Warning (15610): No output dependent on input pin "SW[9]" File: I:/win/554_git/Muthu/ADC_Joystick/joystick.sv Line: 28
-Info (21057): Implemented 931 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 932 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 873 logic cells
+    Info (21061): Implemented 874 logic cells
     Info (21064): Implemented 21 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
     Info: Peak virtual memory: 4925 megabytes
-    Info: Processing ended: Thu Apr 18 16:38:04 2024
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Processing ended: Tue Apr 23 11:14:15 2024
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+

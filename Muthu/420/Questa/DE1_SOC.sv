@@ -100,6 +100,8 @@ wire [4:0] image_indx;
 wire rem_img;
 wire busy;
 
+reg we_cpu;
+
 // Debug State Machine
 typedef enum reg {IDLE, DEBUG} debug_state_t;
 debug_state_t state, nxt_state;
@@ -124,6 +126,7 @@ end
 //=======================================================
 assign LEDR[8] = !rst_n;
 assign LEDR[7] = state;
+assign LEDR[5] = !cpu_rst_n;
 
 // Debouncing
 reset_synch irst(.RST_n(KEY[0]), .clk(clk), .rst_n(rst_n), .pll_locked(pll_locked));
@@ -164,10 +167,10 @@ joystick ijoy (.ADC_CONVST(ADC_CONVST), .ADC_DIN(ADC_DIN), .ADC_DOUT(ADC_DOUT),
 					.ADC_SCLK(ADC_SCLK), .clk(clk), .rst_n(rst_n), .done(done), .val(joystick_data));
 
 wire [23:0] seg_addr;
-assign seg_addr = (debug_sig) ? boot_addr[23:0] : memMappedAddr[23:0];
+assign seg_addr = (state) ? boot_addr[23:0] : memMappedAddr[23:0];
 
 // Debug : SEG7 display
-SEG7_LUT_6 	iseg (.oSEG0(HEX0),.oSEG1(HEX1), .oSEG2(HEX2),.oSEG3(HEX3), .oSEG4(HEX4),.oSEG5(HEX5), .iDIG(seg_addr));
+SEG7_LUT_6 	iseg (.oSEG0(HEX0),.oSEG1(HEX1), .oSEG2(HEX2),.oSEG3(HEX3), .oSEG4(HEX4),.oSEG5(HEX5), .iDIG(boot_addr[23:0]));
 
 
 // BitMap Display

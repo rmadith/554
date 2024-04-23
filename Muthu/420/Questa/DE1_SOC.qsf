@@ -440,50 +440,8 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/UART_wrapper.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/UART_tx.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/UART_rx.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/UART.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/SPI_M.sv
-set_global_assignment -name VERILOG_FILE ../Peripherals/SEG7_LUT_6.v
-set_global_assignment -name VERILOG_FILE ../Peripherals/SEG7_LUT.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/reset_synch.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/joystick.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/circular_queue.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/bootloader.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/A2D_intf.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../wb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../shifter.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../rf.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../MEMWBpipelineReg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../memory.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../IFIDpipelineReg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../IDEXpipelineReg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../HazardDetection.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../forwardToMEM.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../forwardToEX.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../forwardToD.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../fetch.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../extension_unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../EXMEMpipelineReg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../execute.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../dmem8.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../decode.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../cpu.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../control_unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../common_def.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../CheckForLoadToUse.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../CheckForControlToUse.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../BTB_and_PC.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../branch_unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../ALU.sv
-set_global_assignment -name SDC_FILE DE1_SOC.SDC
-set_global_assignment -name QIP_FILE pll.qip
-set_global_assignment -name SIP_FILE pll.sip
-set_global_assignment -name SOURCE_FILE db/DE1_SOC.cmp.rdb
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
-set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "bootloader:iboot|circular_queue:iCPUQueue|consume_count[0]" -section_id auto_signaltap_0
@@ -708,5 +666,56 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name HEX_FILE ../Display/Font.hex
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/videoMem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/VGA_timing.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/PlaceBMP.sv
+set_global_assignment -name VERILOG_FILE ../Peripherals/BMP_display.v
+set_global_assignment -name SOURCE_FILE pll.cmp
+set_global_assignment -name SDC_FILE DE1_SOC.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE DE1_SOC.sv
+set_global_assignment -name VERILOG_FILE ../Display/BMP_ROM_Font.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/UART_wrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/UART_tx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/UART_rx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/UART.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/SPI_M.sv
+set_global_assignment -name VERILOG_FILE ../Peripherals/SEG7_LUT_6.v
+set_global_assignment -name VERILOG_FILE ../Peripherals/SEG7_LUT.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/reset_synch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/joystick.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/circular_queue.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/bootloader.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../Peripherals/A2D_intf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../wb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../shifter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../MEMWBpipelineReg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../IFIDpipelineReg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../IDEXpipelineReg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../HazardDetection.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../forwardToMEM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../forwardToEX.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../forwardToD.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../fetch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../extension_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../EXMEMpipelineReg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../execute.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../dmem8.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../decode.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../cpu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../control_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../common_def.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../CheckForLoadToUse.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../CheckForControlToUse.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../BTB_and_PC.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../branch_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../ALU.sv
+set_global_assignment -name SDC_FILE DE1_SOC.SDC
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name SIP_FILE pll.sip
+set_global_assignment -name SOURCE_FILE db/DE1_SOC.cmp.rdb
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
