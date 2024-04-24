@@ -119,7 +119,7 @@ SW[5] => ~NO_FANOUT~
 SW[6] => ~NO_FANOUT~
 SW[7] => ~NO_FANOUT~
 SW[8] => ~NO_FANOUT~
-SW[9] => ~NO_FANOUT~
+SW[9] => SW[9].IN1
 VGA_BLANK_N <= BMP_display:IBMP.VGA_BLANK_N
 VGA_B[0] <= BMP_display:IBMP.VGA_B
 VGA_B[1] <= BMP_display:IBMP.VGA_B
@@ -233,6 +233,15 @@ rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |tanks_test1|reset_synch:idebug
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tanks_test1|reset_synch:iBaud
 clk => rst_n~reg0.CLK
 clk => q1.CLK
 RST_n => rst_n~reg0.ACLR
@@ -569,6 +578,19 @@ outdata[29] => outdata[29].IN1
 outdata[30] => outdata[30].IN1
 outdata[31] => outdata[31].IN1
 write => write.IN1
+baud[0] => baud[0].IN1
+baud[1] => baud[1].IN1
+baud[2] => baud[2].IN1
+baud[3] => baud[3].IN1
+baud[4] => baud[4].IN1
+baud[5] => baud[5].IN1
+baud[6] => baud[6].IN1
+baud[7] => baud[7].IN1
+baud[8] => baud[8].IN1
+baud[9] => baud[9].IN1
+baud[10] => baud[10].IN1
+baud[11] => baud[11].IN1
+baud[12] => baud[12].IN1
 
 
 |tanks_test1|bootloader:iboot|UART:iUART
@@ -13563,14 +13585,14 @@ InstructionInFetch[28] => Equal5.IN6
 InstructionInFetch[29] => Equal5.IN5
 InstructionInFetch[30] => Equal5.IN4
 InstructionInFetch[31] => Equal5.IN3
-ReadReg1InFetch[0] => Equal0.IN6
-ReadReg1InFetch[1] => Equal0.IN5
-ReadReg1InFetch[2] => Equal0.IN4
+ReadReg1InFetch[0] => Equal0.IN4
+ReadReg1InFetch[1] => Equal0.IN3
+ReadReg1InFetch[2] => Equal0.IN2
 ReadReg1InFetch[3] => Equal0.IN1
 ReadReg1InFetch[4] => Equal0.IN0
-ReadReg2InFetch[0] => Equal1.IN6
-ReadReg2InFetch[1] => Equal1.IN5
-ReadReg2InFetch[2] => Equal1.IN4
+ReadReg2InFetch[0] => Equal1.IN4
+ReadReg2InFetch[1] => Equal1.IN3
+ReadReg2InFetch[2] => Equal1.IN2
 ReadReg2InFetch[3] => Equal1.IN1
 ReadReg2InFetch[4] => Equal1.IN0
 InstructionInDecode[0] => Equal8.IN1
@@ -13589,7 +13611,11 @@ InstructionInDecode[8] => Equal10.IN8
 InstructionInDecode[9] => Equal0.IN7
 InstructionInDecode[9] => Equal1.IN7
 InstructionInDecode[9] => Equal10.IN7
+InstructionInDecode[10] => Equal0.IN6
+InstructionInDecode[10] => Equal1.IN6
 InstructionInDecode[10] => Equal10.IN6
+InstructionInDecode[11] => Equal0.IN5
+InstructionInDecode[11] => Equal1.IN5
 InstructionInDecode[11] => Equal10.IN5
 InstructionInDecode[12] => ~NO_FANOUT~
 InstructionInDecode[13] => ~NO_FANOUT~

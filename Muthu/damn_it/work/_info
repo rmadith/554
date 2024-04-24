@@ -1,0 +1,947 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/22.1std
+T_opt
+!s110 1713930900
+VB_?TRhf9E15XdROJdBc`^1
+04 6 4 work cpu_tb fast 0
+=1-6c2b59d179dc-66288293-5c-3530
+!s124 OEM10U33 
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vALU
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1713930867
+!i10b 1
+!s100 WzS3H]?k0j=8fMNYcob>i3
+Iaa]5YmR?=@6e^>mU=C0Pm3
+S1
+Z3 dI:/win/554_git/Muthu/damn_it
+Z4 w1713484802
+8I:/win/554_git/RISC-V/MainProcessorPipe/ALU.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/ALU.sv
+!i122 31
+L0 3 40
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z7 !s108 1713930867.000000
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/ALU.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/ALU.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@a@l@u
+vbranch_unit
+R2
+Z9 !s110 1713930868
+!i10b 1
+!s100 ZYa33@P^jh^iF]K^Qh@ll3
+Id?Tekh^BUZ59_7zU?I=Ad3
+S1
+R3
+Z10 w1713537520
+8I:/win/554_git/RISC-V/MainProcessorPipe/branch_unit.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/branch_unit.sv
+!i122 32
+L0 2 61
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/branch_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/branch_unit.sv|
+!i113 0
+R8
+R1
+vBTB_and_PC
+R2
+R9
+!i10b 1
+!s100 :]K[9QKOOjnG4bXdgZ8U=1
+IOYM8^4Ua2BcHkO6^9:]N;0
+S1
+R3
+R4
+8I:/win/554_git/RISC-V/MainProcessorPipe/BTB_and_PC.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/BTB_and_PC.sv
+!i122 33
+L0 3 35
+R5
+R6
+r1
+!s85 0
+31
+Z11 !s108 1713930868.000000
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/BTB_and_PC.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/BTB_and_PC.sv|
+!i113 0
+R8
+R1
+n@b@t@b_and_@p@c
+vCheckForControlToUse
+R2
+Z12 DXx4 work 10 common_def 0 22 f2UBCn^cnOJC:8NEbZ8a>1
+DXx4 work 28 CheckForControlToUse_sv_unit 0 22 P:_>;=QfJoQZa78cbbh:41
+Z13 !s110 1713930869
+R5
+r1
+!s85 0
+!i10b 1
+!s100 Sdn2^88ZRHcbI4Y=WSU:l2
+IWDVUTaIjWZ2c2GXf5WNQk2
+!s105 CheckForControlToUse_sv_unit
+S1
+R3
+Z14 w1713654653
+Z15 8I:/win/554_git/RISC-V/MainProcessorPipe/CheckForControlToUse.sv
+Z16 FI:/win/554_git/RISC-V/MainProcessorPipe/CheckForControlToUse.sv
+!i122 34
+L0 10 51
+R6
+31
+R11
+Z17 !s107 I:/win/554_git/RISC-V/MainProcessorPipe/CheckForControlToUse.sv|
+Z18 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/CheckForControlToUse.sv|
+!i113 0
+R8
+R1
+n@check@for@control@to@use
+XCheckForControlToUse_sv_unit
+R2
+R12
+R13
+VP:_>;=QfJoQZa78cbbh:41
+r1
+!s85 0
+!i10b 1
+!s100 lf9::S84:J7305HlNOjLf2
+IP:_>;=QfJoQZa78cbbh:41
+!i103 1
+S1
+R3
+R14
+R15
+R16
+!i122 34
+Z19 L0 8 0
+R6
+31
+R11
+R17
+R18
+!i113 0
+R8
+R1
+n@check@for@control@to@use_sv_unit
+vCheckForLoadToUse
+R2
+R12
+DXx4 work 25 CheckForLoadToUse_sv_unit 0 22 ?jG@0_aVo[43hJlng?Gg^0
+R13
+R5
+r1
+!s85 0
+!i10b 1
+!s100 KLM6mVDd]]zJEMIz:`6[B0
+IWfjRNf7S5mjh[A^1@L9Ug1
+!s105 CheckForLoadToUse_sv_unit
+S1
+R3
+R10
+Z20 8I:/win/554_git/RISC-V/MainProcessorPipe/CheckForLoadToUse.sv
+Z21 FI:/win/554_git/RISC-V/MainProcessorPipe/CheckForLoadToUse.sv
+!i122 35
+L0 10 71
+R6
+31
+Z22 !s108 1713930869.000000
+Z23 !s107 I:/win/554_git/RISC-V/MainProcessorPipe/CheckForLoadToUse.sv|
+Z24 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/CheckForLoadToUse.sv|
+!i113 0
+R8
+R1
+n@check@for@load@to@use
+XCheckForLoadToUse_sv_unit
+R2
+R12
+R13
+V?jG@0_aVo[43hJlng?Gg^0
+r1
+!s85 0
+!i10b 1
+!s100 P]OgdoOP8l[<^6gZPnhIb3
+I?jG@0_aVo[43hJlng?Gg^0
+!i103 1
+S1
+R3
+R10
+R20
+R21
+!i122 35
+R19
+R6
+31
+R22
+R23
+R24
+!i113 0
+R8
+R1
+n@check@for@load@to@use_sv_unit
+Xcommon_def
+R2
+Z25 !s110 1713930870
+!i10b 1
+!s100 gCzN0779E=QT`YcYi@0772
+If2UBCn^cnOJC:8NEbZ8a>1
+S1
+R3
+R14
+8I:/win/554_git/RISC-V/MainProcessorPipe/common_def.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/common_def.sv
+!i122 36
+Z26 L0 1 0
+Vf2UBCn^cnOJC:8NEbZ8a>1
+R6
+r1
+!s85 0
+31
+R22
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/common_def.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/common_def.sv|
+!i113 0
+R8
+R1
+vcontrol_unit
+R2
+R25
+!i10b 1
+!s100 O?e9;=ZgN=onLPBQZ6o6N2
+I[aj<;A0aLc`b4OO;h6WRT3
+S1
+R3
+R4
+8I:/win/554_git/RISC-V/MainProcessorPipe/control_unit.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/control_unit.sv
+!i122 37
+L0 3 138
+R5
+R6
+r1
+!s85 0
+31
+Z27 !s108 1713930870.000000
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/control_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/control_unit.sv|
+!i113 0
+R8
+R1
+vcpu
+R2
+Z28 !s110 1713930871
+!i10b 1
+!s100 VWM>zLc?RYfWaYVU`E^be0
+I>Dz7YBHf:zZW;VgQzU^Q`0
+S1
+R3
+R14
+8I:\win\554_git\RISC-V\MainProcessorPipe\cpu.sv
+FI:\win\554_git\RISC-V\MainProcessorPipe\cpu.sv
+!i122 38
+L0 3 437
+R5
+R6
+r1
+!s85 0
+31
+R27
+!s107 I:\win\554_git\RISC-V\MainProcessorPipe\cpu.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\win\554_git\RISC-V\MainProcessorPipe\cpu.sv|
+!i113 0
+R8
+R1
+vcpu_tb
+R2
+R12
+DXx4 work 14 cpu_tb_sv_unit 0 22 VJGfJLEQgLj;[XmK>A7^m0
+R28
+R5
+r1
+!s85 0
+!i10b 1
+!s100 LIUK`Ud`zkLg1EaOdm2cf1
+I;ibaI>H=e9QJ=RHf5o:b50
+!s105 cpu_tb_sv_unit
+S1
+R3
+R10
+Z29 8I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv
+Z30 FI:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv
+!i122 39
+L0 5 91
+R6
+31
+Z31 !s108 1713930871.000000
+Z32 !s107 I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv|
+Z33 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv|
+!i113 0
+R8
+R1
+Xcpu_tb_sv_unit
+R2
+R12
+R28
+VVJGfJLEQgLj;[XmK>A7^m0
+r1
+!s85 0
+!i10b 1
+!s100 L6zT1dl;Rb4IlNJk[=U]N2
+IVJGfJLEQgLj;[XmK>A7^m0
+!i103 1
+S1
+R3
+R10
+R29
+R30
+!i122 39
+Z34 L0 3 0
+R6
+31
+R31
+R32
+R33
+!i113 0
+R8
+R1
+vdecode
+R2
+R28
+!i10b 1
+!s100 1TLd]@_SVjmUjHilP:f2b0
+I9L?hAW=P>F89iZ7HE5elW3
+S1
+R3
+R14
+8I:\win\554_git\RISC-V\MainProcessorPipe\decode.sv
+FI:\win\554_git\RISC-V\MainProcessorPipe\decode.sv
+!i122 40
+L0 2 109
+R5
+R6
+r1
+!s85 0
+31
+R31
+!s107 I:\win\554_git\RISC-V\MainProcessorPipe\decode.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\win\554_git\RISC-V\MainProcessorPipe\decode.sv|
+!i113 0
+R8
+R1
+vdmem8
+R2
+Z35 !s110 1713930872
+!i10b 1
+!s100 9o6AKRIK54XXK]F;16e@o2
+I1IOC;PZ4K>?NSPO[mejF90
+S1
+R3
+w1713930377
+8I:\win\554_git\RISC-V\MainProcessorPipe\dmem8.sv
+FI:\win\554_git\RISC-V\MainProcessorPipe\dmem8.sv
+!i122 41
+L0 1 37
+R5
+R6
+r1
+!s85 0
+31
+Z36 !s108 1713930872.000000
+!s107 I:\win\554_git\RISC-V\MainProcessorPipe\dmem8.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\win\554_git\RISC-V\MainProcessorPipe\dmem8.sv|
+!i113 0
+R8
+R1
+vexecute
+R2
+R35
+!i10b 1
+!s100 id[DMnzYKhYQEElcb]O[n2
+IA@L`ahYJT755:7:9[lhZg3
+S1
+R3
+R4
+8I:/win/554_git/RISC-V/MainProcessorPipe/execute.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/execute.sv
+!i122 42
+L0 3 36
+R5
+R6
+r1
+!s85 0
+31
+R36
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/execute.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/execute.sv|
+!i113 0
+R8
+R1
+vEXMEMpipelineReg
+R2
+R12
+DXx4 work 24 EXMEMpipelineReg_sv_unit 0 22 G@<dohkgeliZ]OX6d;61X0
+Z37 !s110 1713930873
+R5
+r1
+!s85 0
+!i10b 1
+!s100 UDiOLR6=Ud=CN4Xc6<=<z2
+IY=2Qjg5<aQkPG[[ZFTnd_3
+!s105 EXMEMpipelineReg_sv_unit
+S1
+R3
+R10
+Z38 8I:/win/554_git/RISC-V/MainProcessorPipe/EXMEMpipelineReg.sv
+Z39 FI:/win/554_git/RISC-V/MainProcessorPipe/EXMEMpipelineReg.sv
+!i122 43
+L0 5 72
+R6
+31
+R36
+Z40 !s107 I:/win/554_git/RISC-V/MainProcessorPipe/EXMEMpipelineReg.sv|
+Z41 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/EXMEMpipelineReg.sv|
+!i113 0
+R8
+R1
+n@e@x@m@e@mpipeline@reg
+XEXMEMpipelineReg_sv_unit
+R2
+R12
+R37
+VG@<dohkgeliZ]OX6d;61X0
+r1
+!s85 0
+!i10b 1
+!s100 faT?[1WmjWQ;^eEc6d^H13
+IG@<dohkgeliZ]OX6d;61X0
+!i103 1
+S1
+R3
+R10
+R38
+R39
+!i122 43
+R34
+R6
+31
+R36
+R40
+R41
+!i113 0
+R8
+R1
+n@e@x@m@e@mpipeline@reg_sv_unit
+vextension_unit
+R2
+R37
+!i10b 1
+!s100 Tz1gm0TRkDH[P`2GF9F9@2
+Ilm6l1SG>2OO`Y6UjTB6001
+S1
+R3
+R4
+8I:/win/554_git/RISC-V/MainProcessorPipe/extension_unit.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/extension_unit.sv
+!i122 44
+L0 3 30
+R5
+R6
+r1
+!s85 0
+31
+Z42 !s108 1713930873.000000
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/extension_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/extension_unit.sv|
+!i113 0
+R8
+R1
+vfetch
+R2
+Z43 !s110 1713930874
+!i10b 1
+!s100 Vbe6lJ:[E]1`WHRnBoY9b3
+IY9mez8??m4FH^Y28Q=lKC2
+S1
+R3
+w1713908739
+8I:\win\554_git\RISC-V\MainProcessorPipe\fetch.sv
+FI:\win\554_git\RISC-V\MainProcessorPipe\fetch.sv
+!i122 45
+L0 5 62
+R5
+R6
+r1
+!s85 0
+31
+R42
+!s107 I:\win\554_git\RISC-V\MainProcessorPipe\fetch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\win\554_git\RISC-V\MainProcessorPipe\fetch.sv|
+!i113 0
+R8
+R1
+vfetchTB
+R2
+R43
+!i10b 1
+!s100 DSN]lDcBdMSzZfXA<POBo0
+I1MAKo651Q`lb_U6oca]1_1
+S1
+R3
+R4
+8I:/win/554_git/RISC-V/MainProcessorPipe/fetchTB.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/fetchTB.sv
+!i122 46
+L0 3 61
+R5
+R6
+r1
+!s85 0
+31
+Z44 !s108 1713930874.000000
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/fetchTB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/fetchTB.sv|
+!i113 0
+R8
+R1
+nfetch@t@b
+vforwardToD
+R2
+Z45 !s110 1713930875
+!i10b 1
+!s100 kN5_OcTBNG4C4l2XY32mM2
+IbY<neJz:YUezZOCjh0b0k3
+S1
+R3
+R14
+8I:/win/554_git/RISC-V/MainProcessorPipe/forwardToD.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/forwardToD.sv
+!i122 47
+Z46 L0 8 67
+R5
+R6
+r1
+!s85 0
+31
+R44
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/forwardToD.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/forwardToD.sv|
+!i113 0
+R8
+R1
+nforward@to@d
+vforwardToEX
+R2
+R45
+!i10b 1
+!s100 W^Li9oQQJ`hgLPeiK:PUG1
+I=0[Sz6h_aE`9N5oQP2NY10
+S1
+R3
+R14
+8I:/win/554_git/RISC-V/MainProcessorPipe/forwardToEX.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/forwardToEX.sv
+!i122 48
+R46
+R5
+R6
+r1
+!s85 0
+31
+Z47 !s108 1713930875.000000
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/forwardToEX.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/forwardToEX.sv|
+!i113 0
+R8
+R1
+nforward@to@e@x
+vforwardToMEM
+R2
+R45
+!i10b 1
+!s100 zm6Z_AO:fXid4iZRGUARf2
+I4l]kGWJ`I46h`mnEJOLK53
+S1
+R3
+R10
+8I:/win/554_git/RISC-V/MainProcessorPipe/forwardToMEM.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/forwardToMEM.sv
+!i122 49
+L0 8 37
+R5
+R6
+r1
+!s85 0
+31
+R47
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/forwardToMEM.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/forwardToMEM.sv|
+!i113 0
+R8
+R1
+nforward@to@m@e@m
+vHazardDetection
+R2
+Z48 !s110 1713930876
+!i10b 1
+!s100 >mag3J5oeG4Wc:Cb8zckm2
+I2`6M^C:65ndCnAg=BTEFD1
+S1
+R3
+R14
+8I:\win\554_git\RISC-V\MainProcessorPipe\HazardDetection.sv
+FI:\win\554_git\RISC-V\MainProcessorPipe\HazardDetection.sv
+!i122 50
+L0 6 81
+R5
+R6
+r1
+!s85 0
+31
+Z49 !s108 1713930876.000000
+!s107 I:\win\554_git\RISC-V\MainProcessorPipe\HazardDetection.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\win\554_git\RISC-V\MainProcessorPipe\HazardDetection.sv|
+!i113 0
+R8
+R1
+n@hazard@detection
+vIDEXpipelineReg
+R2
+R12
+DXx4 work 23 IDEXpipelineReg_sv_unit 0 22 R^O08X8bNWFV>4>lU:jU_2
+R48
+R5
+r1
+!s85 0
+!i10b 1
+!s100 5LIe:5HYhL4h5WPHl]_UP0
+IkRg?lDISnYf?mUBHfR5Fj1
+!s105 IDEXpipelineReg_sv_unit
+S1
+R3
+R14
+Z50 8I:/win/554_git/RISC-V/MainProcessorPipe/IDEXpipelineReg.sv
+Z51 FI:/win/554_git/RISC-V/MainProcessorPipe/IDEXpipelineReg.sv
+!i122 51
+L0 5 120
+R6
+31
+R49
+Z52 !s107 I:/win/554_git/RISC-V/MainProcessorPipe/IDEXpipelineReg.sv|
+Z53 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/IDEXpipelineReg.sv|
+!i113 0
+R8
+R1
+n@i@d@e@xpipeline@reg
+XIDEXpipelineReg_sv_unit
+R2
+R12
+R48
+VR^O08X8bNWFV>4>lU:jU_2
+r1
+!s85 0
+!i10b 1
+!s100 >QO9bRnRe1XaC?FU6Ufm^3
+IR^O08X8bNWFV>4>lU:jU_2
+!i103 1
+S1
+R3
+R14
+R50
+R51
+!i122 51
+R34
+R6
+31
+R49
+R52
+R53
+!i113 0
+R8
+R1
+n@i@d@e@xpipeline@reg_sv_unit
+vIFIDpipelineReg
+R2
+R12
+DXx4 work 23 IFIDpipelineReg_sv_unit 0 22 `b7=]I5XXnTKjSXMh=YF23
+Z54 !s110 1713930877
+R5
+r1
+!s85 0
+!i10b 1
+!s100 jJW23:k6E5VS=UUO0KB3J2
+I3Blf;ekSechkX4JJ0kLX23
+!s105 IFIDpipelineReg_sv_unit
+S1
+R3
+R10
+Z55 8I:/win/554_git/RISC-V/MainProcessorPipe/IFIDpipelineReg.sv
+Z56 FI:/win/554_git/RISC-V/MainProcessorPipe/IFIDpipelineReg.sv
+!i122 52
+L0 5 52
+R6
+31
+R49
+Z57 !s107 I:/win/554_git/RISC-V/MainProcessorPipe/IFIDpipelineReg.sv|
+Z58 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/IFIDpipelineReg.sv|
+!i113 0
+R8
+R1
+n@i@f@i@dpipeline@reg
+XIFIDpipelineReg_sv_unit
+R2
+R12
+R54
+V`b7=]I5XXnTKjSXMh=YF23
+r1
+!s85 0
+!i10b 1
+!s100 MULG<fa:doT>8Pe]M`z<V0
+I`b7=]I5XXnTKjSXMh=YF23
+!i103 1
+S1
+R3
+R10
+R55
+R56
+!i122 52
+R34
+R6
+31
+R49
+R57
+R58
+!i113 0
+R8
+R1
+n@i@f@i@dpipeline@reg_sv_unit
+vinstruction_debug
+R2
+R12
+DXx4 work 25 instruction_debug_sv_unit 0 22 icEikz^a7knGWC=EOB0D^1
+R54
+R5
+r1
+!s85 0
+!i10b 1
+!s100 lNGJoB4]2Cf[A[:CM2VXn3
+IJVYACo4d6oYzDGJ^6eiZY2
+!s105 instruction_debug_sv_unit
+S1
+R3
+R4
+Z59 8I:/win/554_git/RISC-V/MainProcessorPipe/instruction_debug.sv
+Z60 FI:/win/554_git/RISC-V/MainProcessorPipe/instruction_debug.sv
+!i122 53
+L0 3 59
+R6
+31
+Z61 !s108 1713930877.000000
+Z62 !s107 I:/win/554_git/RISC-V/MainProcessorPipe/instruction_debug.sv|
+Z63 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/instruction_debug.sv|
+!i113 0
+R8
+R1
+Xinstruction_debug_sv_unit
+R2
+R12
+R54
+VicEikz^a7knGWC=EOB0D^1
+r1
+!s85 0
+!i10b 1
+!s100 0WQ43Vf8=]mB05h6CeDIW2
+IicEikz^a7knGWC=EOB0D^1
+!i103 1
+S1
+R3
+R4
+R59
+R60
+!i122 53
+R26
+R6
+31
+R61
+R62
+R63
+!i113 0
+R8
+R1
+vmemory
+R2
+Z64 !s110 1713930878
+!i10b 1
+!s100 Y7i4NKk<l`aL@TeZUiWcU0
+IQkj?kj@o@EXETk7Q^W2VV3
+S1
+R3
+w1713930856
+8I:\win\554_git\RISC-V\MainProcessorPipe\memory.sv
+FI:\win\554_git\RISC-V\MainProcessorPipe\memory.sv
+!i122 54
+L0 3 176
+R5
+R6
+r1
+!s85 0
+31
+R61
+!s107 I:\win\554_git\RISC-V\MainProcessorPipe\memory.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:\win\554_git\RISC-V\MainProcessorPipe\memory.sv|
+!i113 0
+R8
+R1
+vMEMWBpipelineReg
+R2
+R12
+DXx4 work 24 MEMWBpipelineReg_sv_unit 0 22 Bdf0EaM2M5mVbHMFPlA1E2
+R64
+R5
+r1
+!s85 0
+!i10b 1
+!s100 :m4<T341Vb=TGzIDkOS?i2
+InhiGUz5_]4k:HBYDe=Pj82
+!s105 MEMWBpipelineReg_sv_unit
+S1
+R3
+R10
+Z65 8I:/win/554_git/RISC-V/MainProcessorPipe/MEMWBpipelineReg.sv
+Z66 FI:/win/554_git/RISC-V/MainProcessorPipe/MEMWBpipelineReg.sv
+!i122 55
+L0 5 61
+R6
+31
+Z67 !s108 1713930878.000000
+Z68 !s107 I:/win/554_git/RISC-V/MainProcessorPipe/MEMWBpipelineReg.sv|
+Z69 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/MEMWBpipelineReg.sv|
+!i113 0
+R8
+R1
+n@m@e@m@w@bpipeline@reg
+XMEMWBpipelineReg_sv_unit
+R2
+R12
+R64
+VBdf0EaM2M5mVbHMFPlA1E2
+r1
+!s85 0
+!i10b 1
+!s100 38LQ67]8]U3hdA8LaHA813
+IBdf0EaM2M5mVbHMFPlA1E2
+!i103 1
+S1
+R3
+R10
+R65
+R66
+!i122 55
+R34
+R6
+31
+R67
+R68
+R69
+!i113 0
+R8
+R1
+n@m@e@m@w@bpipeline@reg_sv_unit
+vrf
+R2
+Z70 !s110 1713930879
+!i10b 1
+!s100 IShY8KWoQLQZ]mb6mY<2B0
+IdMFhIQiTjP6L?JMNdZ4PT0
+S1
+R3
+R14
+8I:/win/554_git/RISC-V/MainProcessorPipe/rf.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/rf.sv
+!i122 56
+L0 4 84
+R5
+R6
+r1
+!s85 0
+31
+R67
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/rf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/rf.sv|
+!i113 0
+R8
+R1
+vshifter
+R2
+R70
+!i10b 1
+!s100 C:Sobn:>nb>_I1@Uf=LHZ2
+IKaTM1Q[CXTRR11z4J5Hkj2
+S1
+R3
+R4
+8I:/win/554_git/RISC-V/MainProcessorPipe/shifter.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/shifter.sv
+!i122 57
+L0 1 137
+R5
+R6
+r1
+!s85 0
+31
+Z71 !s108 1713930879.000000
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/shifter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/shifter.sv|
+!i113 0
+R8
+R1
+vwb
+R2
+R70
+!i10b 1
+!s100 z7@o=[9B?]BIUL@7A3F>63
+IE>5CUPniN>Gmciib3]^1;2
+S1
+R3
+R4
+8I:/win/554_git/RISC-V/MainProcessorPipe/wb.sv
+FI:/win/554_git/RISC-V/MainProcessorPipe/wb.sv
+!i122 58
+L0 3 14
+R5
+R6
+r1
+!s85 0
+31
+R71
+!s107 I:/win/554_git/RISC-V/MainProcessorPipe/wb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/win/554_git/RISC-V/MainProcessorPipe/wb.sv|
+!i113 0
+R8
+R1

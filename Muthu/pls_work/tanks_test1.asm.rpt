@@ -1,5 +1,5 @@
 Assembler report for tanks_test1
-Tue Apr 23 15:16:14 2024
+Wed Apr 24 00:51:15 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Apr 23 15:16:14 2024 ;
+; Assembler Status      ; Successful - Wed Apr 24 00:51:15 2024 ;
 ; Revision Name         ; tanks_test1                           ;
 ; Top-level Entity Name ; tanks_test1                           ;
 ; Family                ; Cyclone V                             ;
@@ -78,8 +78,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+--------------------------------------------------------+
 ; Option         ; Setting                                                ;
 +----------------+--------------------------------------------------------+
-; JTAG usercode  ; 0x075B3242                                             ;
-; Checksum       ; 0x075B3242                                             ;
+; JTAG usercode  ; 0x0768AABC                                             ;
+; Checksum       ; 0x0768AABC                                             ;
 +----------------+--------------------------------------------------------+
 
 
@@ -89,14 +89,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Apr 23 15:15:54 2024
+    Info: Processing started: Wed Apr 24 00:50:56 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off tanks_test1 -c tanks_test1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4974 megabytes
-    Info: Processing ended: Tue Apr 23 15:16:14 2024
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4970 megabytes
+    Info: Processing ended: Wed Apr 24 00:51:15 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:06
 
 

@@ -31,7 +31,7 @@ module CheckForLoadToUse(
 	wire WRS_isRR1, WRS_isRR2;
 	wire stall_intermediate_1, stall_intermediate_2;
 	
-	wire [2:0] w_reg_sel; // The register that the instruction farther down the pipeline will write to.
+	wire [4:0] w_reg_sel; // The register that the instruction farther down the pipeline will write to.
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

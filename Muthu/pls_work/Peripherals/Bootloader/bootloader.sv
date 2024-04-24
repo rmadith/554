@@ -12,7 +12,8 @@ module bootloader(
        output wire TX,
 
        input wire [31:0] outdata,
-       input wire write
+       input wire write,
+       input wire [12:0] baud
 );
 
 // Write State Machine
@@ -26,7 +27,7 @@ wire rx_rdy, tx_done;
 reg trmt;
 wire [7:0] rx_data, tx_data;
 
-UART iUART(.clk(clk),.rst_n(rst_n),.RX(RX),.TX(TX),.rx_rdy(rx_rdy),.clr_rx_rdy(clr_rx_rdy),.rx_data(rx_data),.trmt(trmt),.tx_data(tx_data),.tx_done(tx_done), .baud(13'h1b2));
+UART iUART(.clk(clk),.rst_n(rst_n),.RX(RX),.TX(TX),.rx_rdy(rx_rdy),.clr_rx_rdy(clr_rx_rdy),.rx_data(rx_data),.trmt(trmt),.tx_data(tx_data),.tx_done(tx_done), .baud(baud));
 
 
 always_ff @(posedge clk, negedge rst_n) begin : counter
@@ -118,13 +119,13 @@ end
 
 assign tx_data = stored_data_out[7:0];
 
-always_ff @(posedge clk, negedge rst_n) begin
+always_ff @(posedge clk, negedge rst_n) begin // vishnu changed this
        if(!rst_n)
-              transmission_count = 'b0;
+              transmission_count <= 'b0;
        else if(tx_rst)
-              transmission_count = 'b0;
+              transmission_count <= 'b0;
        else if(tx_increment)
-              transmission_count = transmission_count + 1;
+              transmission_count <= transmission_count + 1;
 end
 
 always_comb begin : txStateMachine
