@@ -7,7 +7,7 @@ module BMP_ROM_EnemyTankGunE(clk,addr,dout);
   reg [5:0] rom[0:4099];
 
   initial
-    $readmemh("images_out/EnemyTankGunE.hex",rom);
+    $readmemb("images_out/EnemyTankGunE.hex",rom);
 
   always @(posedge clk)
     dout <= rom[addr];

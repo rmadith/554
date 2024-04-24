@@ -7,7 +7,7 @@ module BMP_ROM_BulletNW(clk,addr,dout);
   reg [5:0] rom[0:1027];
 
   initial
-    $readmemh("images_out/BulletNW.hex",rom);
+    $readmemb("images_out/BulletNW.hex",rom);
 
   always @(posedge clk)
     dout <= rom[addr];
