@@ -4,10 +4,10 @@ module BMP_ROM_BulletS(clk,addr,dout);
   input [15:0] addr;
   output reg [5:0] dout;   // 5-bit color pixel out
 
-  reg [5:0] rom[0:171];
+  reg [5:0] rom[0:1027];
 
   initial
-    $readmemh("images_out/BulletS.hex",rom);
+    $readmemb("images_out/BulletS.hex",rom);
 
   always @(posedge clk)
     dout <= rom[addr];

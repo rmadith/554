@@ -4,10 +4,10 @@ module BMP_ROM_EnemyBulletNE(clk,addr,dout);
   input [15:0] addr;
   output reg [5:0] dout;   // 5-bit color pixel out
 
-  reg [5:0] rom[0:531];
+  reg [5:0] rom[0:1027];
 
   initial
-    $readmemh("images_out/EnemyBulletNE.hex",rom);
+    $readmemb("images_out/EnemyBulletNE.hex",rom);
 
   always @(posedge clk)
     dout <= rom[addr];

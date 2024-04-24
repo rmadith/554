@@ -97,7 +97,7 @@ module IDEXpipelineReg(
             memType_IDEX_EXMEM <=  '0 ;
             memWrite_IDEX_EXMEM <=  '0 ;
             addConstant4_IDEX_out <=  '0 ;
-            regWriteEnable_IDEX_EXMEM <=  1'b1 ;
+            regWriteEnable_IDEX_EXMEM <=  1'b0 ;
             instruction_IDEX_EXMEM <=  NOP_INSTR_HEX ;
             PC_IDEX_EXMEM <=  PC_IFID_IDEX ;
             ECALL_IDEX_EXMEM <= '0;

@@ -7,7 +7,7 @@ module BMP_ROM_TankBaseNorth(clk,addr,dout);
   reg [5:0] rom[0:4099];
 
   initial
-    $readmemb("TankBaseNorth.hex",rom);
+    $readmemb("images_out/TankBaseNorth.hex",rom);
 
   always @(posedge clk)
     dout <= rom[addr];
