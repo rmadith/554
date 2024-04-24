@@ -1,5 +1,5 @@
 Flow report for joystick
-Thu Apr 18 16:39:55 2024
+Tue Apr 23 11:16:18 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Thu Apr 18 16:39:43 2024          ;
+; Flow Status                     ; Successful - Tue Apr 23 11:16:05 2024          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; joystick                                       ;
 ; Top-level Entity Name           ; joystick                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 336 / 32,070 ( 1 % )                           ;
-; Total registers                 ; 725                                            ;
+; Logic utilization (in ALMs)     ; 338 / 32,070 ( 1 % )                           ;
+; Total registers                 ; 730                                            ;
 ; Total pins                      ; 32 / 457 ( 7 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 2,688 / 4,065,280 ( < 1 % )                    ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/18/2024 16:37:38 ;
+; Start date & time ; 04/23/2024 11:13:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; joystick            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+---------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                                                   ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+---------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 118933446293980.171347625810728                                                                         ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 118933446293980.171388882407408                                                                         ; --            ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                                      ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                      ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                       ; --            ; --          ; --               ;
@@ -125,11 +125,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4925 MB             ; 00:00:20                           ;
-; Fitter               ; 00:01:19     ; 1.0                     ; 6731 MB             ; 00:01:20                           ;
-; Assembler            ; 00:00:10     ; 1.0                     ; 4892 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:11     ; 1.2                     ; 5226 MB             ; 00:00:07                           ;
-; Total                ; 00:02:05     ; --                      ; --                  ; 00:01:52                           ;
+; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4925 MB             ; 00:00:20                           ;
+; Fitter               ; 00:01:28     ; 1.0                     ; 6731 MB             ; 00:01:20                           ;
+; Assembler            ; 00:00:12     ; 1.0                     ; 4888 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:11     ; 1.2                     ; 5216 MB             ; 00:00:07                           ;
+; Total                ; 00:02:20     ; --                      ; --                  ; 00:01:52                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

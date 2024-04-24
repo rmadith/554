@@ -1,5 +1,5 @@
 Flow report for DE1_SOC
-Sun Apr 21 00:22:27 2024
+Sun Apr 21 17:56:09 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,19 +41,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Sun Apr 21 00:22:03 2024          ;
+; Flow Status                     ; Successful - Sun Apr 21 17:55:41 2024          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; DE1_SOC                                        ;
 ; Top-level Entity Name           ; DE1_SOC                                        ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 2,535 / 32,070 ( 8 % )                         ;
-; Total registers                 ; 4451                                           ;
+; Logic utilization (in ALMs)     ; 2,794 / 32,070 ( 9 % )                         ;
+; Total registers                 ; 4655                                           ;
 ; Total pins                      ; 186 / 457 ( 41 % )                             ;
 ; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 534,784 / 4,065,280 ( 13 % )                   ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
+; Total block memory bits         ; 2,430,232 / 4,065,280 ( 60 % )                 ;
+; Total DSP Blocks                ; 2 / 87 ( 2 % )                                 ;
 ; Total HSSI RX PCSs              ; 0                                              ;
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
 ; Total HSSI TX PCSs              ; 0                                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/21/2024 00:17:35 ;
+; Start date & time ; 04/21/2024 17:51:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE1_SOC             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                                                                                                                                                                                                                                          ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 118933446293980.171367665520072                                                                                                                                                                                                                                                                ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 118933446293980.171373987114200                                                                                                                                                                                                                                                                ; --            ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                                                                                                                                                                                                                             ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                                                                                                                                                                                                             ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                                                                                                                                                                                                              ; --            ; --          ; --               ;
@@ -129,11 +129,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:42     ; 1.0                     ; 4988 MB             ; 00:00:20                           ;
-; Fitter               ; 00:03:15     ; 1.1                     ; 6823 MB             ; 00:04:46                           ;
-; Assembler            ; 00:00:14     ; 1.0                     ; 4918 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:22     ; 1.8                     ; 5330 MB             ; 00:00:19                           ;
-; Total                ; 00:04:33     ; --                      ; --                  ; 00:05:30                           ;
+; Analysis & Synthesis ; 00:00:51     ; 1.0                     ; 5108 MB             ; 00:00:28                           ;
+; Fitter               ; 00:02:58     ; 1.2                     ; 6859 MB             ; 00:04:10                           ;
+; Assembler            ; 00:00:16     ; 1.0                     ; 4950 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:26     ; 2.0                     ; 5373 MB             ; 00:00:32                           ;
+; Total                ; 00:04:31     ; --                      ; --                  ; 00:05:17                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

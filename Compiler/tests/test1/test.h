@@ -1,1 +1,1 @@
-extern volatile unsigned int *x;
+extern unsigned int *x;

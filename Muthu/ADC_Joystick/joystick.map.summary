@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Apr 18 16:38:04 2024
+Analysis & Synthesis Status : Successful - Tue Apr 23 11:14:15 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : joystick
 Top-level Entity Name : joystick
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 703
+Total registers : 704
 Total pins : 32
 Total virtual pins : 0
 Total block memory bits : 2,688

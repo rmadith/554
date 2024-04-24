@@ -1,13 +1,14 @@
 #include "test.h"
 
-volatile unsigned int *x;
-
+unsigned int *x;	// Debug
+unsigned int *y;	// Joystick
+unsigned int *z;	// VGA
 int main(){
-   x = (volatile unsigned int *) 0xFFFC001;
-   char* array[2] = {'h', 'i'};
-   for(int i = 0; i < 2; i++){
-       *x = array[i];
-   }
-   while(1){}
+  y = (unsigned int *) 0xFFFFC002;
+  z = (unsigned int *) 0xFFFFC003;
+  *y = 0x0000003F;                  // Clearing all Joystick data (Soft Reset)
+  *z = 0x500F0005;
+
+   //while(1){}
    return 0;
 }

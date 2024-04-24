@@ -277,10 +277,8 @@ module PlaceBMP(clk,rst_n,add_fnt,fnt_indx,add_img,rem_img,image_indx,
   // BMP ROMs and mux are below //
   ///////////////////////////////
   BMP_ROM_Font  iROM0(.clk(clk),.addr(font_addr),.dout(bmp_read0));
-  
+
   assign bmp_read = (fnt_addr_inc) ? bmp_read0 :
-                    (indx==6'd01) ? bmp_read1 :
-					(indx==6'd02) ? bmp_read2 :
-					bmp_read3;
+                    'b0;
   
 endmodule
