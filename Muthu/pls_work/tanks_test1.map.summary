@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Apr 24 12:15:06 2024
+Analysis & Synthesis Status : Successful - Wed Apr 24 18:02:28 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : tanks_test1
 Top-level Entity Name : tanks_test1
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 4000
+Total registers : 4037
 Total pins : 222
 Total virtual pins : 0
-Total block memory bits : 2,444,336
-Total DSP Blocks : 2
+Total block memory bits : 2,798,096
+Total DSP Blocks : 1
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

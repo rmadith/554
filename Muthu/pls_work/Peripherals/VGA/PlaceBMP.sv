@@ -48,10 +48,48 @@ module PlaceBMP(clk,rst_n,add_fnt,fnt_indx,add_img,rem_img,image_indx,
   ///////////////////////////
   // Internal nets follow //
   /////////////////////////
-  wire [5:0] bmp_read0;
-  wire [5:0] bmp_read1;
-  wire [5:0] bmp_read2;			// add more for more images
-  wire [5:0] bmp_read3;
+wire [5:0] bmp_read0;
+wire [5:0] bmp_read1;
+wire [5:0] bmp_read2;
+wire [5:0] bmp_read3;
+wire [5:0] bmp_read4;
+wire [5:0] bmp_read5;
+wire [5:0] bmp_read6;
+wire [5:0] bmp_read7;
+wire [5:0] bmp_read8;
+wire [5:0] bmp_read9;
+wire [5:0] bmp_read10;
+wire [5:0] bmp_read11;
+wire [5:0] bmp_read12;
+wire [5:0] bmp_read13;
+wire [5:0] bmp_read14;
+wire [5:0] bmp_read15;
+wire [5:0] bmp_read16;
+wire [5:0] bmp_read17;
+wire [5:0] bmp_read18;
+wire [5:0] bmp_read19;
+wire [5:0] bmp_read20;
+wire [5:0] bmp_read21;
+wire [5:0] bmp_read22;
+wire [5:0] bmp_read23;
+wire [5:0] bmp_read24;
+wire [5:0] bmp_read25;
+wire [5:0] bmp_read26;
+wire [5:0] bmp_read27;
+wire [5:0] bmp_read28;
+wire [5:0] bmp_read29;
+wire [5:0] bmp_read30;
+wire [5:0] bmp_read31;
+wire [5:0] bmp_read32;
+wire [5:0] bmp_read33;
+wire [5:0] bmp_read34;
+wire [5:0] bmp_read35;
+wire [5:0] bmp_read36;
+wire [5:0] bmp_read37;
+wire [5:0] bmp_read38;
+wire [5:0] bmp_read39;
+wire [5:0] bmp_read40;
+wire [5:0] bmp_read41;
   wire [5:0] bmp_read;			// muxed output from BMP ROM
   wire waddr_wrap_en;
   wire fnt_wrap;
@@ -276,11 +314,93 @@ module PlaceBMP(clk,rst_n,add_fnt,fnt_indx,add_img,rem_img,image_indx,
   /////////////////////////////////
   // BMP ROMs and mux are below //
   ///////////////////////////////
-  BMP_ROM_Font  			iROM0(.clk(clk),.addr(font_addr),.dout(bmp_read0));
-  BMP_ROM_TankBaseNorth	 	iROM1(.clk(clk), .addr(bmp_addr), .dout(bmp_read1));
+BMP_ROM_Brick_Block iROM0(.clk(clk), .addr(bmp_addr), .dout(bmp_read0));
+BMP_ROM_BulletE iROM1(.clk(clk), .addr(bmp_addr), .dout(bmp_read1));
+BMP_ROM_BulletN iROM2(.clk(clk), .addr(bmp_addr), .dout(bmp_read2));
+BMP_ROM_BulletNE iROM3(.clk(clk), .addr(bmp_addr), .dout(bmp_read3));
+BMP_ROM_BulletNW iROM4(.clk(clk), .addr(bmp_addr), .dout(bmp_read4));
+BMP_ROM_BulletS iROM5(.clk(clk), .addr(bmp_addr), .dout(bmp_read5));
+BMP_ROM_BulletSE iROM6(.clk(clk), .addr(bmp_addr), .dout(bmp_read6));
+BMP_ROM_BulletSW iROM7(.clk(clk), .addr(bmp_addr), .dout(bmp_read7));
+BMP_ROM_BulletW iROM8(.clk(clk), .addr(bmp_addr), .dout(bmp_read8));
+BMP_ROM_Crown iROM9(.clk(clk), .addr(bmp_addr), .dout(bmp_read9));
+BMP_ROM_EnemyBulletE iROM10(.clk(clk), .addr(bmp_addr), .dout(bmp_read10));
+BMP_ROM_EnemyBulletN iROM11(.clk(clk), .addr(bmp_addr), .dout(bmp_read11));
+BMP_ROM_EnemyBulletNE iROM12(.clk(clk), .addr(bmp_addr), .dout(bmp_read12));
+BMP_ROM_EnemyBulletNW iROM13(.clk(clk), .addr(bmp_addr), .dout(bmp_read13));
+BMP_ROM_EnemyBulletS iROM14(.clk(clk), .addr(bmp_addr), .dout(bmp_read14));
+BMP_ROM_EnemyBulletSE iROM15(.clk(clk), .addr(bmp_addr), .dout(bmp_read15));
+BMP_ROM_EnemyBulletSW iROM16(.clk(clk), .addr(bmp_addr), .dout(bmp_read16));
+BMP_ROM_EnemyBulletW iROM17(.clk(clk), .addr(bmp_addr), .dout(bmp_read17));
+BMP_ROM_EnemyTankBaseEast iROM18(.clk(clk), .addr(bmp_addr), .dout(bmp_read18));
+BMP_ROM_EnemyTankBaseNorth iROM19(.clk(clk), .addr(bmp_addr), .dout(bmp_read19));
+BMP_ROM_EnemyTankBaseSouth iROM20(.clk(clk), .addr(bmp_addr), .dout(bmp_read20));
+BMP_ROM_EnemyTankBaseWest iROM21(.clk(clk), .addr(bmp_addr), .dout(bmp_read21));
+BMP_ROM_EnemyTankGunE iROM22(.clk(clk), .addr(bmp_addr), .dout(bmp_read22));
+BMP_ROM_EnemyTankGunN iROM23(.clk(clk), .addr(bmp_addr), .dout(bmp_read23));
+BMP_ROM_EnemyTankGunNE iROM24(.clk(clk), .addr(bmp_addr), .dout(bmp_read24));
+BMP_ROM_EnemyTankGunNW iROM25(.clk(clk), .addr(bmp_addr), .dout(bmp_read25));
+BMP_ROM_EnemyTankGunS iROM26(.clk(clk), .addr(bmp_addr), .dout(bmp_read26));
+BMP_ROM_EnemyTankGunSE iROM27(.clk(clk), .addr(bmp_addr), .dout(bmp_read27));
+BMP_ROM_EnemyTankGunSW iROM28(.clk(clk), .addr(bmp_addr), .dout(bmp_read28));
+BMP_ROM_EnemyTankGunW iROM29(.clk(clk), .addr(bmp_addr), .dout(bmp_read29));
+BMP_ROM_TankBaseEast iROM30(.clk(clk), .addr(bmp_addr), .dout(bmp_read30));
+BMP_ROM_TankBaseNorth iROM31(.clk(clk), .addr(bmp_addr), .dout(bmp_read31));
+BMP_ROM_TankBaseSouth iROM32(.clk(clk), .addr(bmp_addr), .dout(bmp_read32));
+BMP_ROM_TankBaseWest iROM33(.clk(clk), .addr(bmp_addr), .dout(bmp_read33));
+BMP_ROM_TankGunE iROM34(.clk(clk), .addr(bmp_addr), .dout(bmp_read34));
+BMP_ROM_TankGunN iROM35(.clk(clk), .addr(bmp_addr), .dout(bmp_read35));
+BMP_ROM_TankGunNE iROM36(.clk(clk), .addr(bmp_addr), .dout(bmp_read36));
+BMP_ROM_TankGunNW iROM37(.clk(clk), .addr(bmp_addr), .dout(bmp_read37));
+BMP_ROM_TankGunS iROM38(.clk(clk), .addr(bmp_addr), .dout(bmp_read38));
+BMP_ROM_TankGunSE iROM39(.clk(clk), .addr(bmp_addr), .dout(bmp_read39));
+BMP_ROM_TankGunSW iROM40(.clk(clk), .addr(bmp_addr), .dout(bmp_read40));
+BMP_ROM_TankGunW iROM41(.clk(clk), .addr(bmp_addr), .dout(bmp_read41));
 
-  assign bmp_read = (fnt_addr_inc) ? bmp_read0 :
-					(indx==5'd01) ? bmp_read1 :
-                    'b0;
-  
+
+assign bmp_read = (indx == 6'd00) ? bmp_read0 :
+                   (indx == 6'd01) ? bmp_read1 :
+                   (indx == 6'd02) ? bmp_read2 :
+                   (indx == 6'd03) ? bmp_read3 :
+                   (indx == 6'd04) ? bmp_read4 :
+                   (indx == 6'd05) ? bmp_read5 :
+                   (indx == 6'd06) ? bmp_read6 :
+                   (indx == 6'd07) ? bmp_read7 :
+                   (indx == 6'd08) ? bmp_read8 :
+                   (indx == 6'd09) ? bmp_read9 :
+                   (indx == 6'd010) ? bmp_read10 :
+                   (indx == 6'd011) ? bmp_read11 :
+                   (indx == 6'd012) ? bmp_read12 :
+                   (indx == 6'd013) ? bmp_read13 :
+                   (indx == 6'd014) ? bmp_read14 :
+                   (indx == 6'd015) ? bmp_read15 :
+                   (indx == 6'd016) ? bmp_read16 :
+                   (indx == 6'd017) ? bmp_read17 :
+                   (indx == 6'd018) ? bmp_read18 :
+                   (indx == 6'd019) ? bmp_read19 :
+                   (indx == 6'd020) ? bmp_read20 :
+                   (indx == 6'd021) ? bmp_read21 :
+                   (indx == 6'd022) ? bmp_read22 :
+                   (indx == 6'd023) ? bmp_read23 :
+                   (indx == 6'd024) ? bmp_read24 :
+                   (indx == 6'd025) ? bmp_read25 :
+                   (indx == 6'd026) ? bmp_read26 :
+                   (indx == 6'd027) ? bmp_read27 :
+                   (indx == 6'd028) ? bmp_read28 :
+                   (indx == 6'd029) ? bmp_read29 :
+                   (indx == 6'd030) ? bmp_read30 :
+                   (indx == 6'd031) ? bmp_read31 :
+                   (indx == 6'd032) ? bmp_read32 :
+                   (indx == 6'd033) ? bmp_read33 :
+                   (indx == 6'd034) ? bmp_read34 :
+                   (indx == 6'd035) ? bmp_read35 :
+                   (indx == 6'd036) ? bmp_read36 :
+                   (indx == 6'd037) ? bmp_read37 :
+                   (indx == 6'd038) ? bmp_read38 :
+                   (indx == 6'd039) ? bmp_read39 :
+                   (indx == 6'd040) ? bmp_read40 :
+                   (indx == 6'd041) ? bmp_read41 :
+                   'b0 ;
+
+				
 endmodule

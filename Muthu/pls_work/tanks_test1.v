@@ -146,7 +146,7 @@ wire [31:0] data_out;
 wire q_empty, busy;
 reg remove;
 
-circular_queue #(.Q_WIDTH('d32), .Q_SIZE('d32)) iVGAQueue(.clk(clk),.rst_n(rst_n),.data_in(memMappedDataOut),.add(VGA_WRITE),
+circular_queue #(.Q_WIDTH('d32), .Q_SIZE('d128)) iVGAQueue(.clk(clk),.rst_n(rst_n),.data_in(memMappedDataOut),.add(VGA_WRITE),
                                                             .remove(remove),.data_out(data_out),.q_full(q_full),.q_empty(q_empty), 
                                                             .remaining(), .containing());
 
