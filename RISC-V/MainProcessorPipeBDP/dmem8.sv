@@ -19,6 +19,13 @@ module dmem8(clk,addr,re,we,rdata,wdata);
   
   reg [7:0]mem[0:8191];
 
+  initial begin
+	  for(int i=0; i<8192; i++)
+	  begin
+	      mem[i] = '0;
+	  end
+  end
+
   always @(negedge clk)
     if (re)
 	    rdata <= mem[addr];
