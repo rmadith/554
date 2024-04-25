@@ -70,7 +70,7 @@ module BMP_display(
   /////////////////////////////////////
   // Instantiate 9-bit video memory //
   ///////////////////////////////////
-  videoMem(.clk(clk),.we(we),.waddr(waddr),.wdata(wdata),.raddr(raddr),.rdata(rdata));
+  videoMem(.clk(clk),.we(we),.waddr(waddr),.wdata(wdata),.raddr(raddr),.rdata(rdata), .rst_n(rst_n));
   
   assign VGA_R = {rdata[5:4],6'b000000};
   assign VGA_G = {rdata[3:2],6'b000000};

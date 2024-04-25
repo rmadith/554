@@ -92,7 +92,7 @@ wire [11:0] joystick_data;
 wire [12:0] baud;
 reset_synch irst(.RST_n(KEY[0]), .clk(clk), .rst_n(rst_n), .pll_locked(pll_locked));
 reset_synch idebug(.RST_n(SW[0]), .clk(clk), .rst_n(debug_sig), .pll_locked(1'b1));
-reset_synch iBaud(.RST_n(SW[9]), .clk(clk), .rst_n(baud_sig), .pll_locked(1'b1));
+//reset_synch iBaud(.RST_n(SW[9]), .clk(clk), .rst_n(baud_sig), .pll_locked(1'b1));
 
 pll iPLL (.refclk(CLOCK2_50), .rst(~KEY[0]),.outclk_0(clk),.outclk_1(VGA_CLK),
            .locked(pll_locked));
@@ -107,7 +107,7 @@ assign LEDR[5] = !cpu_rst_n;
 //  Structural coding
 //=======================================================
 // Bootloader
-assign baud = (baud_sig) ? 'h1458 : 'h01b2;
+assign baud = (SW[9]) ? 'h1458 : 'h01b2;
 
 bootloader iboot (.clk(clk), .rst_n(rst_n), .debug(debug_sig), .addr(boot_addr), .data(boot_data), 
 					.increment(LEDR[6]), .RX(GPIO_1[5]), .TX(GPIO_1[3]), .outdata(memMappedDataOut), .write(write), .baud(baud));
