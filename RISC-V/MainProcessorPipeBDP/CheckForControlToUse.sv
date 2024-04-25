@@ -55,7 +55,7 @@ module CheckForControlToUse(
 	assign stall_intermediate_2 = stall_intermediate_1 & RegWriteEnableDownPipeline;
 	
 	// For the case that we are trying to detect load to branch stalls, we need to make sure that the instruction farther down the pipeline is a load.
-	assign stall = load_to_branch_case ? ((InstructionDownPipeline == LOAD_opcode) & stall_intermediate_2) : stall_intermediate_2;
+	assign stall = load_to_branch_case ? ((InstructionDownPipeline[6:0] == LOAD_opcode) & stall_intermediate_2) : stall_intermediate_2;
 
 endmodule
 `default_nettype wire
