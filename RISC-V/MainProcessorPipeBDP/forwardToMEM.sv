@@ -27,7 +27,7 @@ module forwardToMEM (
 
 	// The registers whose value we need to use in EX stage.
 	wire [4:0] Reg_being_stored;
-	assign Reg_being_stored = Instruction_EXMEM_MEMWB [19:15];
+	assign Reg_being_stored = Instruction_EXMEM_MEMWB [24:20];
 
 	// The register we are writing to in the instruction that is in the WB stage
 	wire [4:0] WB_destination_reg;
