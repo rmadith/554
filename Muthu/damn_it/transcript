@@ -1,0 +1,684 @@
+# Compile of ALU.sv was successful.
+# Compile of branch_unit.sv was successful.
+# Compile of BTB_and_PC.sv was successful.
+# Compile of CheckForControlToUse.sv failed with 4 errors.
+# Compile of CheckForLoadToUse.sv failed with 9 errors.
+# Compile of common_def.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of cpu.sv was successful.
+# Compile of cpu_tb.sv was successful.
+# Compile of decode.sv was successful.
+# Compile of dmem8.sv was successful.
+# Compile of execute.sv was successful.
+# Compile of EXMEMpipelineReg.sv was successful.
+# Compile of extension_unit.sv was successful.
+# Compile of fetch.sv was successful.
+# Compile of fetchTB.sv was successful.
+# Compile of forwardToD.sv was successful.
+# Compile of forwardToEX.sv was successful.
+# Compile of forwardToMEM.sv was successful.
+# Compile of HazardDetection.sv was successful.
+# Compile of IDEXpipelineReg.sv was successful.
+# Compile of IFIDpipelineReg.sv was successful.
+# Compile of instruction_debug.sv was successful.
+# Compile of memory.sv was successful.
+# Compile of MEMWBpipelineReg.sv was successful.
+# Compile of rf.sv was successful.
+# Compile of shifter.sv was successful.
+# Compile of wb.sv was successful.
+# 28 compiles, 2 failed with 13 errors.
+# Compile of CheckForControlToUse.sv was successful.
+# Compile of CheckForLoadToUse.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.cpu_tb -voptargs=+acc
+# vsim work.cpu_tb -voptargs="+acc" 
+# Start time: 16:45:49 on Apr 23,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+log * -r
+do I:/win/554_git/RISC-V/MainProcessorPipe/wave.do
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "../Verification/jal.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : I:/win/554_git/RISC-V/MainProcessorPipe/fetch.sv(31)
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/iCPU/iFetch
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 9 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+# Compile of fetch.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 111 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+# Causality operation skipped due to absence of debug database file
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 159 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 159 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+# Load canceled
+quit -sim
+# End time: 19:17:02 on Apr 23,2024, Elapsed time: 2:31:13
+# Errors: 0, Warnings: 2
+vsim -voptargs=+acc work.cpu_tb
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 19:17:47 on Apr 23,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 159 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+do I:/win/554_git/RISC-V/MainProcessorPipe/wave.do
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 159 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 71 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 71 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run
+run -continue
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 71 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 71 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+quit -sim
+# End time: 21:29:19 on Apr 23,2024, Elapsed time: 2:11:32
+# Errors: 0, Warnings: 1
+# Compile of dmem8.sv was successful.
+# Compile of memory.sv failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of memory.sv was successful.
+# Compile of ALU.sv was successful.
+# Compile of branch_unit.sv was successful.
+# Compile of BTB_and_PC.sv was successful.
+# Compile of CheckForControlToUse.sv was successful.
+# Compile of CheckForLoadToUse.sv was successful.
+# Compile of common_def.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of cpu.sv was successful.
+# Compile of cpu_tb.sv was successful.
+# Compile of decode.sv was successful.
+# Compile of dmem8.sv was successful.
+# Compile of execute.sv was successful.
+# Compile of EXMEMpipelineReg.sv was successful.
+# Compile of extension_unit.sv was successful.
+# Compile of fetch.sv was successful.
+# Compile of fetchTB.sv was successful.
+# Compile of forwardToD.sv was successful.
+# Compile of forwardToEX.sv was successful.
+# Compile of forwardToMEM.sv was successful.
+# Compile of HazardDetection.sv was successful.
+# Compile of IDEXpipelineReg.sv was successful.
+# Compile of IFIDpipelineReg.sv was successful.
+# Compile of instruction_debug.sv was successful.
+# Compile of memory.sv was successful.
+# Compile of MEMWBpipelineReg.sv was successful.
+# Compile of rf.sv was successful.
+# Compile of shifter.sv was successful.
+# Compile of wb.sv was successful.
+# 28 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.cpu_tb
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 22:54:56 on Apr 23,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+do I:/win/554_git/RISC-V/MainProcessorPipe/wave.do
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv(87)
+#    Time: 71 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv line 87
+# End time: 23:01:41 on Apr 23,2024, Elapsed time: 0:06:45
+# Errors: 0, Warnings: 5

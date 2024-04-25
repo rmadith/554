@@ -256,6 +256,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
 					"name" : "ADC_DOUT",
 					"strict" : false
 				}

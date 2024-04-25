@@ -9,7 +9,7 @@ OUTPUT_ARCH(riscv)
 MEMORY
 {
    /*Pointing the start & length*/
-   RAM (rwx)  : ORIGIN = 0x00000000, LENGTH = 128M
+   RAM (rwx)  : ORIGIN = 0x00000000, LENGTH = 8192
 }
 ENTRY(_start)
 _start = ORIGIN(RAM);

@@ -19,6 +19,10 @@ module dmem8(clk,addr,re,we,rdata,wdata);
   
   reg [7:0]mem[0:8191];
 
+  initial begin 
+    $readmemh(file,mem);
+  end
+
   always @(negedge clk)
     if (re)
 	    rdata <= mem[addr];

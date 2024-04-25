@@ -1,0 +1,213 @@
+I:/win/554_git/RISC-V/MainProcessorPipe/shifter.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/shifter.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/forwardToEX.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/forwardToEX.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module forwardToEX
+
+Top level modules:
+	forwardToEX
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/branch_unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/branch_unit.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module branch_unit
+
+Top level modules:
+	branch_unit
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/cpu_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package cpu_tb_sv_unit
+-- Importing package common_def
+-- Compiling module cpu_tb
+
+Top level modules:
+	cpu_tb
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/IDEXpipelineReg.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/IDEXpipelineReg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package IDEXpipelineReg_sv_unit
+-- Importing package common_def
+-- Compiling module IDEXpipelineReg
+
+Top level modules:
+	IDEXpipelineReg
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/forwardToMEM.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/forwardToMEM.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module forwardToMEM
+
+Top level modules:
+	forwardToMEM
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/common_def.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/common_def.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package common_def
+
+Top level modules:
+	--none--
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/rf.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/rf.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module rf
+
+Top level modules:
+	rf
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/IFIDpipelineReg.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/IFIDpipelineReg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package IFIDpipelineReg_sv_unit
+-- Importing package common_def
+-- Compiling module IFIDpipelineReg
+
+Top level modules:
+	IFIDpipelineReg
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/control_unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/control_unit.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module control_unit
+
+Top level modules:
+	control_unit
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/cpu.sv {1 {vlog -work work -vopt -sv -stats=none {I:\win\554_git\RISC-V\MainProcessorPipe\cpu.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/wb.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/wb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module wb
+
+Top level modules:
+	wb
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/HazardDetection.sv {1 {vlog -work work -vopt -sv -stats=none {I:\win\554_git\RISC-V\MainProcessorPipe\HazardDetection.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module HazardDetection
+
+Top level modules:
+	HazardDetection
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/fetch.sv {1 {vlog -work work -vopt -sv -stats=none {I:\win\554_git\RISC-V\MainProcessorPipe\fetch.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/forwardToD.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/forwardToD.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module forwardToD
+
+Top level modules:
+	forwardToD
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/extension_unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/extension_unit.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module extension_unit
+
+Top level modules:
+	extension_unit
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/decode.sv {1 {vlog -work work -vopt -sv -stats=none {I:\win\554_git\RISC-V\MainProcessorPipe\decode.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module decode
+
+Top level modules:
+	decode
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/CheckForLoadToUse.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/CheckForLoadToUse.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package CheckForLoadToUse_sv_unit
+-- Importing package common_def
+-- Compiling module CheckForLoadToUse
+
+Top level modules:
+	CheckForLoadToUse
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/CheckForControlToUse.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/CheckForControlToUse.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package CheckForControlToUse_sv_unit
+-- Importing package common_def
+-- Compiling module CheckForControlToUse
+
+Top level modules:
+	CheckForControlToUse
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/instruction_debug.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/instruction_debug.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package instruction_debug_sv_unit
+-- Importing package common_def
+-- Compiling module instruction_debug
+
+Top level modules:
+	instruction_debug
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/fetchTB.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/fetchTB.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module fetchTB
+
+Top level modules:
+	fetchTB
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/EXMEMpipelineReg.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/EXMEMpipelineReg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package EXMEMpipelineReg_sv_unit
+-- Importing package common_def
+-- Compiling module EXMEMpipelineReg
+
+Top level modules:
+	EXMEMpipelineReg
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/memory.sv {1 {vlog -work work -vopt -sv -stats=none {I:\win\554_git\RISC-V\MainProcessorPipe\memory.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/ALU.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/ALU.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/dmem8.sv {1 {vlog -work work -vopt -sv -stats=none {I:\win\554_git\RISC-V\MainProcessorPipe\dmem8.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module dmem8
+
+Top level modules:
+	dmem8
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/execute.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/execute.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module execute
+
+Top level modules:
+	execute
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/MEMWBpipelineReg.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/MEMWBpipelineReg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package MEMWBpipelineReg_sv_unit
+-- Importing package common_def
+-- Compiling module MEMWBpipelineReg
+
+Top level modules:
+	MEMWBpipelineReg
+
+} {} {}} I:/win/554_git/RISC-V/MainProcessorPipe/BTB_and_PC.sv {1 {vlog -work work -vopt -sv -stats=none I:/win/554_git/RISC-V/MainProcessorPipe/BTB_and_PC.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module BTB_and_PC
+
+Top level modules:
+	BTB_and_PC
+
+} {} {}}

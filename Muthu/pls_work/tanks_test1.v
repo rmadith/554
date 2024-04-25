@@ -81,7 +81,7 @@ module tanks_test1(
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-wire rst_n, clk, debug_sig, cpu_rst_n, q_full;
+wire rst_n, clk, debug_sig, cpu_rst_n, q_full, baud_sig;
 reg write, VGA_WRITE;
 reg [5:0] done;
 
@@ -89,9 +89,10 @@ wire [31:0] memMappedDataOut, memMappedAddr;
 wire [31:0] boot_addr, boot_data;
 
 wire [11:0] joystick_data;
-
+wire [12:0] baud;
 reset_synch irst(.RST_n(KEY[0]), .clk(clk), .rst_n(rst_n), .pll_locked(pll_locked));
 reset_synch idebug(.RST_n(SW[0]), .clk(clk), .rst_n(debug_sig), .pll_locked(1'b1));
+reset_synch iBaud(.RST_n(SW[9]), .clk(clk), .rst_n(baud_sig), .pll_locked(1'b1));
 
 pll iPLL (.refclk(CLOCK2_50), .rst(~KEY[0]),.outclk_0(clk),.outclk_1(VGA_CLK),
            .locked(pll_locked));
@@ -106,8 +107,10 @@ assign LEDR[5] = !cpu_rst_n;
 //  Structural coding
 //=======================================================
 // Bootloader
+assign baud = (baud_sig) ? 'h1458 : 'h01b2;
+
 bootloader iboot (.clk(clk), .rst_n(rst_n), .debug(debug_sig), .addr(boot_addr), .data(boot_data), 
-					.increment(LEDR[6]), .RX(GPIO_1[5]), .TX(GPIO_1[3]), .outdata(memMappedDataOut), .write(write));
+					.increment(LEDR[6]), .RX(GPIO_1[5]), .TX(GPIO_1[3]), .outdata(memMappedDataOut), .write(write), .baud(baud));
 
 assign cpu_rst_n = (debug_sig) ? 1'b0 : rst_n;
 // CPU
@@ -143,7 +146,7 @@ wire [31:0] data_out;
 wire q_empty, busy;
 reg remove;
 
-circular_queue #(.Q_WIDTH('d32), .Q_SIZE('d32)) iVGAQueue(.clk(clk),.rst_n(rst_n),.data_in(memMappedDataOut),.add(VGA_WRITE),
+circular_queue #(.Q_WIDTH('d32), .Q_SIZE('d128)) iVGAQueue(.clk(clk),.rst_n(rst_n),.data_in(memMappedDataOut),.add(VGA_WRITE),
                                                             .remove(remove),.data_out(data_out),.q_full(q_full),.q_empty(q_empty), 
                                                             .remaining(), .containing());
 
@@ -157,6 +160,7 @@ always @(posedge clk, negedge rst_n)
 
 always @(*) begin
 	nxt_state = state;
+	remove = 0;
 	case(state)
 		1'b0:	if(!q_empty) begin 
 					remove = 1;
