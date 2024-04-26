@@ -18,7 +18,7 @@ for item in "$folder"/*; do
     if [ -f $item ]; then
         echo Running Perl script for $item
         # Run your Perl script here
-        perl bmp24_to_bin6.pl $item images_out
+        perl bmp24_to_bin6BATCHVERSION.pl $item images_out
     fi
 done
 
