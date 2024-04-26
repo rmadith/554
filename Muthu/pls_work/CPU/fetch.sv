@@ -30,7 +30,7 @@ module fetch (
 
 
     initial begin
-        $readmemh("muthu.hex",instr_mem);
+        $readmemh("wiscv.hex",instr_mem);
     end
 
 

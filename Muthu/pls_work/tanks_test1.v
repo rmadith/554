@@ -170,6 +170,8 @@ always @(*) begin
 	endcase
 end
 
+assign inter_data = (state) ? 'b0 : data_out;
+
 BMP_display IBMP (.clk(clk), .VGA_CLK(VGA_CLK), .rst_n(rst_n), .VGA_BLANK_N(VGA_BLANK_N), .VGA_B(VGA_B), .VGA_G(VGA_G), .VGA_HS(VGA_HS), .VGA_R(VGA_R), 
 					.VGA_SYNC_N(VGA_SYNC_N), .VGA_VS(VGA_VS), .xloc(data_out[31:22]), .yloc(data_out[21:13]), .add_fnt(1'b0), .fnt_indx('b0), .add_img(data_out[0]), 
 					.image_indx(data_out[7:2]), .rem_img(data_out[1]), .busy(busy));

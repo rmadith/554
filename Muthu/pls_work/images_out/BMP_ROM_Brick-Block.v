@@ -7,7 +7,7 @@ module BMP_ROM_Brick_Block(clk,addr,dout);
   reg [5:0] rom[0:4099];
 
   initial
-    $readmemb("images_out/Brick_Block.hex",rom);
+    $readmemb("images_out/Brick-Block.hex",rom);
 
   always @(posedge clk)
     dout <= rom[addr];

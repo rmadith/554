@@ -322,17 +322,13 @@ module cpu(
 		.memType_EXMEM_out(memType_EXMEM_out),
 
 		///// OUTPUTS  /////
-		.memReadRst_MEMWB_in(memReadRst_MEMWB_in),
+		.memReadRst_MEMWB_in(memReadRst_MEMWB_in)
 
-        // Bootloader //
-		.debug(debug),
-		.boot_addr(boot_addr),
-		.boot_data(boot_data)
 	
 	);
 
-	assign memMappedDataOut = (we) ? RegData2_after_forward_M: 'b0;
-	assign memMappedAddr = (we) ? execute_result_EXMEM_MEMWB : 'b0;
+	assign memMappedDataOut = (we) ? RegData2_after_forward_M: 'b1;
+	assign memMappedAddr = (we) ? execute_result_EXMEM_MEMWB : 'b1;
 
 	assign dataMem  = re ? joystick_data : memReadRst_MEMWB_in;
 
