@@ -16,7 +16,7 @@ int tank_yloc = 300;
 int tank_index= 32;
 
 // image index = 1
-int read_joystick(){
+void read_joystick(){
         //*joystick = 0x0000003F; // to reset the joystick
         x1_val = (*joystick & 0x00000C00) >> 10;
         y1_val = (*joystick & 0x00000300) >> 8;
@@ -25,8 +25,14 @@ int read_joystick(){
         y2_val = (*joystick & 0x0000000C) >> 2;
         ps2_val = (*joystick &0x00000003);
         //*debug = *joystick;
-	*joystick = 0x0000003F;
-        return 0;
+	*joystick = 0x0000003F; // 0x3F - to clear the joystick value
+        if(y1_val > 0){
+		x1_val = 0;
+	}
+	else if(x1_val > 0){
+		y1_val = 0;
+	}
+
 }
 
 void update_tank(){
@@ -35,7 +41,7 @@ void update_tank(){
 
 	if(x1_val == 2){ // LEFT
         	if(tank_xloc > 1) {
-        		*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (tank_index << 2) | (0x2);
+        		*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (tank_index << 2) | (0x2);// remove
 			
 			tank_xloc = tank_xloc - 1;
 			tank_index = 33;
@@ -70,10 +76,11 @@ void update_tank(){
 
 
 int main(){
-	while(1){
-        	read_joystick();
-		update_tank();
-   	}
+	//while(1){
+        *VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (tank_index << 2) | (0x2);
+        	//read_joystick();
+		//update_tank();
+   	//}
     return 0;
 
 }

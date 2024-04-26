@@ -17,6 +17,8 @@ module PlaceBMP(clk,rst_n,add_fnt,fnt_indx,add_img,rem_img,image_indx,
   output logic busy;		// asserted if PlaceBMP is busy and cannot accept another command
 							// this would be good to put into a status register if you memory map
 							// this to your processor....which you should.
+							
+  localparam BACKGRND = 6'h3F;
     
   //////////////////////////////////////////
   // Declare any internal registers next //
@@ -33,7 +35,7 @@ module PlaceBMP(clk,rst_n,add_fnt,fnt_indx,add_img,rem_img,image_indx,
   reg [5:0] font_indx;				// 1 of 42
   reg rem;							// set if removing image
   
-  typedef enum reg[3:0] {IDLE,ADV1,ADV2,XRD1,XRD2,YRD1,YRD2,WRT,WRT2} state_t;
+  typedef enum reg[3:0] {INIT,IDLE,ADV1,ADV2,XRD1,XRD2,YRD1,YRD2,WRT,WRT2} state_t;
   
   state_t state, nxt_state;
   
@@ -44,6 +46,7 @@ module PlaceBMP(clk,rst_n,add_fnt,fnt_indx,add_img,rem_img,image_indx,
   logic bmp_addr_inc;
   logic waddr_inc;
   logic fnt_addr_inc;
+  logic rst_waddr;
   
   ///////////////////////////
   // Internal nets follow //
@@ -199,7 +202,7 @@ wire [5:0] bmp_read41;
   //////////////////////////////////		
   always_ff @(posedge clk, negedge rst_n)
       if (!rst_n)
-	    waddr <= 18'h00000;
+	    waddr <= 19'h00000;
 	  else if (captureIndx)
 	    waddr <= yloc*10'd640 + xloc;
 	  else if (waddr_wrap_en)
@@ -228,7 +231,7 @@ wire [5:0] bmp_read41;
   ////////////////  
   always_ff @(posedge clk, negedge rst_n)
     if (!rst_n)
-	  state <= IDLE;
+	  state <= INIT;
 	else
 	  state <= nxt_state;
   
@@ -247,6 +250,13 @@ wire [5:0] bmp_read41;
 	wdata = 6'hxxx;
 
 	case (state)
+	  INIT: begin
+	    we = 1;
+		 wdata = BACKGRND;
+		 waddr_inc = 1;
+		 if (waddr == 19'h4b000)
+		   nxt_state = IDLE;
+	  end
 	  IDLE: begin
 	    busy = 0;
 	    if (add_img | rem_img) begin
@@ -288,8 +298,8 @@ wire [5:0] bmp_read41;
 	  WRT: begin
 	    if (bmp_addr<bmp_addr_end) begin
 		  bmp_addr_inc = 1;
-		  wdata = (rem) ? 6'h00 : bmp_read;
-		  we = (bmp_read==6'h024) ? 1'b0 : 1'b1;	// 128,64,32 is treated as transparent
+		  wdata = (rem) ? BACKGRND : bmp_read;
+		  we = rem ? 1'b1 : ((bmp_read==6'h024) ? 1'b0 : 1'b1);	// 128,64,32 is treated as transparent
 		  waddr_inc = 1;
 		end else
 		  nxt_state = IDLE;

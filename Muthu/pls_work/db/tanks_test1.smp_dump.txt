@@ -1,15 +1,16 @@
 
 State Machine - |tanks_test1|BMP_display:IBMP|PlaceBMP:comb_28|state
-Name state.WRT state.YRD2 state.YRD1 state.XRD2 state.XRD1 state.ADV2 state.ADV1 state.IDLE state.WRT2 
-state.IDLE 0 0 0 0 0 0 0 0 0 
-state.ADV1 0 0 0 0 0 0 1 1 0 
-state.ADV2 0 0 0 0 0 1 0 1 0 
-state.XRD1 0 0 0 0 1 0 0 1 0 
-state.XRD2 0 0 0 1 0 0 0 1 0 
-state.YRD1 0 0 1 0 0 0 0 1 0 
-state.YRD2 0 1 0 0 0 0 0 1 0 
-state.WRT 1 0 0 0 0 0 0 1 0 
-state.WRT2 0 0 0 0 0 0 0 1 1 
+Name state.WRT2 state.WRT state.YRD2 state.YRD1 state.XRD2 state.XRD1 state.ADV2 state.ADV1 state.IDLE state.INIT 
+state.INIT 0 0 0 0 0 0 0 0 0 0 
+state.IDLE 0 0 0 0 0 0 0 0 1 1 
+state.ADV1 0 0 0 0 0 0 0 1 0 1 
+state.ADV2 0 0 0 0 0 0 1 0 0 1 
+state.XRD1 0 0 0 0 0 1 0 0 0 1 
+state.XRD2 0 0 0 0 1 0 0 0 0 1 
+state.YRD1 0 0 0 1 0 0 0 0 0 1 
+state.YRD2 0 0 1 0 0 0 0 0 0 1 
+state.WRT 0 1 0 0 0 0 0 0 0 1 
+state.WRT2 1 0 0 0 0 0 0 0 0 1 
 
 State Machine - |tanks_test1|BMP_display:IBMP|VGA_timing:iVGATM|Vstate
 Name Vstate.V_FP Vstate.V_FRAME Vstate.V_BP Vstate.V_SYNCH 

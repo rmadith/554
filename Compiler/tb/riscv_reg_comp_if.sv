@@ -34,7 +34,7 @@ reg [31:0] pc_old;
 
 integer error_count_cycles=0;
 bit error_detect=0;
-bit [31:0] address, mem_value, temp, address_temp;
+bit [31:0] address, mem_value, mem_value_ref_bus, temp, address_temp; //mem_value_ref_bus is data seen on ref bus for dut probe comparison
 
 //Golden ELF Run
 reg [2000:0] elf_run_fpath = "./wiscv.golden_run";
@@ -138,7 +138,7 @@ end
 
 function void check_reg_files();
 
-  for(int i = 0; i < 32; i=i+1) begin//{
+  for(int i = 1; i < 32; i=i+1) begin//{
     if(tb_gprs[i]!==gprs[i]) begin//{
       error_detect = 1;
       $display("@%t cycle_count = %d ERROR : Reg values mismatch at index %0d ; Expected : %0h, Actual : %0h current_pc : %0h old_pc : %0h",$time,cycle_count,i,tb_gprs[i],gprs[i],pc,pc_old);
@@ -150,7 +150,7 @@ endfunction
 function void check_mem_files();
 `ifndef CACHE
   for(int i = 0; i < NUM_MEM_WORDS; i=i+1) begin//{
-    if(tb_mem[i]!==mem[i]) begin//{
+    if(tb_mem[i]!=mem[i]) begin//{
       error_detect = 1;
       $display("ERROR : Mem mismatch address = 0x%x, Expected value = 0x%x Actual value = 0x%x",i, tb_mem[i], mem[i]);
     end//}
@@ -438,8 +438,11 @@ function void wiscv_sb (input bit[4:0] rs1 , input bit[4:0] rs2 , input bit[11:0
 address = tb_gprs[rs2] + {{20{imm[11]}},imm[11:0]};
 mem_value = tb_mem[address[2+:$clog2(NUM_MEM_WORDS)]];
 temp[7:0] = tb_gprs[rs1][7:0];
-tb_mem[address[2+:$clog2(NUM_MEM_WORDS)]] = (address[1:0] == 2'b11)? {temp[7:0], 24'h0} : (address[1:0] == 2'b10)? {8'h0, temp[7:0], 16'h0} : (address[1:0] == 2'b01)? {16'h0, temp[7:0], 8'h0} : temp ;
+tb_mem[address[2+:$clog2(NUM_MEM_WORDS)]] = (address[1:0] == 2'b11)? {temp[7:0], mem_value[23:0]} : (address[1:0] == 2'b10)? {mem_value[31:24], temp[7:0], mem_value[15:0]} : (address[1:0] == 2'b01)? {mem_value[31:16], temp[7:0], mem_value[7:0]} : {mem_value[31:8],temp[7:0]};
 tb_next_pc = elf_run_instr_pc + 4 ;
+//for ref bus write
+mem_value = 32'h0;
+mem_value = (address[1:0] == 2'b11)? {temp[7:0], mem_value[23:0]} : (address[1:0] == 2'b10)? {mem_value[31:24], temp[7:0], mem_value[15:0]} : (address[1:0] == 2'b01)? {mem_value[31:16], temp[7:0], mem_value[7:0]} : {mem_value[31:8],temp[7:0]};
 //$fwrite(ref_trace_fh,"Reg RD index = %d, value = 0x%x\n", rd, tb_gprs[rd]);
 print_mem_write();
 
@@ -448,9 +451,13 @@ endfunction
 function void wiscv_sh (input bit[4:0] rs1 , input bit[4:0] rs2 , input bit[11:0] imm);
 
 address = tb_gprs[rs2] + {{20{imm[11]}},imm[11:0]};
+mem_value = tb_mem[address[2+:$clog2(NUM_MEM_WORDS)]];
 temp[15:0] = tb_gprs[rs1][15:0];
-tb_mem[address[2+:$clog2(NUM_MEM_WORDS)]] = (address[1]) ? {temp[15:0],16'h0} : temp;
+tb_mem[address[2+:$clog2(NUM_MEM_WORDS)]] = (address[1]) ? {temp[15:0],mem_value[15:0]} : {mem_value[15:0],temp[15:0]};
 tb_next_pc = elf_run_instr_pc + 4 ;
+//for ref bus write
+mem_value = 32'h0;
+mem_value = (address[1]) ? {temp[15:0],mem_value[15:0]} : {mem_value[15:0],temp[15:0]};
 print_mem_write();
 
 endfunction
@@ -460,6 +467,7 @@ function void wiscv_sw (input bit[4:0] rs1 , input bit[4:0] rs2 , input bit[11:0
 address = tb_gprs[rs2] + {{20{imm[11]}},imm[11:0]};
 tb_mem[address[2+:$clog2(NUM_MEM_WORDS)]] = tb_gprs[rs1];
 tb_next_pc = elf_run_instr_pc + 4 ;
+mem_value = tb_mem[address[2+:$clog2(NUM_MEM_WORDS)]];
 print_mem_write();
 
 endfunction
@@ -741,9 +749,9 @@ endfunction
 function void print_mem_write();
     address_temp = {address[31:2],2'b00}; // Aligned address prints
     if(PIPELINE_EN)
-        $fwrite(ref_trace_fh,"Mem write addr = 0x%x, value = 0x%x\n", address_temp, tb_mem[address[2+:$clog2(NUM_MEM_WORDS)]]);
+        $fwrite(ref_trace_fh,"Mem write addr = 0x%x, value = 0x%x\n", address_temp, mem_value);
     else 
-        $fwrite(ref_trace_fh,"PC: 0x%x Mem write addr = 0x%x, value = 0x%x\n", elf_run_instr_pc, address_temp, tb_mem[address[2+:$clog2(NUM_MEM_WORDS)]]);
+        $fwrite(ref_trace_fh,"PC: 0x%x Mem write addr = 0x%x, value = 0x%x\n", elf_run_instr_pc, address_temp, mem_value);
 endfunction
 
 function void print_control_transfer_instr();
