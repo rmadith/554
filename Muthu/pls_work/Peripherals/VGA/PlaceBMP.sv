@@ -299,7 +299,7 @@ wire [5:0] bmp_read41;
 	    if (bmp_addr<bmp_addr_end) begin
 		  bmp_addr_inc = 1;
 		  wdata = (rem) ? BACKGRND : bmp_read;
-		  we = rem ? 1'b1 : ((bmp_read==6'h024) ? 1'b0 : 1'b1);	// 128,64,32 is treated as transparent
+		  we =  ((bmp_read==6'h024) ? 1'b0 : 1'b1);	// 128,64,32 is treated as transparent
 		  waddr_inc = 1;
 		end else
 		  nxt_state = IDLE;

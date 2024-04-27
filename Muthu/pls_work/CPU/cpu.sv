@@ -322,7 +322,12 @@ module cpu(
 		.memType_EXMEM_out(memType_EXMEM_out),
 
 		///// OUTPUTS  /////
-		.memReadRst_MEMWB_in(memReadRst_MEMWB_in)
+		.memReadRst_MEMWB_in(memReadRst_MEMWB_in),
+
+		//// Bootloader /////
+		.debug(debug),
+		.boot_addr(boot_addr),
+		.boot_data(boot_data)
 
 	
 	);

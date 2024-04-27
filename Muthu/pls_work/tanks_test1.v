@@ -90,6 +90,12 @@ wire [31:0] boot_addr, boot_data;
 
 wire [11:0] joystick_data;
 wire [12:0] baud;
+
+reg [31:0] data_out;
+wire q_empty, busy;
+reg remove;
+
+
 reset_synch irst(.RST_n(KEY[0]), .clk(clk), .rst_n(rst_n), .pll_locked(pll_locked));
 reset_synch idebug(.RST_n(SW[0]), .clk(clk), .rst_n(debug_sig), .pll_locked(1'b1));
 //reset_synch iBaud(.RST_n(SW[9]), .clk(clk), .rst_n(baud_sig), .pll_locked(1'b1));
@@ -116,16 +122,16 @@ assign cpu_rst_n = (debug_sig) ? 1'b0 : rst_n;
 // CPU
 cpu iCPU(.clk(clk), .rst_n(cpu_rst_n), .boot_addr(boot_addr), .boot_data(boot_data), 
 			.debug(debug_sig), .memMappedAddr(memMappedAddr), .memMappedDataOut(memMappedDataOut), 
-			.joystick_data({q_full,19'b0, joystick_data}), .halt(LEDR[9]));
+			.joystick_data({busy,19'b0, joystick_data}), .halt(LEDR[9]));
 
 always @(*) begin
 	write = 0;
 	done = 'b0;
-	VGA_WRITE = 'b0;
+	data_out = 'b0;
 	case(memMappedAddr)
 		32'hFFFFC001 : 	write = 1;
 		32'hFFFFC002 :  done = memMappedDataOut[5:0];
-		32'hFFFFC003 :  VGA_WRITE = 1'b1;
+		32'hFFFFC003 :  data_out = memMappedDataOut;
 		default:		begin
 							write = 0;
 							done = 'b0;
@@ -142,13 +148,9 @@ joystick ijoy (.ADC_CONVST(ADC_CONVST), .ADC_DIN(ADC_DIN), .ADC_DOUT(ADC_DOUT),
 					.ADC_SCLK(ADC_SCLK), .clk(clk), .rst_n(rst_n), .done(done), .val(joystick_data));
 
 
-wire [31:0] data_out;
-wire q_empty, busy;
-reg remove;
-
-circular_queue #(.Q_WIDTH('d32), .Q_SIZE('d128)) iVGAQueue(.clk(clk),.rst_n(rst_n),.data_in(memMappedDataOut),.add(VGA_WRITE),
-                                                            .remove(remove),.data_out(data_out),.q_full(q_full),.q_empty(q_empty), 
-                                                            .remaining(), .containing());
+//circular_queue #(.Q_WIDTH('d32), .Q_SIZE('d128)) iVGAQueue(.clk(clk),.rst_n(rst_n),.data_in(memMappedDataOut),.add(VGA_WRITE),
+//                                                            .remove(remove),.data_out(data_out),.q_full(q_full),.q_empty(q_empty), 
+//                                                            .remaining(), .containing());
 
 reg state, nxt_state;
 always @(posedge clk, negedge rst_n)
@@ -170,7 +172,7 @@ always @(*) begin
 	endcase
 end
 
-assign inter_data = (state) ? 'b0 : data_out;
+// assign inter_data = (state) ? 'b0 : data_out;
 
 BMP_display IBMP (.clk(clk), .VGA_CLK(VGA_CLK), .rst_n(rst_n), .VGA_BLANK_N(VGA_BLANK_N), .VGA_B(VGA_B), .VGA_G(VGA_G), .VGA_HS(VGA_HS), .VGA_R(VGA_R), 
 					.VGA_SYNC_N(VGA_SYNC_N), .VGA_VS(VGA_VS), .xloc(data_out[31:22]), .yloc(data_out[21:13]), .add_fnt(1'b0), .fnt_indx('b0), .add_img(data_out[0]), 

@@ -1,1 +1,1 @@
-extern unsigned int *x;
+extern unsigned int *joystick;

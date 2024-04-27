@@ -1,0 +1,29 @@
+
+
+I:/win/554_git/Muthu/pls_work/pll.v
+
+Apr 26 06PM:48:24>: MegaWizard Plug-In Manager does not recognize I:/win/554_git/Muthu/pls_work/pll.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?
+
+I:/win/554_git/Muthu/pls_work/pll.v
+
+Apr 26 06PM:48:45>: MegaWizard Plug-In Manager does not recognize I:/win/554_git/Muthu/pls_work/pll.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?
+
+I:/win/554_git/Muthu/pls_work/pll.v
+
+Apr 26 06PM:48:52>: MegaWizard Plug-In Manager does not recognize I:/win/554_git/Muthu/pls_work/pll.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?
+
+I:/win/554_git/Muthu/pls_work/pll.v
+
+Apr 26 06PM:48:58>: MegaWizard Plug-In Manager does not recognize I:/win/554_git/Muthu/pls_work/pll.v as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?
