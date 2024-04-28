@@ -4,6 +4,17 @@ unsigned int *debug = 0xFFFFC001;
 unsigned int *joystick = 0xFFFFC002;
 unsigned int *VGA = 0xFFFFC003;
 
+
+
+#define numBlocks 13
+#define TANK_WIDTH 64  
+#define TANK_HEIGHT 128
+#define BLOCK_WIDTH 64
+#define BLOCK_HEIGHT 128
+
+
+
+// Global Joystick values
 int x1_val;
 int y1_val;
 int ps1_val;
@@ -11,12 +22,37 @@ int x2_val;
 int y2_val;
 int ps2_val;
 
-int tank_xloc = 300; // initial placement of tank (middle)
-int tank_yloc = 300;
-int tank_index = 31;
-int gun_index = 34;
+// Player Tank
+int tank_xloc; // initial placement of tank (middle)
+int tank_yloc;
+int tank_index;
+int gun_index;
 
-// image index = 1
+
+// Blocks
+struct block_t{
+	int xloc;
+	int yloc;
+};
+
+struct block_t blocks[numBlocks] = {{70, 836}, {70, 708}, {70, 580}, {5,5}, {75, 75}, {145, 145}, {300, 300}, {300, 428}, {364, 300}, {500, 836}, {500,708}, {436, 708}, {500 ,5}};
+
+
+// Tank Struct
+struct tank_t{
+	int xloc;
+	int yloc;
+	int tank_index;
+	int gun_index;
+};
+
+struct tank_t enemy;
+
+
+
+///////////////////////
+// Interface Functions
+///////////////////////
 void read_joystick(){
         //*joystick = 0x0000003F; // to reset the joystick
         x1_val = (*joystick & 0x00000C00) >> 10;
@@ -33,10 +69,61 @@ void wait_for_vga(){
 	while(*VGA & 0x80000000);
 }
 
-void update_tank(){
+
+void init(){
+	// Reset xloc and yloc
+	tank_xloc = 5;
+	tank_yloc = 820;
+
+	// Reset tank index and gun index
+	tank_index = 31;
+	gun_index = 35;
+
+	// Write tank
+	wait_for_vga();
+	*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (tank_index << 2) | (0x1);
+	wait_for_vga();
+	*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (gun_index << 2) | (0x1);
+
+
+	// Write sample block
+	for(int i = 0; i < numBlocks; i++){
+		wait_for_vga();
+		*VGA = (blocks[i].xloc << 22) | (blocks[i].yloc << 12) | (0 << 2) | (0x1);
+	}
+
+	// Initialise enemy 1
+	enemy.tank_index = 31;
+	enemy.gun_index = 38;
+	enemy.xloc = 574;
+	enemy.yloc = 5;
+
+	wait_for_vga();
+	*VGA = (enemy.xloc << 22) | (enemy.yloc << 12) | (enemy.tank_index << 2) | (0x1);
+	wait_for_vga();
+	*VGA = (enemy.xloc << 22) | (enemy.yloc << 12) | (enemy.gun_index << 2) | (0x1);
+
+	return;
+}
+
+
+// Takes in two parameters with the xloc and yloc of the tank's upper left corner
+int wall_collision(int xloc, int yloc){
+	for(int i = 0; i < numBlocks; i++){
+		if ((xloc < blocks[i].xloc + BLOCK_WIDTH) && (xloc + TANK_WIDTH > blocks[i].xloc) &&
+            (yloc < blocks[i].yloc + BLOCK_HEIGHT) && (yloc + TANK_HEIGHT > blocks[i].yloc)) {
+            return -1;  // Collision detected
+        }
+	}
+	return 0;
+}
+
+
+
+void update_player_tank(){
 	
+	int tank_move = 0;
 	// Optimism >>>>
-	int tank_move = 1;
 	int gun_move = 1;
 
 	// Check if VGA is busy
@@ -81,44 +168,41 @@ void update_tank(){
 
 	if(gun_move == 0){
 		if(x1_val == 2){ // LEFT
-			if(tank_xloc > 1) {
+			if(tank_xloc > 1 && wall_collision(tank_xloc - 1, tank_yloc) == 0) {
 				wait_for_vga();
 				*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (tank_index << 2) | (0x2);
 				tank_xloc = tank_xloc - 1;
 				tank_index = 33;
+				tank_move = 1;
 			}
 		}
 		else if(x1_val == 1){ //RIGHT
-			if(tank_xloc < 576){
-				//*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (gun_index << 2) | (0x2);
+			if(tank_xloc < 576 && wall_collision(tank_xloc + 1, tank_yloc) == 0){
 				wait_for_vga();
 				*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (tank_index << 2) | (0x2);
 				tank_xloc = tank_xloc + 1;
 				tank_index = 30;
+				tank_move = 1;
 			}
 		}
 		else if(y1_val == 2){ //UP
-			if(tank_yloc > 1){
+			if(tank_yloc > 1 && wall_collision(tank_xloc, tank_yloc - 2) == 0){
 				wait_for_vga();
 				*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (tank_index << 2) | (0x2);
 				tank_yloc = tank_yloc - 2;
 				tank_index = 31;
+				tank_move = 1;
 			}
 		}
 		else if(y1_val == 1){//DOWN
-			if(tank_yloc < 836){
+			if(tank_yloc < 836 && wall_collision(tank_xloc, tank_yloc + 2) == 0){
 				wait_for_vga();
 				*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (tank_index << 2) | (0x2);
 				tank_yloc = tank_yloc + 2;
 				tank_index = 32;
+				tank_move = 1;
 			}
 		}
-		else {
-			tank_move = 0;
-		}
-	}
-	else{
-		tank_move = 0;
 	}
 
 	if(tank_move | gun_move){
@@ -127,17 +211,53 @@ void update_tank(){
 		wait_for_vga();
 		*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (gun_index << 2) | (0x1);
 	}
+}
+
+
+void update_enemy(struct tank_t *enemy, int player_x, int player_y){
+    int dx = player_x - enemy->xloc;
+    int dy = player_y - enemy->yloc;
+
+    int step_x = (dx > 0) ? 1 : -1; // Determine the step direction for x
+    int step_y = (dy > 0) ? 2 : -2; // Determine the step direction for y
+
+    // Determine the magnitude of dx and dy without using abs()
+    int mag_dx = dx > 0 ? dx : -dx; // Manual absolute value of dx
+    int mag_dy = dy > 0 ? dy : -dy; // Manual absolute value of dy
+
+    // Compare the magnitudes of dx and dy to decide movement priority
+    if (mag_dx >= mag_dy) {
+        // Try horizontal movement first
+        if (wall_collision(enemy->xloc + step_x, enemy->yloc) == 0) {
+            enemy->xloc += step_x; // Move horizontally towards the player
+        } else if (wall_collision(enemy->xloc, enemy->yloc + step_y) == 0) {
+            enemy->yloc += step_y; // Move vertically if horizontal move is blocked
+        }
+    } else {
+        // Try vertical movement first
+        if (wall_collision(enemy->xloc, enemy->yloc + step_y) == 0) {
+            enemy->yloc += step_y; // Move vertically towards the player
+        } else if (wall_collision(enemy->xloc + step_x, enemy->yloc) == 0) {
+            enemy->xloc += step_x; // Move horizontally if vertical move is blocked
+        }
+    }
+
+    // Update the tank's position in VGA memory
+    wait_for_vga();
+    *VGA = (enemy->xloc << 22) | (enemy->yloc << 12) | (enemy->tank_index << 2) | (0x1);
 
 
 }
 
 
+
+
 int main(){
-	//*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (tank_index << 2) | (0x1);
-	//*VGA  = (tank_xloc << 22) | (tank_yloc << 12) | (gun_index << 2) | (0x1);
+	init();
 	while(1){
 	    read_joystick();
-		update_tank();
+		update_player_tank();
+		//update_enemy(&enemy, tank_xloc, tank_xloc);
 		for(int i = 0; i < 10000; i++){
 			2 + 2;
 		};
