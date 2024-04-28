@@ -1,4 +1,4 @@
-module BMP_ROM_Brick_Block(clk,addr,dout);
+module BMP_ROM_Brick-Block(clk,addr,dout);
 
   input clk;     // 50MHz clock
   input [15:0] addr;
