@@ -366,6 +366,58 @@ BMP_ROM_TankGunS iROM38(.clk(clk), .addr(bmp_addr), .dout(bmp_read38));
 BMP_ROM_TankGunSE iROM39(.clk(clk), .addr(bmp_addr), .dout(bmp_read39));
 BMP_ROM_TankGunSW iROM40(.clk(clk), .addr(bmp_addr), .dout(bmp_read40));
 BMP_ROM_TankGunW iROM41(.clk(clk), .addr(bmp_addr), .dout(bmp_read41));
+//
+//wire [17:0] offset, addr;
+//
+//assign addr = {2'b0, bmp_addr} + offset;
+//
+//BMP_ROM iROM(.clk(clk), .addr(addr), .dout(bmp_read));
+//
+//
+//assign offset = (indx == 6'd00) ? 6'd0 :
+//                   (indx == 6'd01) ? 6'd4100 :
+//                   (indx == 6'd02) ? 6'd5128 :
+//                   (indx == 6'd03) ? 6'd6156 :
+//                   (indx == 6'd04) ? 6'd7184 :
+//                   (indx == 6'd05) ? 6'd8212 :
+//                   (indx == 6'd06) ? 6'd9240 :
+//                   (indx == 6'd07) ? 6'd10268 :
+//                   (indx == 6'd08) ? 6'd11296 :
+//                   (indx == 6'd09) ? 6'd12324 :
+//                   (indx == 6'd010) ? 6'd16424 :
+//                   (indx == 6'd011) ? 6'd17452 :
+//                   (indx == 6'd012) ? 6'd18480 :
+//                   (indx == 6'd013) ? 6'd19508 :
+//                   (indx == 6'd014) ? 6'd20536 :
+//                   (indx == 6'd015) ? 6'd21564 :
+//                   (indx == 6'd016) ? 6'd22592 :
+//                   (indx == 6'd017) ? 6'd23620 :
+//                   (indx == 6'd018) ? 6'd24648 :
+//                   (indx == 6'd019) ? 6'd28748 :
+//                   (indx == 6'd020) ? 6'd32848 :
+//                   (indx == 6'd021) ? 6'd36948 :
+//                   (indx == 6'd022) ? 6'd41048 :
+//                   (indx == 6'd023) ? 6'd45148 :
+//                   (indx == 6'd024) ? 6'd49248 :
+//                   (indx == 6'd025) ? 6'd53348 :
+//                   (indx == 6'd026) ? 6'd57448 :
+//                   (indx == 6'd027) ? 6'd61548 :
+//                   (indx == 6'd028) ? 6'd65648 :
+//                   (indx == 6'd029) ? 6'd69748 :
+//                   (indx == 6'd030) ? 6'd73848 :
+//                   (indx == 6'd031) ? 6'd77948 :
+//                   (indx == 6'd032) ? 6'd82048 :
+//                   (indx == 6'd033) ? 6'd86148 :
+//                   (indx == 6'd034) ? 6'd90248 :
+//                   (indx == 6'd035) ? 6'd94348 :
+//                   (indx == 6'd036) ? 6'd98448 :
+//                   (indx == 6'd037) ? 6'd102548 :
+//                   (indx == 6'd038) ? 6'd106648 :
+//                   (indx == 6'd039) ? 6'd110748 :
+//                   (indx == 6'd040) ? 6'd114848 :
+//                   (indx == 6'd041) ? 6'd118948 :
+//                   'b0 ;
+
 
 
 assign bmp_read = (indx === 6'd00) ? bmp_read0 :
