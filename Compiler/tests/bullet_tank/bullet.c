@@ -1,4 +1,4 @@
-#include "main.h"
+#include "bullet.h"
 
 unsigned int *debug = 0xFFFFC001;
 unsigned int *joystick = 0xFFFFC002;
@@ -205,7 +205,7 @@ void update_bullet(){
 
 
 	else if(bullet_move == 2){
-		if(bullet_x >= 576 || bullet_x <= 1 || bullet_y >= 836 || bullet_y <= 1){
+		if(bullet_x >= 600 || bullet_x <= 1 || bullet_y >= 850 || bullet_y <= 1){
 			bullet_move = 1; // Not moving anymore
 			wait_for_vga();
 			*VGA  = (bullet_x << 22) | (bullet_y << 12) | (bullet_index<< 2) | (0x2);
@@ -260,3 +260,117 @@ int main(){
     return 0;
 
 }
+void update_bullet(){
+
+	if((bullet_move == 1)){
+		if(ps2_val == 2){
+			if(gun_index == 34){ //E 
+				//bullet_move = 2;
+				bullet_index = 1;
+				bullet_x = tank_xloc + 64;
+				bullet_y = tank_yloc + 32;
+			}
+			else if(gun_index == 35){ // N
+				//bullet_move = 2;
+				bullet_index = 2;
+				bullet_x = tank_xloc + 16;
+				bullet_y = tank_yloc - 40;
+			}
+			else if(gun_index == 36){ // NE
+				//bullet_move = 2;
+				bullet_index = 3; //NE
+				bullet_x = tank_xloc + 64;
+				bullet_y = tank_yloc - 36;
+			}
+			else if(gun_index == 37){ // NW
+				//bullet_move = 2;
+				bullet_index = 4; //NW
+				bullet_x = tank_xloc - 32;
+				bullet_y = tank_yloc - 34;
+			}
+			else if(gun_index == 38){ // S
+				//bullet_move = 2;
+				bullet_index = 5; //S
+				bullet_x = tank_xloc + 16;
+				bullet_y = tank_yloc + 106;
+			}
+			else if(gun_index == 39){ // SE
+				//bullet_move = 2;
+				bullet_index = 6; //SE
+				bullet_x = tank_xloc + 64;
+				bullet_y = tank_yloc + 106;
+			}
+			else if(gun_index == 40){ // SW
+				//bullet_move = 2;
+				bullet_index = 7; //SW
+				bullet_x = tank_xloc - 32;
+				bullet_y = tank_yloc + 106;
+			}
+			else if(gun_index == 41){ // W
+				//bullet_move = 2;
+				bullet_index = 8; //W
+				bullet_x = tank_xloc - 32;
+				bullet_y = tank_yloc + 32;
+			}
+			if(bullet_collision(bullet_x, bullet_y)){
+				bullet_move = 1; // Not moving anymore
+				return;
+			}
+			if(bullet_x >= 616 || bullet_x <= 1 || bullet_y >= 884 || bullet_y <= 1){
+				bullet_move = 1; // Not moving anymore
+				return;
+			}
+			bullet_move = 2;
+			wait_for_vga();
+			*VGA  = (bullet_x << 22) | (bullet_y << 12) | (bullet_index << 2) | (0x1);			
+
+		}
+	}
+
+
+
+	else if(bullet_move == 2){
+		if(bullet_x >= 616 || bullet_x <= 1 || bullet_y >= 884 || bullet_y <= 1){
+			bullet_move = 1; // Not moving anymore
+			wait_for_vga();
+			*VGA  = (bullet_x << 22) | (bullet_y << 12) | (bullet_index<< 2) | (0x2);
+		}
+		else if(bullet_collision(bullet_x, bullet_y)){
+			bullet_move = 1; // Not moving anymore
+			wait_for_vga();
+			*VGA  = (bullet_x << 22) | (bullet_y << 12) | (bullet_index<< 2) | (0x2);
+		}
+		else{
+			if(bullet_index == 1){
+				bullet_x = bullet_x + 1; // update x postion only	
+			}
+			else if (bullet_index == 2){ //(N)
+				bullet_y = bullet_y - 2; // update y position only
+			}
+			else if (bullet_index == 3){ //(NE)
+				bullet_y = bullet_y - 2; 
+				bullet_x = bullet_x + 1;
+			}
+			else if (bullet_index == 4){ //(NW)
+				bullet_x = bullet_x - 1;
+				bullet_y = bullet_y - 2; 
+			}
+			else if (bullet_index == 5){ //(S)
+				bullet_y = bullet_y + 2; 
+			}
+			else if (bullet_index == 6){ //(SE)
+				bullet_x = bullet_x + 1;
+				bullet_y = bullet_y + 2; 
+			}
+			else if (bullet_index == 7){ //(SW)
+				bullet_x = bullet_x - 1;
+				bullet_y = bullet_y + 2; 
+			}
+			else if (bullet_index == 8){ //(W)
+				bullet_x = bullet_x - 1;
+			}
+			wait_for_vga();
+			*VGA  = (bullet_x << 22) | (bullet_y << 12) | (bullet_index << 2) | (0x1);
+		}	
+	}	
+}	

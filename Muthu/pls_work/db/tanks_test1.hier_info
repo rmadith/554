@@ -14511,7 +14511,7 @@ rst_n => ~NO_FANOUT~
 
 
 |tanks_test1|BMP_display:IBMP|PlaceBMP:comb_28
-clk => clk.IN21
+clk => clk.IN25
 rst_n => waddr[0]~reg0.ACLR
 rst_n => waddr[1]~reg0.ACLR
 rst_n => waddr[2]~reg0.ACLR
@@ -14968,6 +14968,130 @@ addr[9] => rom.RADDR9
 addr[10] => rom.RADDR10
 addr[11] => ~NO_FANOUT~
 addr[12] => ~NO_FANOUT~
+addr[13] => ~NO_FANOUT~
+addr[14] => ~NO_FANOUT~
+addr[15] => ~NO_FANOUT~
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tanks_test1|BMP_display:IBMP|PlaceBMP:comb_28|BMP_ROM_EnemyTankBaseEast:iROM18
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+addr[0] => rom.RADDR
+addr[1] => rom.RADDR1
+addr[2] => rom.RADDR2
+addr[3] => rom.RADDR3
+addr[4] => rom.RADDR4
+addr[5] => rom.RADDR5
+addr[6] => rom.RADDR6
+addr[7] => rom.RADDR7
+addr[8] => rom.RADDR8
+addr[9] => rom.RADDR9
+addr[10] => rom.RADDR10
+addr[11] => rom.RADDR11
+addr[12] => rom.RADDR12
+addr[13] => ~NO_FANOUT~
+addr[14] => ~NO_FANOUT~
+addr[15] => ~NO_FANOUT~
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tanks_test1|BMP_display:IBMP|PlaceBMP:comb_28|BMP_ROM_EnemyTankBaseNorth:iROM19
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+addr[0] => rom.RADDR
+addr[1] => rom.RADDR1
+addr[2] => rom.RADDR2
+addr[3] => rom.RADDR3
+addr[4] => rom.RADDR4
+addr[5] => rom.RADDR5
+addr[6] => rom.RADDR6
+addr[7] => rom.RADDR7
+addr[8] => rom.RADDR8
+addr[9] => rom.RADDR9
+addr[10] => rom.RADDR10
+addr[11] => rom.RADDR11
+addr[12] => rom.RADDR12
+addr[13] => ~NO_FANOUT~
+addr[14] => ~NO_FANOUT~
+addr[15] => ~NO_FANOUT~
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tanks_test1|BMP_display:IBMP|PlaceBMP:comb_28|BMP_ROM_EnemyTankBaseSouth:iROM20
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+addr[0] => rom.RADDR
+addr[1] => rom.RADDR1
+addr[2] => rom.RADDR2
+addr[3] => rom.RADDR3
+addr[4] => rom.RADDR4
+addr[5] => rom.RADDR5
+addr[6] => rom.RADDR6
+addr[7] => rom.RADDR7
+addr[8] => rom.RADDR8
+addr[9] => rom.RADDR9
+addr[10] => rom.RADDR10
+addr[11] => rom.RADDR11
+addr[12] => rom.RADDR12
+addr[13] => ~NO_FANOUT~
+addr[14] => ~NO_FANOUT~
+addr[15] => ~NO_FANOUT~
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tanks_test1|BMP_display:IBMP|PlaceBMP:comb_28|BMP_ROM_EnemyTankBaseWest:iROM21
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+addr[0] => rom.RADDR
+addr[1] => rom.RADDR1
+addr[2] => rom.RADDR2
+addr[3] => rom.RADDR3
+addr[4] => rom.RADDR4
+addr[5] => rom.RADDR5
+addr[6] => rom.RADDR6
+addr[7] => rom.RADDR7
+addr[8] => rom.RADDR8
+addr[9] => rom.RADDR9
+addr[10] => rom.RADDR10
+addr[11] => rom.RADDR11
+addr[12] => rom.RADDR12
 addr[13] => ~NO_FANOUT~
 addr[14] => ~NO_FANOUT~
 addr[15] => ~NO_FANOUT~

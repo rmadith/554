@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Mon Apr 29 13:00:01 2024
+Analysis & Synthesis Status : Successful - Mon Apr 29 18:12:53 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : tanks_test1
 Top-level Entity Name : tanks_test1
@@ -7,7 +7,7 @@ Logic utilization (in ALMs) : N/A
 Total registers : 3712
 Total pins : 222
 Total virtual pins : 0
-Total block memory bits : 2,688,952
+Total block memory bits : 2,787,352
 Total DSP Blocks : 1
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
