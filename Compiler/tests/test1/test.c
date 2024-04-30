@@ -110,11 +110,11 @@ void init(){
 	// Initialise enemy 1
 	enemy.tank_index = 19;
 	enemy.gun_index = 38;
-	enemy.xloc = 574;
-	enemy.yloc = 5;
+	enemy.xloc = 575;
+	enemy.yloc = 2;
 
 	enemy_bullet.bullet_move = 1;
-	enemy_bullet.bullet_move = 2;
+	enemy_bullet.bullet_index = 2;
 	enemy_bullet.bullet_x = 1;
 	enemy_bullet.bullet_y = 1;
 
@@ -370,28 +370,38 @@ void update_enemy(struct tank_t *enemy, int player_x, int player_y, struct bulle
     int mag_dy = dy > 0 ? dy : -dy;
 
 	int tank_move = 1;
+	int gun_move = 1;
 
-	if(bullet->bullet_move == 1){
-		if (mag_dx > mag_dy) {
-			if (dx > 0) {
-				enemy->gun_index = dy > 0 ? 39 : (dy < 0 ? 36 : 34); // SE, NE, or E
-			} 
-			else {
-				enemy->gun_index = dy > 0 ? 40 : (dy < 0 ? 37 : 41); // SW, NW, or W
-			}
-		} 
-		else {
-			if (dy > 0) {
-				enemy->gun_index = dx > 0 ? 39 : (dx < 0 ? 40 : 38); // SE, SW, or S
-			} 
-			else {
-				enemy->gun_index = dx > 0 ? 36 : (dx < 0 ? 37 : 35); // NE, NW, or N
-			}
-		}
+	if(dy == 0 && dx < 0){  // West
+		enemy->gun_index = 41;
+	}
+	else if(dx == 0 && dy > 0){ // South
+		enemy->gun_index = 38;
+	}
+	else if(dy == 0 && dx > 0){ // East
+		enemy->gun_index = 34;
+	}
+	else if(dx == 0 && dy < 0){ //North
+		enemy->gun_index = 35;
+	}
+	else if(dy > 0 && dx < 0){ // SouthWest
+		 enemy->gun_index = 40;
+	}
+	else if(dx > 0 && dy > 0){ // SouthEast
+		enemy->gun_index = 39;
+	}
+	else if(dx < 0 && dy < 0){ // NorthWest
+		enemy->gun_index = 37;
+	}
+	else if(dx > 0 && dy < 0){ // NorthEast
+		enemy->gun_index = 36;
+	}
+	else{
+		gun_move = 0;
 	}
 
     // Attempt to move horizontally or vertically based on the direction of the player
-    if (mag_dx > mag_dy) {
+    if (mag_dx >= mag_dy) {
         // Horizontal movement
         if (wall_collision(enemy->xloc + step_x, enemy->yloc) == 0) {
             enemy->xloc += step_x;
@@ -400,7 +410,7 @@ void update_enemy(struct tank_t *enemy, int player_x, int player_y, struct bulle
             enemy->yloc += step_y;
         }
     }
-	else if(mag_dy < mag_dx) {
+	else{
         // Vertical movement
         if (wall_collision(enemy->xloc, enemy->yloc + step_y) == 0) {
             enemy->yloc += step_y;
@@ -409,12 +419,9 @@ void update_enemy(struct tank_t *enemy, int player_x, int player_y, struct bulle
             enemy->xloc += step_x;
         }
     }
-	else{
-		tank_move = 0;
-	}
 
     // Update the enemy's position and gun orientation in VGA memory
-	if(tank_move){
+	if(tank_move | gun_move){
 		wait_for_vga();
 		*VGA = (enemy->xloc << 22) | (enemy->yloc << 12) | (enemy->tank_index << 2) | (0x1);
 		wait_for_vga();
@@ -430,7 +437,7 @@ int main(){
 	    read_joystick();
 		update_player_tank(&player);
 		update_bullet(&player, &player_bullet);
-		//update_enemy(&enemy, player.xloc, player.yloc, &enemy_bullet);
+		update_enemy(&enemy, player.xloc, player.yloc, &enemy_bullet);
 		for(int i = 0; i < 10000; i++){
 			2 + 2;
 		};
