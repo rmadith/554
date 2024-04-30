@@ -9,8 +9,7 @@ module BTB_and_PC (
     input wire logic branch,
     input wire logic jumpAL, 
     input wire logic takeBranch, 
-    input wire logic [31:0] PC_plus_4,
-
+    input wire logic [31:0] PC_plus_4,    
     input wire logic [31:0] instruction_IFID_in,
     input wire logic [31:0] branch_PC,
     input wire logic incorrect_b_prediction,
