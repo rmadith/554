@@ -197,12 +197,39 @@ int bullet_collision(int xloc, int yloc){
     return 0;
 }
 
-int bullet_tank(struct bullet_t *bullet, struct tank_t *tank){
-    if ((bullet->bullet_x < tank->xloc + BLOCK_WIDTH) && (bullet->bullet_x + 32 > tank->xloc) &&
-        (bullet->bullet_y < tank->yloc + BLOCK_HEIGHT) && (bullet->bullet_y + 60 > tank->yloc)) {
-        return 1; // Collision detected
+int tank_collision(int xloc, int yloc, struct tank_t *tank2){
+    if ((xloc + BLOCK_WIDTH > tank2->xloc) && (xloc < tank2->xloc + BLOCK_WIDTH) &&
+        (yloc + BLOCK_HEIGHT > tank2->yloc) && (yloc < tank2->yloc + BLOCK_HEIGHT)) {
+        return -1;  // Collision detected
     }
-        return 0;
+    return 0;  // No collision
+}
+
+int bullet_tank(struct bullet_t *bullet, struct tank_t *tank){
+    // Defining the border offset for the tank
+    int tank_border_offset = 5; // Example offset, adjust as needed
+
+    // Effective collision bounds of the tank considering the transparent border
+    int effective_tank_x = tank->xloc + tank_border_offset;
+    int effective_tank_width = BLOCK_WIDTH - 2 * tank_border_offset;
+    int effective_tank_y = tank->yloc + tank_border_offset;
+    int effective_tank_height = BLOCK_HEIGHT - 2 * tank_border_offset;
+
+    // Dimensions of the bullet
+    int bullet_width = 30;  // Width of the bullet
+    int bullet_height = 60; // Height of the bullet
+
+    // Check if the bullet's move is set to 1
+    if(bullet->bullet_move != 1){
+        // Check if there is overlap in both x and y directions
+        if ((bullet->bullet_x < effective_tank_x + effective_tank_width) && 
+            (bullet->bullet_x + bullet_width > effective_tank_x) &&
+            (bullet->bullet_y < effective_tank_y + effective_tank_height) && 
+            (bullet->bullet_y + bullet_height > effective_tank_y)) {
+            return 1; // Collision detected
+        }
+    }
+    return 0;
 }
 
 void flash_tank(struct tank_t *tank){
@@ -221,7 +248,7 @@ void flash_tank(struct tank_t *tank){
     
 }
 
-void update_player_tank(struct tank_t *tank, struct joystick *j, struct direction *direct){
+void update_player_tank(struct tank_t *tank, struct joystick *j, struct direction *direct, struct tank_t *enemy){
     int tank_move = 0;
     // Optimism >>>>
     int gun_move = 1;
@@ -268,7 +295,7 @@ void update_player_tank(struct tank_t *tank, struct joystick *j, struct directio
 
     if(gun_move == 0){
         if(j->x1_val == 2){ // LEFT
-            if(tank->xloc > 1 && wall_collision(tank->xloc - 1, tank->yloc) == 0) {
+            if(tank->xloc > 1 && wall_collision(tank->xloc - 1, tank->yloc) == 0 && tank_collision(tank->xloc - 1, tank->yloc, enemy) == 0) {
                 wait_for_vga();
                 *VGA = (tank->xloc << 22) | (tank->yloc << 12) | (tank->tank_index << 2) | (0x2);
                 tank->xloc = tank->xloc - 1;
@@ -277,7 +304,7 @@ void update_player_tank(struct tank_t *tank, struct joystick *j, struct directio
             }
         }
         else if(j->x1_val == 1){ //RIGHT
-            if(tank->xloc < 576 && wall_collision(tank->xloc + 1, tank->yloc) == 0){
+            if(tank->xloc < 576 && wall_collision(tank->xloc + 1, tank->yloc) == 0 && tank_collision(tank->xloc + 1, tank->yloc, enemy) == 0){
                 wait_for_vga();
                 *VGA = (tank->xloc << 22) | (tank->yloc << 12) | (tank->tank_index << 2) | (0x2);
                 tank->xloc = tank->xloc + 1;
@@ -286,7 +313,7 @@ void update_player_tank(struct tank_t *tank, struct joystick *j, struct directio
             }
         }
         else if(j->y1_val == 2){ //UP
-            if(tank->yloc > 1 && wall_collision(tank->xloc, tank->yloc - 2) == 0){
+            if(tank->yloc > 1 && wall_collision(tank->xloc, tank->yloc - 2) == 0 && tank_collision(tank->xloc, tank->yloc - 2, enemy) == 0){
                 wait_for_vga();
                 *VGA = (tank->xloc << 22) | (tank->yloc << 12) | (tank->tank_index << 2) | (0x2);
                 tank->yloc = tank->yloc - 2;
@@ -295,7 +322,7 @@ void update_player_tank(struct tank_t *tank, struct joystick *j, struct directio
             }
         }
         else if(j->y1_val == 1){//DOWN
-            if(tank->yloc < 836 && wall_collision(tank->xloc, tank->yloc + 2) == 0){
+            if(tank->yloc < 836 && wall_collision(tank->xloc, tank->yloc + 2) == 0 && tank_collision(tank->xloc, tank->yloc + 2, enemy) == 0){
                 wait_for_vga();
                 *VGA = (tank->xloc << 22) | (tank->yloc << 12) | (tank->tank_index << 2) | (0x2);
                 tank->yloc = tank->yloc + 2;
@@ -367,6 +394,7 @@ void update_bullet(struct tank_t *tank, struct bullet_t *bullet, struct joystick
             bullet->bullet_move = 2;
             wait_for_vga();
             *VGA = (bullet->bullet_x << 22) | (bullet->bullet_y << 12) | (bullet->bullet_index << 2) | (0x1); 
+            *debug = 0x00;
             *debug = 0x37; // Sound of bullet
 
         }
@@ -420,17 +448,20 @@ void update_bullet(struct tank_t *tank, struct bullet_t *bullet, struct joystick
 
 int main(){
     init();
+    *debug = 0x00;
+    *debug = 0x39;
     int game_start = 1;
     while(1){
         while(game_start){
             read_joystick(&joy1);
             read_joystick_2(&joy2);
-            update_player_tank(&player, &joy1, &player_direct);
-            update_player_tank(&enemy, &joy2, &enemy_direct);
+            update_player_tank(&player, &joy1, &player_direct, &enemy);
+            update_player_tank(&enemy, &joy2, &enemy_direct, &player);
             update_bullet(&player, &player_bullet, &joy1);
             update_bullet(&enemy, &enemy_bullet, &joy2);
             if(bullet_tank(&player_bullet,&enemy) || bullet_tank(&enemy_bullet,&player)){
                 game_start = 0;
+                *debug = 0x00;
                 *debug = 0x38;
             }
             for(int i = 0; i < 10000; i++){
