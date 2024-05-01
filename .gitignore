@@ -22,5 +22,8 @@ RISC-V/MainProcessorPipeBDP/transcript
 RISC-V/MainProcessorPipeBDP/vsim.wlf
 RISC-V/MainProcessorPipeBDP/RISCV-DBP-sim.cr.mti
 RISC-V/MainProcessorPipeBDP/RISCV-DBP-sim.mpf
-Muthu/pls_work_dbp/db/
-Muthu/pls_work_dbp/work/
+RISC-V/MainProcessorPipeDBP/work/*
+RISC-V/MainProcessorPipeDBP/pls_work.mpf
+RISC-V/MainProcessorPipeDBP/pls_work.cr.mti
+RISC-V/MainProcessorPipeDBP/vsim.wlf
+RISC-V/MainProcessorPipeDBP/transcript

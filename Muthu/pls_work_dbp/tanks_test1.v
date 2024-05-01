@@ -122,7 +122,7 @@ assign cpu_rst_n = (debug_sig) ? 1'b0 : rst_n;
 // CPU
 cpu iCPU(.clk(clk), .rst_n(cpu_rst_n), .boot_addr(boot_addr), .boot_data(boot_data), 
 			.debug(debug_sig), .memMappedAddr(memMappedAddr), .memMappedDataOut(memMappedDataOut), 
-			.joystick_data({busy,19'b0, joystick_data}), .halt(LEDR[9]));
+			.joystick_data({busy,19'b0, joystick_data}), .halt(LEDR[9]) , .turn_off_DBP(SW[3]));
 
 always @(*) begin
 	write = 0;
