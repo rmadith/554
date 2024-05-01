@@ -16,6 +16,8 @@ module HazardDetection(
 	
 	// The signal that is asserted when the later pipeline stage says that the branch should be taken.
 	input wire TakeBranch_from_D,
+	input wire jump,
+	input wire branch,
 
 	// signal used for detecting if an incorret branch prediction
 	input wire predict_branch_taken_ID,
@@ -68,7 +70,7 @@ module HazardDetection(
 	
 
 	// since we're using predict not taken, if the branch is taken, we've made the incorrect prediction.
-	assign incorrect_b_prediction = TakeBranch_from_D != predict_branch_takenID;	
+	assign incorrect_b_prediction = TakeBranch_from_D != predict_branch_takenID & (branch | jump);	
 	
 	// We need to stall (stop incrementing PC) if there is a RAW between either set of instructions
 	wire stall;

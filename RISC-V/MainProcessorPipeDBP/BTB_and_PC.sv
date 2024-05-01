@@ -51,20 +51,22 @@ module BTB_and_PC (
     assign current_tag = PC_IFID_in[15:9];                // use bits 9 - 15 of the current PC as the tag  
     assign pulled_branch_reg = branch_reg[current_location];
 
+    assign predict_branch_taken = (valid_reg[current_location] == 1'b1) && (strong_reg[current_location] == 1'b1) && (pulled_branch_reg[38:32] == current_tag) && (turn_off_DBP != 1'b1);
+
     ////////////////////////////
     // Config Branch Register //
     ////////////////////////////
     always @(posedge clk) begin
 
-        predict_branch_taken <= 1'b0;
+       // predict_branch_taken <= 1'b0;
 
         // predict branch taken if the strong bit is set at the current location
-        if(valid_reg[current_location] == 1'b1 && 
-            strong_reg[current_location] == 1'b1 && 
-            pulled_branch_reg[38:32] == current_tag &&
-            turn_off_DBP != 1'b1) begin           // check to see if strong bit is set                                 
-            predict_branch_taken <= 1'b1;
-        end
+        //if(valid_reg[current_location] == 1'b1 && 
+       //     strong_reg[current_location] == 1'b1 && 
+       //     pulled_branch_reg[38:32] == current_tag &&
+       //     turn_off_DBP != 1'b1) begin           // check to see if strong bit is set                                 
+       //     predict_branch_taken <= 1'b1;
+       // end
 
         // update the branch register
         if(branch | jumpAL) begin
@@ -103,7 +105,7 @@ module BTB_and_PC (
     ////////////////////////////////////////////
     // Flop the Last Location in the Register //
     ////////////////////////////////////////////
-    always @(posedge clk) begin
+    always @(posedge clk, negedge rst_n) begin
         if(!rst_n)
             last_PC <= 9'h000;
         else
