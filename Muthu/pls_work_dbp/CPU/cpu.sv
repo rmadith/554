@@ -210,7 +210,7 @@ module cpu(
 		.regWriteEnable_IDEX_in(regWriteEnable_IDEX_in),
 
 		.branch_PC(branch_PC),
-		.takeBranch(takeBranch)
+		.takeBranch(takeBranch),
 		.branch(branch),
 		.jumpAL(jumpAL),
 		.jump(jump)

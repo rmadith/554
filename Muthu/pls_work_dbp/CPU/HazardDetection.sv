@@ -70,7 +70,7 @@ module HazardDetection(
 	
 
 	// since we're using predict not taken, if the branch is taken, we've made the incorrect prediction.
-	assign incorrect_b_prediction = TakeBranch_from_D != predict_branch_takenID & (branch | jump);	
+	assign incorrect_b_prediction = TakeBranch_from_D != predict_branch_taken_ID & (branch | jump);	
 	
 	// We need to stall (stop incrementing PC) if there is a RAW between either set of instructions
 	wire stall;
