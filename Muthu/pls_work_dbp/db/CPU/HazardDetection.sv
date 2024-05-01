@@ -23,7 +23,6 @@ module HazardDetection(
 	input wire predict_branch_taken_ID,
 
 	output wire incorrect_b_prediction,
-
 	output wire PC_enable, // goes directly to the enable of the PC
 	
 	// Flush. For the specific pipeline register (E.g. IDEX, MEMWB, etc.), set the current value in the instruction 
@@ -68,9 +67,8 @@ module HazardDetection(
 		.stall(stall_load_to_Branch)
 	);
 	
-
 	// since we're using predict not taken, if the branch is taken, we've made the incorrect prediction.
-	assign incorrect_b_prediction = TakeBranch_from_D != predict_branch_taken_ID & (branch | jump);	
+	assign incorrect_b_prediction = TakeBranch_from_D != predict_branch_taken_ID & (branch | jump);
 	
 	// We need to stall (stop incrementing PC) if there is a RAW between either set of instructions
 	wire stall;
@@ -86,6 +84,7 @@ module HazardDetection(
 	assign Flush_EXMEM = 1'b0;
 	
 	assign Flush_MEMWB = 1'b0;
+
 
 	
 endmodule

@@ -7,10 +7,10 @@ module BTB_and_PC (
 
     input wire logic PC_enable,
     input wire logic branch,
-    input wire logic jumpAL, 
-    input wire logic takeBranch,
-    input wire logic turn_off_DBP, 
+    input wire logic jumpAL,  
+    input wire logic takeBranch, 
     input wire logic [31:0] PC_plus_4,
+    input wire logic turn_off_DBP,
 
     input wire logic [31:0] instruction_IFID_in,
     input wire logic [31:0] branch_PC,
@@ -95,7 +95,7 @@ module BTB_and_PC (
     ////////////////////////////////////////////
     // Flop the Last Location in the Register //
     ////////////////////////////////////////////
-    always @(posedge clk) begin
+    always @(posedge clk, negedge rst_n) begin
         if(!rst_n)
             last_PC <= 9'h000;
         else
@@ -118,6 +118,8 @@ module BTB_and_PC (
         else if (PC_enable)  
             PC_IFID_in <= next_PC;
     end
+
+
 
 endmodule
 

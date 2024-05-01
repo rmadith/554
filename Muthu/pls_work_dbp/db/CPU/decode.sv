@@ -32,12 +32,11 @@ module decode(
 	output logic regWriteEnable_IDEX_in,
 
 	output logic [31:0] branch_PC,
-	output logic takeBranch,
+	output logic takeBranch
 	
 	output logic jumpAL,
 	output logic branch,
 	output logic jump
-
 	);
 
 	///////////////////////////// Declare internal nets //////////////////////////////////

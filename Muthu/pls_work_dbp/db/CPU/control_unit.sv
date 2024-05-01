@@ -5,7 +5,7 @@ module control_unit(
 	instr,
 	//Outputs
 	alu_op,immSel,immType,setDataZero,regWriteEnable,memRead,memWrite,branch,pc_operand,jump,
-	addConstant4, memType,jumpAL
+	addConstant4, memType
 	);
 //`include "common_params.inc"
 
@@ -94,9 +94,9 @@ always@(*) begin
 				immType = 5; //J-Type
 				regWriteEnable = 1;
 				pc_operand = 1;
-				jumpAL = 1;
 				addConstant4 = 1;
 				jump = 1;
+				jumpAL = 1;
 				alu_op = 0; // ADD here 
 			    end
 		7'b1100111: begin // JALR - ????

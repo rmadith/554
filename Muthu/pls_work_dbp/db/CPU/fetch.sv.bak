@@ -9,9 +9,6 @@ module fetch (
 
     input wire PC_enable, 
     input wire takeBranch,
-    input wire branch,
-    input wire jumpAL,
-    input wire turn_off_DBP,
     input wire [31:0] branch_PC, 
     input wire incorrect_b_prediction,
     input wire [31:0] PC_IFID_IDEX,
@@ -20,8 +17,7 @@ module fetch (
     ///// OUTPUTS /////
 	output wire [31:0] PC_plus4_IFID_in,
 	output reg [31:0] instruction_IFID_in,
-    output reg [31:0] PC_IFID_in,
-    output reg predict_branch_taken, 
+    output reg [31:0] PC_IFID_in, 
     output wire ECALL,
 
     ///// Bootloader /////
@@ -45,10 +41,7 @@ module fetch (
         .rst_n(rst_n), 
 
         .PC_enable(PC_enable), 
-        .takeBranch(takeBranch),
-        .branch(branch),
-        .jumpAL(jumpAL),
-        .turn_off_DBP(turn_off_DBP), 
+        .takeBranch(takeBranch), 
         .PC_plus_4(PC_plus4_IFID_in),
 
         .instruction_IFID_in(instruction_IFID_in),
@@ -58,8 +51,7 @@ module fetch (
         .PC_plus4_IFID_out(PC_plus4_IFID_out),
 
         ///// OUTPUTS /////
-        .PC_IFID_in(PC_IFID_in),
-        .predict_branch_taken(predict_branch_taken)
+        .PC_IFID_in(PC_IFID_in)
     );
 
     // Read instruction out of memory

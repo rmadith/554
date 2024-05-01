@@ -135,8 +135,7 @@ module cpu(
 		.takeBranch(takeBranch),
 		.branch_PC(branch_PC),
 		.branch(branch),
-		.jumpAL(jumpAL),
-		.turn_off_DBP(turn_off_DBP),  
+		.jumpAL(jumpAL), 
 		.incorrect_b_prediction(incorrect_b_prediction),
 		.PC_IFID_IDEX(PC_IFID_IDEX),
 		.PC_plus4_IFID_out(PC_plus4_IFID_out),
@@ -146,6 +145,7 @@ module cpu(
 		.instruction_IFID_in(instruction_IFID_in),
 		.PC_IFID_in(PC_IFID_in), 
 		.ECALL(ECALL_IFID_in),
+		.predict_branch_taken(predict_branch_taken),
 
 		//// Bootloader /////
 		.debug(debug),
@@ -462,13 +462,13 @@ module cpu(
 		.MemRead_IDEX_in(memRead_IDEX_in),
 		.ECALL_IFID_in(ECALL_IFID_in),
 
+		.predict_branch_taken_ID(predict_branch_taken_ID),
 		.Instruction_IDEX_EXMEM(instruction_IDEX_EXMEM), 
 		.Instruction_IFID_IDEX(instruction_IFID_IDEX), 
 		.RegWriteEnable_IDEX_EXMEM(regWriteEnable_IDEX_EXMEM), 
 		.RegWriteEnable_IDEX_in(regWriteEnable_IDEX_in),
 		
 		.TakeBranch_from_D(takeBranch),
-		.predict_branch_taken_ID(predict_branch_taken_ID),
 		.jump(jump),
 		.branch(branch),
 

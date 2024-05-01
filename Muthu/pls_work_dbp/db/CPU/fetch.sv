@@ -11,7 +11,6 @@ module fetch (
     input wire takeBranch,
     input wire branch,
     input wire jumpAL,
-    input wire turn_off_DBP,
     input wire [31:0] branch_PC, 
     input wire incorrect_b_prediction,
     input wire [31:0] PC_IFID_IDEX,
@@ -21,7 +20,7 @@ module fetch (
 	output wire [31:0] PC_plus4_IFID_in,
 	output reg [31:0] instruction_IFID_in,
     output reg [31:0] PC_IFID_in,
-    output reg predict_branch_taken, 
+    output reg predict_branch_taken,
     output wire ECALL,
 
     ///// Bootloader /////
@@ -47,8 +46,7 @@ module fetch (
         .PC_enable(PC_enable), 
         .takeBranch(takeBranch),
         .branch(branch),
-        .jumpAL(jumpAL),
-        .turn_off_DBP(turn_off_DBP), 
+        .jumpAL(jumpAL),  
         .PC_plus_4(PC_plus4_IFID_in),
 
         .instruction_IFID_in(instruction_IFID_in),
