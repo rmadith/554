@@ -26,6 +26,11 @@ Hstate.H_BP 0 0 1 1
 Hstate.H_LINE 0 1 0 1 
 Hstate.H_FP 1 0 0 1 
 
+State Machine - |tanks_test1|game_holder:iGame|state
+Name state.RX_L 
+state.IDLE 0 
+state.RX_L 1 
+
 State Machine - |tanks_test1|joystick:ijoy|state
 Name state.PS2 state.Y2 state.X2 state.PS1 state.Y1 state.X1 
 state.X1 0 0 0 0 0 0 

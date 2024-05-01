@@ -604,6 +604,7 @@ set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name SYSTEMVERILOG_FILE Peripherals/JOY2/game_holder.sv
 set_global_assignment -name VERILOG_FILE images_out/BMP_ROM_TankGunW.v
 set_global_assignment -name VERILOG_FILE images_out/BMP_ROM_TankGunSW.v
 set_global_assignment -name VERILOG_FILE images_out/BMP_ROM_TankGunSE.v

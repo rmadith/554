@@ -1,0 +1,350 @@
+|test
+CLOCK2_50 => CLOCK2_50.IN2
+CLOCK3_50 => ~NO_FANOUT~
+CLOCK4_50 => ~NO_FANOUT~
+CLOCK_50 => ~NO_FANOUT~
+HEX0[0] <= SEG7_LUT_6:iseg.oSEG0
+HEX0[1] <= SEG7_LUT_6:iseg.oSEG0
+HEX0[2] <= SEG7_LUT_6:iseg.oSEG0
+HEX0[3] <= SEG7_LUT_6:iseg.oSEG0
+HEX0[4] <= SEG7_LUT_6:iseg.oSEG0
+HEX0[5] <= SEG7_LUT_6:iseg.oSEG0
+HEX0[6] <= SEG7_LUT_6:iseg.oSEG0
+HEX1[0] <= SEG7_LUT_6:iseg.oSEG1
+HEX1[1] <= SEG7_LUT_6:iseg.oSEG1
+HEX1[2] <= SEG7_LUT_6:iseg.oSEG1
+HEX1[3] <= SEG7_LUT_6:iseg.oSEG1
+HEX1[4] <= SEG7_LUT_6:iseg.oSEG1
+HEX1[5] <= SEG7_LUT_6:iseg.oSEG1
+HEX1[6] <= SEG7_LUT_6:iseg.oSEG1
+HEX2[0] <= SEG7_LUT_6:iseg.oSEG2
+HEX2[1] <= SEG7_LUT_6:iseg.oSEG2
+HEX2[2] <= SEG7_LUT_6:iseg.oSEG2
+HEX2[3] <= SEG7_LUT_6:iseg.oSEG2
+HEX2[4] <= SEG7_LUT_6:iseg.oSEG2
+HEX2[5] <= SEG7_LUT_6:iseg.oSEG2
+HEX2[6] <= SEG7_LUT_6:iseg.oSEG2
+HEX3[0] <= SEG7_LUT_6:iseg.oSEG3
+HEX3[1] <= SEG7_LUT_6:iseg.oSEG3
+HEX3[2] <= SEG7_LUT_6:iseg.oSEG3
+HEX3[3] <= SEG7_LUT_6:iseg.oSEG3
+HEX3[4] <= SEG7_LUT_6:iseg.oSEG3
+HEX3[5] <= SEG7_LUT_6:iseg.oSEG3
+HEX3[6] <= SEG7_LUT_6:iseg.oSEG3
+HEX4[0] <= SEG7_LUT_6:iseg.oSEG4
+HEX4[1] <= SEG7_LUT_6:iseg.oSEG4
+HEX4[2] <= SEG7_LUT_6:iseg.oSEG4
+HEX4[3] <= SEG7_LUT_6:iseg.oSEG4
+HEX4[4] <= SEG7_LUT_6:iseg.oSEG4
+HEX4[5] <= SEG7_LUT_6:iseg.oSEG4
+HEX4[6] <= SEG7_LUT_6:iseg.oSEG4
+HEX5[0] <= SEG7_LUT_6:iseg.oSEG5
+HEX5[1] <= SEG7_LUT_6:iseg.oSEG5
+HEX5[2] <= SEG7_LUT_6:iseg.oSEG5
+HEX5[3] <= SEG7_LUT_6:iseg.oSEG5
+HEX5[4] <= SEG7_LUT_6:iseg.oSEG5
+HEX5[5] <= SEG7_LUT_6:iseg.oSEG5
+HEX5[6] <= SEG7_LUT_6:iseg.oSEG5
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= reset_synch:iRST.rst_n
+GPIO[0] <> <UNC>
+GPIO[1] <> <UNC>
+GPIO[2] <> <UNC>
+GPIO[3] <> <UNC>
+GPIO[4] <> <UNC>
+GPIO[5] <> <UNC>
+GPIO[6] <> <UNC>
+GPIO[7] <> <UNC>
+GPIO[8] <> <UNC>
+GPIO[9] <> <UNC>
+GPIO[10] <> <UNC>
+GPIO[11] <> <UNC>
+GPIO[12] <> <UNC>
+GPIO[13] <> <UNC>
+GPIO[14] <> <UNC>
+GPIO[15] <> GPIO[15]
+GPIO[16] <> <UNC>
+GPIO[18] <> <UNC>
+GPIO[20] <> <UNC>
+GPIO[22] <> <UNC>
+GPIO[24] <> <UNC>
+GPIO[26] <> <UNC>
+GPIO[28] <> <UNC>
+GPIO[30] <> <UNC>
+GPIO[32] <> <UNC>
+GPIO[34] <> <UNC>
+
+
+|test|reset_synch:iRST
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iDONE
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iData[0]
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iData[1]
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iData[2]
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iData[3]
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iData[4]
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iData[5]
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iData[6]
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iData[7]
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iData[8]
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|reset_synch:iData[9]
+clk => rst_n~reg0.CLK
+clk => q1.CLK
+RST_n => rst_n~reg0.ACLR
+RST_n => q1.ACLR
+pll_locked => q1.DATAIN
+rst_n <= rst_n~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|SEG7_LUT_6:iseg
+oSEG0[0] <= SEG7_LUT:u0.port0
+oSEG0[1] <= SEG7_LUT:u0.port0
+oSEG0[2] <= SEG7_LUT:u0.port0
+oSEG0[3] <= SEG7_LUT:u0.port0
+oSEG0[4] <= SEG7_LUT:u0.port0
+oSEG0[5] <= SEG7_LUT:u0.port0
+oSEG0[6] <= SEG7_LUT:u0.port0
+oSEG1[0] <= SEG7_LUT:u1.port0
+oSEG1[1] <= SEG7_LUT:u1.port0
+oSEG1[2] <= SEG7_LUT:u1.port0
+oSEG1[3] <= SEG7_LUT:u1.port0
+oSEG1[4] <= SEG7_LUT:u1.port0
+oSEG1[5] <= SEG7_LUT:u1.port0
+oSEG1[6] <= SEG7_LUT:u1.port0
+oSEG2[0] <= SEG7_LUT:u2.port0
+oSEG2[1] <= SEG7_LUT:u2.port0
+oSEG2[2] <= SEG7_LUT:u2.port0
+oSEG2[3] <= SEG7_LUT:u2.port0
+oSEG2[4] <= SEG7_LUT:u2.port0
+oSEG2[5] <= SEG7_LUT:u2.port0
+oSEG2[6] <= SEG7_LUT:u2.port0
+oSEG3[0] <= SEG7_LUT:u3.port0
+oSEG3[1] <= SEG7_LUT:u3.port0
+oSEG3[2] <= SEG7_LUT:u3.port0
+oSEG3[3] <= SEG7_LUT:u3.port0
+oSEG3[4] <= SEG7_LUT:u3.port0
+oSEG3[5] <= SEG7_LUT:u3.port0
+oSEG3[6] <= SEG7_LUT:u3.port0
+oSEG4[0] <= SEG7_LUT:u4.port0
+oSEG4[1] <= SEG7_LUT:u4.port0
+oSEG4[2] <= SEG7_LUT:u4.port0
+oSEG4[3] <= SEG7_LUT:u4.port0
+oSEG4[4] <= SEG7_LUT:u4.port0
+oSEG4[5] <= SEG7_LUT:u4.port0
+oSEG4[6] <= SEG7_LUT:u4.port0
+oSEG5[0] <= SEG7_LUT:u5.port0
+oSEG5[1] <= SEG7_LUT:u5.port0
+oSEG5[2] <= SEG7_LUT:u5.port0
+oSEG5[3] <= SEG7_LUT:u5.port0
+oSEG5[4] <= SEG7_LUT:u5.port0
+oSEG5[5] <= SEG7_LUT:u5.port0
+oSEG5[6] <= SEG7_LUT:u5.port0
+iDIG[0] => iDIG[0].IN1
+iDIG[1] => iDIG[1].IN1
+iDIG[2] => iDIG[2].IN1
+iDIG[3] => iDIG[3].IN1
+iDIG[4] => iDIG[4].IN1
+iDIG[5] => iDIG[5].IN1
+iDIG[6] => iDIG[6].IN1
+iDIG[7] => iDIG[7].IN1
+iDIG[8] => iDIG[8].IN1
+iDIG[9] => iDIG[9].IN1
+iDIG[10] => iDIG[10].IN1
+iDIG[11] => iDIG[11].IN1
+iDIG[12] => iDIG[12].IN1
+iDIG[13] => iDIG[13].IN1
+iDIG[14] => iDIG[14].IN1
+iDIG[15] => iDIG[15].IN1
+iDIG[16] => iDIG[16].IN1
+iDIG[17] => iDIG[17].IN1
+iDIG[18] => iDIG[18].IN1
+iDIG[19] => iDIG[19].IN1
+iDIG[20] => iDIG[20].IN1
+iDIG[21] => iDIG[21].IN1
+iDIG[22] => iDIG[22].IN1
+iDIG[23] => iDIG[23].IN1
+
+
+|test|SEG7_LUT_6:iseg|SEG7_LUT:u0
+oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+
+
+|test|SEG7_LUT_6:iseg|SEG7_LUT:u1
+oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+
+
+|test|SEG7_LUT_6:iseg|SEG7_LUT:u2
+oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+
+
+|test|SEG7_LUT_6:iseg|SEG7_LUT:u3
+oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+
+
+|test|SEG7_LUT_6:iseg|SEG7_LUT:u4
+oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+
+
+|test|SEG7_LUT_6:iseg|SEG7_LUT:u5
+oSEG[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oSEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+
+
