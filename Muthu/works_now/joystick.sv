@@ -39,7 +39,7 @@ assign {x1_done, x2_done, y1_done, y2_done, ps1_done, ps2_done} = done;
 
 reg [1:0] x1_val, y1_val, ps1_val, x2_val, y2_val, ps2_val/* synthesis keep */;
 
-assign val = {x1_val, y1_val, ps1_val, x2_val, y2_val, ps2_val};
+assign val = {x1_val, y1_val , ps1_val, x2_val, y2_val, ps2_val};
 
 //=======================================================
 //  Structural coding
@@ -149,7 +149,7 @@ always_ff @(posedge clk, negedge rst_n)
 		x1_val <= 2'b00;
 	else if(X1_update && (volume > 12'hDFF))
 		x1_val <= 2'b10;
-	else if(X1_update && (volume < 12'h05F))
+	else if(X1_update && (volume < 12'h05F)) // was 05F
 		x1_val <= 2'b01;
 
 
@@ -202,6 +202,10 @@ always_ff @(posedge clk, negedge rst_n)
 		ps2_val <= 2'b00;
 	else if(PS2_update && volume < 12'h05F)
 		ps2_val <= 2'b10;
+		
+		
+		
+
 	
 
 		

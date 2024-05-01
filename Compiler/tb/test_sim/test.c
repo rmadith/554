@@ -3,7 +3,7 @@
 unsigned int *debug = 0xFFFFC001;
 unsigned int *joystick = 0xFFFFC002;
 unsigned int *VGA = 0xFFFFC003;
-
+unsigned int *joystick2 = 0xFFFFC004;
 
 
 #define numBlocks 13
@@ -15,12 +15,28 @@ unsigned int *VGA = 0xFFFFC003;
 
 
 // Global Joystick values
-int x1_val;
-int y1_val;
-int ps1_val;
-int x2_val;
-int y2_val;
-int ps2_val;
+struct joystick{
+	int x1_val;
+	int y1_val;
+	int ps1_val;
+	int x2_val;
+	int y2_val;
+	int ps2_val;
+	int* addr;
+};
+
+struct direction{
+	int North;
+	int West;
+	int East;
+	int South;
+};
+
+struct direction player_direct = {31, 33, 30, 32};
+struct direction enemy_direct = {19, 21, 18, 20};
+
+struct joystick joy1 = {0,0,0,0,0,0,0};
+struct joystick joy2 = {0,0,0,0,0,0,0};
 
 
 // Blocks
@@ -60,16 +76,29 @@ struct bullet_t enemy_bullet = {1,2,1,1};
 ///////////////////////
 // Interface Functions
 ///////////////////////
-void read_joystick(){
+void read_joystick(struct joystick *j){
         //*joystick = 0x0000003F; // to reset the joystick
-        x1_val = (*joystick & 0x00000C00) >> 10;
-        y1_val = (*joystick & 0x00000300) >> 8;
-        ps1_val =(*joystick &0x000000C0) >> 6;
-        x2_val = (*joystick & 0x00000030) >> 4;
-        y2_val = (*joystick & 0x0000000C) >> 2;
-        ps2_val = (*joystick &0x00000003);
+        j->x1_val = (*joystick & 0x00000C00) >> 10;
+        j->y1_val = (*joystick & 0x00000300) >> 8;
+        j->ps1_val =(*joystick &0x000000C0) >> 6;
+        j->x2_val = (*joystick & 0x00000030) >> 4;
+        j->y2_val = (*joystick & 0x0000000C) >> 2;
+        j->ps2_val = (*joystick &0x00000003);
 		*joystick = 0x0000003F; // 0x3F - to clear the joystick value
 		return;
+}
+
+void read_joystick_2(struct joystick *j){
+	j->x1_val = (*joystick & 0x00C00000) >> 22;
+	j->y1_val = (*joystick & 0x00300000) >> 20;
+	j->ps1_val = 0;
+	j->x2_val = (*joystick & 0x00030000) >> 16;
+	j->y2_val = (*joystick & 0x0000C000) >> 14;
+	j->ps2_val = (*joystick & 0x00003000) >> 12;
+	for(int i = 0; i < 500; i++){
+		*joystick2 = 1;
+	}
+	return;
 }
 
 void wait_for_vga(){
@@ -94,6 +123,14 @@ void init(){
 	player_bullet.bullet_x = 1;
 	player_bullet.bullet_y = 1;
 
+	joy1.ps1_val = 0;
+	joy1.ps2_val = 0;
+	joy1.x1_val = 0;
+	joy1.x2_val = 0;
+	joy1.y1_val = 0;
+	joy1.y2_val = 0;
+	joy1.addr =  0xFFFFC002;
+
 	// Write tank
 	wait_for_vga();
 	*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.tank_index << 2) | (0x1);
@@ -117,6 +154,14 @@ void init(){
 	enemy_bullet.bullet_index = 2;
 	enemy_bullet.bullet_x = 1;
 	enemy_bullet.bullet_y = 1;
+
+	joy2.ps1_val = 0;
+	joy2.ps2_val = 0;
+	joy2.x1_val = 0;
+	joy2.x2_val = 0;
+	joy2.y1_val = 0;
+	joy2.y2_val = 0;
+	joy2.addr =  0xFFFFC004;
 
 	wait_for_vga();
 	*VGA = (enemy.xloc << 22) | (enemy.yloc << 12) | (enemy.tank_index << 2) | (0x1);
@@ -150,7 +195,7 @@ int bullet_collision(int xloc, int yloc){
 
 
 
-void update_player_tank(struct tank_t *tank){
+void update_player_tank(struct tank_t *tank, struct joystick *j, struct direction *direct){
 	
 	int tank_move = 0;
 	// Optimism >>>>
@@ -159,37 +204,37 @@ void update_player_tank(struct tank_t *tank){
 	// Check if VGA is busy
 	wait_for_vga();
 
-	if((x2_val == 2) && (y2_val == 0) && player.gun_index != 41){ // (W)
-		*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.gun_index << 2) | (0x2);
-		player.gun_index = 41;
+	if((j->x2_val == 2) && (j->y2_val == 0) && player.gun_index != 41){ // (W)
+		*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->gun_index << 2) | (0x2);
+		tank->gun_index = 41;
 	}	
-	else if((x2_val == 1) && (y2_val == 0)&& player.gun_index != 34){ // (E)
-		*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.gun_index << 2) | (0x2);
-		player.gun_index = 34;
+	else if((j->x2_val == 1) && (j->y2_val == 0)&& tank->gun_index != 34){ // (E)
+		*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->gun_index << 2) | (0x2);
+		tank->gun_index = 34;
 	}	
-	else if((y2_val == 2) && (x2_val == 0)&& player.gun_index != 35){ // (N)
-		*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.gun_index << 2) | (0x2);
-		player.gun_index = 35;
+	else if((j->y2_val == 2) && (j->x2_val == 0)&& tank->gun_index != 35){ // (N)
+		*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->gun_index << 2) | (0x2);
+		tank->gun_index = 35;
 	}	
-	else if((y2_val == 1) && (x2_val == 0)&& player.gun_index != 38){ // (S)
-		*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.gun_index << 2) | (0x2);
-		player.gun_index = 38;
+	else if((j->y2_val == 1) && (j->x2_val == 0)&& tank->gun_index != 38){ // (S)
+		*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->gun_index << 2) | (0x2);
+		tank->gun_index = 38;
 	}	
-	else if((x2_val == 1) && (y2_val == 2)&& player.gun_index != 36){ // (NE)
-		*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.gun_index << 2) | (0x2);
-		player.gun_index = 36;
+	else if((j->x2_val == 1) && (j->y2_val == 2)&& tank->gun_index != 36){ // (NE)
+		*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->gun_index << 2) | (0x2);
+		tank->gun_index = 36;
 	}	
-	else if((x2_val == 2) && (y2_val == 2)&& player.gun_index != 37){ // (NW)
-		*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.gun_index << 2) | (0x2);
-		player.gun_index = 37;
+	else if((j->x2_val == 2) && (j->y2_val == 2)&& tank->gun_index != 37){ // (NW)
+		*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->gun_index << 2) | (0x2);
+		tank->gun_index = 37;
 	}	
-	else if((x2_val == 1) && (y2_val == 1)&& player.gun_index != 39){ // (SE)
-		*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.gun_index << 2) | (0x2);
-		player.gun_index = 39;
+	else if((j->x2_val == 1) && (j->y2_val == 1)&& tank->gun_index != 39){ // (SE)
+		*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->gun_index << 2) | (0x2);
+		tank->gun_index = 39;
 	}	
-	else if((x2_val == 2) && (y2_val == 1)&& player.gun_index != 40){ // (SW)
-		*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.gun_index << 2) | (0x2);
-		player.gun_index = 40;
+	else if((j->x2_val == 2) && (j->y2_val == 1)&& tank->gun_index != 40){ // (SW)
+		*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->gun_index << 2) | (0x2);
+		tank->gun_index = 40;
 	}
 	else{
 		gun_move = 0;
@@ -197,39 +242,39 @@ void update_player_tank(struct tank_t *tank){
 
 
 	if(gun_move == 0){
-		if(x1_val == 2){ // LEFT
-			if(player.xloc > 1 && wall_collision(player.xloc - 1, player.yloc) == 0) {
+		if(j->x1_val == 2){ // LEFT
+			if(tank->xloc > 1 && wall_collision(tank->xloc - 1, tank->yloc) == 0) {
 				wait_for_vga();
-				*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.tank_index << 2) | (0x2);
-				player.xloc = player.xloc - 1;
-				player.tank_index = 33;
+				*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->tank_index << 2) | (0x2);
+				tank->xloc = tank->xloc - 1;
+				tank->tank_index = direct->West;
 				tank_move = 1;
 			}
 		}
-		else if(x1_val == 1){ //RIGHT
-			if(player.xloc < 576 && wall_collision(player.xloc + 1, player.yloc) == 0){
+		else if(j->x1_val == 1){ //RIGHT
+			if(tank->xloc < 576 && wall_collision(tank->xloc + 1, tank->yloc) == 0){
 				wait_for_vga();
-				*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.tank_index << 2) | (0x2);
-				player.xloc = player.xloc + 1;
-				player.tank_index = 30;
+				*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->tank_index << 2) | (0x2);
+				tank->xloc = tank->xloc + 1;
+				tank->tank_index = direct->East;
 				tank_move = 1;
 			}
 		}
-		else if(y1_val == 2){ //UP
-			if(player.yloc > 1 && wall_collision(player.xloc, player.yloc - 2) == 0){
+		else if(j->y1_val == 2){ //UP
+			if(tank->yloc > 1 && wall_collision(tank->xloc, tank->yloc - 2) == 0){
 				wait_for_vga();
-				*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.tank_index << 2) | (0x2);
-				player.yloc = player.yloc - 2;
-				player.tank_index = 31;
+				*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->tank_index << 2) | (0x2);
+				tank->yloc = tank->yloc - 2;
+				tank->tank_index = direct->North;
 				tank_move = 1;
 			}
 		}
-		else if(y1_val == 1){//DOWN
-			if(player.yloc < 836 && wall_collision(player.xloc, player.yloc + 2) == 0){
+		else if(j->y1_val == 1){//DOWN
+			if(tank->yloc < 836 && wall_collision(tank->xloc, tank->yloc + 2) == 0){
 				wait_for_vga();
-				*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.tank_index << 2) | (0x2);
-				player.yloc = player.yloc + 2;
-				player.tank_index = 32;
+				*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->tank_index << 2) | (0x2);
+				tank->yloc = tank->yloc + 2;
+				tank->tank_index = direct->South;
 				tank_move = 1;
 			}
 		}
@@ -237,18 +282,18 @@ void update_player_tank(struct tank_t *tank){
 
 	if(tank_move | gun_move){
 		wait_for_vga();
-		*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.tank_index << 2) | (0x1);
+		*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->tank_index << 2) | (0x1);
 		wait_for_vga();
-		*VGA  = (player.xloc << 22) | (player.yloc << 12) | (player.gun_index << 2) | (0x1);
+		*VGA  = (tank->xloc << 22) | (tank->yloc << 12) | (tank->gun_index << 2) | (0x1);
 	}
 
 }
 
 
-void update_bullet(struct tank_t *tank, struct bullet_t *bullet){
+void update_bullet(struct tank_t *tank, struct bullet_t *bullet, struct joystick *j){
 
 	if((bullet->bullet_move == 1)){
-		if(ps2_val == 2){
+		if(j->ps2_val == 2){
 			if(tank->gun_index == 34){ //E 
 				//bullet_move = 2;
 				bullet->bullet_index = 1;
@@ -359,85 +404,16 @@ void update_bullet(struct tank_t *tank, struct bullet_t *bullet){
 }	
 
 
-void update_enemy(struct tank_t *enemy, int player_x, int player_y, struct bullet_t *bullet){
-    int dx = player_x - enemy->xloc;
-    int dy = player_y - enemy->yloc;
-
-    int step_x = (dx > 0) ? 1 : -1;
-    int step_y = (dy > 0) ? 1 : -1;
-
-	int mag_dx = dx > 0 ? dx : -dx;
-    int mag_dy = dy > 0 ? dy : -dy;
-
-	int tank_move = 1;
-	int gun_move = 1;
-
-	if(dy == 0 && dx < 0){  // West
-		enemy->gun_index = 41;
-	}
-	else if(dx == 0 && dy > 0){ // South
-		enemy->gun_index = 38;
-	}
-	else if(dy == 0 && dx > 0){ // East
-		enemy->gun_index = 34;
-	}
-	else if(dx == 0 && dy < 0){ //North
-		enemy->gun_index = 35;
-	}
-	else if(dy > 0 && dx < 0){ // SouthWest
-		 enemy->gun_index = 40;
-	}
-	else if(dx > 0 && dy > 0){ // SouthEast
-		enemy->gun_index = 39;
-	}
-	else if(dx < 0 && dy < 0){ // NorthWest
-		enemy->gun_index = 37;
-	}
-	else if(dx > 0 && dy < 0){ // NorthEast
-		enemy->gun_index = 36;
-	}
-	else{
-		gun_move = 0;
-	}
-
-    // Attempt to move horizontally or vertically based on the direction of the player
-    if (mag_dx >= mag_dy) {
-        // Horizontal movement
-        if (wall_collision(enemy->xloc + step_x, enemy->yloc) == 0) {
-            enemy->xloc += step_x;
-        } 
-		else if (wall_collision(enemy->xloc, enemy->yloc + step_y) == 0) {
-            enemy->yloc += step_y;
-        }
-    }
-	else{
-        // Vertical movement
-        if (wall_collision(enemy->xloc, enemy->yloc + step_y) == 0) {
-            enemy->yloc += step_y;
-        } 
-		else if (wall_collision(enemy->xloc + step_x, enemy->yloc) == 0) {
-            enemy->xloc += step_x;
-        }
-    }
-
-    // Update the enemy's position and gun orientation in VGA memory
-	if(tank_move | gun_move){
-		wait_for_vga();
-		*VGA = (enemy->xloc << 22) | (enemy->yloc << 12) | (enemy->tank_index << 2) | (0x1);
-		wait_for_vga();
-		*VGA = (enemy->xloc << 22) | (enemy->yloc << 12) | (enemy->gun_index << 2) | (0x1);
-	}
-}
-
-
-
 int main(){
 	init();
 	while(1){
-	    read_joystick();
-		update_player_tank(&player);
-		update_bullet(&player, &player_bullet);
-		update_enemy(&enemy, player.xloc, player.yloc, &enemy_bullet);
+	    read_joystick(&joy1);
+		read_joystick_2(&joy2);
+		update_player_tank(&player, &joy1, &player_direct);
+		update_player_tank(&enemy, &joy2, &enemy_direct);
+		update_bullet(&player, &player_bullet, &joy1);
+		update_bullet(&enemy, &enemy_bullet, &joy2);
+		*debug = joy2.y1_val;
 		for(int i = 0; i < 10000; i++){
 			2 + 2;
 		};

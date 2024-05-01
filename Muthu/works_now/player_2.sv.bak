@@ -1,0 +1,78 @@
+module player_2(
+	output TX,
+	input RX,
+	input clk, rst_n,
+
+	input [9:0] joystick_data,
+	output done
+);
+
+wire rx_rdy, tx_done;
+wire [7:0] tx_data;
+
+reg capture, shift, trmt, trmt_state;
+reg [9:0] captured;
+
+typedef enum reg[1:0]{IDLE, SENDING, SENT} state_t;
+state_t state, nxt_state;
+
+UART iUART(.clk(clk),.rst_n(rst_n),.RX(RX),.TX(TX),.rx_rdy(done),.clr_rx_rdy(),.rx_data(),.trmt(trmt),.tx_data(tx_data),.tx_done(tx_done), .baud('h01b2));
+
+always_ff @(posedge clk, negedge rst_n)
+	if(!rst_n)
+		state <= IDLE;
+	else
+		state <= nxt_state;
+
+always_ff @(posedge clk, negedge rst_n) begin
+	if(!rst_n)
+		captured = 'b0;
+	else if(capture)
+		captured = joystick_data;
+	else if(shift)
+		captured = {6'h0 , captured[9:8]};
+end
+
+assign tx_data = captured[7:0];
+
+// It takes 2^12 clocks to get a valid Spi transaction
+reg [11:0] counter;
+always @(posedge clk, negedge rst_n)
+	if(!rst_n)
+		counter <= 'b0;
+	else
+		counter <= counter + 1;
+
+
+always_comb begin
+	nxt_state = state;
+	capture = 0;
+	shift = 0;
+	trmt_state = 0;
+	case(state)
+		default: if(&counter) begin
+				capture = 1;
+				nxt_state = SENDING;
+				trmt_state = 1;
+		      	end
+		SENDING: begin
+				if(tx_done) begin
+				 shift = 1;
+				 nxt_state = SENT;
+			         trmt_state = 1;
+				end //else trmt = 1;
+			  end		
+		SENT:	begin 
+				if(tx_done) nxt_state = IDLE;
+				//else trmt = 1;
+			end
+	endcase	      
+end
+
+always_ff @(posedge clk, negedge rst_n)
+	if(!rst_n)
+		trmt = 'b0;
+	else
+		trmt = trmt_state;
+
+endmodule

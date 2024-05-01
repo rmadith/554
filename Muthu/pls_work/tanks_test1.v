@@ -95,10 +95,20 @@ reg [31:0] data_out;
 wire q_empty, busy;
 reg remove;
 
+wire [9:0] joystick_2;
+wire [9:0] joystick_2_in;
+reg joystick_out;
+
+wire rdy;
+
+//assign GPIO_1[15] = nxt_state;
+
+//assign joystick_2_in = {GPIO_1[35], GPIO_1[33], GPIO_1[31], GPIO_1[29], GPIO_1[27], GPIO_1[25], GPIO_1[23], GPIO_1[21], GPIO_1[19], GPIO_1[17]};
 
 reset_synch irst(.RST_n(KEY[0]), .clk(clk), .rst_n(rst_n), .pll_locked(pll_locked));
 reset_synch idebug(.RST_n(SW[0]), .clk(clk), .rst_n(debug_sig), .pll_locked(1'b1));
 //reset_synch iBaud(.RST_n(SW[9]), .clk(clk), .rst_n(baud_sig), .pll_locked(1'b1));
+//reset_synch iData [9:0](.RST_n(joystick_2_in), .clk(clk), .rst_n(joystick_2), .pll_locked(1'b1));
 
 pll iPLL (.refclk(CLOCK2_50), .rst(~KEY[0]),.outclk_0(clk),.outclk_1(VGA_CLK),
            .locked(pll_locked));
@@ -108,6 +118,7 @@ pll iPLL (.refclk(CLOCK2_50), .rst(~KEY[0]),.outclk_0(clk),.outclk_1(VGA_CLK),
 assign LEDR[8] = !rst_n;
 assign LEDR[7] = debug_sig;
 assign LEDR[5] = !cpu_rst_n;
+//assign LEDR[4] = nxt_state;
 
 //=======================================================
 //  Structural coding
@@ -122,22 +133,28 @@ assign cpu_rst_n = (debug_sig) ? 1'b0 : rst_n;
 // CPU
 cpu iCPU(.clk(clk), .rst_n(cpu_rst_n), .boot_addr(boot_addr), .boot_data(boot_data), 
 			.debug(debug_sig), .memMappedAddr(memMappedAddr), .memMappedDataOut(memMappedDataOut), 
-			.joystick_data({busy,19'b0, joystick_data}), .halt(LEDR[9]));
+			.joystick_data({busy,8'b0, rdy,joystick_2,joystick_data}), .halt(LEDR[9]));
 
 always @(*) begin
 	write = 0;
 	done = 'b0;
 	data_out = 'b0;
+	joystick_out = 1'b0;
 	case(memMappedAddr)
-		32'hFFFFC001 : 	write = 1;
+		32'hFFFFC001 :  write = 1;
 		32'hFFFFC002 :  done = memMappedDataOut[5:0];
 		32'hFFFFC003 :  data_out = memMappedDataOut;
+		32'hFFFFC004 :  joystick_out = 1'b1;
 		default:		begin
 							write = 0;
 							done = 'b0;
 							VGA_WRITE = 'b0;
 						end
 	endcase
+end
+
+always @(*) begin
+
 end
 
 SEG7_LUT_6 	iseg (.oSEG0(HEX0),.oSEG1(HEX1), .oSEG2(HEX2),.oSEG3(HEX3), .oSEG4(HEX4),.oSEG5(HEX5), .iDIG(boot_addr[23:0]));
@@ -148,31 +165,9 @@ joystick ijoy (.ADC_CONVST(ADC_CONVST), .ADC_DIN(ADC_DIN), .ADC_DOUT(ADC_DOUT),
 					.ADC_SCLK(ADC_SCLK), .clk(clk), .rst_n(rst_n), .done(done), .val(joystick_data));
 
 
-//circular_queue #(.Q_WIDTH('d32), .Q_SIZE('d128)) iVGAQueue(.clk(clk),.rst_n(rst_n),.data_in(memMappedDataOut),.add(VGA_WRITE),
-//                                                            .remove(remove),.data_out(data_out),.q_full(q_full),.q_empty(q_empty), 
-//                                                            .remaining(), .containing());
 
-reg state, nxt_state;
-always @(posedge clk, negedge rst_n)
-	if(!rst_n)
-		state <= 1'b0;
-	else
-		state <= nxt_state; 
+game_holder iGame(.clk(clk), .rst_n(rst_n), .TX(GPIO_1[35]), .RX(GPIO_1[33]), .joystick_data(joystick_2), .ready(rdy), .send_done(joystick_out));
 
-
-always @(*) begin
-	nxt_state = state;
-	remove = 0;
-	case(state)
-		1'b0:	if(!q_empty) begin 
-					remove = 1;
-					nxt_state = 1'b1;
-				end
-		1'b1:	if(!busy) nxt_state = 1'b0;
-	endcase
-end
-
-// assign inter_data = (state) ? 'b0 : data_out;
 
 BMP_display IBMP (.clk(clk), .VGA_CLK(VGA_CLK), .rst_n(rst_n), .VGA_BLANK_N(VGA_BLANK_N), .VGA_B(VGA_B), .VGA_G(VGA_G), .VGA_HS(VGA_HS), .VGA_R(VGA_R), 
 					.VGA_SYNC_N(VGA_SYNC_N), .VGA_VS(VGA_VS), .xloc(data_out[31:22]), .yloc(data_out[21:13]), .add_fnt(1'b0), .fnt_indx('b0), .add_img(data_out[0]), 

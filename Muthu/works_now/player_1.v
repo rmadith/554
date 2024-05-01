@@ -47,7 +47,9 @@ module player_1(
 	input 		     [9:0]		SW,
 
 	//////////// GPIO_1, GPIO_1 connect to GPIO Default //////////
-	inout 		    [35:0]		GPIO
+	inout 		    [14:0]		GPIO_1,
+	input 			 done,
+	inout 			 [35:17] GPIO
 );
 
 
@@ -55,17 +57,27 @@ module player_1(
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
+wire [11:0] val;
+wire rst_n;
+wire in_done;
+assign LEDR[9] = !rst_n;
+wire [9:0] joy_send;
 
-
+reset_synch iRST(.clk(CLOCK2_50),.RST_n(KEY[0]),.pll_locked(1'b1),.rst_n(rst_n));
+//reset_synch iDONE(.clk(CLOCK2_50),.RST_n(done),.pll_locked(1'b1),.rst_n(in_done));
 
 
 //=======================================================
 //  Structural coding
 //=======================================================
 joystick ijoy (.ADC_CONVST(ADC_CONVST), .ADC_DIN(ADC_DIN), .ADC_DOUT(ADC_DOUT), 
-					.ADC_SCLK(ADC_SCLK), .clk(clk), .rst_n(rst_n), .done(done), .val(joystick_data));
+					.ADC_SCLK(ADC_SCLK), .clk(CLOCK2_50), .rst_n(rst_n), .done({6{in_done}}), .val(val));
 					
-					
-assign GPIO
+assign joy_send = {val[11:8],val[5:0]};
+
+player_2 iPlayer(.clk(CLOCK2_50), .rst_n(rst_n), .TX(GPIO[33]), .RX(GPIO[35]), .joystick_data(joy_send), .done(in_done));
+
+SEG7_LUT_6 	iseg(.oSEG0(HEX0),.oSEG1(HEX1), .oSEG2(HEX2),.oSEG3(HEX3), .oSEG4(HEX4),.oSEG5(HEX5), .iDIG(val));
+
 
 endmodule
