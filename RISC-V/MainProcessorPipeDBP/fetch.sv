@@ -31,7 +31,7 @@ module fetch (
 
     `ifdef LOAD_INSTR_FILE
     initial begin
-        $readmemh("../Verification/4-24-failing-test-LD-to-use.hex",instr_mem);
+        $readmemh("wiscv.hex",instr_mem);
     end
 
     `endif

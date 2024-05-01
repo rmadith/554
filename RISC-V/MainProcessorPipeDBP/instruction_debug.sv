@@ -12,7 +12,7 @@ logic [9:0] funct3_and_opcode;
 
 always_comb begin 
 	case(instruction) inside
-		32'b00000000000000000000000000010011: inst_name = NOP;
+		32'b000000000000000000000000000x00xx: inst_name = NOP;
         32'bxxxxxxxxxxxxxxxxxxxxxxxxx0110111: inst_name = LUI;
         32'bxxxxxxxxxxxxxxxxxxxxxxxxx0010111: inst_name = AUIPC;
         32'bxxxxxxxxxxxxxxxxxxxxxxxxx1101111: inst_name = JAL;
