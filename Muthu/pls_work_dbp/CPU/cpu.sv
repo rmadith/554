@@ -50,6 +50,7 @@ module cpu(
 	logic takeBranch;
 	logic branch;
 	logic jumpAL;
+	logic jump;
 
 	/////////////// IDEX pipeline register (outputs) //////////////////
 	logic [31:0] regData1_IDEX_out;
@@ -211,7 +212,8 @@ module cpu(
 		.branch_PC(branch_PC),
 		.takeBranch(takeBranch)
 		.branch(branch),
-		.jumpAL(jumpAL)
+		.jumpAL(jumpAL),
+		.jump(jump)
 	);
 
 	IDEXpipelineReg iIDEX_pipeline_reg(
@@ -466,7 +468,9 @@ module cpu(
 		.RegWriteEnable_IDEX_in(regWriteEnable_IDEX_in),
 		
 		.TakeBranch_from_D(takeBranch),
-		.predict_branch_taken_ID(predict_branch_taken_ID)
+		.predict_branch_taken_ID(predict_branch_taken_ID),
+		.jump(jump),
+		.branch(branch),
 
 		///// OUTPUTS  /////
 		.incorrect_b_prediction(incorrect_b_prediction),

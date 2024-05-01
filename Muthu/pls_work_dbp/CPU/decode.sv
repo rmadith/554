@@ -35,13 +35,13 @@ module decode(
 	output logic takeBranch,
 	
 	output logic jumpAL,
-	output logic branch
+	output logic branch,
+	output logic jump
 
 	);
 
 	///////////////////////////// Declare internal nets //////////////////////////////////
 	logic [2:0] immType;
-	logic jump;
 	//////////////////////////////////////////////////////////////////////////////////////
 
 
