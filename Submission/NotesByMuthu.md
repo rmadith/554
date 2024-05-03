@@ -56,4 +56,4 @@ It would have been nice to use in memory editor. But I think the space use is O(
 
 Oh and when you copy an old project into a new directory to make changes make sure to change .sof file. Surprisingly the programmer unlike the rest of projector uses absolute path instead of a relative path
 
-You'll need to reset everytime you switch on or off dynamic Branch prediction
+You'll need to reset everytime you switch dynamic Branch prediction on or off
