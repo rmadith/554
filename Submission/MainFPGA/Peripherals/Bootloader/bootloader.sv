@@ -3,17 +3,17 @@
 module bootloader(
        input wire clk, rst_n,
 
-       input wire debug,
-       output reg [31:0] addr,
-       output reg [31:0] data,
-       output reg increment,
+       input wire debug,           // Debug Mode
+       output reg [31:0] addr,     // Address of the data to be sent to CPU
+       output reg [31:0] data,     // Data to be sent to CPU
+       output reg increment,       // Debug Signal, does not affect the actual operation
 
        input wire RX,
        output wire TX,
 
-       input wire [31:0] outdata,
-       input wire write,
-       input wire [12:0] baud
+       input wire [31:0] outdata,  // Data to be sent to CPU
+       input wire write,           // Asserts the add signal to the circular queue
+       input wire [12:0] baud             
 );
 
 // Write State Machine
@@ -31,6 +31,7 @@ wire [7:0] rx_data, tx_data;
 UART iUART(.clk(clk),.rst_n(rst_n),.RX(RX),.TX(TX),.rx_rdy(rx_rdy),.clr_rx_rdy(clr_rx_rdy),.rx_data(rx_data),.trmt(trmt),.tx_data(tx_data),.tx_done(tx_done), .baud(baud));
 
 
+// Address Counter
 always_ff @(posedge clk, negedge rst_n) begin : counter
        if(!rst_n)
               addr <= 0;
@@ -40,13 +41,7 @@ always_ff @(posedge clk, negedge rst_n) begin : counter
               addr <= addr + 1;
 end
 
-always_ff @(posedge clk, negedge rst_n) begin
-       if(!rst_n) 
-              write_state <= IDLE;
-       else 
-              write_state <= nxt_write_state;
-end
-
+// Shift Register to receive 8 bits at a time
 always_ff @(posedge clk, negedge rst_n) begin
        if(!rst_n)
               data <= 'b0;
@@ -54,6 +49,7 @@ always_ff @(posedge clk, negedge rst_n) begin
               data <= {data[23:0], rx_data};
 end
 
+// Transmission Counter. Needs to get 4 transmissions to rx 32 bits
 always_ff @(posedge clk, negedge rst_n) begin
        if(!rst_n)
               rx_count <= 3'b0;
@@ -63,6 +59,17 @@ always_ff @(posedge clk, negedge rst_n) begin
               rx_count <= rx_count + 1;
 end
 
+// State Machine for Transmission from CPU to FPGA
+always_ff @(posedge clk, negedge rst_n) begin
+       if(!rst_n) 
+              write_state <= IDLE;
+       else 
+              write_state <= nxt_write_state;
+end
+
+// State Machine for Transmission from CPU to FPGA
+// The data is sent in 8 bit chunks and the state machine waits for 4 transmissions to get 32 bits
+// The state machine then moves to the next address
 always_comb begin : writeStateMachine
        nxt_write_state = write_state;
        increment = 0;
@@ -83,7 +90,12 @@ always_comb begin : writeStateMachine
        endcase
 end
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+// State Machine for Transmission from FPGA to CPU
 wire q_empty;
 reg remove;
 wire [31:0] data_out;
@@ -100,15 +112,10 @@ tx_state_t tx_state, nxt_tx_state;
 
 reg shift_tx, store, tx_increment, tx_rst;
 
-always_ff @(posedge clk, negedge rst_n) begin
-       if(!rst_n)
-              tx_state <= STEADY;
-       else
-              tx_state <= nxt_tx_state;
-end
-
 reg [31:0] stored_data_out;
 
+
+// Shift Register to send 8 bits at a time
 always_ff @(posedge clk, negedge rst_n) begin
        if(!rst_n)
               stored_data_out <= 'b0;
@@ -120,6 +127,7 @@ end
 
 assign tx_data = stored_data_out[7:0];
 
+// Transmission Counter
 always_ff @(posedge clk, negedge rst_n) begin // vishnu changed this
        if(!rst_n)
               transmission_count <= 'b0;
@@ -129,6 +137,14 @@ always_ff @(posedge clk, negedge rst_n) begin // vishnu changed this
               transmission_count <= transmission_count + 1;
 end
 
+always_ff @(posedge clk, negedge rst_n) begin
+       if(!rst_n)
+              tx_state <= STEADY;
+       else
+              tx_state <= nxt_tx_state;
+end
+
+// State Machine for Transmission to split the data into 8 bits and make 4 transmissions
 always_comb begin : txStateMachine
        nxt_tx_state = tx_state;
        shift_tx = 0;
