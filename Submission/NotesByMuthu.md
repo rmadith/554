@@ -46,8 +46,6 @@ I think that that the tristate update is lot faster than the Tclk2q which makes 
 We switched to a UART. I was initially apprehensive of the lag. But there isn't any! or at least I don't feel it. I am no pro gamer so don't take my word for it. 
 
 
-
-
 & I guess I am done with problems or at least the big ones. Read the following at your own Risks! &
 
 We removed the case statement to mux the data from external sources to CPU because we did not have enough ROM. This was absolutely dumb, but we were under the assumption at the time that the ROM and Registers were the same thing with Quartus. However after we removed it, it was just nice to not have another case statement :P
@@ -56,5 +54,6 @@ Sounds were cheesy. We used the debug statement back to the PC and check if it i
 
 It would have been nice to use in memory editor. But I think the space use is O(n) rather than O(1) which is what our bootloader is. This would mean there is greater logic use which might be an issue depending on what you are doing. 
 
+Oh and when you copy an old project into a new directory to make changes make sure to change .sof file. Surprisingly the programmer unlike the rest of projector uses absolute path instead of a relative path
 
-
+You'll need to reset everytime you switch on or off dynamic Branch prediction
