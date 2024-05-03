@@ -1,33 +1,20 @@
 `default_nettype none
 module branch_unit(
-	//Inputs
-	branch,jump,currPC,PC_plus4,immediate,SrcA,SrcB,funct3,opcode,
-	//Outputs
-	branch_PC, takeBranch
-	);
-
-///////////////////////////////////////
 /////////////// Inputs ///////////////
-/////////////////////////////////////
 input logic [31:0] currPC,immediate,SrcA,SrcB,PC_plus4;
 input logic branch,jump;
 input logic [2:0] funct3;
 input logic [6:0] opcode;
-////////////////////////////////////////
+
 /////////////// Outputs ///////////////
-//////////////////////////////////////
 output logic [31:0] branch_PC;
 output logic takeBranch;
-//////////////////////////////////////////
+);
+
 /////////////// Variables ///////////////
-////////////////////////////////////////
 logic [31:0] branchSum,jumpSum,jalrSum;
 logic jumpFlag;
 logic branch_internal; 
-////////////////////////////////////////
-///////////////////////////////////////
-//////////////////////////////////////
-
 
 always @(*) begin 
 	branch_internal = 0;
@@ -43,21 +30,21 @@ always @(*) begin
 	endcase
 	
 	case(opcode) // Jump Opcodes
-		7'b1101111: jumpFlag = 0;
-		7'b1100111: jumpFlag = 1;
+		7'b1101111: jumpFlag = 0;	//JALR
+		7'b1100111: jumpFlag = 1;	//JAL
 		default: jumpFlag = 0;
 	endcase
 end 
 
-assign branchSum = currPC + immediate; // ?? 
-assign jumpSum = currPC + immediate;
-assign jalrSum = SrcA + immediate;
+assign branchSum = currPC + immediate; // Branch Target
+assign jumpSum = currPC + immediate; //JAL Target
+assign jalrSum = SrcA + immediate; // JALR Target
 
-assign branch_PC = (jump & jumpFlag) ? jalrSum : 
+assign branch_PC = (jump & jumpFlag) ? jalrSum : 	// set the branch target depending on what operation we are going
 		(branch & branch_internal) ? branchSum : 
 		(jump & ~jumpFlag) ? jumpSum : PC_plus4;
 
-assign takeBranch = jump | (branch_internal & branch);
+assign takeBranch = jump | (branch_internal & branch); // say if a branch is happening
 
 endmodule
 
