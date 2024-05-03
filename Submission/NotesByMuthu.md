@@ -58,4 +58,4 @@ Oh and when you copy an old project into a new directory to make changes make su
 
 You'll need to reset everytime you switch dynamic Branch prediction on or off
 
-When using the a queue to write to VGA, remember to clear the previous instrcution. Otherwise it will circle around and but you in the ass!
+When using the a queue to write to VGA, remember to clear the previous instrcution. Otherwise it will circle around and bite you in the ass!
