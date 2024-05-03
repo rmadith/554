@@ -1,0 +1,617 @@
+# Compile of cpu_tb.sv was successful.
+vsim -voptargs=+acc work.cpu_tb
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 14:21:29 on May 02,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+add wave -position insertpoint sim:/cpu_tb/iCPU/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rsdingle  Hostname: WIN-8119  ProcessID: 15700
+#           Attempting to use alternate WLF file "./wlft5r6gdy".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5r6gdy
+do I:/554/Muthu/pls_work_dbp/CPU/wave2.do
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(104)
+#    Time: 161 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 104
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(108)
+#    Time: 203 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 108
+# Compile of BTB_and_PC.sv was successful.
+# Compile of cpu_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(104)
+#    Time: 161 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 104
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(107)
+#    Time: 311 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 107
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(111)
+#    Time: 363 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 111
+# Compile of cpu_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(105)
+#    Time: 161 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 105
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(108)
+#    Time: 335 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 108
+restart
+restart
+run
+# Hit ECALL
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(112)
+#    Time: 363 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 112
+# Warning: Cannot write compile report file: I:/554/Muthu/pls_work_dbp/CPU/dbp.cr.mti
+ration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 108
+# Compile of cpu_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(104)
+#    Time: 161 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 104
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(107)
+#    Time: 315 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 107
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(111)
+#    Time: 369 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 111
+# Compile of cpu_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(105)
+#    Time: 161 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 105
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(108)
+#    Time: 341 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 108
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(112)
+#    Time: 369 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 112
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(105)
+#    Time: 161 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 105
+run -all
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(108)
+#    Time: 341 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 108
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+# Compile of cpu_tb.sv was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(106)
+#    Time: 187 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 106
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(106)
+#    Time: 189 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 106
+run -all
+# Warning: Cannot write compile report file: I:/554/Muthu/pls_work_dbp/CPU/dbp.cr.mti
+restart
+# Compile of BTB_and_PC.sv was successful.
+# Compile of cpu_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(106)
+#    Time: 267 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 106
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.common_def(fast)
+# Loading work.cpu_tb_sv_unit(fast)
+# Loading work.cpu_tb(fast)
+# Loading work.cpu(fast)
+# Loading work.fetch(fast)
+# Loading work.BTB_and_PC(fast)
+# Loading work.IFIDpipelineReg_sv_unit(fast)
+# Loading work.IFIDpipelineReg(fast)
+# Loading work.decode(fast)
+# Loading work.control_unit(fast)
+# Loading work.extension_unit(fast)
+# Loading work.rf(fast)
+# Loading work.branch_unit(fast)
+# Loading work.IDEXpipelineReg_sv_unit(fast)
+# Loading work.IDEXpipelineReg(fast)
+# Loading work.execute(fast)
+# Loading work.ALU(fast)
+# Loading work.EXMEMpipelineReg_sv_unit(fast)
+# Loading work.EXMEMpipelineReg(fast)
+# Loading work.memory(fast)
+# Loading work.dmem8(fast)
+# Loading work.dmem8(fast__1)
+# Loading work.dmem8(fast__2)
+# Loading work.dmem8(fast__3)
+# Loading work.MEMWBpipelineReg_sv_unit(fast)
+# Loading work.MEMWBpipelineReg(fast)
+# Loading work.wb(fast)
+# Loading work.forwardToEX(fast)
+# Loading work.forwardToD(fast)
+# Loading work.forwardToMEM(fast)
+# Loading work.HazardDetection(fast)
+# Loading work.CheckForLoadToUse_sv_unit(fast)
+# Loading work.CheckForLoadToUse(fast)
+# Loading work.CheckForControlToUse_sv_unit(fast)
+# Loading work.CheckForControlToUse(fast)
+# Loading work.CheckForControlToUse(fast__1)
+# Loading work.instruction_debug_sv_unit(fast)
+# Loading work.instruction_debug(fast)
+run -all
+# Hit ECALL
+# ** Note: $stop    : I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv(106)
+#    Time: 267 ns  Iteration: 2  Instance: /cpu_tb
+# Break in Module cpu_tb at I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv line 106
+# End time: 16:47:07 on May 02,2024, Elapsed time: 2:50:08
+# Errors: 0, Warnings: 1
