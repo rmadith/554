@@ -1,17 +1,17 @@
 import common_def::*;
 
 module instruction_debug (
+    // INPUTS //
     input wire logic [31:0] instruction,
+
+    // OUTPUTS //
     output instruction_type inst_name
 );
 
 logic [9:0] funct3_and_opcode;
-//assign funct3_and_opcode = {instruction[14:12], instruction[6:0]};
-
-
 
 always_comb begin 
-	case(instruction) inside
+	case(instruction) inside    // used for debugging in the waveforms, the names of the instructions will show in the waves
 		32'b000000000000000000000000000x00xx: inst_name = NOP;
         32'bxxxxxxxxxxxxxxxxxxxxxxxxx0110111: inst_name = LUI;
         32'bxxxxxxxxxxxxxxxxxxxxxxxxx0010111: inst_name = AUIPC;
@@ -54,8 +54,5 @@ always_comb begin
         default: inst_name = INVALID;
 	endcase
 end
-
-
-
 
 endmodule

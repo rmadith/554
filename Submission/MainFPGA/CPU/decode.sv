@@ -34,15 +34,14 @@ module decode(
 	output logic [31:0] branch_PC,
 	output logic takeBranch,
 	
-	output logic jumpAL,
-	output logic branch,
-	output logic jump
+	output logic jumpAL,	// assert if the instruction is a JAL
+	output logic branch,	// assert if the instruction is a Branch
+	output logic jump		// assert if the instrucion is a jump 
 	);
 
 	///////////////////////////// Declare internal nets //////////////////////////////////
 	logic [2:0] immType;
 	//////////////////////////////////////////////////////////////////////////////////////
-
 
 	///////////////////////////// CONTROL UNIT //////////////////////////////////
 	control_unit iControl_Unit(
@@ -55,7 +54,6 @@ module decode(
 		.addConstant4(addConstant4_IDEX_in), .memType(memType_IDEX_in), .jumpAL(jumpAL)
 	);
 
-
 	///////////////////////////// SIGN EXTENSION UNIT ////////////////////////////////
 	extension_unit iEU(
 		///// INPUTS /////
@@ -64,7 +62,6 @@ module decode(
 		///// OUTPUTS /////
 		.immediate(sext_imm_IDEX_in)
 	);
-
 
 	// Separate variable declared for ease of debugging.
 	logic [4:0] reg_dst_addr;
@@ -87,7 +84,6 @@ module decode(
 		.p0(regData1_IDEX_in),
 		.p1(regData2_IDEX_in)
 	);
-
 
 	///////////////////////////// BRANCH UNIT ////////////////////////////////
 	branch_unit iBU(

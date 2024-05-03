@@ -1,10 +1,5 @@
-/*
-   ECE 554 Spring '24
-  
-   Filename        : forward.v
-   Description     : This is the overall module for the forwarding logic of the processor.
-*/
 `default_nettype none
+
 module forwardToMEM (
 	// allows us to determine the registers we are reading in MEM stage.
 	input wire [31:0] Instruction_EXMEM_MEMWB,
@@ -33,7 +28,6 @@ module forwardToMEM (
 	wire [4:0] WB_destination_reg;
 
 	assign WB_destination_reg = Instruction_MEMWB_out[11:7];
-
 
 	//////////////////////REG 2 Forwarding ////////////////////////
 	// MEM -> MEM forwarding (from start of WB to start of MEM stage)

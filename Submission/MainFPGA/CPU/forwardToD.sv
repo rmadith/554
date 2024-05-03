@@ -1,10 +1,5 @@
-/*
-   ECE 554 Spring '24
-  
-   Filename        : forward.v
-   Description     : This is the overall module for the forwarding logic of the processor.
-*/
 `default_nettype none
+
 module forwardToD (
 	// allows us to determine the registers we are reading in D stage.
 	input wire [31:0] Instruction_IFID_IDEX,
@@ -45,8 +40,6 @@ module forwardToD (
 
 	assign WB_destination_reg =  Instruction_MEMWB_out[11:7];
 
-
-	 
 	// NOTE: For both registers, the second mux (EX->EX) has priority over the first mux (MEM->EX). 
 	
 	//////////////////////REG 1 Forwarding ////////////////////////
@@ -57,7 +50,7 @@ module forwardToD (
 	
 	// EX -> D forwarding (from start of MEM to start of D stage)
 	assign RegData1_after_forward_EX =  (~|D_read_register_1) ? 32'b0 :
-											RegWriteEnable_EXMEM_MEMWB ? 
+										RegWriteEnable_EXMEM_MEMWB ? 
 										(((MEM_destination_reg==D_read_register_1)) ? execute_result_EXMEM_MEMWB : RegData1_MEMtoEX_forward) : RegData1_MEMtoEX_forward;
 
 
@@ -69,7 +62,7 @@ module forwardToD (
 	
 	// EX -> D forwarding (from start of MEM to start of D stage)
 	assign RegData2_after_forward_EX =   (~|D_read_register_2) ? 32'b0 : 
-											RegWriteEnable_EXMEM_MEMWB ? 
+										RegWriteEnable_EXMEM_MEMWB ? 
 										(((MEM_destination_reg==D_read_register_2)) ? execute_result_EXMEM_MEMWB : RegData2_MEMtoEX_forward) : RegData2_MEMtoEX_forward;
 
 	

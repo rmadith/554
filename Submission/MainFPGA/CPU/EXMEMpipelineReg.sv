@@ -6,9 +6,6 @@ module EXMEMpipelineReg(
     ///// INPUTS  /////
     input wire clk,
     input wire rst_n,
-    
-    input wire stall_disable,
-    input wire flush,
 
     ///// PIPELINE INPUTS  /////
     input wire regWriteEnable_IDEX_EXMEM,
@@ -33,16 +30,6 @@ module EXMEMpipelineReg(
     output logic ECALL_EXMEM_MEMWB
 
     );
-    
-    // Dummy version for now.
-    // assign regWriteEnable_EXMEM_MEMWB = regWriteEnable_IDEX_EXMEM ;
-    // assign instruction_EXMEM_MEMWB = instruction_IDEX_EXMEM ;
-    // assign PC_EXMEM_MEMWB = PC_IDEX_EXMEM ;
-    // assign regData2_EXMEM_out = regData2_EXMEM_in ;
-    // assign memType_EXMEM_out = memType_IDEX_EXMEM ;
-    // assign memRead_EXMEM_MEMWB = memRead_IDEX_EXMEM ;
-    // assign memWrite_EXMEM_out = memWrite_IDEX_EXMEM ;
-    // assign execute_result_EXMEM_MEMWB = execute_result_EXMEM_in ;
 
     always_ff @( posedge clk, negedge rst_n) begin 
         if (!rst_n) begin
@@ -68,10 +55,6 @@ module EXMEMpipelineReg(
 
         end
     end
-
-
-
-
 
 endmodule
 

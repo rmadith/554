@@ -29,16 +29,9 @@ module MEMWBpipelineReg(
     output logic ECALL_MEMWB_out
 
 );
-    // Dummy version for now.
-    // assign regWriteEnable_MEMWB_out =  regWriteEnable_EXMEM_MEMWB;
-    // assign instruction_MEMWB_out =  instruction_EXMEM_MEMWB;
-    // assign PC_MEMWB_out =  PC_EXMEM_MEMWB;
-    // assign execute_result_MEMWB_out =  execute_result_EXMEM_MEMWB;
-    // assign memRead_MEMWB_out = memRead_EXMEM_MEMWB ;
-    // assign memReadRst_MEMWB_out =  memReadRst_MEMWB_in;
 
     always_ff @( posedge clk, negedge rst_n) begin 
-        if (!rst_n) begin
+        if (!rst_n) begin       // clear the register on a reset
             regWriteEnable_MEMWB_out <=  '0;
             instruction_MEMWB_out <=  NOP_INSTR_HEX;
             PC_MEMWB_out <=  '0;
@@ -46,7 +39,7 @@ module MEMWBpipelineReg(
             memRead_MEMWB_out <= '0 ;
             memReadRst_MEMWB_out <=  '0;
             ECALL_MEMWB_out <= '0;
-        end else begin
+        end else begin      // pipeline the required signals from Memory to Write Back stage
             regWriteEnable_MEMWB_out <=  regWriteEnable_EXMEM_MEMWB;
             instruction_MEMWB_out <=  instruction_EXMEM_MEMWB;
             PC_MEMWB_out <=  PC_EXMEM_MEMWB;

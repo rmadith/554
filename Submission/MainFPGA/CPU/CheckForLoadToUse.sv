@@ -1,20 +1,8 @@
-/*
-    CS/ECE 552 Spring '23
-    Eric Dubberstein
-    Joash Shankar
-*/
 `default_nettype none
 
 import common_def::*;
 
 module CheckForLoadToUse(
-	// inputs
-	InstructionInFetch, ReadReg1InFetch, ReadReg2InFetch, InstructionInDecode, RegWriteEnableInDecode, MemReadInDecode,
-	// outputs
-	stall
-);
-
-	/// Inputs/ outputs ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	input wire [31:0] InstructionInFetch; // The instruction that is currently in the fetch stage.
 	input wire [4:0] ReadReg1InFetch, ReadReg2InFetch; // The two registers that need to be read for the instruction that is in the fetch stage.
 	
@@ -23,7 +11,7 @@ module CheckForLoadToUse(
 	input wire MemReadInDecode; // is the instruction in decode reading from memory?
 	
 	output wire stall; // the result if we need to stall (i.e. is there a RAW?)
-	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+);
 
 	// Declare internal nets///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	wire WRS_RR1, WRS_RR2;

@@ -1,10 +1,5 @@
-/*
-   ECE 554 Spring '24
-  
-   Filename        : forward.v
-   Description     : This is the overall module for the forwarding logic of the processor.
-*/
 `default_nettype none
+
 module forwardToEX (
 	// allows us to determine the registers we are reading in EX stage.
 	input wire [31:0] Instruction_IDEX_EXMEM,
@@ -45,8 +40,6 @@ module forwardToEX (
 
 	assign WB_destination_reg =  Instruction_MEMWB_out[11:7];
 
-
-	 
 	// NOTE: For both registers, the second mux (EX->EX) has priority over the first mux (MEM->EX). 
 	
 	//////////////////////REG 1 Forwarding ////////////////////////

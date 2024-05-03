@@ -1,45 +1,32 @@
 `default_nettype none
 
 module control_unit(
-	//Inputs
-	instr,
-	//Outputs
-	alu_op,immSel,immType,setDataZero,regWriteEnable,memRead,memWrite,branch,pc_operand,jump,
-	addConstant4, memType, jumpAL
-	);
-//`include "common_params.inc"
+	/////////////// Inputs ///////////////
+	input wire [31:0] instr;
+	
+	/////////////// Outputs ///////////////
+	output reg [2:0] immType; // I-type=0(Sext),I-type=1(Zext),S-type=2,B-type=3,U-type=4,J-type=5
+	output reg [3:0] alu_op; // ?????? how many bits (4bits)
+	output reg immSel; //ALU Src B
+	output reg setDataZero;
+	output reg regWriteEnable;
+	output reg memRead;
+	output reg memWrite;
+	output reg branch;
+	output reg pc_operand;
+	output reg jump;
+	output reg jumpAL;
+	output reg addConstant4;
+	output reg [2:0] memType;
+);
 
-///////////////////////////////////////
-/////////////// Inputs ///////////////
-/////////////////////////////////////
-input wire [31:0] instr;
-////////////////////////////////////////
-/////////////// Outputs ///////////////
-//////////////////////////////////////
-output reg [2:0] immType; // I-type=0(Sext),I-type=1(Zext),S-type=2,B-type=3,U-type=4,J-type=5
-output reg [3:0] alu_op; // ?????? how many bits (4bits)
-output reg immSel; //ALU Src B
-output reg setDataZero;
-output reg regWriteEnable;
-output reg memRead;
-output reg memWrite;
-output reg branch;
-output reg pc_operand;
-output reg jump;
-output reg jumpAL;
-output reg addConstant4;
-output reg [2:0] memType;
-//////////////////////////////////////////
 /////////////// Variables ///////////////
-////////////////////////////////////////
 logic [6:0] opcode;
 logic [2:0] funct3;
 logic [6:0] funct7;
 logic [3:0] inter_alu_op; // ???? Set number of bits
-//logic [2:0] inter_memType; 
 ////////////////////////////////////////
-///////////////////////////////////////
-//////////////////////////////////////
+
 
 assign opcode = instr[6:0];
 assign funct3 = instr[14:12];
@@ -99,7 +86,7 @@ always@(*) begin
 				jumpAL = 1;
 				alu_op = 0; // ADD here 
 			    end
-		7'b1100111: begin // JALR - ????
+		7'b1100111: begin // JALR 
 				regWriteEnable = 1;
 				immSel = 1;
 				immType = 0;
@@ -142,6 +129,5 @@ always@(*) begin
 	endcase
     end
 endmodule
-
 
 `default_nettype wire

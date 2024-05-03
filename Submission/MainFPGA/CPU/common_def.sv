@@ -20,15 +20,4 @@ parameter LOAD_opcode = 7'b0000011;
 
 parameter JALR_opcode = 7'b1100111;
 
-
-
-
-
-
-
-
-
-
-
-
 endpackage

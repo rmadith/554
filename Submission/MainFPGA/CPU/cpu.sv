@@ -120,9 +120,6 @@ module cpu(
 	logic incorrect_b_prediction;
 	logic PC_enable; 
 	logic Flush_IFID;
-	logic Flush_IDEX;
-	logic Flush_EXMEM;
-	logic Flush_MEMWB;
 
 
 	// Instantiate the modules for each stage of (what will be) the pipeline.
@@ -158,7 +155,6 @@ module cpu(
 		///// INPUTS  /////
 		.clk(clk),
 		.rst_n(rst_n),
-		.stall_disable(1'b0),
 		.flush(Flush_IFID),
 
 		///// PIPELINE INPUTS  /////
@@ -185,15 +181,11 @@ module cpu(
 		.instruction_IFID_IDEX(instruction_IFID_IDEX),
 		.PC_IFID_IDEX(PC_IFID_IDEX),
 		.PC_plus4_IFID_out(PC_plus4_IFID_out),
-
 		.instruction_MEMWB_out(instruction_MEMWB_out),
 		.writeBackData(writeBackData),
-
 		.regWriteEnable_MEMWB_out(regWriteEnable_MEMWB_out),
-
 		.RegData1_after_forward_D(RegData1_after_forward_D),
 		.RegData2_after_forward_D(RegData2_after_forward_D),
-		
 
 		///// OUTPUTS /////
 		.regData1_IDEX_in(regData1_IDEX_in),
@@ -221,9 +213,6 @@ module cpu(
 		///// INPUTS  /////
 		.clk(clk),
 		.rst_n(rst_n),
-		
-		.stall_disable(1'b0),
-		.flush(Flush_IDEX),
 
 		///// PIPELINE INPUTS  /////
 		.regData1_IDEX_in(regData1_IDEX_in),
@@ -267,9 +256,6 @@ module cpu(
 
 	);
 
-	
-
-
 	execute iExecute(
 		///// INPUTS  /////
 		.setDataZero_IDEX_out(setDataZero_IDEX_out),
@@ -292,9 +278,6 @@ module cpu(
 		///// INPUTS  /////
 		.clk(clk),
 		.rst_n(rst_n),
-		
-		.stall_disable(1'b0),
-		.flush(Flush_EXMEM),
 
 		///// PIPELINE INPUTS  /////
 		.regWriteEnable_IDEX_EXMEM(regWriteEnable_IDEX_EXMEM),
@@ -356,9 +339,6 @@ module cpu(
 		///// INPUTS  /////
 		.clk(clk),
 		.rst_n(rst_n),
-		
-		.stall_disable(1'b0),
-		.flush(Flush_MEMWB),
 
 		///// PIPELINE INPUTS  /////
 		.regWriteEnable_EXMEM_MEMWB(regWriteEnable_EXMEM_MEMWB),
@@ -475,14 +455,8 @@ module cpu(
 
 		///// OUTPUTS  /////
 		.incorrect_b_prediction(incorrect_b_prediction),
-
 		.PC_enable(PC_enable), // goes directly to the enable of the PC
-	
-		.Flush_IFID(Flush_IFID), 
-		.Flush_IDEX(Flush_IDEX), 
-		.Flush_EXMEM(Flush_EXMEM), 
-		.Flush_MEMWB(Flush_MEMWB)
-
+		.Flush_IFID(Flush_IFID)
 	);
 
 endmodule

@@ -8,10 +8,9 @@ module wb (
 
         ///// OUTPUTS  /////
         output wire [31:0] writeBackData
-
         );
 
-        assign writeBackData = (memRead_MEMWB_out) ? memReadRst_MEMWB_out : execute_result_MEMWB_out;
+        assign writeBackData = (memRead_MEMWB_out) ? memReadRst_MEMWB_out : execute_result_MEMWB_out; 
 
 endmodule
 

@@ -37,7 +37,6 @@ module fetch (
         $readmemh("wiscv.hex",instr_mem);
     end
 
-
     // Instaniate BTB/PC module
     BTB_and_PC btb_pc (
         ///// INPUTS  /////
@@ -51,11 +50,8 @@ module fetch (
         .PC_plus_4(PC_plus4_IFID_in),
         .turn_off_DBP(turn_off_DBP),
 
-        .instruction_IFID_in(instruction_IFID_in),
         .branch_PC(branch_PC),
         .incorrect_b_prediction(incorrect_b_prediction),
-        .PC_IFID_IDEX(PC_IFID_IDEX),
-        .PC_plus4_IFID_out(PC_plus4_IFID_out),
 
         ///// OUTPUTS /////
         .PC_IFID_in(PC_IFID_in),
