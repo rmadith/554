@@ -1,14 +1,14 @@
 `default_nettype none
 module branch_unit(
 	/////////////// Inputs ///////////////
-	input logic [31:0] currPC,immediate,SrcA,SrcB,PC_plus4;
-	input logic branch,jump;
-	input logic [2:0] funct3;
-	input logic [6:0] opcode;
+	input logic [31:0] currPC,immediate,SrcA,SrcB,PC_plus4,
+	input logic branch,jump,
+	input logic [2:0] funct3,
+	input logic [6:0] opcode,
 	
 	/////////////// Outputs ///////////////
-	output logic [31:0] branch_PC;
-	output logic takeBranch;
+	output logic [31:0] branch_PC,
+	output logic takeBranch
 );
 
 /////////////// Variables ///////////////

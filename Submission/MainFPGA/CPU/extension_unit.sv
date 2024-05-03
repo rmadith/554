@@ -2,11 +2,11 @@
 
 module extension_unit(
 	/////////////// Inputs ///////////////
-	input wire [2:0] immType;
-	input wire [31:0] inst;
+	input wire [2:0] immType,
+	input wire [31:0] inst,
 
 	/////////////// Outputs ///////////////
-	output reg [31:0] immediate;
+	output reg [31:0] immediate
 );
 
 always @(*) begin 

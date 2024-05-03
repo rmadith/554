@@ -1578,8 +1578,8 @@ Disassembly of section .text:
     1820:	00178793          	add	a5,a5,1
     1824:	fef42423          	sw	a5,-24(s0)
     1828:	fe842703          	lw	a4,-24(s0)
-    182c:	000027b7          	lui	a5,0x2
-    1830:	70f78793          	add	a5,a5,1807 # 270f <__global_pointer$+0x63b>
+    182c:	000057b7          	lui	a5,0x5
+    1830:	e1f78793          	add	a5,a5,-481 # 4e1f <__global_pointer$+0x2d4b>
     1834:	fee7d4e3          	bge	a5,a4,181c <main+0xdc>
     1838:	fec42783          	lw	a5,-20(s0)
     183c:	f2079ce3          	bnez	a5,1774 <main+0x34>

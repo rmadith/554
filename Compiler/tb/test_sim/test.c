@@ -187,6 +187,7 @@ int wall_collision(int xloc, int yloc){
     return 0;
 }
 
+
 int bullet_collision(int xloc, int yloc){
     for(int i = 0; i < numBlocks; i++){
         if ((xloc < blocks[i].xloc + BLOCK_WIDTH) && (xloc + 32 > blocks[i].xloc) &&
@@ -464,7 +465,7 @@ int main(){
                 *debug = 0x00;
                 *debug = 0x38;
             }
-            for(int i = 0; i < 10000; i++){
+            for(int i = 0; i < 20000; i++){
                 2 + 2;
             };
         }

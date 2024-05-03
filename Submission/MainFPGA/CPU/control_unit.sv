@@ -2,22 +2,22 @@
 
 module control_unit(
 	/////////////// Inputs ///////////////
-	input wire [31:0] instr;
+	input wire [31:0] instr,
 	
 	/////////////// Outputs ///////////////
-	output reg [2:0] immType; // I-type=0(Sext),I-type=1(Zext),S-type=2,B-type=3,U-type=4,J-type=5
-	output reg [3:0] alu_op; // ?????? how many bits (4bits)
-	output reg immSel; //ALU Src B
-	output reg setDataZero;
-	output reg regWriteEnable;
-	output reg memRead;
-	output reg memWrite;
-	output reg branch;
-	output reg pc_operand;
-	output reg jump;
-	output reg jumpAL;
-	output reg addConstant4;
-	output reg [2:0] memType;
+	output reg [2:0] immType, // I-type=0(Sext),I-type=1(Zext),S-type=2,B-type=3,U-type=4,J-type=5
+	output reg [3:0] alu_op, // ?????? how many bits (4bits)
+	output reg immSel, //ALU Src B
+	output reg setDataZero,
+	output reg regWriteEnable,
+	output reg memRead,
+	output reg memWrite,
+	output reg branch,
+	output reg pc_operand,
+	output reg jump,
+	output reg jumpAL,
+	output reg addConstant4,
+	output reg [2:0] memType
 );
 
 /////////////// Variables ///////////////

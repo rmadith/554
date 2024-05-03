@@ -3,13 +3,13 @@
 import common_def::*;
 
 module CheckForControlToUse(
-	input wire [31:0] InstructionInFetch; // The instruction that is currently in the fetch stage.
-	input wire [4:0] ReadReg1InFetch; // The two registers that need to be read for the instruction that is in the fetch stage.
-	input wire [4:0] ReadReg2InFetch;
-	input wire [31:0] InstructionDownPipeline; // The instruction in a later phase that we are checking for a RAW dependency against.
-	input wire RegWriteEnableDownPipeline; // is the instruction in a later phase writing to a register?
+	input wire [31:0] InstructionInFetch, // The instruction that is currently in the fetch stage.
+	input wire [4:0] ReadReg1InFetch, // The two registers that need to be read for the instruction that is in the fetch stage.
+	input wire [4:0] ReadReg2InFetch,
+	input wire [31:0] InstructionDownPipeline, // The instruction in a later phase that we are checking for a RAW dependency against.
+	input wire RegWriteEnableDownPipeline, // is the instruction in a later phase writing to a register?
 	
-	output wire stall; // the result if we need to stall (i.e. is there a RAW?)
+	output wire stall // the result if we need to stall (i.e. is there a RAW?)
 );
 	// parameter is 1 when we're checking for load to branch hazard.
 	parameter load_to_branch_case = 1'b0;

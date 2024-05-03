@@ -22,7 +22,7 @@ module HazardDetection(
 	
 	// Flush. For the IFID pipeline register, set the current value in the instruction 
 	//			pipeline register to be NOP and reset syncrhonously the rest of the pipeline register.
-	output wire Flush_IFID, 
+	output wire Flush_IFID 
 );
 	
 	// result for if we need to stall due to RAW hazard for each stage.

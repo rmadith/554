@@ -1,5 +1,5 @@
 Timing Analyzer report for player_1
-Wed May  1 00:56:11 2024
+Fri May  3 11:13:47 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -103,16 +103,16 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 6           ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.20        ;
+; Average used               ; 1.24        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.3%      ;
-;     Processor 3            ;   4.2%      ;
-;     Processor 4            ;   4.1%      ;
-;     Processor 5            ;   3.7%      ;
-;     Processor 6            ;   3.7%      ;
+;     Processor 2            ;   4.9%      ;
+;     Processor 3            ;   4.8%      ;
+;     Processor 4            ;   4.8%      ;
+;     Processor 5            ;   4.6%      ;
+;     Processor 6            ;   4.6%      ;
 +----------------------------+-------------+
 
 
@@ -121,7 +121,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; player_1.SDC  ; OK     ; Wed May  1 00:55:59 2024 ;
+; player_1.SDC  ; OK     ; Fri May  3 11:13:36 2024 ;
 +---------------+--------+--------------------------+
 
 
@@ -1248,7 +1248,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed May  1 00:55:57 2024
+    Info: Processing started: Fri May  3 11:13:34 2024
 Info: Command: quartus_sta player_1 -c player_1
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1261,9 +1261,9 @@ Info (332164): Evaluating HDL-embedded SDC commands
         Info (332166): if { [string equal quartus_fit $::TimeQuestInfo(nameofexecutable)] } { set_max_delay -to [get_ports { altera_reserved_tdo } ] 0 }
         Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
 Info (332104): Reading SDC File: 'player_1.SDC'
-Warning (332049): Ignored create_clock at player_1.sdc(16): Time value "1.536 MH" is not valid File: I:/win/554_git/Muthu/works_now/player_1.sdc Line: 16
-    Info (332050): create_clock -period "1.536 MH" -name clk_audbck [get_ports AUD_BCLK] File: I:/win/554_git/Muthu/works_now/player_1.sdc Line: 16
-Warning (332049): Ignored create_clock at player_1.sdc(16): Option -period: Invalid clock period File: I:/win/554_git/Muthu/works_now/player_1.sdc Line: 16
+Warning (332049): Ignored create_clock at player_1.sdc(16): Time value "1.536 MH" is not valid File: I:/win/554_git/Submission/SecondaryFPGA/player_1.sdc Line: 16
+    Info (332050): create_clock -period "1.536 MH" -name clk_audbck [get_ports AUD_BCLK] File: I:/win/554_git/Submission/SecondaryFPGA/player_1.sdc Line: 16
+Warning (332049): Ignored create_clock at player_1.sdc(16): Option -period: Invalid clock period File: I:/win/554_git/Submission/SecondaryFPGA/player_1.sdc Line: 16
 Warning (332043): Overwriting existing clock: altera_reserved_tck
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
@@ -1410,9 +1410,9 @@ Info (332114): Report Metastability: Found 36 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5225 megabytes
-    Info: Processing ended: Wed May  1 00:56:11 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 5237 megabytes
+    Info: Processing ended: Fri May  3 11:13:47 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:06
 
 

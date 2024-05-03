@@ -3,14 +3,15 @@
 import common_def::*;
 
 module CheckForLoadToUse(
-	input wire [31:0] InstructionInFetch; // The instruction that is currently in the fetch stage.
-	input wire [4:0] ReadReg1InFetch, ReadReg2InFetch; // The two registers that need to be read for the instruction that is in the fetch stage.
+	input wire [31:0] InstructionInFetch, // The instruction that is currently in the fetch stage.
+	input wire [4:0] ReadReg1InFetch,
+	input wire [4:0] ReadReg2InFetch, // The two registers that need to be read for the instruction that is in the fetch stage.
 	
-	input wire [31:0] InstructionInDecode; // The instruction in a later phase that we are checking for a RAW dependency against.
-	input wire RegWriteEnableInDecode; // is the instruction in a later phase writing to a register?
-	input wire MemReadInDecode; // is the instruction in decode reading from memory?
+	input wire [31:0] InstructionInDecode, // The instruction in a later phase that we are checking for a RAW dependency against.
+	input wire RegWriteEnableInDecode, // is the instruction in a later phase writing to a register?
+	input wire MemReadInDecode, // is the instruction in decode reading from memory?
 	
-	output wire stall; // the result if we need to stall (i.e. is there a RAW?)
+	output wire stall // the result if we need to stall (i.e. is there a RAW?)
 );
 
 	// Declare internal nets///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

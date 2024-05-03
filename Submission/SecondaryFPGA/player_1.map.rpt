@@ -1,5 +1,5 @@
 Analysis & Synthesis report for player_1
-Wed May  1 00:54:07 2024
+Fri May  3 11:12:01 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May  1 00:54:06 2024          ;
+; Analysis & Synthesis Status     ; Successful - Fri May  3 11:12:01 2024          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; player_1                                       ;
 ; Top-level Entity Name           ; player_1                                       ;
@@ -185,84 +185,85 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                      ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------+-------------+
-; RemoteComm.sv                                                      ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Muthu/works_now/RemoteComm.sv                                                      ;             ;
-; player_2.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Muthu/works_now/player_2.sv                                                        ;             ;
-; SPI_M.sv                                                           ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Muthu/works_now/SPI_M.sv                                                           ;             ;
-; reset_synch.sv                                                     ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Muthu/works_now/reset_synch.sv                                                     ;             ;
-; player_1.v                                                         ; yes             ; User Verilog HDL File                        ; I:/win/554_git/Muthu/works_now/player_1.v                                                         ;             ;
-; joystick.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Muthu/works_now/joystick.sv                                                        ;             ;
-; A2D_intf.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Muthu/works_now/A2D_intf.sv                                                        ;             ;
-; uart.sv                                                            ; yes             ; Auto-Found SystemVerilog HDL File            ; I:/win/554_git/Muthu/works_now/uart.sv                                                            ;             ;
-; uart_tx.sv                                                         ; yes             ; Auto-Found SystemVerilog HDL File            ; I:/win/554_git/Muthu/works_now/uart_tx.sv                                                         ;             ;
-; uart_rx.sv                                                         ; yes             ; Auto-Found SystemVerilog HDL File            ; I:/win/554_git/Muthu/works_now/uart_rx.sv                                                         ;             ;
-; seg7_lut_6.v                                                       ; yes             ; Auto-Found Verilog HDL File                  ; I:/win/554_git/Muthu/works_now/seg7_lut_6.v                                                       ;             ;
-; seg7_lut.v                                                         ; yes             ; Auto-Found Verilog HDL File                  ; I:/win/554_git/Muthu/works_now/seg7_lut.v                                                         ;             ;
-; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_signaltap.vhd                       ;             ;
-; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                  ;             ;
-; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_ela_control.vhd                     ;             ;
-; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_shiftreg.tdf                        ;             ;
-; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_constant.inc                        ;             ;
-; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/dffeea.inc                              ;             ;
-; aglobal221.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                          ;             ;
-; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_mbpmg.vhd                           ;             ;
-; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd            ;             ;
-; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_buffer_manager.vhd                  ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf                          ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                   ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                             ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                          ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc                           ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                              ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc                              ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                            ;             ;
-; db/altsyncram_kb84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Muthu/works_now/db/altsyncram_kb84.tdf                                             ;             ;
-; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.tdf                            ;             ;
-; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/others/maxplus2/memmodes.inc                          ;             ;
-; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_hdffe.inc                             ;             ;
-; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/alt_le_rden_reg.inc                     ;             ;
-; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.inc                          ;             ;
-; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.tdf                             ;             ;
-; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/muxlut.inc                              ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/bypassff.inc                            ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altshift.inc                            ;             ;
-; db/mux_elc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Muthu/works_now/db/mux_elc.tdf                                                     ;             ;
-; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.tdf                          ;             ;
-; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/declut.inc                              ;             ;
-; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_compare.inc                         ;             ;
-; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Muthu/works_now/db/decode_vnf.tdf                                                  ;             ;
-; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_counter.tdf                         ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                         ;             ;
-; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/cmpconst.inc                            ;             ;
-; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_counter.inc                         ;             ;
-; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/alt_counter_stratix.inc                 ;             ;
-; db/cntr_39i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Muthu/works_now/db/cntr_39i.tdf                                                    ;             ;
-; db/cmpr_e9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Muthu/works_now/db/cmpr_e9c.tdf                                                    ;             ;
-; db/cntr_4vi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Muthu/works_now/db/cntr_4vi.tdf                                                    ;             ;
-; db/cntr_09i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Muthu/works_now/db/cntr_09i.tdf                                                    ;             ;
-; db/cmpr_c9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Muthu/works_now/db/cmpr_c9c.tdf                                                    ;             ;
-; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Muthu/works_now/db/cntr_kri.tdf                                                    ;             ;
-; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Muthu/works_now/db/cmpr_99c.tdf                                                    ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_rom_sr.vhd                          ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd           ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv       ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_hub.vhd                             ; altera_sld  ;
-; db/ip/sld91f8a9a6/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                        ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------+-------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                         ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                               ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------+-------------+
+; RemoteComm.sv                                                      ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Submission/SecondaryFPGA/RemoteComm.sv                                                      ;             ;
+; player_2.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Submission/SecondaryFPGA/player_2.sv                                                        ;             ;
+; SPI_M.sv                                                           ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Submission/SecondaryFPGA/SPI_M.sv                                                           ;             ;
+; reset_synch.sv                                                     ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Submission/SecondaryFPGA/reset_synch.sv                                                     ;             ;
+; player_1.v                                                         ; yes             ; User Verilog HDL File                        ; I:/win/554_git/Submission/SecondaryFPGA/player_1.v                                                         ;             ;
+; joystick.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Submission/SecondaryFPGA/joystick.sv                                                        ;             ;
+; A2D_intf.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; I:/win/554_git/Submission/SecondaryFPGA/A2D_intf.sv                                                        ;             ;
+; uart.sv                                                            ; yes             ; Auto-Found SystemVerilog HDL File            ; I:/win/554_git/Submission/SecondaryFPGA/uart.sv                                                            ;             ;
+; uart_tx.sv                                                         ; yes             ; Auto-Found SystemVerilog HDL File            ; I:/win/554_git/Submission/SecondaryFPGA/uart_tx.sv                                                         ;             ;
+; uart_rx.sv                                                         ; yes             ; Auto-Found SystemVerilog HDL File            ; I:/win/554_git/Submission/SecondaryFPGA/uart_rx.sv                                                         ;             ;
+; seg7_lut_6.v                                                       ; yes             ; Auto-Found Verilog HDL File                  ; I:/win/554_git/Submission/SecondaryFPGA/seg7_lut_6.v                                                       ;             ;
+; seg7_lut.v                                                         ; yes             ; Auto-Found Verilog HDL File                  ; I:/win/554_git/Submission/SecondaryFPGA/seg7_lut.v                                                         ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_signaltap.vhd                                ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                           ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_ela_control.vhd                              ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                 ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_constant.inc                                 ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/dffeea.inc                                       ;             ;
+; aglobal221.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                   ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_mbpmg.vhd                                    ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                     ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_buffer_manager.vhd                           ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf                                   ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                            ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                                      ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                                   ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                    ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                                       ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc                                       ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                     ;             ;
+; db/altsyncram_kb84.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Submission/SecondaryFPGA/db/altsyncram_kb84.tdf                                             ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.tdf                                     ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/others/maxplus2/memmodes.inc                                   ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_hdffe.inc                                      ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/alt_le_rden_reg.inc                              ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.inc                                   ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.tdf                                      ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/muxlut.inc                                       ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/bypassff.inc                                     ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altshift.inc                                     ;             ;
+; db/mux_elc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Submission/SecondaryFPGA/db/mux_elc.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.tdf                                   ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/declut.inc                                       ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_compare.inc                                  ;             ;
+; db/decode_vnf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Submission/SecondaryFPGA/db/decode_vnf.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_counter.tdf                                  ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                  ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/cmpconst.inc                                     ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_counter.inc                                  ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/alt_counter_stratix.inc                          ;             ;
+; db/cntr_39i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Submission/SecondaryFPGA/db/cntr_39i.tdf                                                    ;             ;
+; db/cmpr_e9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Submission/SecondaryFPGA/db/cmpr_e9c.tdf                                                    ;             ;
+; db/cntr_4vi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Submission/SecondaryFPGA/db/cntr_4vi.tdf                                                    ;             ;
+; db/cntr_09i.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Submission/SecondaryFPGA/db/cntr_09i.tdf                                                    ;             ;
+; db/cmpr_c9c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Submission/SecondaryFPGA/db/cmpr_c9c.tdf                                                    ;             ;
+; db/cntr_kri.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Submission/SecondaryFPGA/db/cntr_kri.tdf                                                    ;             ;
+; db/cmpr_99c.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; I:/win/554_git/Submission/SecondaryFPGA/db/cmpr_99c.tdf                                                    ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_rom_sr.vhd                                   ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                    ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_hub.vhd                                      ; altera_sld  ;
+; db/ip/sld91f8a9a6/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                 ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +---------------------------------------------------------------+
@@ -961,84 +962,84 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed May  1 00:53:35 2024
+    Info: Processing started: Fri May  3 11:11:31 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off player_1 -c player_1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file remotecomm.sv
-    Info (12023): Found entity 1: RemoteComm File: I:/win/554_git/Muthu/works_now/RemoteComm.sv Line: 1
+    Info (12023): Found entity 1: RemoteComm File: I:/win/554_git/Submission/SecondaryFPGA/RemoteComm.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file player_2.sv
-    Info (12023): Found entity 1: player_2 File: I:/win/554_git/Muthu/works_now/player_2.sv Line: 1
+    Info (12023): Found entity 1: player_2 File: I:/win/554_git/Submission/SecondaryFPGA/player_2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file spi_m.sv
-    Info (12023): Found entity 1: SPI_M File: I:/win/554_git/Muthu/works_now/SPI_M.sv Line: 13
+    Info (12023): Found entity 1: SPI_M File: I:/win/554_git/Submission/SecondaryFPGA/SPI_M.sv Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file reset_synch.sv
-    Info (12023): Found entity 1: reset_synch File: I:/win/554_git/Muthu/works_now/reset_synch.sv Line: 1
+    Info (12023): Found entity 1: reset_synch File: I:/win/554_git/Submission/SecondaryFPGA/reset_synch.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file player_1.v
-    Info (12023): Found entity 1: player_1 File: I:/win/554_git/Muthu/works_now/player_1.v Line: 6
+    Info (12023): Found entity 1: player_1 File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file joystick.sv
-    Info (12023): Found entity 1: joystick File: I:/win/554_git/Muthu/works_now/joystick.sv Line: 6
+    Info (12023): Found entity 1: joystick File: I:/win/554_git/Submission/SecondaryFPGA/joystick.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file a2d_intf.sv
-    Info (12023): Found entity 1: A2D_intf File: I:/win/554_git/Muthu/works_now/A2D_intf.sv Line: 1
+    Info (12023): Found entity 1: A2D_intf File: I:/win/554_git/Submission/SecondaryFPGA/A2D_intf.sv Line: 1
 Info (12127): Elaborating entity "player_1" for the top level hierarchy
-Warning (10034): Output port "LEDR[8..0]" at player_1.v(44) has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 44
-Warning (10034): Output port "AUD_DACDAT" at player_1.v(18) has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 18
-Warning (10034): Output port "AUD_XCK" at player_1.v(20) has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 20
-Warning (10034): Output port "FPGA_I2C_SCLK" at player_1.v(29) has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 29
-Info (12128): Elaborating entity "reset_synch" for hierarchy "reset_synch:iRST" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 66
-Info (12128): Elaborating entity "joystick" for hierarchy "joystick:ijoy" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 74
-Warning (10230): Verilog HDL assignment warning at joystick.sv(71): truncated value with size 32 to match size of target (3) File: I:/win/554_git/Muthu/works_now/joystick.sv Line: 71
-Info (10264): Verilog HDL Case Statement information at joystick.sv(115): all case item expressions in this case statement are onehot File: I:/win/554_git/Muthu/works_now/joystick.sv Line: 115
-Info (12128): Elaborating entity "A2D_intf" for hierarchy "joystick:ijoy|A2D_intf:iADC" File: I:/win/554_git/Muthu/works_now/joystick.sv Line: 49
-Warning (10230): Verilog HDL assignment warning at A2D_intf.sv(37): truncated value with size 32 to match size of target (12) File: I:/win/554_git/Muthu/works_now/A2D_intf.sv Line: 37
-Info (12128): Elaborating entity "SPI_M" for hierarchy "joystick:ijoy|A2D_intf:iADC|SPI_M:iSPI" File: I:/win/554_git/Muthu/works_now/A2D_intf.sv Line: 96
-Info (12128): Elaborating entity "player_2" for hierarchy "player_2:iPlayer" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 78
-Warning (10230): Verilog HDL assignment warning at player_2.sv(35): truncated value with size 32 to match size of target (12) File: I:/win/554_git/Muthu/works_now/player_2.sv Line: 35
-Info (12128): Elaborating entity "RemoteComm" for hierarchy "player_2:iPlayer|RemoteComm:iRemote" File: I:/win/554_git/Muthu/works_now/player_2.sv Line: 20
-Warning (10036): Verilog HDL or VHDL warning at RemoteComm.sv(18): object "clr_rx_rdy" assigned a value but never read File: I:/win/554_git/Muthu/works_now/RemoteComm.sv Line: 18
-Warning (10036): Verilog HDL or VHDL warning at RemoteComm.sv(20): object "set_cmd_snt2" assigned a value but never read File: I:/win/554_git/Muthu/works_now/RemoteComm.sv Line: 20
-Info (10264): Verilog HDL Case Statement information at RemoteComm.sv(77): all case item expressions in this case statement are onehot File: I:/win/554_git/Muthu/works_now/RemoteComm.sv Line: 77
+Warning (10034): Output port "LEDR[8..0]" at player_1.v(44) has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 44
+Warning (10034): Output port "AUD_DACDAT" at player_1.v(18) has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 18
+Warning (10034): Output port "AUD_XCK" at player_1.v(20) has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 20
+Warning (10034): Output port "FPGA_I2C_SCLK" at player_1.v(29) has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 29
+Info (12128): Elaborating entity "reset_synch" for hierarchy "reset_synch:iRST" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 66
+Info (12128): Elaborating entity "joystick" for hierarchy "joystick:ijoy" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 74
+Warning (10230): Verilog HDL assignment warning at joystick.sv(71): truncated value with size 32 to match size of target (3) File: I:/win/554_git/Submission/SecondaryFPGA/joystick.sv Line: 71
+Info (10264): Verilog HDL Case Statement information at joystick.sv(115): all case item expressions in this case statement are onehot File: I:/win/554_git/Submission/SecondaryFPGA/joystick.sv Line: 115
+Info (12128): Elaborating entity "A2D_intf" for hierarchy "joystick:ijoy|A2D_intf:iADC" File: I:/win/554_git/Submission/SecondaryFPGA/joystick.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at A2D_intf.sv(37): truncated value with size 32 to match size of target (12) File: I:/win/554_git/Submission/SecondaryFPGA/A2D_intf.sv Line: 37
+Info (12128): Elaborating entity "SPI_M" for hierarchy "joystick:ijoy|A2D_intf:iADC|SPI_M:iSPI" File: I:/win/554_git/Submission/SecondaryFPGA/A2D_intf.sv Line: 96
+Info (12128): Elaborating entity "player_2" for hierarchy "player_2:iPlayer" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 78
+Warning (10230): Verilog HDL assignment warning at player_2.sv(35): truncated value with size 32 to match size of target (12) File: I:/win/554_git/Submission/SecondaryFPGA/player_2.sv Line: 35
+Info (12128): Elaborating entity "RemoteComm" for hierarchy "player_2:iPlayer|RemoteComm:iRemote" File: I:/win/554_git/Submission/SecondaryFPGA/player_2.sv Line: 20
+Warning (10036): Verilog HDL or VHDL warning at RemoteComm.sv(18): object "clr_rx_rdy" assigned a value but never read File: I:/win/554_git/Submission/SecondaryFPGA/RemoteComm.sv Line: 18
+Warning (10036): Verilog HDL or VHDL warning at RemoteComm.sv(20): object "set_cmd_snt2" assigned a value but never read File: I:/win/554_git/Submission/SecondaryFPGA/RemoteComm.sv Line: 20
+Info (10264): Verilog HDL Case Statement information at RemoteComm.sv(77): all case item expressions in this case statement are onehot File: I:/win/554_git/Submission/SecondaryFPGA/RemoteComm.sv Line: 77
 Warning (12125): Using design file uart.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: UART File: I:/win/554_git/Muthu/works_now/uart.sv Line: 1
-Info (12128): Elaborating entity "UART" for hierarchy "player_2:iPlayer|RemoteComm:iRemote|UART:iUART" File: I:/win/554_git/Muthu/works_now/RemoteComm.sv Line: 33
+    Info (12023): Found entity 1: UART File: I:/win/554_git/Submission/SecondaryFPGA/uart.sv Line: 1
+Info (12128): Elaborating entity "UART" for hierarchy "player_2:iPlayer|RemoteComm:iRemote|UART:iUART" File: I:/win/554_git/Submission/SecondaryFPGA/RemoteComm.sv Line: 33
 Warning (12125): Using design file uart_tx.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: UART_tx File: I:/win/554_git/Muthu/works_now/uart_tx.sv Line: 1
-Info (12128): Elaborating entity "UART_tx" for hierarchy "player_2:iPlayer|RemoteComm:iRemote|UART:iUART|UART_tx:iTX" File: I:/win/554_git/Muthu/works_now/uart.sv Line: 17
-Warning (10230): Verilog HDL assignment warning at uart_tx.sv(43): truncated value with size 32 to match size of target (4) File: I:/win/554_git/Muthu/works_now/uart_tx.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at uart_tx.sv(54): truncated value with size 32 to match size of target (13) File: I:/win/554_git/Muthu/works_now/uart_tx.sv Line: 54
+    Info (12023): Found entity 1: UART_tx File: I:/win/554_git/Submission/SecondaryFPGA/uart_tx.sv Line: 1
+Info (12128): Elaborating entity "UART_tx" for hierarchy "player_2:iPlayer|RemoteComm:iRemote|UART:iUART|UART_tx:iTX" File: I:/win/554_git/Submission/SecondaryFPGA/uart.sv Line: 17
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(43): truncated value with size 32 to match size of target (4) File: I:/win/554_git/Submission/SecondaryFPGA/uart_tx.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(54): truncated value with size 32 to match size of target (13) File: I:/win/554_git/Submission/SecondaryFPGA/uart_tx.sv Line: 54
 Warning (12125): Using design file uart_rx.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: UART_rx File: I:/win/554_git/Muthu/works_now/uart_rx.sv Line: 1
-Info (12128): Elaborating entity "UART_rx" for hierarchy "player_2:iPlayer|RemoteComm:iRemote|UART:iUART|UART_rx:iRX" File: I:/win/554_git/Muthu/works_now/uart.sv Line: 24
-Warning (10230): Verilog HDL assignment warning at uart_rx.sv(41): truncated value with size 32 to match size of target (4) File: I:/win/554_git/Muthu/works_now/uart_rx.sv Line: 41
-Warning (10230): Verilog HDL assignment warning at uart_rx.sv(51): truncated value with size 32 to match size of target (13) File: I:/win/554_git/Muthu/works_now/uart_rx.sv Line: 51
+    Info (12023): Found entity 1: UART_rx File: I:/win/554_git/Submission/SecondaryFPGA/uart_rx.sv Line: 1
+Info (12128): Elaborating entity "UART_rx" for hierarchy "player_2:iPlayer|RemoteComm:iRemote|UART:iUART|UART_rx:iRX" File: I:/win/554_git/Submission/SecondaryFPGA/uart.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(41): truncated value with size 32 to match size of target (4) File: I:/win/554_git/Submission/SecondaryFPGA/uart_rx.sv Line: 41
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(51): truncated value with size 32 to match size of target (13) File: I:/win/554_git/Submission/SecondaryFPGA/uart_rx.sv Line: 51
 Warning (12125): Using design file seg7_lut_6.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: SEG7_LUT_6 File: I:/win/554_git/Muthu/works_now/seg7_lut_6.v Line: 43
-Info (12128): Elaborating entity "SEG7_LUT_6" for hierarchy "SEG7_LUT_6:iseg" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 80
+    Info (12023): Found entity 1: SEG7_LUT_6 File: I:/win/554_git/Submission/SecondaryFPGA/seg7_lut_6.v Line: 43
+Info (12128): Elaborating entity "SEG7_LUT_6" for hierarchy "SEG7_LUT_6:iseg" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 80
 Warning (12125): Using design file seg7_lut.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: SEG7_LUT File: I:/win/554_git/Muthu/works_now/seg7_lut.v Line: 43
-Info (12128): Elaborating entity "SEG7_LUT" for hierarchy "SEG7_LUT_6:iseg|SEG7_LUT:u0" File: I:/win/554_git/Muthu/works_now/seg7_lut_6.v Line: 47
+    Info (12023): Found entity 1: SEG7_LUT File: I:/win/554_git/Submission/SecondaryFPGA/seg7_lut.v Line: 43
+Info (12128): Elaborating entity "SEG7_LUT" for hierarchy "SEG7_LUT_6:iseg|SEG7_LUT:u0" File: I:/win/554_git/Submission/SecondaryFPGA/seg7_lut_6.v Line: 47
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kb84.tdf
-    Info (12023): Found entity 1: altsyncram_kb84 File: I:/win/554_git/Muthu/works_now/db/altsyncram_kb84.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_kb84 File: I:/win/554_git/Submission/SecondaryFPGA/db/altsyncram_kb84.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_elc.tdf
-    Info (12023): Found entity 1: mux_elc File: I:/win/554_git/Muthu/works_now/db/mux_elc.tdf Line: 23
+    Info (12023): Found entity 1: mux_elc File: I:/win/554_git/Submission/SecondaryFPGA/db/mux_elc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_vnf.tdf
-    Info (12023): Found entity 1: decode_vnf File: I:/win/554_git/Muthu/works_now/db/decode_vnf.tdf Line: 23
+    Info (12023): Found entity 1: decode_vnf File: I:/win/554_git/Submission/SecondaryFPGA/db/decode_vnf.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_39i.tdf
-    Info (12023): Found entity 1: cntr_39i File: I:/win/554_git/Muthu/works_now/db/cntr_39i.tdf Line: 28
+    Info (12023): Found entity 1: cntr_39i File: I:/win/554_git/Submission/SecondaryFPGA/db/cntr_39i.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_e9c.tdf
-    Info (12023): Found entity 1: cmpr_e9c File: I:/win/554_git/Muthu/works_now/db/cmpr_e9c.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_e9c File: I:/win/554_git/Submission/SecondaryFPGA/db/cmpr_e9c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_4vi.tdf
-    Info (12023): Found entity 1: cntr_4vi File: I:/win/554_git/Muthu/works_now/db/cntr_4vi.tdf Line: 26
+    Info (12023): Found entity 1: cntr_4vi File: I:/win/554_git/Submission/SecondaryFPGA/db/cntr_4vi.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_09i.tdf
-    Info (12023): Found entity 1: cntr_09i File: I:/win/554_git/Muthu/works_now/db/cntr_09i.tdf Line: 28
+    Info (12023): Found entity 1: cntr_09i File: I:/win/554_git/Submission/SecondaryFPGA/db/cntr_09i.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_c9c.tdf
-    Info (12023): Found entity 1: cmpr_c9c File: I:/win/554_git/Muthu/works_now/db/cmpr_c9c.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_c9c File: I:/win/554_git/Submission/SecondaryFPGA/db/cmpr_c9c.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_kri.tdf
-    Info (12023): Found entity 1: cntr_kri File: I:/win/554_git/Muthu/works_now/db/cntr_kri.tdf Line: 28
+    Info (12023): Found entity 1: cntr_kri File: I:/win/554_git/Submission/SecondaryFPGA/db/cntr_kri.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_99c.tdf
-    Info (12023): Found entity 1: cmpr_99c File: I:/win/554_git/Muthu/works_now/db/cmpr_99c.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_99c File: I:/win/554_git/Submission/SecondaryFPGA/db/cmpr_99c.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.05.01.00:53:56 Progress: Loading sld91f8a9a6/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.05.03.11:11:51 Progress: Loading sld91f8a9a6/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1049,119 +1050,119 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld91f8a9a6/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: I:/win/554_git/Muthu/works_now/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: I:/win/554_git/Submission/SecondaryFPGA/db/ip/sld91f8a9a6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[33]" and its non-tri-state driver. File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[33]" and its non-tri-state driver. File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 16
-    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 17
-    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 19
-    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 30
-    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 50
-    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
-    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 16
+    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 17
+    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 19
+    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 30
+    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 50
+    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
+    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "GPIO[33]~synth" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 53
+    Warning (13010): Node "GPIO[33]~synth" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 53
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 18
-    Warning (13410): Pin "AUD_XCK" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 20
-    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 29
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 36
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 36
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 36
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 36
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 36
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 36
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: I:/win/554_git/Muthu/works_now/player_1.v Line: 36
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 37
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 37
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 37
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 37
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 37
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 37
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: I:/win/554_git/Muthu/works_now/player_1.v Line: 37
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 38
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 38
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 38
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 38
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 38
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 38
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: I:/win/554_git/Muthu/works_now/player_1.v Line: 38
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 44
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 44
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 44
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 44
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 44
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 44
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 44
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 44
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: I:/win/554_git/Muthu/works_now/player_1.v Line: 44
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 18
+    Warning (13410): Pin "AUD_XCK" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 20
+    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 29
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 36
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 36
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 36
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 36
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 36
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 36
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 36
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 37
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 37
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 37
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 37
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 37
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 37
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 37
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 38
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 38
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 38
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 38
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 38
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 38
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 38
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 44
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 44
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 44
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 44
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 44
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 44
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 44
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 44
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 44
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 7 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file I:/win/554_git/Muthu/works_now/player_1.map.smsg
+Info (144001): Generated suppressed messages file I:/win/554_git/Submission/SecondaryFPGA/player_1.map.smsg
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 117 of its 137 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 20 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 17 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 15
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 24
-    Warning (15610): No output dependent on input pin "CLOCK4_50" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 25
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 26
-    Warning (15610): No output dependent on input pin "KEY[1]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 41
-    Warning (15610): No output dependent on input pin "KEY[2]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 41
-    Warning (15610): No output dependent on input pin "KEY[3]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 41
-    Warning (15610): No output dependent on input pin "SW[0]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 47
-    Warning (15610): No output dependent on input pin "SW[1]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 47
-    Warning (15610): No output dependent on input pin "SW[2]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 47
-    Warning (15610): No output dependent on input pin "SW[3]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 47
-    Warning (15610): No output dependent on input pin "SW[4]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 47
-    Warning (15610): No output dependent on input pin "SW[5]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 47
-    Warning (15610): No output dependent on input pin "SW[6]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 47
-    Warning (15610): No output dependent on input pin "SW[7]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 47
-    Warning (15610): No output dependent on input pin "SW[8]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 47
-    Warning (15610): No output dependent on input pin "SW[9]" File: I:/win/554_git/Muthu/works_now/player_1.v Line: 47
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 15
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 24
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 25
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 26
+    Warning (15610): No output dependent on input pin "KEY[1]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 41
+    Warning (15610): No output dependent on input pin "KEY[2]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 41
+    Warning (15610): No output dependent on input pin "KEY[3]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 41
+    Warning (15610): No output dependent on input pin "SW[0]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 47
+    Warning (15610): No output dependent on input pin "SW[1]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 47
+    Warning (15610): No output dependent on input pin "SW[2]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 47
+    Warning (15610): No output dependent on input pin "SW[3]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 47
+    Warning (15610): No output dependent on input pin "SW[4]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 47
+    Warning (15610): No output dependent on input pin "SW[5]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 47
+    Warning (15610): No output dependent on input pin "SW[6]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 47
+    Warning (15610): No output dependent on input pin "SW[7]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 47
+    Warning (15610): No output dependent on input pin "SW[8]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 47
+    Warning (15610): No output dependent on input pin "SW[9]" File: I:/win/554_git/Submission/SecondaryFPGA/player_1.v Line: 47
 Info (21057): Implemented 1541 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
     Info (21059): Implemented 59 output pins
@@ -1170,14 +1171,14 @@ Info (21057): Implemented 1541 device resources after synthesis - the final reso
     Info (21064): Implemented 52 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 115 warnings
     Info: Peak virtual memory: 4936 megabytes
-    Info: Processing ended: Wed May  1 00:54:07 2024
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Processing ended: Fri May  3 11:12:01 2024
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in I:/win/554_git/Muthu/works_now/player_1.map.smsg.
+The suppressed messages can be found in I:/win/554_git/Submission/SecondaryFPGA/player_1.map.smsg.
 
 
