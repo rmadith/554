@@ -1,0 +1,199 @@
+I:/554/Muthu/pls_work_dbp/CPU/BTB_and_PC.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/BTB_and_PC.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module BTB_and_PC
+
+Top level modules:
+	BTB_and_PC
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/MEMWBpipelineReg.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/MEMWBpipelineReg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package MEMWBpipelineReg_sv_unit
+-- Importing package common_def
+-- Compiling module MEMWBpipelineReg
+
+Top level modules:
+	MEMWBpipelineReg
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/cpu_tb.sv {1 {vlog -work work -vopt -sv -stats=none {I:\554\Muthu\pls_work_dbp\CPU\cpu_tb.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package cpu_tb_sv_unit
+-- Importing package common_def
+-- Compiling module cpu_tb
+
+Top level modules:
+	cpu_tb
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/CheckForLoadToUse.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/CheckForLoadToUse.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package CheckForLoadToUse_sv_unit
+-- Importing package common_def
+-- Compiling module CheckForLoadToUse
+
+Top level modules:
+	CheckForLoadToUse
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/forwardToMEM.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/forwardToMEM.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module forwardToMEM
+
+Top level modules:
+	forwardToMEM
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/common_def.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/common_def.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package common_def
+
+Top level modules:
+	--none--
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/rf.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/rf.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module rf
+
+Top level modules:
+	rf
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/instruction_debug.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/instruction_debug.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package instruction_debug_sv_unit
+-- Importing package common_def
+-- Compiling module instruction_debug
+
+Top level modules:
+	instruction_debug
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/control_unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/control_unit.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module control_unit
+
+Top level modules:
+	control_unit
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/wb.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/wb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module wb
+
+Top level modules:
+	wb
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/ALU.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/ALU.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/dmem8.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/dmem8.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module dmem8
+
+Top level modules:
+	dmem8
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/execute.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/execute.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module execute
+
+Top level modules:
+	execute
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/forwardToD.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/forwardToD.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module forwardToD
+
+Top level modules:
+	forwardToD
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/extension_unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/extension_unit.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module extension_unit
+
+Top level modules:
+	extension_unit
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/decode.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/decode.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module decode
+
+Top level modules:
+	decode
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/shifter.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/shifter.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/forwardToEX.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/forwardToEX.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module forwardToEX
+
+Top level modules:
+	forwardToEX
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/branch_unit.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/branch_unit.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module branch_unit
+
+Top level modules:
+	branch_unit
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/IDEXpipelineReg.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/IDEXpipelineReg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package IDEXpipelineReg_sv_unit
+-- Importing package common_def
+-- Compiling module IDEXpipelineReg
+
+Top level modules:
+	IDEXpipelineReg
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/CheckForControlToUse.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/CheckForControlToUse.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package CheckForControlToUse_sv_unit
+-- Importing package common_def
+-- Compiling module CheckForControlToUse
+
+Top level modules:
+	CheckForControlToUse
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/IFIDpipelineReg.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/IFIDpipelineReg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package IFIDpipelineReg_sv_unit
+-- Importing package common_def
+-- Compiling module IFIDpipelineReg
+
+Top level modules:
+	IFIDpipelineReg
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/EXMEMpipelineReg.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/EXMEMpipelineReg.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package EXMEMpipelineReg_sv_unit
+-- Importing package common_def
+-- Compiling module EXMEMpipelineReg
+
+Top level modules:
+	EXMEMpipelineReg
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/cpu.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/cpu.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/memory.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/memory.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} I:/554/Muthu/pls_work_dbp/CPU/fetch.sv {1 {vlog -work work -vopt -sv -stats=none I:/554/Muthu/pls_work_dbp/CPU/fetch.sv
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
+} {} {}}

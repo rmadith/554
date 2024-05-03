@@ -1,0 +1,4 @@
+Warning (10268): Verilog HDL information at rf.sv(57): always construct contains both blocking and non-blocking assignments File: I:/win/554_git/Muthu/final/CPU/rf.sv Line: 57
+Info (10281): Verilog HDL Declaration information at BMP_display.v(12): object "RST_n" differs only in case from object "rst_n" in the same scope File: I:/win/554_git/Muthu/final/Peripherals/VGA/BMP_display.v Line: 12
+Info (10281): Verilog HDL Declaration information at UART_rx.sv(10): object "receiving" differs only in case from object "RECEIVING" in the same scope File: I:/win/554_git/Muthu/final/Peripherals/Bootloader/UART_rx.sv Line: 10
+Info (10281): Verilog HDL Declaration information at reset_synch.sv(4): object "RST_n" differs only in case from object "rst_n" in the same scope File: I:/win/554_git/Muthu/final/reset_synch.sv Line: 4
