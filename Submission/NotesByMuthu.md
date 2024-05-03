@@ -46,7 +46,7 @@ I think that that the tristate update is lot faster than the Tclk2q which makes 
 We switched to a UART. I was initially apprehensive of the lag. But there isn't any! or at least I don't feel it. I am no pro gamer so don't take my word for it. 
 
 
-& I guess I am done with problems or at least the big ones. Read the following at your own Risks! &
+## & I guess I am done with problems or at least the big ones. Read the following at your own Risks! &
 
 We removed the case statement to mux the data from external sources to CPU because we did not have enough ROM. This was absolutely dumb, but we were under the assumption at the time that the ROM and Registers were the same thing with Quartus. However after we removed it, it was just nice to not have another case statement :P
 
