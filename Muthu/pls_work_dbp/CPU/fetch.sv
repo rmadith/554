@@ -11,17 +11,17 @@ module fetch (
     input wire takeBranch,
     input wire branch,
     input wire jumpAL,
-    input wire turn_off_DBP,
     input wire [31:0] branch_PC, 
     input wire incorrect_b_prediction,
     input wire [31:0] PC_IFID_IDEX,
     input wire [31:0] PC_plus4_IFID_out,
+    input wire turn_off_DBP,
 
     ///// OUTPUTS /////
 	output wire [31:0] PC_plus4_IFID_in,
 	output reg [31:0] instruction_IFID_in,
     output reg [31:0] PC_IFID_in,
-    output reg predict_branch_taken, 
+    output reg predict_branch_taken,
     output wire ECALL,
 
     ///// Bootloader /////
@@ -34,7 +34,7 @@ module fetch (
 
 
     initial begin
-        $readmemh("muthu.hex",instr_mem);
+        $readmemh("wiscv.hex",instr_mem);
     end
 
 
@@ -47,9 +47,9 @@ module fetch (
         .PC_enable(PC_enable), 
         .takeBranch(takeBranch),
         .branch(branch),
-        .jumpAL(jumpAL),
-        .turn_off_DBP(turn_off_DBP), 
+        .jumpAL(jumpAL),  
         .PC_plus_4(PC_plus4_IFID_in),
+        .turn_off_DBP(turn_off_DBP),
 
         .instruction_IFID_in(instruction_IFID_in),
         .branch_PC(branch_PC),

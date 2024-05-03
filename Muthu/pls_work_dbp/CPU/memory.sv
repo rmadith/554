@@ -45,10 +45,10 @@ module memory(
 	logic [7:0] rdata_bnk0,rdata_bnk1,rdata_bnk2,rdata_bnk3; 
 	logic [7:0] wdata_bnk0,wdata_bnk1,wdata_bnk2,wdata_bnk3;
 	
-	dmem8 iBNK0(.clk(clk),.addr(memAddr[14:2]),.re(re0 & memRead),.we(we0 & memWrite),.rdata(rdata_bnk0),.wdata(wdata_bnk0), .debug(debug), .boot_addr(boot_addr[12:0]), .boot_data(boot_data[7:0])); // 00
-	dmem8 iBNK1(.clk(clk),.addr(memAddr[14:2]),.re(re1 & memRead),.we(we1 & memWrite),.rdata(rdata_bnk1),.wdata(wdata_bnk1), .debug(debug), .boot_addr(boot_addr[12:0]), .boot_data(boot_data[15:8])); // 01
-	dmem8 iBNK2(.clk(clk),.addr(memAddr[14:2]),.re(re2 & memRead),.we(we2 & memWrite),.rdata(rdata_bnk2),.wdata(wdata_bnk2), .debug(debug), .boot_addr(boot_addr[12:0]), .boot_data(boot_data[23:16])); // 10
-	dmem8 iBNK3(.clk(clk),.addr(memAddr[14:2]),.re(re3 & memRead),.we(we3 & memWrite),.rdata(rdata_bnk3),.wdata(wdata_bnk3), .debug(debug), .boot_addr(boot_addr[12:0]), .boot_data(boot_data[31:24])); // 11	
+	dmem8 #("wiscv_bank3.hex") iBNK0(.clk(clk),.addr(memAddr[14:2]),.re(re0 & memRead),.we(we0 & memWrite),.rdata(rdata_bnk0),.wdata(wdata_bnk0), .debug(debug), .boot_addr(boot_addr[12:0]), .boot_data(boot_data[7:0])); // 00
+	dmem8 #("wiscv_bank2.hex") iBNK1(.clk(clk),.addr(memAddr[14:2]),.re(re1 & memRead),.we(we1 & memWrite),.rdata(rdata_bnk1),.wdata(wdata_bnk1), .debug(debug), .boot_addr(boot_addr[12:0]), .boot_data(boot_data[15:8])); // 01
+	dmem8 #("wiscv_bank1.hex") iBNK2(.clk(clk),.addr(memAddr[14:2]),.re(re2 & memRead),.we(we2 & memWrite),.rdata(rdata_bnk2),.wdata(wdata_bnk2), .debug(debug), .boot_addr(boot_addr[12:0]), .boot_data(boot_data[23:16])); // 10
+	dmem8 #("wiscv_bank0.hex") iBNK3(.clk(clk),.addr(memAddr[14:2]),.re(re3 & memRead),.we(we3 & memWrite),.rdata(rdata_bnk3),.wdata(wdata_bnk3), .debug(debug), .boot_addr(boot_addr[12:0]), .boot_data(boot_data[31:24])); // 11	
 	
 	
 	

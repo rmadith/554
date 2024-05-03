@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("I:/win/554_git/Muthu/pls_work/") File("tanks_test1.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("I:/554/Muthu/pls_work_dbp/") File("tanks_test1.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

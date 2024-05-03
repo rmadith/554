@@ -37,7 +37,6 @@ module decode(
 	output logic jumpAL,
 	output logic branch,
 	output logic jump
-
 	);
 
 	///////////////////////////// Declare internal nets //////////////////////////////////

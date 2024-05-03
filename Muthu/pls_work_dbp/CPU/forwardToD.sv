@@ -56,7 +56,8 @@ module forwardToD (
 										(((WB_destination_reg==D_read_register_1)) ? writebackData : RegData1_IDEX_out) : RegData1_IDEX_out;
 	
 	// EX -> D forwarding (from start of MEM to start of D stage)
-	assign RegData1_after_forward_EX = RegWriteEnable_EXMEM_MEMWB ? 
+	assign RegData1_after_forward_EX =  (~|D_read_register_1) ? 32'b0 :
+											RegWriteEnable_EXMEM_MEMWB ? 
 										(((MEM_destination_reg==D_read_register_1)) ? execute_result_EXMEM_MEMWB : RegData1_MEMtoEX_forward) : RegData1_MEMtoEX_forward;
 
 
@@ -67,7 +68,8 @@ module forwardToD (
 										(((WB_destination_reg==D_read_register_2)) ? writebackData : RegData2_IDEX_out) : RegData2_IDEX_out;
 	
 	// EX -> D forwarding (from start of MEM to start of D stage)
-	assign RegData2_after_forward_EX = RegWriteEnable_EXMEM_MEMWB ? 
+	assign RegData2_after_forward_EX =   (~|D_read_register_2) ? 32'b0 : 
+											RegWriteEnable_EXMEM_MEMWB ? 
 										(((MEM_destination_reg==D_read_register_2)) ? execute_result_EXMEM_MEMWB : RegData2_MEMtoEX_forward) : RegData2_MEMtoEX_forward;
 
 	

@@ -2617,7 +2617,6 @@ clk => strong_reg[3].CLK
 clk => strong_reg[2].CLK
 clk => strong_reg[1].CLK
 clk => strong_reg[0].CLK
-clk => predict_branch_taken~reg0.CLK
 clk => branch_reg.CLK0
 rst_n => strong_reg[511].ACLR
 rst_n => strong_reg[510].ACLR
@@ -4237,7 +4236,7 @@ takeBranch => strong_reg.OUTPUTSELECT
 takeBranch => strong_reg.OUTPUTSELECT
 takeBranch => strong_reg.OUTPUTSELECT
 takeBranch => strong_reg.OUTPUTSELECT
-turn_off_DBP => always0.IN1
+turn_off_DBP => predict_branch_taken.IN1
 PC_plus_4[0] => next_PC.DATAA
 PC_plus_4[1] => next_PC.DATAA
 PC_plus_4[2] => next_PC.DATAA
@@ -4526,7 +4525,7 @@ PC_IFID_in[28] <= PC_IFID_in[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 PC_IFID_in[29] <= PC_IFID_in[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 PC_IFID_in[30] <= PC_IFID_in[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 PC_IFID_in[31] <= PC_IFID_in[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-predict_branch_taken <= predict_branch_taken~reg0.DB_MAX_OUTPUT_PORT_TYPE
+predict_branch_taken <= predict_branch_taken.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |tanks_test1|cpu:iCPU|IFIDpipelineReg:iIFID_pipeline_reg
@@ -5331,6 +5330,7 @@ branch_PC[31] <= branch_unit:iBU.branch_PC
 takeBranch <= branch_unit:iBU.takeBranch
 jumpAL <= control_unit:iControl_Unit.jumpAL
 branch <= branch.DB_MAX_OUTPUT_PORT_TYPE
+jump <= jump.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |tanks_test1|cpu:iCPU|decode:iDecode|control_unit:iControl_Unit
@@ -16215,6 +16215,8 @@ Instruction_IFID_IDEX[31] => Instruction_IFID_IDEX[31].IN2
 RegWriteEnable_IDEX_EXMEM => RegWriteEnable_IDEX_EXMEM.IN1
 RegWriteEnable_IDEX_in => RegWriteEnable_IDEX_in.IN2
 TakeBranch_from_D => incorrect_b_prediction.IN0
+jump => incorrect_b_prediction.IN0
+branch => incorrect_b_prediction.IN1
 predict_branch_taken_ID => incorrect_b_prediction.IN1
 incorrect_b_prediction <= incorrect_b_prediction.DB_MAX_OUTPUT_PORT_TYPE
 PC_enable <= PC_enable.DB_MAX_OUTPUT_PORT_TYPE

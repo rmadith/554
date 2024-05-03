@@ -2,7 +2,7 @@ module dmem8(clk,addr,re,we,rdata,wdata, debug, boot_addr, boot_data);
 
   // 8k byte memory //
   
-  parameter file = "wiscv0.hex";
+  parameter file;
   
   
   //wiscv.hex --> 32-bits wide goes into readmemh of instr_mem
@@ -33,7 +33,7 @@ module dmem8(clk,addr,re,we,rdata,wdata, debug, boot_addr, boot_data);
     else if (we)
 	   mem[addr] <= wdata;
 		
-  //initial
-    //$readmemh(file,mem);
+  initial
+    $readmemh(file,mem);
 		
 endmodule

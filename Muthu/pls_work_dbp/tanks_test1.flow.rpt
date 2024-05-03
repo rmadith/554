@@ -1,5 +1,5 @@
 Flow report for tanks_test1
-Tue Apr 30 15:54:10 2024
+Wed May  1 16:26:57 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Tue Apr 30 15:53:40 2024          ;
+; Flow Status                     ; Successful - Wed May  1 16:26:32 2024          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; tanks_test1                                    ;
 ; Top-level Entity Name           ; tanks_test1                                    ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 4,222 / 32,070 ( 13 % )                        ;
-; Total registers                 ; 5008                                           ;
+; Logic utilization (in ALMs)     ; 4,288 / 32,070 ( 13 % )                        ;
+; Total registers                 ; 5006                                           ;
 ; Total pins                      ; 222 / 457 ( 49 % )                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 2,807,320 / 4,065,280 ( 69 % )                 ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/30/2024 15:47:38 ;
+; Start date & time ; 05/01/2024 16:21:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tanks_test1         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+---------------------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                                           ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+---------------------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 118933446302053.171451005804272                                                 ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 118933446302053.171459846310792                                                 ; --            ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                              ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                              ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                               ; --            ; --          ; --               ;
@@ -129,11 +129,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:11     ; 1.0                     ; 5117 MB             ; 00:01:01                           ;
-; Fitter               ; 00:04:00     ; 1.2                     ; 6892 MB             ; 00:11:52                           ;
-; Assembler            ; 00:00:21     ; 1.0                     ; 4967 MB             ; 00:00:14                           ;
-; Timing Analyzer      ; 00:00:27     ; 2.3                     ; 5424 MB             ; 00:00:45                           ;
-; Total                ; 00:05:59     ; --                      ; --                  ; 00:13:52                           ;
+; Analysis & Synthesis ; 00:01:08     ; 1.0                     ; 5123 MB             ; 00:00:59                           ;
+; Fitter               ; 00:03:39     ; 1.2                     ; 6902 MB             ; 00:10:37                           ;
+; Assembler            ; 00:00:20     ; 1.0                     ; 4959 MB             ; 00:00:14                           ;
+; Timing Analyzer      ; 00:00:23     ; 2.3                     ; 5423 MB             ; 00:00:43                           ;
+; Total                ; 00:05:30     ; --                      ; --                  ; 00:12:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

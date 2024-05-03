@@ -37,7 +37,8 @@ module forwardToMEM (
 
 	//////////////////////REG 2 Forwarding ////////////////////////
 	// MEM -> MEM forwarding (from start of WB to start of MEM stage)
-	assign RegData2_after_forward_M = RegWriteEnable_MEMWB_out ? 
+	assign RegData2_after_forward_M =  (~|Reg_being_stored) ? 32'b0 :
+										RegWriteEnable_MEMWB_out ? 
 										(((WB_destination_reg==Reg_being_stored) & memRead_MEMWB_out & memWrite_EXMEM_out) ? memReadRst_MEMWB_out : RegData2_EXMEM_out) : RegData2_EXMEM_out;
 	
 	
